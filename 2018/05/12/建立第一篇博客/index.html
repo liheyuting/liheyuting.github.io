@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/05/12/建立第一篇博客/index.html">
 <meta property="og:site_name" content="虚妄之城">
 <meta property="og:description" content="发布文章 过程：先进入blog所在的文件夹，在终端输入进入blog所在文件夹 每次部署的步骤，三步  hexo clean hexo generate hexo deploy  主题可选择：[点击此处]（https://github.com/hexojs/hexo/wiki/Themes） 个人觉得好看的主题：  Yilia - Responsive and simple style 优雅简洁响">
-<meta property="og:updated_time" content="2018-05-12T15:10:17.081Z">
+<meta property="og:updated_time" content="2018-05-12T16:04:01.726Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="建立第一篇博客">
 <meta name="twitter:description" content="发布文章 过程：先进入blog所在的文件夹，在终端输入进入blog所在文件夹 每次部署的步骤，三步  hexo clean hexo generate hexo deploy  主题可选择：[点击此处]（https://github.com/hexojs/hexo/wiki/Themes） 个人觉得好看的主题：  Yilia - Responsive and simple style 优雅简洁响">
@@ -186,39 +186,16 @@
 </ul>
 <p>YAHT - Yet Another Hexo Theme based on Pacman</p>
 <p><strong><em> 多端同步管理 </em></strong><br>​用coding.net来备份博客并同步博客</p>
-<ol>
-<li><p>新建一个博客备份的私有仓库，配置SSH，不过不需要pages服务。</p>
-</li>
-<li><p>配置 .gitignore 如下：<br>/.deploy_git</p>
-</li>
-</ol>
-<p>/public</p>
-<ol>
-<li><p>如果主题是git clone 下来的，记得删除主题下的.git文件(rm -rf .git)</p>
-</li>
-<li><p>初始化仓库,git init 和 git remote add origin</p>
-</li>
-<li><p>git add . #添加目录下所有文件<br>git commit -m “更新说明” #提交并添加更新说明<br>git push origin master #推送更新到远程仓库</p>
-</li>
-<li><p>查看仓库有没有提交成功</p>
-</li>
-</ol>
-<p><strong><em> 另一台电脑的更新远程仓库 </em></strong><br>​ 在B电脑安装必须要的环境后，新建文件执行</p>
-<p>​ git init</p>
-<p>​ git remote add origin</p>
-<p>​ git fetch –all</p>
-<p>​ git pull origin master</p>
-<p><strong><em> 发布客户端同步 </em></strong><br>​ git add .</p>
-<p>​ git commit -m “更新说明”</p>
-<p>​ git push origin master</p>
+<p>1.新建一个博客备份的私有仓库，配置SSH，不过不需要pages服务。</p>
+<p>2.配置 .gitignore 如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/.deploy_git</span><br><span class="line">/public</span><br></pre></td></tr></table></figure></p>
+<p>3.如果主题是git clone 下来的，记得删除主题下的.git文件(rm -rf .git)</p>
+<p>4.初始化仓库,git init 和 git remote add origin</p>
+<p>5.git add. #添加目录下所有文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m “更新说明” #提交并添加更新说明 </span><br><span class="line">git push origin master #推送更新到远程仓库</span><br></pre></td></tr></table></figure></p>
+<p>6.查看仓库有没有提交成功</p>
+<p><strong><em> 另一台电脑的更新远程仓库 </em></strong><br>​ 在B电脑安装必须要的环境后，新建文件执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">​ git init</span><br><span class="line">​ git remote add origin</span><br><span class="line">​ git fetch –all</span><br><span class="line">​ git pull origin master</span><br></pre></td></tr></table></figure></p>
+<p><strong><em> 发布客户端同步 </em></strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “更新说明”</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
 <p>每次写博客之前记得先 git pull 进行同步更新</p>
-<p><strong><em> 常用同步操作 </em></strong><br>​ git pull #同步更新</p>
-<p>​ hexo new test “新建文章” （hexo n xxx）</p>
-<p>​ hexo clean 清除旧的public文件夹</p>
-<p>​ hexo d -g</p>
-<p>​ git add .</p>
-<p>​ git commit - m “更新说明”</p>
-<p>​ git push origin master</p>
+<p><strong><em> 常用同步操作 </em></strong><br>​<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git pull #同步更新</span><br><span class="line">hexo new test “新建文章” （hexo n xxx）</span><br><span class="line">hexo clean 清除旧的public文件夹</span><br><span class="line">hexo d -g</span><br><span class="line">git add .</span><br><span class="line">git commit - m “更新说明”</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
 
       
 
@@ -333,9 +310,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2018/05/12/Markdown语法文档/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Markdown语法文档
+        
+      </div>
+    </a>
   
-    <a href="/2018/05/12/Markdown语法文档/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">建立第一篇博客</div>
+  
+    <a href="/2017/11/23/从零开始搭建博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">从零开始搭建博客</div>
       <i class="icon-circle-right"></i>
     </a>
   
