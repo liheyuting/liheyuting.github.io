@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="虚妄之城">
 <meta property="og:description" content="gitalk评论部署我用的是gitalk评论 这里花费的时间最久，在issues里找了很久，终于在Ziven找到对应的 123456789#6、gitalk评论gitalk:  enable:  true  githubID:  liheyuting    repo: liheyuting.github.io （填写repo的名字）  ClientID: &amp;apos;&amp;apos;  ClientS">
 <meta property="og:image" content="http://yoursite.com/img/client.png">
-<meta property="og:updated_time" content="2018-08-26T10:06:49.558Z">
+<meta property="og:updated_time" content="2018-08-26T10:08:28.923Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Yilia 所遇问题解决方法汇总">
 <meta name="twitter:description" content="gitalk评论部署我用的是gitalk评论 这里花费的时间最久，在issues里找了很久，终于在Ziven找到对应的 123456789#6、gitalk评论gitalk:  enable:  true  githubID:  liheyuting    repo: liheyuting.github.io （填写repo的名字）  ClientID: &amp;apos;&amp;apos;  ClientS">
@@ -188,7 +188,8 @@
 <p>这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。</p>
 <a id="more"></a> 
 <p><strong> GitHub授权ClientID和ClientSecret </strong><br>进入setting-developer settings - OAuth Apps<br><a href="https://github.com/settings/applications/861324" target="_blank" rel="noopener">点击直接进入</a></p>
-<p><img src="/img/client.png" alt=""><br>homepage url 只需要填写blog首页链接即可<br>Authorization callback URL 填写的是授权返回的页面，这样也只需要填写blog地址即可</p>
+<p><img src="/img/client.png" alt=""></p>
+<p>homepage url 只需要填写blog首页链接即可<br>Authorization callback URL 填写的是授权返回的页面，这样也只需要填写blog地址即可</p>
 <p>提交之后会生成“ClientID”和“ClientSecret”放到主题配置文件中就可以了。</p>
 <p>按上面提交之后，怎么页面还是提示“未找到对应issue，需要联系管理员”呢？</p>
 <p><strong> 评论初始化 </strong></p>
@@ -393,7 +394,7 @@ if(true){
     clientSecret: 'f9b95841b8e2667e877d3bd0d24b901403a29d77',
     repo: 'liheyuting.github.io',
     owner: 'liheyuting',
-    admin: ['Dora'],
+    admin: ['liheyuting'],
     id: 'Sun Aug 26 2018 00:00:00 GMT+0800',
     distractionFreeMode: 'true'
 })
@@ -523,11 +524,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+                <a href="javascript:void(0)" class="js-tag color5">soft</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">soft</a>
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
             
             <div class="clearfix"></div>
