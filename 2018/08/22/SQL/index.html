@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>常用SQL语句及函数 | 虚妄之城</title>
+  <title>SQL常用语句及函数(MY SQL) | 虚妄之城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="假设  表1：Persons 表2：Behaviors  #查询SELECT * FROM Persons #从Persons表里查询姓名和电话SELECT name,phoneFROM Persons  #返回唯一不同的值SELECT DISTINCT name,phoneFROM Persons  #找出地域为北京">
+  <meta name="description" content="假设  表1：Persons 表2：Behaviors  select#SELECT 查询  SELECT * FROM Persons  #从Persons表里查询姓名和电话  SELECT name,phoneFROM Persons   #DISTINCT 返回唯一不同的值  SELECT DISTINCT na">
 <meta name="keywords" content="sql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用SQL语句及函数">
+<meta property="og:title" content="SQL常用语句及函数(MY SQL)">
 <meta property="og:url" content="http://yoursite.com/2018/08/22/SQL/index.html">
 <meta property="og:site_name" content="虚妄之城">
-<meta property="og:description" content="假设  表1：Persons 表2：Behaviors  #查询SELECT * FROM Persons #从Persons表里查询姓名和电话SELECT name,phoneFROM Persons  #返回唯一不同的值SELECT DISTINCT name,phoneFROM Persons  #找出地域为北京的用户姓名和电话SELECT name,phone FROM PersonsWH">
-<meta property="og:updated_time" content="2018-08-26T10:12:00.081Z">
+<meta property="og:description" content="假设  表1：Persons 表2：Behaviors  select#SELECT 查询  SELECT * FROM Persons  #从Persons表里查询姓名和电话  SELECT name,phoneFROM Persons   #DISTINCT 返回唯一不同的值  SELECT DISTINCT name,phoneFROM Persons   #WHERE 找出地域为北京的用户">
+<meta property="og:updated_time" content="2018-08-26T14:18:32.526Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用SQL语句及函数">
-<meta name="twitter:description" content="假设  表1：Persons 表2：Behaviors  #查询SELECT * FROM Persons #从Persons表里查询姓名和电话SELECT name,phoneFROM Persons  #返回唯一不同的值SELECT DISTINCT name,phoneFROM Persons  #找出地域为北京的用户姓名和电话SELECT name,phone FROM PersonsWH">
+<meta name="twitter:title" content="SQL常用语句及函数(MY SQL)">
+<meta name="twitter:description" content="假设  表1：Persons 表2：Behaviors  select#SELECT 查询  SELECT * FROM Persons  #从Persons表里查询姓名和电话  SELECT name,phoneFROM Persons   #DISTINCT 返回唯一不同的值  SELECT DISTINCT name,phoneFROM Persons   #WHERE 找出地域为北京的用户">
   
     <link rel="alternative" href="/atom.xml" title="虚妄之城" type="application/atom+xml">
   
@@ -167,7 +167,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      常用SQL语句及函数
+      SQL常用语句及函数(MY SQL)
     </h1>
   
 
@@ -185,15 +185,110 @@
 <li>表1：Persons</li>
 <li>表2：Behaviors</li>
 </ul>
-<p>#查询<br>SELECT * FROM Persons</p>
-<p>#从Persons表里查询姓名和电话<br>SELECT name,phone<br>FROM Persons </p>
-<p>#返回唯一不同的值<br>SELECT DISTINCT name,phone<br>FROM Persons </p>
-<p>#找出地域为北京的用户姓名和电话<br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’</p>
+<h3 id="select"><a href="#select" class="headerlink" title="select"></a>select</h3><p>#SELECT 查询</p>
+<blockquote>
+<p>SELECT * FROM Persons</p>
+</blockquote>
+<p>#从Persons表里查询姓名和电话</p>
+<blockquote>
+<p>SELECT name,phone<br>FROM Persons </p>
+</blockquote>
+<p>#DISTINCT 返回唯一不同的值</p>
+<blockquote>
+<p>SELECT DISTINCT name,phone<br>FROM Persons </p>
+</blockquote>
+<p>#WHERE 找出地域为北京的用户姓名和电话</p>
+<blockquote>
+<p>SELECT name,phone FROM Persons<br>WHERE city =’beijing’</p>
+</blockquote>
 <a id="more"></a> 
-<p>#找出来源是微信且（或）地域是北京的用户姓名和电话<br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’ and（/or） source = ‘wechat’</p>
-<p>#找出北京地区用户，按公司字母(和名字)排序<br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company (,name) </p>
-<p>#找出北京地区用户，按公司字母顺序和名字逆序排序<br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company ASC (,name DESC) </p>
+<p>#AND/OR 找出来源是微信且（或）地域是北京的用户姓名和电话</p>
+<blockquote>
+<p>SELECT name,phone FROM Persons<br>WHERE city =’beijing’ and（/or） source = ‘wechat’</p>
+</blockquote>
+<p>#ORDER BY 找出北京地区用户，按公司字母(和名字)排序</p>
+<blockquote>
+<p>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company (,name) </p>
+</blockquote>
+<p>#DESC/ASC 找出北京地区用户，按公司字母顺序和名字逆序排序</p>
+<blockquote>
+<p>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company ASC (,name DESC)</p>
+</blockquote>
+<p>#找出前n名</p>
+<blockquote>
+<p>SELECT city(列名)<br>FROM Persons<br>LIMIT number</p>
+</blockquote>
+<p>#找出名字带有‘二’的人</p>
+<blockquote>
+<p>SELECT * FROM Persons<br>WHERE city = ‘%二%’</p>
+</blockquote>
+<p>#找出在上海和北京的人，用in</p>
+<blockquote>
+<p>SELECT * FROM Persons<br>WHERE city in (‘beijing’,’shanghai’)</p>
+</blockquote>
+<p>#值在什么之间</p>
+<blockquote>
+<p>SELECT * FROM Persons<br>WHERE birth<br>BETWEEN ‘2017/02/03’ AND ‘2018/04/03’</p>
+</blockquote>
+<p>两表间查询</p>
+<p>#对应相同的名字</p>
+<ul>
+<li><p>方式1</p>
+<blockquote>
+<p>SELECT * FROM Persons, Behaviors<br>WHERE Persons.name = Behaviors.name</p>
+</blockquote>
+</li>
+<li><p>方式2</p>
+<h1 id="JOIN"><a href="#JOIN" class="headerlink" title="JOIN"></a>JOIN</h1><blockquote>
+<p>SELECT * FROM Persons<br>INNER JOIN Behaviors<br>ON Persons.name = Behaviors.name</p>
+</blockquote>
+</li>
+</ul>
+<p>#Left Join 想象左对齐，心里只有左表，不管它怎样，都保留它</p>
+<blockquote>
+<p>SELECT * FROM Persons<br>LEFT JOIN Behaviors<br>ON Persons.name = Behaviors.name</p>
+</blockquote>
+<p>#RIGHT JOIN 全为右右右</p>
+<p>#FULL JOIN 全部都要，左表右表全在一块儿</p>
+<p>#UNION 汇总：两个表表头一样，合并在一起,只取唯一值</p>
+<blockquote>
+<p>SELECT name FROM Persons1<br>UNION<br>SELECT name FROM Persons2</p>
+</blockquote>
+<p>#UNION ALL 汇总所有值（用法如上）</p>
+<p>#SELECT INTO 从前表选取数据插入后表中</p>
+<blockquote>
+<p>SELECT */name(列名)<br>INTO new_Persons (IN Externaldb.mdb)<br>FROM old_Persons</p>
+</blockquote>
+<p>#GROUP BY 感觉某字段，分类统计</p>
+<hr>
+<p>#INSERT 插入新的行</p>
+<blockquote>
 <p>INSERT INTO table_name(列1， 列2)<br>VALUES (VALUE 1, VALUE 2, VALUE 3)</p>
+</blockquote>
+<p>#插入指定行的值，在value里加入限定的值</p>
+<p>#UPDATE 更新值</p>
+<blockquote>
+<p>UPDATE Persons<br>SET city（列值）= ‘beijing’<br>WHERE phone=’12122222222’</p>
+</blockquote>
+<p>#删除表(表的行）</p>
+<blockquote>
+<p>DELETE FROM Persons<br>(WEHRE city=’beijing’)</p>
+</blockquote>
+<p>#AS 指定命名</p>
+<hr>
+<p>#CREATE DATABASE 创建数据库<br>CREATE DATABASE new_db</p>
+<p>#CREATE TABLE<br>CREATE TABLE new_Persons{<br>name varchar,<br>city varchar,<br>…<br>}</p>
+<p>#字段约束</p>
+<ul>
+<li><p>NOT NULL 不为空<br>ALERT TABLE Persons<br>DROP INDEX PersonID</p>
+</li>
+<li><p>UNIQUE 唯一标识</p>
+</li>
+<li>PRIMARY KEY 主键</li>
+<li>FOREIGN KEY</li>
+<li>CHECK</li>
+<li>DEFAULT</li>
+</ul>
 
       
 
@@ -346,7 +441,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#select"><span class="toc-number">1.</span> <span class="toc-text">select</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JOIN"><span class="toc-number"></span> <span class="toc-text">JOIN</span></a>
                     </div>
                 </span>
             </div>
@@ -524,11 +619,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">soft</a>
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+                <a href="javascript:void(0)" class="js-tag color5">soft</a>
               </li>
             
             <div class="clearfix"></div>
