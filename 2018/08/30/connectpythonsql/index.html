@@ -15,7 +15,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/08/30/connectpythonsql/index.html">
 <meta property="og:site_name" content="虚妄之城">
 <meta property="og:description" content="安装“MySQL Connector“pip install mysql-connector 连接数据库123456789import mysql.connectormydb = mysql.connector.connect(    host = &amp;quot;localhost&amp;quot;,    user = &amp;quot;username&amp;quot;,    passwd = &amp;quot;pa">
-<meta property="og:updated_time" content="2018-09-02T08:03:30.254Z">
+<meta property="og:updated_time" content="2018-09-02T08:09:44.756Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="连接Python和MySQL">
 <meta name="twitter:description" content="安装“MySQL Connector“pip install mysql-connector 连接数据库123456789import mysql.connectormydb = mysql.connector.connect(    host = &amp;quot;localhost&amp;quot;,    user = &amp;quot;username&amp;quot;,    passwd = &amp;quot;pa">
@@ -182,7 +182,8 @@
       
         <h3 id="安装“MySQL-Connector“"><a href="#安装“MySQL-Connector“" class="headerlink" title="安装“MySQL Connector“"></a>安装“MySQL Connector“</h3><p><code>pip install mysql-connector</code></p>
 <h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import mysql.connector</span><br><span class="line"></span><br><span class="line">mydb = mysql.connector.connect(</span><br><span class="line">    host = &quot;localhost&quot;,</span><br><span class="line">    user = &quot;username&quot;,</span><br><span class="line">    passwd = &quot;password&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(mydb)</span><br></pre></td></tr></table></figure>
-<h3 id="创建一个database"><a href="#创建一个database" class="headerlink" title="创建一个database"></a>创建一个database</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import mysql.connector</span><br><span class="line"></span><br><span class="line">mydb = mysql.connector.connect(</span><br><span class="line">    host = &quot;localhost&quot;,</span><br><span class="line">    user = &quot;username&quot;,</span><br><span class="line">    passwd = &quot;password&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">&lt;!--more--&gt;</span><br><span class="line"></span><br><span class="line">mycursor = mydb.cursor()</span><br><span class="line"></span><br><span class="line">mycursor.execute(&quot;CREATE DATABASE mydatabase&quot;)</span><br><span class="line"></span><br><span class="line">#check</span><br><span class="line"></span><br><span class="line">for x in mycursor:</span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
+<h3 id="创建一个database"><a href="#创建一个database" class="headerlink" title="创建一个database"></a>创建一个database</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import mysql.connector</span><br><span class="line"></span><br><span class="line">mydb = mysql.connector.connect(</span><br><span class="line">    host = &quot;localhost&quot;,</span><br><span class="line">    user = &quot;username&quot;,</span><br><span class="line">    passwd = &quot;password&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">mycursor = mydb.cursor()</span><br><span class="line"></span><br><span class="line">mycursor.execute(&quot;CREATE DATABASE mydatabase&quot;)</span><br><span class="line"></span><br><span class="line">#check</span><br><span class="line"></span><br><span class="line">for x in mycursor:</span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <p>#连接时access the database </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import mysql.connector.connect(</span><br><span class="line">    host = &quot;localhost&quot;,</span><br><span class="line">    user = &quot;username&quot;,</span><br><span class="line">    passwd = &quot;password&quot;,</span><br><span class="line">    database = &quot;mydatabase&quot;</span><br><span class="line">    )</span><br></pre></td></tr></table></figure>
 <h3 id="创建一个table"><a href="#创建一个table" class="headerlink" title="创建一个table"></a>创建一个table</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">import mysql.connector</span><br><span class="line"></span><br><span class="line">mydb = mysql.connector.connect(</span><br><span class="line">    host = &quot;localhost&quot;,</span><br><span class="line">    user = &quot;username&quot;,</span><br><span class="line">    passwd = &quot;password&quot;,</span><br><span class="line">    database = &quot;mydatabase&quot;</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">mycursor = mydb.cursor()</span><br><span class="line"></span><br><span class="line">mycursor.execte(&quot;CREATE TABLE persons(</span><br><span class="line">name varchar(225),</span><br><span class="line">age varchar(255)</span><br><span class="line">)&quot;)</span><br></pre></td></tr></table></figure>
@@ -501,19 +502,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">soft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
