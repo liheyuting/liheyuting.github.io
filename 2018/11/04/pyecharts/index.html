@@ -6,24 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Python CGI准备：IIS 配置 | 虚妄之城</title>
+  <title>python数据可视化：pyecharts | 虚妄之城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="什么是CGI CGI 目前由NCSA维护，NCSA定义CGI如下： CGI(Common Gateway Interface),通用网关接口,它是一段程序,运行在服务器上如：HTTP服务器，提供同客户端HTML页面的接口。 大部分教程接下来会详细讲明CGI是怎么工作，怎么实现的。 但是对于很多如我从头开始，小白要直接理">
+  <meta name="description" content="预想是学习通过python开发一个数据图表的平台，用API获取数据，数据可视化。 通过搜索等，发现echarts可以实现数据可视化，并且还有针对python的第三方库。以下记录过程 安装pyechartspip install pyecharts不知道为什么我总是不成功，最终还是在下载了pyecharts库文件才安装成">
 <meta name="keywords" content="learn,python">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python CGI准备：IIS 配置">
-<meta property="og:url" content="http://yoursite.com/2018/11/10/IISDeploy/index.html">
+<meta property="og:title" content="python数据可视化：pyecharts">
+<meta property="og:url" content="http://yoursite.com/2018/11/04/pyecharts/index.html">
 <meta property="og:site_name" content="虚妄之城">
-<meta property="og:description" content="什么是CGI CGI 目前由NCSA维护，NCSA定义CGI如下： CGI(Common Gateway Interface),通用网关接口,它是一段程序,运行在服务器上如：HTTP服务器，提供同客户端HTML页面的接口。 大部分教程接下来会详细讲明CGI是怎么工作，怎么实现的。 但是对于很多如我从头开始，小白要直接理解使用是有一定的困难的。这里涉及到一个如何实现CGI的环境配置。这里把过程记录下">
-<meta property="og:image" content="https://img-blog.csdn.net/20181022133300750?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:image" content="https://img-blog.csdn.net/20181022133314366?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:image" content="https://img-blog.csdn.net/20181022133325143?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:image" content="https://img-blog.csdn.net/20181022133335516?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
-<meta property="og:updated_time" content="2018-11-10T05:01:25.510Z">
+<meta property="og:description" content="预想是学习通过python开发一个数据图表的平台，用API获取数据，数据可视化。 通过搜索等，发现echarts可以实现数据可视化，并且还有针对python的第三方库。以下记录过程 安装pyechartspip install pyecharts不知道为什么我总是不成功，最终还是在下载了pyecharts库文件才安装成功。  安装了wheelpip install wheel  下载安装pyech">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20181104174725420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw,size_16,color_FFFFFF,t_70">
+<meta property="og:updated_time" content="2018-11-10T06:54:44.429Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python CGI准备：IIS 配置">
-<meta name="twitter:description" content="什么是CGI CGI 目前由NCSA维护，NCSA定义CGI如下： CGI(Common Gateway Interface),通用网关接口,它是一段程序,运行在服务器上如：HTTP服务器，提供同客户端HTML页面的接口。 大部分教程接下来会详细讲明CGI是怎么工作，怎么实现的。 但是对于很多如我从头开始，小白要直接理解使用是有一定的困难的。这里涉及到一个如何实现CGI的环境配置。这里把过程记录下">
-<meta name="twitter:image" content="https://img-blog.csdn.net/20181022133300750?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta name="twitter:title" content="python数据可视化：pyecharts">
+<meta name="twitter:description" content="预想是学习通过python开发一个数据图表的平台，用API获取数据，数据可视化。 通过搜索等，发现echarts可以实现数据可视化，并且还有针对python的第三方库。以下记录过程 安装pyechartspip install pyecharts不知道为什么我总是不成功，最终还是在下载了pyecharts库文件才安装成功。  安装了wheelpip install wheel  下载安装pyech">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20181104174725420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw,size_16,color_FFFFFF,t_70">
   
     <link rel="alternative" href="/atom.xml" title="虚妄之城" type="application/atom+xml">
   
@@ -165,51 +162,69 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="test-IISDeploy" class="article article-type-test " itemscope itemprop="blogPost">
+            <article id="post-pyecharts" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Python CGI准备：IIS 配置
+      python数据可视化：pyecharts
     </h1>
   
 
         
-        <a href="/2018/11/10/IISDeploy/" class="archive-article-date">
-  	<time datetime="2018-11-10T04:59:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-10</time>
+        <a href="/2018/11/04/pyecharts/" class="archive-article-date">
+  	<time datetime="2018-11-04T04:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong>什么是CGI</strong></p>
-<p>CGI 目前由NCSA维护，NCSA定义CGI如下：</p>
-<p>CGI(Common Gateway Interface),通用网关接口,它是一段程序,运行在服务器上如：HTTP服务器，提供同客户端HTML页面的接口。</p>
-<p>大部分教程接下来会详细讲明CGI是怎么工作，怎么实现的。</p>
-<p>但是对于很多如我从头开始，小白要直接理解使用是有一定的困难的。这里涉及到一个如何实现CGI的环境配置。这里把过程记录下来，如果有遇到和我同样问题的同学，也可少走点弯路。</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p><strong>1. 安装启动IIS</strong></p>
-<p>控制面板-程序-程序与功能-打开或关闭Windows功能-Internet information services（按所需功能）-确定<br><img src="https://img-blog.csdn.net/20181022133300750?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"><br><a id="more"></a><br><strong>2. 创建快捷方式</strong></p>
-<p>安装完了，到哪儿去找到IIS呢？</p>
-<p>控制面板-系统与安全-管理工具</p>
-<p>这里就会出现 Internetinformation services(IIS)管理器，邮件发送桌面快捷方式就可以了<br><img src="https://img-blog.csdn.net/20181022133314366?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
-<p><strong>3. 配置python环境</strong></p>
-<p>打开IIS</p>
-<ul>
-<li>配置ISAPI和CGI限制</li>
+        <p>预想是学习通过python开发一个数据图表的平台，用API获取数据，数据可视化。</p>
+<p>通过搜索等，发现echarts可以实现数据可视化，并且还有针对python的第三方库。以下记录过程</p>
+<h4 id="安装pyecharts"><a href="#安装pyecharts" class="headerlink" title="安装pyecharts"></a>安装pyecharts</h4><p><code>pip install pyecharts</code><br>不知道为什么我总是不成功，最终还是在下载了pyecharts库文件才安装成功。</p>
+<ol>
+<li><p>安装了wheel<br><code>pip install wheel</code></p>
+</li>
+<li><p>下载安装pyecharts<br>下载了<a href="https://files.pythonhosted.org/packages/7e/aa/63f80d0d2d2ee43cfe9f30822eb751ba67359aa54507a05b740ed5666416/pyecharts-0.1.9.4-py2.py3-none-any.whl" target="_blank" rel="noopener">pyecharts-0.1.9.4-py2.py3-none-any.whl</a></p>
+</li>
+</ol>
+<h4 id="图表类型"><a href="#图表类型" class="headerlink" title="图表类型"></a>图表类型</h4><ul>
+<li>Bar（柱状图/条形图） </li>
+<li>Bar3D（3D 柱状图）<br>&lt; !–more–&gt;</li>
+<li>Boxplot（箱形图） </li>
+<li>EffectScatter（带有涟漪特效动画的散点图） </li>
+<li>Funnel（漏斗图） </li>
+<li>Gauge（仪表盘） </li>
+<li>Geo（地理坐标系） </li>
+<li>Graph（关系图） </li>
+<li>HeatMap（热力图） </li>
+<li>Kline（K线图） </li>
+<li>Line（折线/面积图） </li>
+<li>Line3D（3D 折线图） </li>
+<li>Liquid（水球图） </li>
+<li>Map（地图） </li>
+<li>Parallel（平行坐标系） </li>
+<li>Pie（饼图） </li>
+<li>Polar（极坐标系） </li>
+<li>Radar（雷达图） </li>
+<li>Sankey（桑基图） </li>
+<li>Scatter（散点图） </li>
+<li>Scatter3D（3D 散点图） </li>
+<li>ThemeRiver（主题河流图） </li>
+<li>WordCloud（词云图）</li>
 </ul>
-<p>点击右上角添加</p>
-<p><img src="https://img-blog.csdn.net/20181022133325143?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
-<ul>
-<li>处理程序映射</li>
-</ul>
-<p>右上角添加模块映射</p>
-<p>（这里已经配置完了，模块选择CgiModule就行）<br><img src="https://img-blog.csdn.net/20181022133335516?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
-<p>接下来就可以创建一个网站测试一下了。</p>
-<p>然而未真正实操CGI，这个权作为记录吧。</p>
-<p>有时候会心慌，时常恐慌于自己的愚钝和怠懒，在高速公路上的停滞倒退，导致最终的车毁人亡。</p>
+<h4 id="第一个图表"><a href="#第一个图表" class="headerlink" title="第一个图表"></a>第一个图表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts import Line</span><br><span class="line"></span><br><span class="line">attr=[&quot;衬衫&quot;,&quot;羊毛衫&quot;,&quot;雪纺衫&quot;,&quot;裤子&quot;,&quot;高跟鞋&quot;,&quot;袜子&quot;]</span><br><span class="line">v1=[5,20,36,10,75,90]</span><br><span class="line">v2=[10,25,8,60,20,80]</span><br><span class="line">bar=Line(&quot;各商家产品销售情况&quot;)</span><br><span class="line">bar.add(&quot;商家A&quot;,attr,v1,is_stack=True)</span><br><span class="line">bar.add(&quot;商家B&quot;,attr,v2,is_stack=True)</span><br><span class="line">bar.show_config()</span><br><span class="line">bar.render()</span><br></pre></td></tr></table></figure>
+<p><img src="https://img-blog.csdnimg.cn/20181104174725420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>bar = Bar(“主标题”，”副标题”)<br>bar.add（） 调用add()函数添加图表的数据和设置各种配置项<br>bar.show_config() 打印输出图表的所有配置项<br>bar.render() 生成render.html文件，也可以设置路径和文件名<br>bar.use_theme(‘dark’) 更改主体色系</p>
+<h4 id="绘制图表过程"><a href="#绘制图表过程" class="headerlink" title="绘制图表过程"></a>绘制图表过程</h4><ol>
+<li>chart_name = Type() 初始化具体类型图表</li>
+<li>add() 添加数据及配置项</li>
+<li>render() 生成.html文件</li>
+</ol>
+<p><a href="http://pyecharts.org/#/zh-cn/prepare" target="_blank" rel="noopener">参考网站</a></p>
 
       
 
@@ -314,7 +329,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/10/IISDeploy/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/11/04/pyecharts/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -328,18 +343,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/11/10/gitlist/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          git 清单
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/11/10/pyecharts/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">python数据可视化：pyecharts</div>
+    <a href="/2018/10/28/20181028/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">胡思乱想又怎样</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -366,7 +372,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#环境配置"><span class="toc-number">1.</span> <span class="toc-text">环境配置</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装pyecharts"><span class="toc-number">1.</span> <span class="toc-text">安装pyecharts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#图表类型"><span class="toc-number">2.</span> <span class="toc-text">图表类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#第一个图表"><span class="toc-number">3.</span> <span class="toc-text">第一个图表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#绘制图表过程"><span class="toc-number">4.</span> <span class="toc-text">绘制图表过程</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -399,7 +405,7 @@ if(true){
     repo: 'liheyuting.github.io',
     owner: 'liheyuting',
     admin: ['liheyuting'],
-    id: 'Sat Nov 10 2018 12:59:28 GMT+0800',
+    id: 'Sun Nov 04 2018 12:54:00 GMT+0800',
     distractionFreeMode: 'true'
 })
 gitalk.render('gitalk-container') 
@@ -512,7 +518,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,7 +526,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">soft</a>
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,11 +534,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
+                <a href="javascript:void(0)" class="js-tag color5">soft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -540,11 +546,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+                <a href="javascript:void(0)" class="js-tag color4">VBS</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VBS</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -553,10 +563,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">other</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
