@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>gitlist | 虚妄之城</title>
+  <title>git 清单 | 虚妄之城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="gitlist">
+  <meta name="description" content="Git 配置git config工具专门用来配置或读取相应的工作环境变量 git config –global user.name “dora”git config –global user.email xxx@163.com –global所有项目会默认使用这个配置信息 在某个特定文件中使用其他的账户，去掉–glob">
+<meta name="keywords" content="learn,git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 清单">
 <meta property="og:url" content="http://yoursite.com/2018/11/10/gitlist/index.html">
 <meta property="og:site_name" content="虚妄之城">
-<meta property="og:updated_time" content="2018-11-10T05:02:31.806Z">
+<meta property="og:description" content="Git 配置git config工具专门用来配置或读取相应的工作环境变量 git config –global user.name “dora”git config –global user.email xxx@163.com –global所有项目会默认使用这个配置信息 在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里 文本编辑">
+<meta property="og:updated_time" content="2018-11-10T05:51:05.482Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="gitlist">
+<meta name="twitter:title" content="git 清单">
+<meta name="twitter:description" content="Git 配置git config工具专门用来配置或读取相应的工作环境变量 git config –global user.name “dora”git config –global user.email xxx@163.com –global所有项目会默认使用这个配置信息 在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里 文本编辑">
   
     <link rel="alternative" href="/atom.xml" title="虚妄之城" type="application/atom+xml">
   
@@ -163,7 +167,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      gitlist
+      git 清单
     </h1>
   
 
@@ -176,7 +180,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h4 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h4><p>git config工具专门用来配置或读取相应的工作环境变量</p>
+<p>git config –global user.name “dora”<br>git config –global user.email xxx@163.com</p>
+<p>–global所有项目会默认使用这个配置信息</p>
+<p>在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里</p>
+<p><strong>文本编辑器</strong><br>默认的是Vi或者Vim，重新设置：<br>git config –global core.editor sublime</p>
+<p><strong>差异分析工具</strong><br><a id="more"></a></p>
+<h4 id="Git创建仓库"><a href="#Git创建仓库" class="headerlink" title="Git创建仓库"></a>Git创建仓库</h4><p><strong>git 创建仓库</strong></p>
+<p>#使用当前目录作为Git仓库，使它初始化<br>git init</p>
+<p>#使用指定目录作为仓库<br>git init newrepo</p>
+<p>当前目录会出现一个名叫.git的目录。<br>如果当前目录下有几个文件需要纳入版本控制，需要先用git add命令告诉git开始对这些文件进行跟踪，然后提交。</p>
+<p>#Q 需要后期往前再看一下<br>git add *.c<br>git add README #类似增加一个说明文档<br>git commit -m ‘initial project version’</p>
+<p><strong>从现有仓库克隆</strong><br>git clone [url] xxxx</p>
+<p>#xxx 用来指定新名字</p>
+<h4 id="git-基本操作"><a href="#git-基本操作" class="headerlink" title="git 基本操作"></a>git 基本操作</h4><p>git init #创建新仓库<br>git clone [url] #拷贝已存在的仓库到本地<br>git add #将文件添加到缓存<br>git status #查看状态<br>git diff #查看执行git status结果的详细信息</p>
+<ul>
+<li>git diff #尚未缓存</li>
+<li>git diff –cached #查看已缓存的改动</li>
+<li>git diff HEAD #查看已缓存的与未缓存的所有改动</li>
+<li>git diff –stat #显示摘要<br>#git statue 显示改动，git diff 显示每行具体改动<br>git commit #记录缓存区的快照<br>#git add 写入缓存，git commit提交到云上<br>git commit -m #message 写写更新描述<br>git commit -a #一键推送到云上<br>git commit -am<br>git reset HEAD #取消已缓存的内容<br>git rm #将文件从缓存区中移除<br>git rm –cached #工作目录中保留</li>
+</ul>
+<h4 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h4><p>git branch (branch name) #创建分支<br>git checkout (branch name) #切换分支<br>git merge #合并分支内容<br>git checkout -b (branchname) 创建新分支并切换<br>git branch -d (branchname) #删除分支</p>
+<h4 id="git查看提交历史"><a href="#git查看提交历史" class="headerlink" title="git查看提交历史"></a>git查看提交历史</h4><p>git log #查看提交历史<br>git log –oneline #简洁版本<br>git –graph #查看历史提交中的分支合并<br>git –reverse #逆向显示所有日志<br>git log –author #查找某人的爪印</p>
+<h4 id="git标签"><a href="#git标签" class="headerlink" title="git标签"></a>git标签</h4><p>git tag -a xxxx  #带注释的标签<br>git log –decorate #查看打过标签的内容<br>git tag #查看所有标签</p>
+<h4 id="git-远程仓库"><a href="#git-远程仓库" class="headerlink" title="git 远程仓库"></a>git 远程仓库</h4><p>暂时用不上，留空</p>
+<h4 id="git-服务器搭建"><a href="#git-服务器搭建" class="headerlink" title="git 服务器搭建"></a>git 服务器搭建</h4><p>暂时用不上，留空</p>
+<h3 id="git-pycharm-操作过程"><a href="#git-pycharm-操作过程" class="headerlink" title="git + pycharm 操作过程"></a>git + pycharm 操作过程</h3><ul>
+<li>version control （设置界面中）</li>
+<li>导入版本控制台，点击import into CVS</li>
+<li>接着使用过程即可</li>
+</ul>
+<ol>
+<li>add</li>
+<li>commit</li>
+<li>push<br>第一次：git push –set -upsteam origin master<br>以后： git push origin master</li>
+</ol>
+
       
 
       
@@ -215,6 +254,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">learn</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -308,7 +362,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Git-配置"><span class="toc-number">1.</span> <span class="toc-text">Git 配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Git创建仓库"><span class="toc-number">2.</span> <span class="toc-text">Git创建仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-基本操作"><span class="toc-number">3.</span> <span class="toc-text">git 基本操作</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#分支管理"><span class="toc-number">4.</span> <span class="toc-text">分支管理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git查看提交历史"><span class="toc-number">5.</span> <span class="toc-text">git查看提交历史</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git标签"><span class="toc-number">6.</span> <span class="toc-text">git标签</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-远程仓库"><span class="toc-number">7.</span> <span class="toc-text">git 远程仓库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#git-服务器搭建"><span class="toc-number">8.</span> <span class="toc-text">git 服务器搭建</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#git-pycharm-操作过程"><span class="toc-number"></span> <span class="toc-text">git + pycharm 操作过程</span></a>
                     </div>
                 </span>
             </div>
@@ -462,10 +516,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">soft</a>
               </li>
              
@@ -474,11 +524,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -486,7 +536,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">VBS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">read</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,7 +552,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">read</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
