@@ -7,3 +7,5 @@ p.article-more-link > a.article-more-a {
 a.article-more-a {
   display: none;
 }
+
+#feedAv { margin-top: -250px!important; transform: scale(0)!important; z-index: -999!important; } #pop_ad { margin-top: -250px!important; transform: scale(0)!important; z-index: -999!important; }
