@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-12-23T11:58:34.480Z</updated>
+  <updated>2019-01-23T15:45:33.919Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,9 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo blog 更新 -- 增加RSS功能+更换百度统计</title>
+    <link href="http://yoursite.com/2019/01/23/Hexo_190123/"/>
+    <id>http://yoursite.com/2019/01/23/Hexo_190123/</id>
+    <published>2019-01-22T16:00:00.000Z</published>
+    <updated>2019-01-23T15:45:33.919Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="增加RSS功能"><a href="#增加RSS功能" class="headerlink" title="增加RSS功能"></a>增加RSS功能</h3><p>参考<a href="https://blog.csdn.net/qq_31673689/article/details/78288786" target="_blank" rel="noopener">Mi Chong</a></p><ul><li><p>安装RSS插件<br>注意一定要安装到blog的根目录<br><code>npm i hexo-generator-feed</code></p></li><li><p>在你的项目的‘_config.yml‘配置文件下找到Extensions添加如下内容：</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Extensions  #插件和主题</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">#RSS订阅</span><br><span class="line">plugins: hexo-generater-feed</span><br></pre></td></tr></table></figure><ul><li><p>在主题配置文件里，在rss位置，添加‘/atom.xml‘</p></li><li><p>刷新页面</p></li></ul><h3 id="更换到百度统计"><a href="#更换到百度统计" class="headerlink" title="更换到百度统计"></a>更换到百度统计</h3><ul><li>注册一个<a href="http://tongji.baidu.com" target="_blank" rel="noopener">百度统计</a>账号<ul><li>网站域名：用博客首页链接</li><li>网站首页：用博客首页链接</li></ul></li><li>hexo\themes\yilia\layout_partial\baidu_tongji.ejs中修改代码</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.baidu_tongji)&#123; %&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">#你的百度统计代码</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure><ul><li>在hexo\themes\modernist\layout_partial\head.ejs文件中，在前增加<br><code>&lt;%- partial(&#39;baidu_tongji&#39;) %&gt;</code></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;增加RSS功能&quot;&gt;&lt;a href=&quot;#增加RSS功能&quot; class=&quot;headerlink&quot; title=&quot;增加RSS功能&quot;&gt;&lt;/a&gt;增加RSS功能&lt;/h3&gt;&lt;p&gt;参考&lt;a href=&quot;https://blog.csdn.net/qq_31673689/artic
+      
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+    
+      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+    
+  </entry>
+  
+  <entry>
     <title>杂思</title>
-    <link href="http://yoursite.com/2018/12/23/daily1203/"/>
-    <id>http://yoursite.com/2018/12/23/daily1203/</id>
+    <link href="http://yoursite.com/2018/12/23/daily1228/"/>
+    <id>http://yoursite.com/2018/12/23/daily1228/</id>
     <published>2018-12-22T16:00:00.000Z</published>
     <updated>2018-12-23T11:58:34.480Z</updated>
     
@@ -43,8 +68,8 @@
   
   <entry>
     <title>杂思</title>
-    <link href="http://yoursite.com/2018/12/23/daily1228/"/>
-    <id>http://yoursite.com/2018/12/23/daily1228/</id>
+    <link href="http://yoursite.com/2018/12/23/daily1203/"/>
+    <id>http://yoursite.com/2018/12/23/daily1203/</id>
     <published>2018-12-22T16:00:00.000Z</published>
     <updated>2018-12-23T11:58:34.480Z</updated>
     
@@ -522,33 +547,6 @@
       <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
     
       <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>那个沉默着送你回家却不告诉你的男生</title>
-    <link href="http://yoursite.com/2018/03/16/thatboy/"/>
-    <id>http://yoursite.com/2018/03/16/thatboy/</id>
-    <published>2018-03-15T16:00:00.000Z</published>
-    <updated>2018-11-24T13:27:35.933Z</updated>
-    
-    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=28381611&auto=1&height=66" width="330" height="86"></iframe><p>Z小姐个子很高，一米七，走起路来大开大合，很是潇洒，她的笑声也是。</p><p>在我说了”不过单身二十三年而已”，上铺的她接到”我也不过二十四年而已”，然后两人相视大笑。谈到单身这个问题，她忽然说起了一个几乎伴随着她整个学生生涯的男孩。</p><p>那还是初中的时候，Z小姐家还在新疆，成绩很不错，副班长。似乎念书的时候，一个成绩好，长相清秀的女孩很容易受男孩子的喜欢，接受女孩们的敌视。其中包括一个一米九的高个男孩J.</p><p>J是个很沉默的人，坐在最后一排的窗户旁边，守护着窗外的风景，聪明却不努力。</p><p>爱情最初是什么的模样，谁也不知道。就好像，众人起哄，”你这么重，只有J带的动你”，自行车后座上飞扬起来的头发。田埂上，拾棉花，男孩沉默跑过来背起沉沉的蛇皮袋。</p><p>或者是，我沉默的注视着你，即使也许你永远不知道。</p><a id="more"></a><p>“Z，偷偷和你说哦，那个不是xxx帮你洗的桌布，是J帮你洗的哦”仿似女孩间的絮絮秘密，散落空气里。</p><p>Z小姐轻轻的笑了笑，装做满不在意，空气中传来洗得干干净净的桌布传来的淡淡香味，嗯，香味。</p><p>真是个可爱的家伙。</p><p>“Z,你快回头看，他又在窗户那看着你了”</p><p>“哈哈，他又在偷看你哦”</p><p>…</p><p>圣诞节，</p><p>“嗯，给你”</p><p>“什么”</p><p>卡片上：你站在桥上看风景 看风景的人在楼上看你 明月装饰了你的窗子 你装饰了别人的梦</p><p>“写得真好，谁写得呀”Z小姐故作不知，俏皮问到。</p><p>“嗯…嗯…不是…是卞之琳”J挠挠头。</p><p>快乐的时光，像涮毛的刷子，飞逝的猝不及防。</p><p>中考三个月，男孩翻墙摔断右臂，班主任恨铁不成钢，狠狠的骂了那个聪慧却不上进的男孩。</p><p>只有三个月，摔断右臂。</p><p>女孩走到男孩桌前，一脸认真的说”我已经保送到十二中，你必须考上十二中或者xxx中，必须去市里”</p><p>“只能用左手写字，会很慢诶”</p><p>“他晚上写作业都写到很晚的，从来不这么拼的”</p><p>“后来呢”</p><p>“后来…”Z小姐微微侧了侧头，似乎陷在了回忆里，无法自拔。</p><p>“后来，我在十二中的重点班，他在平行班。就像以前和你说的，班里的同学是滚动着的，如果成绩太差，就会被踢出去。</p><p>那时候家里出了很大的变动，家人也都搬去了兰州。我每天每天睡不好觉，不想和任何人说话，活在了自己的世界里，也不是那个原来的我了”</p><p>再不是那个笑得肆意飞扬的女孩，再不是那个成绩很不错，自带光芒的女孩了，只剩下灰暗灰暗的背影，在街灯下拉长推短。</p><p>每天晚自习结束，J离女孩很远，默默的送女孩到宿舍楼下，然后回去。</p><p>Z明白身后沉默的陪伴，却一次也没有回过头。电话，关机；短信，不回，求约，拒绝。</p><p>“其实每天睡觉前，打开手机，看到他的搞笑留言，心里有一丝丝暖”</p><p>感谢有这样一个人，默默的陪伴着渺小的自己，说得再多让他难堪的话，也不会讨厌自己，好像冬日的暖流缓缓流淌过干涸的河床。</p><p>“他的消息断断续续传来，高二的时候他和一个女孩在一起了”</p><p>据说有次晚自习，女孩在画漫画，老师过来，男孩主动承认是自己的。</p><p>闻者不禁唏嘘，那又是另一段”我心目中的他会踏着七彩祥云来找我”的英雄故事了。</p><p>只是，片尾曲起，终究有人要离场，终究有人会失望。也许无关情爱，也许，是触手可及的陪伴。</p><p>那个沉默的男孩终于渐行渐远，在暗黑色的背景里渐渐隐去，在记忆的后视镜里蝴蝶飘远。</p><p>爱情，最初的时候，是怎样的模样。是不是有笑靥如花的脸庞，是不是有窗后静静凝视的目光，是不是，只是等待和陪伴。</p><p>徐志摩曾说，<br>“年少时，我们因谁因爱或是只因寂寞而同场起舞；<br>沧桑后，我们何因何故寂寞如初却宁愿形同陌路。”<br>“联系？很少了。”停顿片刻，Z略遗憾的语气像是穿越过十年的长廊，”我多想再回到那时候”</p><p>我多想再回到那时候。</p><p>也许我会回头看看窗后默默的凝视眼睛，</p><p>也许我会回头看看身后跟随的细长身影</p><p>也许我会在午夜辗转难眠时回你的信息，</p><p>也许…</p><p>也许我什么都不会做，只是想对那时候的你真诚说一句”谢谢你，谢谢你陪伴我这么久，谢谢你曾给我那种珍视的感觉”</p><p>其实我都知道，原谅我没有对你说。</p><hr><p>去年的时候Z小姐结婚了，婚纱照看起来很漂亮，笑容灿烂。犹记得当时把文字拿给她看时，她有些怔怔的摸样。</p><p>回忆最美好的地方，大概就是被时间氤氲开，像是久穿的毛衣，起了一粒粒的毛球，那些快乐飞驰的难受郁郁的都夹杂融合在了一起，反倒是熨帖而微暖。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=28381611&amp;auto=1&amp;height=66&quot; width=&quot;330&quot; height=&quot;86&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Z小姐个子很高，一米七，走起路来大开大合，很是潇洒，她的笑声也是。&lt;/p&gt;
-&lt;p&gt;在我说了”不过单身二十三年而已”，上铺的她接到”我也不过二十四年而已”，然后两人相视大笑。谈到单身这个问题，她忽然说起了一个几乎伴随着她整个学生生涯的男孩。&lt;/p&gt;
-&lt;p&gt;那还是初中的时候，Z小姐家还在新疆，成绩很不错，副班长。似乎念书的时候，一个成绩好，长相清秀的女孩很容易受男孩子的喜欢，接受女孩们的敌视。其中包括一个一米九的高个男孩J.&lt;/p&gt;
-&lt;p&gt;J是个很沉默的人，坐在最后一排的窗户旁边，守护着窗外的风景，聪明却不努力。&lt;/p&gt;
-&lt;p&gt;爱情最初是什么的模样，谁也不知道。就好像，众人起哄，”你这么重，只有J带的动你”，自行车后座上飞扬起来的头发。田埂上，拾棉花，男孩沉默跑过来背起沉沉的蛇皮袋。&lt;/p&gt;
-&lt;p&gt;或者是，我沉默的注视着你，即使也许你永远不知道。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="soft" scheme="http://yoursite.com/tags/soft/"/>
     
   </entry>
   
