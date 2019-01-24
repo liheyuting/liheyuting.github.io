@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-24T13:17:58.039Z</updated>
+  <updated>2019-01-24T13:54:37.833Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hexo blog 更新 -- 增加RSS功能+更换百度统计</title>
+    <title>Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</title>
     <link href="http://yoursite.com/2019/01/23/Hexo_190123/"/>
     <id>http://yoursite.com/2019/01/23/Hexo_190123/</id>
     <published>2019-01-22T16:00:00.000Z</published>
-    <updated>2019-01-24T13:17:58.039Z</updated>
+    <updated>2019-01-24T13:54:37.833Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="增加RSS功能"><a href="#增加RSS功能" class="headerlink" title="增加RSS功能"></a>增加RSS功能</h3><ul><li><p>安装RSS插件<br>注意一定要安装到blog的根目录<br><code>npm install --save hexo-generator-feed</code></p></li><li><p>在你的项目的‘_config.yml‘配置文件下找到Extensions添加如下内容：</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Extensions  #插件和主题</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">#RSS订阅</span><br><span class="line">plugins: hexo-generater-feed</span><br></pre></td></tr></table></figure><ul><li><p>在主题配置文件里，在rss位置，添加‘/atom.xml‘</p></li><li><p>刷新页面</p></li></ul><h3 id="更换到百度统计"><a href="#更换到百度统计" class="headerlink" title="更换到百度统计"></a>更换到百度统计</h3><ul><li>注册一个<a href="http://tongji.baidu.com" target="_blank" rel="noopener">百度统计</a>账号<ul><li>网站域名：用博客首页链接</li><li>网站首页：用博客首页链接</li></ul></li><li>hexo\themes\yilia\layout_partial\baidu_tongji.ejs中修改代码</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.baidu_tongji)&#123; %&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">#你的百度统计代码</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure><ul><li>在hexo\themes\modernist\layout_partial\head.ejs文件中，在前增加<br><code>&lt;%- partial(&#39;baidu_tongji&#39;) %&gt;</code></li></ul>]]></content>
+    <content type="html"><![CDATA[<h3 id="增加RSS功能"><a href="#增加RSS功能" class="headerlink" title="增加RSS功能"></a>增加RSS功能</h3><ul><li><p>安装RSS插件<br>注意一定要安装到blog的根目录<br><code>npm install --save hexo-generator-feed</code></p></li><li><p>在你的项目的‘_config.yml‘配置文件下找到Extensions添加如下内容：</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Extensions  #插件和主题</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">#RSS订阅</span><br><span class="line">plugins: hexo-generater-feed</span><br></pre></td></tr></table></figure><ul><li><p>在主题配置文件里，在rss位置，添加‘/atom.xml‘</p></li><li><p>刷新页面</p></li></ul><h3 id="更换到百度统计"><a href="#更换到百度统计" class="headerlink" title="更换到百度统计"></a>更换到百度统计</h3><ul><li>注册一个<a href="http://tongji.baidu.com" target="_blank" rel="noopener">百度统计</a>账号<ul><li>网站域名：用博客首页链接</li><li>网站首页：用博客首页链接</li></ul></li><li>hexo\themes\yilia\layout_partial\baidu-analytics.ejs中修改代码</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.baidu_tongji)&#123; %&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">#你的百度统计代码</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure><ul><li>在hexo\themes\yilia\layout_partial\head.ejs文件中，在前增加<br><code>&lt;%- partial(&#39;baidu-analytics&#39;) %&gt;</code></li></ul><h3 id="google-analytics-谷歌统计"><a href="#google-analytics-谷歌统计" class="headerlink" title="google analytics 谷歌统计"></a>google analytics 谷歌统计</h3><ul><li>注册一个<a href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener">google analytics账号</a></li><li>hexo\themes\yilia\layout_partial\google-analytics.ejs 修改代码</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#google里全局代码，直接copy</span><br></pre></td></tr></table></figure><ul><li>在hexo\themes\yilia\layout_partial\head.ejs文件中，在前增加<br><code>&lt;%- partial(&#39;google-analytics&#39;) %&gt;</code></li></ul>]]></content>
     
     <summary type="html">
     
@@ -36,16 +36,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
-    
       <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+    
+      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
     
   </entry>
   
   <entry>
     <title>杂思</title>
-    <link href="http://yoursite.com/2018/12/23/daily1203/"/>
-    <id>http://yoursite.com/2018/12/23/daily1203/</id>
+    <link href="http://yoursite.com/2018/12/23/daily1228/"/>
+    <id>http://yoursite.com/2018/12/23/daily1228/</id>
     <published>2018-12-22T16:00:00.000Z</published>
     <updated>2018-12-23T11:58:34.480Z</updated>
     
@@ -69,8 +69,8 @@
   
   <entry>
     <title>杂思</title>
-    <link href="http://yoursite.com/2018/12/23/daily1228/"/>
-    <id>http://yoursite.com/2018/12/23/daily1228/</id>
+    <link href="http://yoursite.com/2018/12/23/daily1203/"/>
+    <id>http://yoursite.com/2018/12/23/daily1203/</id>
     <published>2018-12-22T16:00:00.000Z</published>
     <updated>2018-12-23T11:58:34.480Z</updated>
     
@@ -267,9 +267,9 @@
     </summary>
     
     
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
-    
       <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+    
+      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
     
   </entry>
   
@@ -319,9 +319,9 @@
     
       <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
       <category term="sql" scheme="http://yoursite.com/tags/sql/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
@@ -415,9 +415,9 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
-    
       <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+    
+      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
     
   </entry>
   
@@ -520,9 +520,9 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
-    
       <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+    
+      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
     
   </entry>
   
