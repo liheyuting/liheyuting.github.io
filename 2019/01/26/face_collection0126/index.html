@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Mac 安装人脸识别face_recognition python包 | 虚妄之城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、安装实现 二、部署在云服务器上(Heroku,AWS)部署在Heroku或者AWS的云端服务器上是很明智的为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成Docker容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。 一、系统搭建1. 系">
-<meta name="keywords" content="learn,python,big data">
+  <meta name="description" content="一、安装face_recognition 二、完成功能开发 二、部署在云服务器上(Heroku,AWS)部署在Heroku或者AWS的云端服务器上是很明智的为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成Docker容器文件，你可以把它部署在所以支持Dock">
+<meta name="keywords" content="learn,python,big data,face_recognition">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Mac 安装人脸识别face_recognition python包">
 <meta property="og:url" content="http://yoursite.com/2019/01/26/face_collection0126/index.html">
 <meta property="og:site_name" content="虚妄之城">
-<meta property="og:description" content="一、安装实现 二、部署在云服务器上(Heroku,AWS)部署在Heroku或者AWS的云端服务器上是很明智的为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成Docker容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。 一、系统搭建1. 系统环境123- python 3.3+- mac- 已安装homebrew 2.">
-<meta property="og:updated_time" content="2019-01-28T14:45:23.285Z">
+<meta property="og:description" content="一、安装face_recognition 二、完成功能开发 二、部署在云服务器上(Heroku,AWS)部署在Heroku或者AWS的云端服务器上是很明智的为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成Docker容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。 此篇为安装篇 一、系统搭建1. 系统环境123- py">
+<meta property="og:updated_time" content="2019-01-28T15:07:16.703Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac 安装人脸识别face_recognition python包">
-<meta name="twitter:description" content="一、安装实现 二、部署在云服务器上(Heroku,AWS)部署在Heroku或者AWS的云端服务器上是很明智的为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成Docker容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。 一、系统搭建1. 系统环境123- python 3.3+- mac- 已安装homebrew 2.">
+<meta name="twitter:description" content="一、安装face_recognition 二、完成功能开发 二、部署在云服务器上(Heroku,AWS)部署在Heroku或者AWS的云端服务器上是很明智的为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成Docker容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。 此篇为安装篇 一、系统搭建1. 系统环境123- py">
   
   
     <link rel="icon" href="/favicon.png">
@@ -192,10 +192,13 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一、安装实现</p>
+        <p>一、安装face_recognition</p>
+<p>二、完成功能开发</p>
 <p>二、部署在云服务器上(Heroku,AWS)<br>部署在Heroku或者AWS的云端服务器上是很明智的<br>为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成<a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。</p>
+<p><em>此篇为安装篇</em></p>
 <h3 id="一、系统搭建"><a href="#一、系统搭建" class="headerlink" title="一、系统搭建"></a>一、系统搭建</h3><h4 id="1-系统环境"><a href="#1-系统环境" class="headerlink" title="1. 系统环境"></a>1. 系统环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- python 3.3+</span><br><span class="line">- mac</span><br><span class="line">- 已安装homebrew</span><br></pre></td></tr></table></figure>
 <h4 id="2-Dlib安装"><a href="#2-Dlib安装" class="headerlink" title="2. Dlib安装"></a>2. Dlib安装</h4><h5 id="dlib的依赖点击查看安装教程"><a href="#dlib的依赖点击查看安装教程" class="headerlink" title="dlib的依赖点击查看安装教程"></a>dlib的依赖<a href="">点击查看安装教程</a></h5><p>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。</p>
+<a id="more"></a>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure>
 <h5 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h5><p>点击查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p>
 <ul>
@@ -260,6 +263,10 @@ var _hmt = _hmt || [];
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">big data</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">face_recognition</a>
         		</li>
       		
 		</ul>
@@ -533,11 +540,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -562,6 +569,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">face_recognition</a>
               </li>
             
             <div class="clearfix"></div>

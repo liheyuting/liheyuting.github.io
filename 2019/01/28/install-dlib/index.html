@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>安装dlib | 虚妄之城</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="官方文档可查看How to install dlib from source on macOS or Ubuntu dlib的依赖 dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。12$ brew install openblas$ brew install opencv   安装出现">
+  <meta name="description" content="安装dlib官方文档，可查看How to install dlib from source on macOS or Ubuntu dlib的依赖 dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。12$ brew install openblas$ brew install opencv">
 <meta name="keywords" content="learn,python,big data">
 <meta property="og:type" content="article">
 <meta property="og:title" content="安装dlib">
 <meta property="og:url" content="http://yoursite.com/2019/01/28/install-dlib/index.html">
 <meta property="og:site_name" content="虚妄之城">
-<meta property="og:description" content="官方文档可查看How to install dlib from source on macOS or Ubuntu dlib的依赖 dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。12$ brew install openblas$ brew install opencv   安装出现：gcc安装失败（具体显示如问题）安装gcc  更新安装Xcode最新版本 安装">
-<meta property="og:updated_time" content="2019-01-28T14:45:25.270Z">
+<meta property="og:description" content="安装dlib官方文档，可查看How to install dlib from source on macOS or Ubuntu dlib的依赖 dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。12$ brew install openblas$ brew install opencv   安装出现：gcc安装失败（具体显示如问题），安装gcc  Mac的X11X">
+<meta property="og:updated_time" content="2019-01-28T15:03:17.438Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="安装dlib">
-<meta name="twitter:description" content="官方文档可查看How to install dlib from source on macOS or Ubuntu dlib的依赖 dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。12$ brew install openblas$ brew install opencv   安装出现：gcc安装失败（具体显示如问题）安装gcc  更新安装Xcode最新版本 安装">
+<meta name="twitter:description" content="安装dlib官方文档，可查看How to install dlib from source on macOS or Ubuntu dlib的依赖 dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。12$ brew install openblas$ brew install opencv   安装出现：gcc安装失败（具体显示如问题），安装gcc  Mac的X11X">
   
   
     <link rel="icon" href="/favicon.png">
@@ -192,25 +192,22 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h3><p>可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p>
-<h3 id="dlib的依赖"><a href="#dlib的依赖" class="headerlink" title="dlib的依赖"></a>dlib的依赖</h3><ol>
+        <h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p>
+<h3 id="dlib的依赖"><a href="#dlib的依赖" class="headerlink" title="dlib的依赖"></a>dlib的依赖</h3><ul>
 <li>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-<p>安装出现：gcc安装失败（具体显示如问题）<br><strong>安装gcc</strong></p>
-<ul>
-<li>更新安装Xcode最新版本</li>
-<li>安装Xcode CLT<br><code>xcode-select --install</code></li>
 </ul>
-<p><a href="">点击查看详情</a></p>
-<ol>
-<li>Mac的X11<br>X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。</li>
-</ol>
+<p>安装出现：gcc安装失败（具体显示如问题），<a href="https://liheyuting.github.io/2019/01/28/install-openblas:opencv:gcc/" target="_blank" rel="noopener">安装gcc</a></p>
+<ul>
+<li>Mac的X11<br>X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。<a id="more"></a>
+</li>
+</ul>
 <p>运行dlib需要X11，但Mac目前没有自带X11，需要重新下载安装，<a href="https://www.xquartz.org/" target="_blank" rel="noopener">下载地址</a>，下载后直接安装，默认安装目录为/opt/X11，需要在/usr/loca/opt目录下创建软连接，创建命令如下，创建后重启Mac。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/local/opt</span><br><span class="line">$ ln -s /opt/X11 X11</span><br></pre></td></tr></table></figure>
 <h4 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h4><p><code>brew install openblas</code>安装时显示如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Warning: Your Xcode (10.0) is outdated.</span><br><span class="line">Please update to Xcode 10.1 (or delete it).</span><br><span class="line">Xcode can be updated from the App Store.</span><br><span class="line"></span><br><span class="line">Warning: Building gcc from source:</span><br><span class="line">  The bottle needs the Xcode CLT to be installed.</span><br><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br><span class="line">Error: An exception occurred within a child process:</span><br><span class="line">  CompilerSelectionError: gcc cannot be built with any available compilers.</span><br><span class="line">Install GNU&apos;s GCC</span><br><span class="line">  brew install gcc</span><br></pre></td></tr></table></figure></p>
+<p> <strong>解决办法</strong>：安装或更新到最新版本的Xcode</p>
 <p> 重新安装Xcode后，重新安装gcc，显示：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> Warning: Building gcc from source:</span><br><span class="line">  The bottle needs the Xcode CLT to be installed.</span><br><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br><span class="line">Error: An exception occurred within a child process:</span><br><span class="line">  CompilerSelectionError: gcc cannot be built with any available compilers.</span><br><span class="line">Install GNU&apos;s GCC</span><br><span class="line">  brew install gcc</span><br></pre></td></tr></table></figure></p>
-<p>fail..</p>
+<p><strong>解决办法</strong>：需要安装Xcode CLT</p>
 <h3 id="参考地址"><a href="#参考地址" class="headerlink" title="参考地址"></a>参考地址</h3><ul>
 <li><a href="https://blog.csdn.net/Quincuntial/article/details/53572415" target="_blank" rel="noopener">Mac下的dlib安装</a> 作者：SnailTyan </li>
 </ul>
@@ -360,7 +357,7 @@ var _hmt = _hmt || [];
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#官方文档"><span class="toc-number">1.</span> <span class="toc-text">官方文档</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dlib的依赖"><span class="toc-number">2.</span> <span class="toc-text">dlib的依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#遇到的问题："><span class="toc-number">2.1.</span> <span class="toc-text">遇到的问题：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考地址"><span class="toc-number">3.</span> <span class="toc-text">参考地址</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装dlib"><span class="toc-number">1.</span> <span class="toc-text">安装dlib</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#dlib的依赖"><span class="toc-number">2.</span> <span class="toc-text">dlib的依赖</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#遇到的问题："><span class="toc-number">2.1.</span> <span class="toc-text">遇到的问题：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#参考地址"><span class="toc-number">3.</span> <span class="toc-text">参考地址</span></a></li></ol>
                     </div>
                 </span>
             </div>
@@ -526,11 +523,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,6 +552,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">other</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">face_recognition</a>
               </li>
             
             <div class="clearfix"></div>
