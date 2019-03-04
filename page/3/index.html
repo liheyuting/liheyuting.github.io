@@ -184,32 +184,35 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-search" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-first_blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/16/search/">“科学上网”攻略</a>
+      <a class="article-title" href="/2018/05/12/first_blog/">建立第一篇博客</a>
     </h1>
   
 
         
-        <a href="/2018/05/16/search/" class="archive-article-date">
-  	<time datetime="2018-05-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-16</time>
+        <a href="/2018/05/12/first_blog/" class="archive-article-date">
+  	<time datetime="2018-05-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-12</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="Windows-Mac-安卓"><a href="#Windows-Mac-安卓" class="headerlink" title="Windows/Mac/安卓"></a>Windows/Mac/安卓</h3><p>蓝灯即可，蓝灯即可，蓝灯即可，直接<a href="http://www.landengpro.org/index.php#download" target="_blank" rel="noopener">官网</a></p>
-<h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>之前记得pad下过一个蓝灯，手机怎么搜也搜不到，蓝灯官网说iOS版正在开发中。</p>
-<p>最初只是想要下载一个 Google keep，只能在非大陆的app store里下载，神烦。</p>
-<p><strong><em> 注册一个非大陆的apple id </em></strong><br>目前store里几乎只有那些试用一次收费的软件，其他的VPN几乎全被下架。免费的VPN一般都需要在非大陆的store里下载，所以申请一个非大陆的账号还是有点用的。</p>
+        <p><strong><em> 发布文章 </em></strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
+<p>每次部署的步骤，三步</p>
+<ul>
+<li>hexo clean</li>
+<li>hexo generate</li>
+<li>hexo deploy</li>
+</ul>
         
-          <a class="article-more-a" href="/2018/05/16/search/#more">more >></a>
+          <a class="article-more-a" href="/2018/05/12/first_blog/#more">more >></a>
         
       
 
@@ -223,7 +226,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">other</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">learn</a>
         		</li>
       		
 		</ul>
@@ -233,7 +240,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/16/search/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/05/12/first_blog/">展开全文 >></a>
         </p>
       
 
@@ -352,36 +359,32 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-first_blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-face_recognition_0206" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/12/first_blog/">建立第一篇博客</a>
+      <a class="article-title" href="/2018/03/16/face_recognition_0206/">face_recognition 人脸识别语法</a>
     </h1>
   
 
         
-        <a href="/2018/05/12/first_blog/" class="archive-article-date">
-  	<time datetime="2018-05-11T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-12</time>
+        <a href="/2018/03/16/face_recognition_0206/" class="archive-article-date">
+  	<time datetime="2018-03-15T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><strong><em> 发布文章 </em></strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
-<p>每次部署的步骤，三步</p>
-<ul>
-<li>hexo clean</li>
-<li>hexo generate</li>
-<li>hexo deploy</li>
-</ul>
-        
-          <a class="article-more-a" href="/2018/05/12/first_blog/#more">more >></a>
-        
+        <h3 id="常用语法"><a href="#常用语法" class="headerlink" title="常用语法"></a>常用语法</h3><p><code>import face_recognition</code> 引入face_recognition</p>
+<p><code>rece_recognition.load_image_file</code> 上传图片</p>
+<p><code>face_recognition.face_encodings()[]</code></p>
+<p><code>results = face_recognition.compare_faces( , )</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if results[0] == True:</span><br><span class="line">    print(&quot;It is True&quot;)</span><br><span class="line">else:</span><br><span class="line">    print(&quot;not xxx&quot;)</span><br></pre></td></tr></table></figure>
+
       
 
       
@@ -394,11 +397,15 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">learn</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">learn</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">人脸识别</a>
         		</li>
       		
 		</ul>
@@ -408,7 +415,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/12/first_blog/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/03/16/face_recognition_0206/">展开全文 >></a>
         </p>
       
 
@@ -463,7 +470,7 @@ var _hmt = _hmt || [];
       
         <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=28381611&auto=1&height=66" width="330" height="86"></iframe>
 
-<p>Z小姐个子很高，一米七，走起路来大开大合，很是潇洒，她的笑声也是。</p>
+<p>（<em>旧文</em>）<br>Z小姐个子很高，一米七，走起路来大开大合，很是潇洒，她的笑声也是。</p>
 <p>在我说了”不过单身二十三年而已”，上铺的她接到”我也不过二十四年而已”，然后两人相视大笑。谈到单身这个问题，她忽然说起了一个几乎伴随着她整个学生生涯的男孩。</p>
 <p>那还是初中的时候，Z小姐家还在新疆，成绩很不错，副班长。似乎念书的时候，一个成绩好，长相清秀的女孩很容易受男孩子的喜欢，接受女孩们的敌视。其中包括一个一米九的高个男孩J.</p>
 <p>J是个很沉默的人，坐在最后一排的窗户旁边，守护着窗外的风景，聪明却不努力。</p>
@@ -1141,11 +1148,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1154,10 +1165,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1173,11 +1180,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">face_recognition</a>
+                <a href="javascript:void(0)" class="js-tag color5">人脸识别</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color5">read</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1185,7 +1192,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">read</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
