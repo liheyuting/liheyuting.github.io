@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-28T15:03:25.844Z</updated>
+  <updated>2019-03-17T10:48:42.141Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,24 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Mac安装openblas或opencv或gcc</title>
-    <link href="http://yoursite.com/2019/01/28/install-openblas:opencv:gcc/"/>
-    <id>http://yoursite.com/2019/01/28/install-openblas:opencv:gcc/</id>
-    <published>2019-01-27T16:00:00.000Z</published>
-    <updated>2019-01-28T15:03:25.844Z</updated>
+    <title>Flask-web 搭建学习笔记（一）：bootstrap模版引用</title>
+    <link href="http://yoursite.com/2019/03/17/2019/Flask-web(1)/"/>
+    <id>http://yoursite.com/2019/03/17/2019/Flask-web(1)/</id>
+    <published>2019-03-16T16:00:00.000Z</published>
+    <updated>2019-03-17T10:48:42.141Z</updated>
     
-    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure><p>如果都安装成功，则无须看以下内容，否则需要：</p><blockquote><ul><li>安装或更新Xcode 最新版本</li><li>安装Xcode CLT</li></ul></blockquote><a id="more"></a><p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p><ul><li>在终端输入：<code>xcode-select --install</code></li><li>弹出提示框中选择“安装”</li><li>选择同意协议</li><li>安装</li><li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li></ul><h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>]]></content>
+    <content type="html"><![CDATA[<p>先安装python，以及flask和flask_bootstrap包</p><p>首先梳理一下文件夹，也就是网站最基本的框架</p><ol><li><p>xxx.py  </p><p>程序主页面，用命令行运行，或是通过pycharm这些都OK，此处例举最基础的语法</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask, render_template</span><br><span class="line">from flask_bootstrap import Bootstrap</span><br><span class="line"># 引入flask和flask_bootstrap两个包</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">bootstrap = Bootstrap(app)</span><br><span class="line"></span><br><span class="line">@app.route(&apos;/&apos;)</span><br><span class="line">def index():</span><br><span class="line">    return render_template(&apos;base.html&apos;)</span><br><span class="line"># 这段可以复制，再修改增加功能，上面三行仅为index的设置，其他页面再设置 </span><br><span class="line">    </span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    app.run()</span><br><span class="line"># 当然也可以加入其他的一些功能，例如debug=True</span><br></pre></td></tr></table></figure></li></ol><ol><li><p>templates</p><p>可以放一些template，比如，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- index.html或是base.html 命名没关系，但要有一些基础的‘.html‘页面</span><br><span class="line">- 其他，比如user.html/404.html等，看页面功能，可以“继承”index.html的一些元素，</span><br></pre></td></tr></table></figure></li><li><p>static/css：放css样式以及图片等静态内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main.css 放page的css代码</span><br></pre></td></tr></table></figure></li><li><p>xxx.db：数据库</p></li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ brew install openblas&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install opencv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install gcc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;如果都安装成功，则无须看以下内容，否则需要：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;安装或更新Xcode 最新版本&lt;/li&gt;
-&lt;li&gt;安装Xcode CLT&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
+      
+      
+        &lt;p&gt;先安装python，以及flask和flask_bootstrap包&lt;/p&gt;
+&lt;p&gt;首先梳理一下文件夹，也就是网站最基本的框架&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;xxx.py  &lt;/p&gt;
+&lt;p&gt;程序主页面，用命令行运行，或是通过pycharm这些都OK，此处例举最基础的语法&lt;
+      
     
     </summary>
     
@@ -43,12 +43,16 @@
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
+      <category term="flask" scheme="http://yoursite.com/tags/flask/"/>
+    
+      <category term="bootstrap" scheme="http://yoursite.com/tags/bootstrap/"/>
+    
   </entry>
   
   <entry>
     <title>安装dlib</title>
-    <link href="http://yoursite.com/2019/01/28/install-dlib/"/>
-    <id>http://yoursite.com/2019/01/28/install-dlib/</id>
+    <link href="http://yoursite.com/2019/01/28/2019/install-dlib/"/>
+    <id>http://yoursite.com/2019/01/28/2019/install-dlib/</id>
     <published>2019-01-27T16:00:00.000Z</published>
     <updated>2019-01-28T15:03:17.438Z</updated>
     
@@ -77,9 +81,38 @@
   </entry>
   
   <entry>
+    <title>Mac安装openblas或opencv或gcc</title>
+    <link href="http://yoursite.com/2019/01/28/2019/install-openblas:opencv:gcc/"/>
+    <id>http://yoursite.com/2019/01/28/2019/install-openblas:opencv:gcc/</id>
+    <published>2019-01-27T16:00:00.000Z</published>
+    <updated>2019-01-28T15:03:25.844Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure><p>如果都安装成功，则无须看以下内容，否则需要：</p><blockquote><ul><li>安装或更新Xcode 最新版本</li><li>安装Xcode CLT</li></ul></blockquote><a id="more"></a><p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p><ul><li>在终端输入：<code>xcode-select --install</code></li><li>弹出提示框中选择“安装”</li><li>选择同意协议</li><li>安装</li><li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li></ul><h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ brew install openblas&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install opencv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install gcc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果都安装成功，则无须看以下内容，否则需要：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;安装或更新Xcode 最新版本&lt;/li&gt;
+&lt;li&gt;安装Xcode CLT&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Mac 安装人脸识别face_recognition python包</title>
-    <link href="http://yoursite.com/2019/01/26/face_collection_install/"/>
-    <id>http://yoursite.com/2019/01/26/face_collection_install/</id>
+    <link href="http://yoursite.com/2019/01/26/2019/face_collection_install/"/>
+    <id>http://yoursite.com/2019/01/26/2019/face_collection_install/</id>
     <published>2019-01-25T16:00:00.000Z</published>
     <updated>2019-02-06T12:13:51.720Z</updated>
     
@@ -109,8 +142,8 @@
   
   <entry>
     <title>Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</title>
-    <link href="http://yoursite.com/2019/01/23/Hexo_190123/"/>
-    <id>http://yoursite.com/2019/01/23/Hexo_190123/</id>
+    <link href="http://yoursite.com/2019/01/23/2019/Hexo_190123/"/>
+    <id>http://yoursite.com/2019/01/23/2019/Hexo_190123/</id>
     <published>2019-01-22T16:00:00.000Z</published>
     <updated>2019-01-26T07:25:25.495Z</updated>
     
@@ -131,16 +164,16 @@
     </summary>
     
     
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
-    
       <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+    
+      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>杂思</title>
-    <link href="http://yoursite.com/2018/12/23/daily1203/"/>
-    <id>http://yoursite.com/2018/12/23/daily1203/</id>
+    <link href="http://yoursite.com/2018/12/23/2018/daily1203/"/>
+    <id>http://yoursite.com/2018/12/23/2018/daily1203/</id>
     <published>2018-12-22T16:00:00.000Z</published>
     <updated>2018-12-23T11:58:34.480Z</updated>
     
@@ -164,8 +197,8 @@
   
   <entry>
     <title>有趣之人如此多，少我一人也无妨</title>
-    <link href="http://yoursite.com/2018/12/01/daily1201/"/>
-    <id>http://yoursite.com/2018/12/01/daily1201/</id>
+    <link href="http://yoursite.com/2018/12/01/2018/daily1201/"/>
+    <id>http://yoursite.com/2018/12/01/2018/daily1201/</id>
     <published>2018-11-30T16:00:00.000Z</published>
     <updated>2018-12-23T11:41:37.125Z</updated>
     
@@ -185,8 +218,8 @@
   
   <entry>
     <title>这个世界太严肃，想到这点，我毛骨悚然。</title>
-    <link href="http://yoursite.com/2018/11/24/daily1124/"/>
-    <id>http://yoursite.com/2018/11/24/daily1124/</id>
+    <link href="http://yoursite.com/2018/11/24/2018/daily1124/"/>
+    <id>http://yoursite.com/2018/11/24/2018/daily1124/</id>
     <published>2018-11-23T16:00:00.000Z</published>
     <updated>2018-12-23T11:41:38.798Z</updated>
     
@@ -208,8 +241,8 @@
   
   <entry>
     <title>Python数据可视化：pyecharts</title>
-    <link href="http://yoursite.com/2018/11/04/pyecharts/"/>
-    <id>http://yoursite.com/2018/11/04/pyecharts/</id>
+    <link href="http://yoursite.com/2018/11/04/2018/pyecharts/"/>
+    <id>http://yoursite.com/2018/11/04/2018/pyecharts/</id>
     <published>2018-11-04T04:54:00.000Z</published>
     <updated>2018-11-10T07:03:13.379Z</updated>
     
@@ -238,8 +271,8 @@
   
   <entry>
     <title>Python CGI准备：IIS 配置</title>
-    <link href="http://yoursite.com/2018/10/22/IISDeploy/"/>
-    <id>http://yoursite.com/2018/10/22/IISDeploy/</id>
+    <link href="http://yoursite.com/2018/10/22/2018/IISDeploy/"/>
+    <id>http://yoursite.com/2018/10/22/2018/IISDeploy/</id>
     <published>2018-10-22T04:59:28.000Z</published>
     <updated>2018-11-10T07:00:55.933Z</updated>
     
@@ -265,8 +298,8 @@
   
   <entry>
     <title>git 清单</title>
-    <link href="http://yoursite.com/2018/09/28/gitlist/"/>
-    <id>http://yoursite.com/2018/09/28/gitlist/</id>
+    <link href="http://yoursite.com/2018/09/28/2018/gitlist/"/>
+    <id>http://yoursite.com/2018/09/28/2018/gitlist/</id>
     <published>2018-09-28T05:02:31.000Z</published>
     <updated>2018-11-10T06:55:19.352Z</updated>
     
@@ -292,8 +325,8 @@
   
   <entry>
     <title>Excel 蓝图</title>
-    <link href="http://yoursite.com/2018/09/16/Excel/"/>
-    <id>http://yoursite.com/2018/09/16/Excel/</id>
+    <link href="http://yoursite.com/2018/09/16/2018/Excel/"/>
+    <id>http://yoursite.com/2018/09/16/2018/Excel/</id>
     <published>2018-09-15T16:00:00.000Z</published>
     <updated>2018-09-19T12:17:20.810Z</updated>
     
@@ -323,8 +356,8 @@
   
   <entry>
     <title>HTML 相关常用汇总</title>
-    <link href="http://yoursite.com/2018/09/14/HTML%20and%20CSS/"/>
-    <id>http://yoursite.com/2018/09/14/HTML and CSS/</id>
+    <link href="http://yoursite.com/2018/09/14/2018/HTML%20and%20CSS/"/>
+    <id>http://yoursite.com/2018/09/14/2018/HTML and CSS/</id>
     <published>2018-09-13T16:00:00.000Z</published>
     <updated>2018-11-10T06:54:35.749Z</updated>
     
@@ -345,8 +378,8 @@
   
   <entry>
     <title>VBS</title>
-    <link href="http://yoursite.com/2018/09/14/VB/"/>
-    <id>http://yoursite.com/2018/09/14/VB/</id>
+    <link href="http://yoursite.com/2018/09/14/2018/VB/"/>
+    <id>http://yoursite.com/2018/09/14/2018/VB/</id>
     <published>2018-09-13T16:00:00.000Z</published>
     <updated>2018-11-10T07:05:57.957Z</updated>
     
@@ -371,8 +404,8 @@
   
   <entry>
     <title>连接Python和MySQL</title>
-    <link href="http://yoursite.com/2018/08/30/connectpythonsql/"/>
-    <id>http://yoursite.com/2018/08/30/connectpythonsql/</id>
+    <link href="http://yoursite.com/2018/08/30/2018/connectpythonsql/"/>
+    <id>http://yoursite.com/2018/08/30/2018/connectpythonsql/</id>
     <published>2018-08-29T16:00:00.000Z</published>
     <updated>2018-09-02T08:09:44.756Z</updated>
     
@@ -397,8 +430,8 @@
   
   <entry>
     <title>SQL常用函数</title>
-    <link href="http://yoursite.com/2018/08/29/SQL2/"/>
-    <id>http://yoursite.com/2018/08/29/SQL2/</id>
+    <link href="http://yoursite.com/2018/08/29/2018/SQL2/"/>
+    <id>http://yoursite.com/2018/08/29/2018/SQL2/</id>
     <published>2018-08-28T16:00:00.000Z</published>
     <updated>2018-09-02T07:47:20.611Z</updated>
     
@@ -443,8 +476,8 @@
   
   <entry>
     <title>《一个人的村庄》</title>
-    <link href="http://yoursite.com/2018/08/27/read_village/"/>
-    <id>http://yoursite.com/2018/08/27/read_village/</id>
+    <link href="http://yoursite.com/2018/08/27/2018/read_village/"/>
+    <id>http://yoursite.com/2018/08/27/2018/read_village/</id>
     <published>2018-08-26T16:00:00.000Z</published>
     <updated>2018-08-27T15:23:45.703Z</updated>
     
@@ -468,8 +501,8 @@
   
   <entry>
     <title>Hexo+Yilia 所遇问题解决方法汇总</title>
-    <link href="http://yoursite.com/2018/08/26/hexo_yilia/"/>
-    <id>http://yoursite.com/2018/08/26/hexo_yilia/</id>
+    <link href="http://yoursite.com/2018/08/26/2019/hexo_yilia/"/>
+    <id>http://yoursite.com/2018/08/26/2019/hexo_yilia/</id>
     <published>2018-08-25T16:00:00.000Z</published>
     <updated>2019-01-23T14:16:33.083Z</updated>
     
@@ -485,16 +518,16 @@
     </summary>
     
     
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
-    
       <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+    
+      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
     
   </entry>
   
   <entry>
     <title>SQL常用语句</title>
-    <link href="http://yoursite.com/2018/08/22/SQL/"/>
-    <id>http://yoursite.com/2018/08/22/SQL/</id>
+    <link href="http://yoursite.com/2018/08/22/2018/SQL/"/>
+    <id>http://yoursite.com/2018/08/22/2018/SQL/</id>
     <published>2018-08-21T16:00:00.000Z</published>
     <updated>2018-09-02T07:39:27.289Z</updated>
     
@@ -523,8 +556,8 @@
   
   <entry>
     <title>岁月走在美的光影里</title>
-    <link href="http://yoursite.com/2018/08/19/beauty/"/>
-    <id>http://yoursite.com/2018/08/19/beauty/</id>
+    <link href="http://yoursite.com/2018/08/19/2018/beauty/"/>
+    <id>http://yoursite.com/2018/08/19/2018/beauty/</id>
     <published>2018-08-18T16:00:00.000Z</published>
     <updated>2018-08-23T15:53:53.137Z</updated>
     
@@ -542,29 +575,6 @@
     
     
       <category term="soft" scheme="http://yoursite.com/tags/soft/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>“科学上网”攻略</title>
-    <link href="http://yoursite.com/2018/05/16/search/"/>
-    <id>http://yoursite.com/2018/05/16/search/</id>
-    <published>2018-05-15T16:00:00.000Z</published>
-    <updated>2018-08-23T23:05:29.102Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Windows-Mac-安卓"><a href="#Windows-Mac-安卓" class="headerlink" title="Windows/Mac/安卓"></a>Windows/Mac/安卓</h3><p>蓝灯即可，蓝灯即可，蓝灯即可，直接<a href="http://www.landengpro.org/index.php#download" target="_blank" rel="noopener">官网</a></p><h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>之前记得pad下过一个蓝灯，手机怎么搜也搜不到，蓝灯官网说iOS版正在开发中。</p><p>最初只是想要下载一个 Google keep，只能在非大陆的app store里下载，神烦。</p><p><strong><em> 注册一个非大陆的apple id </em></strong><br>目前store里几乎只有那些试用一次收费的软件，其他的VPN几乎全被下架。免费的VPN一般都需要在非大陆的store里下载，所以申请一个非大陆的账号还是有点用的。</p><a id="more"></a> <p>1.下载一个一次性免费VPN<br>只要可以免费连接一次即可，比如熊猫VPN，windly VPN，seed，wingy等等</p><p>2.申请非大陆账号<br>登陆之后迅速在设置中，重新创建一个app id，设置双重验证（据说有必要），以及在付款里选择“无”（只有非大陆的网络下才可以选择无，这个很有必要，要不然无法购买app），这样就可以在app store里下载免费的VPN了。</p><p>以下的可以试试，试了几个，总的来说，都没有蓝灯页面简洁少广告，还是期待今年的蓝灯iOS可以上架吧。</p><ul><li>赛风</li><li>vypr VPN：付费</li><li>Yurbo</li><li>Bestline</li><li>SSR</li><li>Yoga VPN</li><li>网易UU</li><li>蜗牛加速器</li></ul><p>（以上来源于xxx公众号，为避免说广告，就无耻的盗用且隐藏了公众号名字）</p><p>以上大致可满足普通民众如我对科学上网不太强烈的需求，需求大些也可以购买付费类的。</p><p>之前有听过小伙伴说好像也可以自己搭建，可能是搬瓦工？记不清了，也需要先VPN跨越山川大海进官网。</p><p>完。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;Windows-Mac-安卓&quot;&gt;&lt;a href=&quot;#Windows-Mac-安卓&quot; class=&quot;headerlink&quot; title=&quot;Windows/Mac/安卓&quot;&gt;&lt;/a&gt;Windows/Mac/安卓&lt;/h3&gt;&lt;p&gt;蓝灯即可，蓝灯即可，蓝灯即可，直接&lt;a href=&quot;http://www.landengpro.org/index.php#download&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;官网&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;iOS&quot;&gt;&lt;a href=&quot;#iOS&quot; class=&quot;headerlink&quot; title=&quot;iOS&quot;&gt;&lt;/a&gt;iOS&lt;/h3&gt;&lt;p&gt;之前记得pad下过一个蓝灯，手机怎么搜也搜不到，蓝灯官网说iOS版正在开发中。&lt;/p&gt;
-&lt;p&gt;最初只是想要下载一个 Google keep，只能在非大陆的app store里下载，神烦。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;em&gt; 注册一个非大陆的apple id &lt;/em&gt;&lt;/strong&gt;&lt;br&gt;目前store里几乎只有那些试用一次收费的软件，其他的VPN几乎全被下架。免费的VPN一般都需要在非大陆的store里下载，所以申请一个非大陆的账号还是有点用的。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="other" scheme="http://yoursite.com/tags/other/"/>
     
   </entry>
   

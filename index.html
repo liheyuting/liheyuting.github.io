@@ -184,37 +184,46 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-install-openblas:opencv:gcc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2019/Flask-web(1)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/28/install-openblas:opencv:gcc/">Mac安装openblas或opencv或gcc</a>
+      <a class="article-title" href="/2019/03/17/2019/Flask-web(1)/">Flask-web 搭建学习笔记（一）：bootstrap模版引用</a>
     </h1>
   
 
         
-        <a href="/2019/01/28/install-openblas:opencv:gcc/" class="archive-article-date">
-  	<time datetime="2019-01-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-28</time>
+        <a href="/2019/03/17/2019/Flask-web(1)/" class="archive-article-date">
+  	<time datetime="2019-03-16T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure>
-<p>如果都安装成功，则无须看以下内容，否则需要：</p>
-<blockquote>
-<ul>
-<li>安装或更新Xcode 最新版本</li>
-<li>安装Xcode CLT</li>
-</ul>
-</blockquote>
-        
-          <a class="article-more-a" href="/2019/01/28/install-openblas:opencv:gcc/#more">more >></a>
-        
+        <p>先安装python，以及flask和flask_bootstrap包</p>
+<p>首先梳理一下文件夹，也就是网站最基本的框架</p>
+<ol>
+<li><p>xxx.py  </p>
+<p>程序主页面，用命令行运行，或是通过pycharm这些都OK，此处例举最基础的语法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask, render_template</span><br><span class="line">from flask_bootstrap import Bootstrap</span><br><span class="line"># 引入flask和flask_bootstrap两个包</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">bootstrap = Bootstrap(app)</span><br><span class="line"></span><br><span class="line">@app.route(&apos;/&apos;)</span><br><span class="line">def index():</span><br><span class="line">    return render_template(&apos;base.html&apos;)</span><br><span class="line"># 这段可以复制，再修改增加功能，上面三行仅为index的设置，其他页面再设置 </span><br><span class="line">    </span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    app.run()</span><br><span class="line"># 当然也可以加入其他的一些功能，例如debug=True</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>templates</p>
+<p>可以放一些template，比如，</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- index.html或是base.html 命名没关系，但要有一些基础的‘.html‘页面</span><br><span class="line">- 其他，比如user.html/404.html等，看页面功能，可以“继承”index.html的一些元素，</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>static/css：放css样式以及图片等静态内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main.css 放page的css代码</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>xxx.db：数据库</p>
+</li>
+</ol>
+
       
 
       
@@ -233,6 +242,14 @@ var _hmt = _hmt || [];
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">flask</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">bootstrap</a>
+        		</li>
       		
 		</ul>
 	</div>
@@ -241,7 +258,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/28/install-openblas:opencv:gcc/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/03/17/2019/Flask-web(1)/">展开全文 >></a>
         </p>
       
 
@@ -274,19 +291,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-install-dlib" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2019/install-dlib" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/28/install-dlib/">安装dlib</a>
+      <a class="article-title" href="/2019/01/28/2019/install-dlib/">安装dlib</a>
     </h1>
   
 
         
-        <a href="/2019/01/28/install-dlib/" class="archive-article-date">
+        <a href="/2019/01/28/2019/install-dlib/" class="archive-article-date">
   	<time datetime="2019-01-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-28</time>
 </a>
         
@@ -303,7 +320,7 @@ var _hmt = _hmt || [];
 <ul>
 <li>Mac的X11<br>X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。
         
-          <a class="article-more-a" href="/2019/01/28/install-dlib/#more">more >></a>
+          <a class="article-more-a" href="/2019/01/28/2019/install-dlib/#more">more >></a>
         
       
 
@@ -335,7 +352,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/28/install-dlib/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/01/28/2019/install-dlib/">展开全文 >></a>
         </p>
       
 
@@ -368,19 +385,109 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-face_collection_install" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2019/install-openblas:opencv:gcc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/26/face_collection_install/">Mac 安装人脸识别face_recognition python包</a>
+      <a class="article-title" href="/2019/01/28/2019/install-openblas:opencv:gcc/">Mac安装openblas或opencv或gcc</a>
     </h1>
   
 
         
-        <a href="/2019/01/26/face_collection_install/" class="archive-article-date">
+        <a href="/2019/01/28/2019/install-openblas:opencv:gcc/" class="archive-article-date">
+  	<time datetime="2019-01-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-28</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure>
+<p>如果都安装成功，则无须看以下内容，否则需要：</p>
+<blockquote>
+<ul>
+<li>安装或更新Xcode 最新版本</li>
+<li>安装Xcode CLT</li>
+</ul>
+</blockquote>
+        
+          <a class="article-more-a" href="/2019/01/28/2019/install-openblas:opencv:gcc/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">learn</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/01/28/2019/install-openblas:opencv:gcc/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+  
+    <article id="post-2019/face_collection_install" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/26/2019/face_collection_install/">Mac 安装人脸识别face_recognition python包</a>
+    </h1>
+  
+
+        
+        <a href="/2019/01/26/2019/face_collection_install/" class="archive-article-date">
   	<time datetime="2019-01-25T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-26</time>
 </a>
         
@@ -395,7 +502,7 @@ var _hmt = _hmt || [];
 <h3 id="一、系统搭建"><a href="#一、系统搭建" class="headerlink" title="一、系统搭建"></a>一、系统搭建</h3><h4 id="1-系统环境"><a href="#1-系统环境" class="headerlink" title="1. 系统环境"></a>1. 系统环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- python 3.3+</span><br><span class="line">- mac</span><br><span class="line">- 已安装homebrew</span><br></pre></td></tr></table></figure>
 <h4 id="2-Dlib安装"><a href="#2-Dlib安装" class="headerlink" title="2. Dlib安装"></a>2. Dlib安装</h4><h5 id="dlib的依赖点击查看安装教程"><a href="#dlib的依赖点击查看安装教程" class="headerlink" title="dlib的依赖点击查看安装教程"></a>dlib的依赖<a href="https://liheyuting.github.io/2019/01/28/install-dlib/" target="_blank" rel="noopener">点击查看安装教程</a></h5><p>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。</p>
         
-          <a class="article-more-a" href="/2019/01/26/face_collection_install/#more">more >></a>
+          <a class="article-more-a" href="/2019/01/26/2019/face_collection_install/#more">more >></a>
         
       
 
@@ -431,7 +538,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/26/face_collection_install/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/01/26/2019/face_collection_install/">展开全文 >></a>
         </p>
       
 
@@ -464,19 +571,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-Hexo_190123" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2019/Hexo_190123" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/23/Hexo_190123/">Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</a>
+      <a class="article-title" href="/2019/01/23/2019/Hexo_190123/">Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</a>
     </h1>
   
 
         
-        <a href="/2019/01/23/Hexo_190123/" class="archive-article-date">
+        <a href="/2019/01/23/2019/Hexo_190123/" class="archive-article-date">
   	<time datetime="2019-01-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-01-23</time>
 </a>
         
@@ -494,7 +601,7 @@ var _hmt = _hmt || [];
 <ul>
 <li>在主题配置文件里，在rss位置，添加‘/atom.xml‘
         
-          <a class="article-more-a" href="/2019/01/23/Hexo_190123/#more">more >></a>
+          <a class="article-more-a" href="/2019/01/23/2019/Hexo_190123/#more">more >></a>
         
       
 
@@ -508,11 +615,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">learn</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">learn</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">blog</a>
         		</li>
       		
 		</ul>
@@ -522,7 +629,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/01/23/Hexo_190123/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/01/23/2019/Hexo_190123/">展开全文 >></a>
         </p>
       
 
@@ -555,19 +662,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-daily1203" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2018/daily1203" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/23/daily1203/">杂思</a>
+      <a class="article-title" href="/2018/12/23/2018/daily1203/">杂思</a>
     </h1>
   
 
         
-        <a href="/2018/12/23/daily1203/" class="archive-article-date">
+        <a href="/2018/12/23/2018/daily1203/" class="archive-article-date">
   	<time datetime="2018-12-22T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-23</time>
 </a>
         
@@ -582,7 +689,7 @@ var _hmt = _hmt || [];
 <p>落笔无力，言语无力，心情也无着落点，想想这么颓败，真是让人头疼呢。冷笑话也并不好笑呢。听着点破歌，好像也没什么意思呢。</p>
 <p>每天要怎么过呢，不想做事，也提不起精神来，除了说起丧气话来，还有些话好抱怨，其他真的是一点兴致也提不起来。<br>
         
-          <a class="article-more-a" href="/2018/12/23/daily1203/#more">more >></a>
+          <a class="article-more-a" href="/2018/12/23/2018/daily1203/#more">more >></a>
         
       
 
@@ -606,7 +713,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/23/daily1203/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/12/23/2018/daily1203/">展开全文 >></a>
         </p>
       
 
@@ -639,19 +746,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-daily1201" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2018/daily1201" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/01/daily1201/">有趣之人如此多，少我一人也无妨</a>
+      <a class="article-title" href="/2018/12/01/2018/daily1201/">有趣之人如此多，少我一人也无妨</a>
     </h1>
   
 
         
-        <a href="/2018/12/01/daily1201/" class="archive-article-date">
+        <a href="/2018/12/01/2018/daily1201/" class="archive-article-date">
   	<time datetime="2018-11-30T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-01</time>
 </a>
         
@@ -662,7 +769,7 @@ var _hmt = _hmt || [];
         <p>一天待在家里，偶尔出来一下，找了个咖啡厅，假装自己今天也是有所收获吧。</p>
 <p>每天日复一日，有时候忍不住在想，这样下去又有什么意思呢。这种没意思的话，说出来又有什么意思呢。今天看群里有人说，即使你是个小ID，也应该表达自身的观点，否则就会被带着走。回想下，自己一直有点抗拒输出自己的价值观，虽然生活工作中价值观输出又是日常。但说的东西似乎就会让别人给你下tag的这种感觉，并不舒服，人性复杂，性格多变，稳定才是奇怪的事情，但人比较容易刻板印象，这也是奇怪，大概是惯性思维习惯导致的？倘若为他人的标签化过于忧虑，似乎也是一种焦虑且不够有安全感的表现了。如果按自尊的定义“喜欢自身的程度”来说，这岂不又是一种“低自尊”的状态？这样不好不好，这不算是“坦然平静”的生活处理方式了，但生活为什么有需要“坦然泰然”的态度呢，这就源源不绝的废话连篇了。</p>
         
-          <a class="article-more-a" href="/2018/12/01/daily1201/#more">more >></a>
+          <a class="article-more-a" href="/2018/12/01/2018/daily1201/#more">more >></a>
         
       
 
@@ -686,7 +793,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/12/01/daily1201/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/12/01/2018/daily1201/">展开全文 >></a>
         </p>
       
 
@@ -719,19 +826,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-daily1124" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2018/daily1124" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/24/daily1124/">这个世界太严肃，想到这点，我毛骨悚然。</a>
+      <a class="article-title" href="/2018/11/24/2018/daily1124/">这个世界太严肃，想到这点，我毛骨悚然。</a>
     </h1>
   
 
         
-        <a href="/2018/11/24/daily1124/" class="archive-article-date">
+        <a href="/2018/11/24/2018/daily1124/" class="archive-article-date">
   	<time datetime="2018-11-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-24</time>
 </a>
         
@@ -744,7 +851,7 @@ var _hmt = _hmt || [];
 <p>文字自有其欺骗性的本性以及自由自在的自在。她既是脆弱的不堪一击的比玻璃和爱情还更不靠谱，又像是穿越过无数时光还死乞白赖的活着精彩又长久。让人欲罢不能。</p>
 <p>时常不想动笔，动笔即各种生活的坏处涌上心头，就不知说些什么好，和自己对话，总是乱七八糟的糟心事，当作和别人对话吧，又好像喋喋不休的祥林嫂，让人联想到圆规。索性就还是不写。要真写点正经话吧，又要挠头摆尾，鱼鳞都好像要挠掉一样，半天憋不出一句半句来。说出的话来，像是一个个的泡泡，即怕它落在半空不落地，心就空落落，要是落地了，又是严肃的要命，没意思的紧。<br>
         
-          <a class="article-more-a" href="/2018/11/24/daily1124/#more">more >></a>
+          <a class="article-more-a" href="/2018/11/24/2018/daily1124/#more">more >></a>
         
       
 
@@ -768,7 +875,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/24/daily1124/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/11/24/2018/daily1124/">展开全文 >></a>
         </p>
       
 
@@ -801,19 +908,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-pyecharts" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-2018/pyecharts" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/04/pyecharts/">Python数据可视化：pyecharts</a>
+      <a class="article-title" href="/2018/11/04/2018/pyecharts/">Python数据可视化：pyecharts</a>
     </h1>
   
 
         
-        <a href="/2018/11/04/pyecharts/" class="archive-article-date">
+        <a href="/2018/11/04/2018/pyecharts/" class="archive-article-date">
   	<time datetime="2018-11-04T04:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-04</time>
 </a>
         
@@ -831,7 +938,7 @@ var _hmt = _hmt || [];
 </li>
 </ol>
         
-          <a class="article-more-a" href="/2018/11/04/pyecharts/#more">more >></a>
+          <a class="article-more-a" href="/2018/11/04/2018/pyecharts/#more">more >></a>
         
       
 
@@ -859,7 +966,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/11/04/pyecharts/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/11/04/2018/pyecharts/">展开全文 >></a>
         </p>
       
 
@@ -892,19 +999,19 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="test-IISDeploy" class="article article-type-test  article-index" itemscope itemprop="blogPost">
+    <article id="test-2018/IISDeploy" class="article article-type-test  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/22/IISDeploy/">Python CGI准备：IIS 配置</a>
+      <a class="article-title" href="/2018/10/22/2018/IISDeploy/">Python CGI准备：IIS 配置</a>
     </h1>
   
 
         
-        <a href="/2018/10/22/IISDeploy/" class="archive-article-date">
+        <a href="/2018/10/22/2018/IISDeploy/" class="archive-article-date">
   	<time datetime="2018-10-22T04:59:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-10-22</time>
 </a>
         
@@ -919,7 +1026,7 @@ var _hmt = _hmt || [];
 <p>但是对于很多如我从头开始，小白要直接理解使用是有一定的困难的。这里涉及到一个如何实现CGI的环境配置。这里把过程记录下来，如果有遇到和我同样问题的同学，也可少走点弯路。</p>
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2>
         
-          <a class="article-more-a" href="/2018/10/22/IISDeploy/#more">more >></a>
+          <a class="article-more-a" href="/2018/10/22/2018/IISDeploy/#more">more >></a>
         
       
 
@@ -947,95 +1054,7 @@ var _hmt = _hmt || [];
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2018/10/22/IISDeploy/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-
-
-  
-    <article id="test-gitlist" class="article article-type-test  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/09/28/gitlist/">git 清单</a>
-    </h1>
-  
-
-        
-        <a href="/2018/09/28/gitlist/" class="archive-article-date">
-  	<time datetime="2018-09-28T05:02:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h4><p>git config工具专门用来配置或读取相应的工作环境变量</p>
-<p>git config –global user.name “dora”<br>git config –global user.email xxx@163.com</p>
-<p>–global所有项目会默认使用这个配置信息</p>
-<p>在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里</p>
-<p><strong>文本编辑器</strong><br>默认的是Vi或者Vim，重新设置：<br>git config –global core.editor sublime</p>
-<p><strong>差异分析工具</strong><br>
-        
-          <a class="article-more-a" href="/2018/09/28/gitlist/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">learn</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/09/28/gitlist/">展开全文 >></a>
+          <a class="article-more-a" href="/2018/10/22/2018/IISDeploy/">展开全文 >></a>
         </p>
       
 
@@ -1173,39 +1192,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">blog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">learn</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">sql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">VBS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">soft</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1217,15 +1208,51 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">blog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Excel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">sql</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flask</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">bootstrap</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VBS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">soft</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">read</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">other</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
             
             <div class="clearfix"></div>
