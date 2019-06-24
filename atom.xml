@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-24T16:47:38.427Z</updated>
+  <updated>2019-06-24T16:49:26.319Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2019/05/28/2019/SMA_User/"/>
     <id>http://yoursite.com/2019/05/28/2019/SMA_User/</id>
     <published>2019-05-27T16:00:00.000Z</published>
-    <updated>2019-06-24T16:47:38.427Z</updated>
+    <updated>2019-06-24T16:49:26.319Z</updated>
     
-    <content type="html"><![CDATA[<p>留坑待填</p><h3 id="营销自动化"><a href="#营销自动化" class="headerlink" title="营销自动化"></a>营销自动化</h3><ul><li>增加新用户/培育旧用户</li><li><p>为什么邮件营销是被低估的渠道</p><ul><li>成本低、速度快</li><li>投放精准、内容丰富</li><li>主动性强，连续推销</li><li>点对点的私域流量</li><li>异步消息，人群更加精准</li><li>内容质量更高（邮件营销而非垃圾邮件）</li></ul></li><li><p>营销自动化，多渠道触达</p><ul><li>邮件渠道</li><li>微信公众号</li></ul></li></ul><h4 id="用户质量"><a href="#用户质量" class="headerlink" title="用户质量"></a>用户质量</h4><ul><li><p>用户来源的质量分析</p></li><li><p>媒体用户质量分析</p></li><li><p>active or engage用户数字</p></li><li><p>用户质量控制</p></li></ul><h4 id="用户生命周期"><a href="#用户生命周期" class="headerlink" title="用户生命周期"></a>用户生命周期</h4><ul><li>常见的产业生命周期/产品生命周期</li><li>用户生命周期，（循环式上升的生命周期better）</li><li>用户价值<ul><li>举例：RIO &amp; LTV （用户终身价值）</li><li>公司SMA对于revenue的贡献（数据）</li></ul></li></ul><a id="more"></a> <h4 id="用户分层-对应nurture策略"><a href="#用户分层-对应nurture策略" class="headerlink" title="用户分层+对应nurture策略"></a>用户分层+对应nurture策略</h4><ul><li>用户分层+策略</li><li>用户筛选<ul><li>nurture stream 用户标签筛选+（行为偏好筛选）</li><li>用户阶段性筛选</li></ul></li></ul><h4 id="用户画像"><a href="#用户画像" class="headerlink" title="用户画像"></a>用户画像</h4><ul><li>用户画像完善<ul><li>举例说明用户画像的价值（+用户标签使用）</li><li>SMA现在的情况</li><li>如何完善用户画像</li><li>用户标签</li></ul></li></ul><h4 id="关键群体的用户激活-用户培育"><a href="#关键群体的用户激活-用户培育" class="headerlink" title="关键群体的用户激活/用户培育"></a>关键群体的用户激活/用户培育</h4><ul><li>Person score 0-20分用户 用户激活</li><li>Person score 20 -40分，demographic score/behavior score 二维分析</li><li>Oil&amp;Gas/data center segment nurture</li><li>data center&gt;Person score 75分用户，探索</li></ul><h4 id="从数据看效果"><a href="#从数据看效果" class="headerlink" title="从数据看效果"></a>从数据看效果</h4><ul><li>A/B test <ul><li>小红书的案例</li><li>2018年SMA的A/B test</li></ul></li><li>Key数字：Open rate/  Click rate/ CTO<ul><li>2018年SMA的表现</li><li>从rate看效果</li><li>精准化筛选人群效果分析</li></ul></li></ul><h4 id="Learning-接下来的方向"><a href="#Learning-接下来的方向" class="headerlink" title="Learning + 接下来的方向"></a>Learning + 接下来的方向</h4><ul><li>用户质量控制</li><li>用户行为分析—&gt;丰满用户画像</li><li>用户活跃性评估维度多元化</li><li>用户标签管理：个人信息标签片面式–&gt;综合性标签推送—&gt;标签模糊化，大数据推送</li><li>用户分层营销策略流程化+关键人群用户流程化</li><li>CMS（Content Management System），碎片化内容—&gt;内容系统化管理</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>留坑待填</p><h3 id="营销自动化"><a href="#营销自动化" class="headerlink" title="营销自动化"></a>营销自动化</h3><ul><li>增加新用户/培育旧用户</li><li><p>为什么邮件营销是被低估的渠道</p><ul><li>成本低、速度快</li><li>投放精准、内容丰富</li><li>主动性强，连续推销</li><li>点对点的私域流量</li><li>异步消息，人群更加精准</li><li>内容质量更高（邮件营销而非垃圾邮件）</li></ul></li><li><p>营销自动化，多渠道触达</p><ul><li>邮件渠道</li><li>微信公众号</li></ul></li></ul><h3 id="用户质量"><a href="#用户质量" class="headerlink" title="用户质量"></a>用户质量</h3><ul><li><p>用户来源的质量分析</p></li><li><p>媒体用户质量分析</p></li><li><p>active or engage用户数字</p></li><li><p>用户质量控制</p></li></ul><h3 id="用户生命周期"><a href="#用户生命周期" class="headerlink" title="用户生命周期"></a>用户生命周期</h3><ul><li>常见的产业生命周期/产品生命周期</li><li>用户生命周期，（循环式上升的生命周期better）</li><li>用户价值<ul><li>举例：RIO &amp; LTV （用户终身价值）</li><li>公司SMA对于revenue的贡献（数据）</li></ul></li></ul><a id="more"></a> <h3 id="用户分层-对应nurture策略"><a href="#用户分层-对应nurture策略" class="headerlink" title="用户分层+对应nurture策略"></a>用户分层+对应nurture策略</h3><ul><li>用户分层+策略</li><li>用户筛选<ul><li>nurture stream 用户标签筛选+（行为偏好筛选）</li><li>用户阶段性筛选</li></ul></li></ul><h3 id="用户画像"><a href="#用户画像" class="headerlink" title="用户画像"></a>用户画像</h3><ul><li>用户画像完善<ul><li>举例说明用户画像的价值（+用户标签使用）</li><li>SMA现在的情况</li><li>如何完善用户画像</li><li>用户标签</li></ul></li></ul><h3 id="关键群体的用户激活-用户培育"><a href="#关键群体的用户激活-用户培育" class="headerlink" title="关键群体的用户激活/用户培育"></a>关键群体的用户激活/用户培育</h3><ul><li>Person score 0-20分用户 用户激活</li><li>Person score 20 -40分，demographic score/behavior score 二维分析</li><li>Oil&amp;Gas/data center segment nurture</li><li>data center&gt;Person score 75分用户，探索</li></ul><h3 id="从数据看效果"><a href="#从数据看效果" class="headerlink" title="从数据看效果"></a>从数据看效果</h3><ul><li>A/B test <ul><li>小红书的案例</li><li>2018年SMA的A/B test</li></ul></li><li>Key数字：Open rate/  Click rate/ CTO<ul><li>2018年SMA的表现</li><li>从rate看效果</li><li>精准化筛选人群效果分析</li></ul></li></ul><h3 id="Learning-接下来的方向"><a href="#Learning-接下来的方向" class="headerlink" title="Learning + 接下来的方向"></a>Learning + 接下来的方向</h3><ul><li>用户质量控制</li><li>用户行为分析—&gt;丰满用户画像</li><li>用户活跃性评估维度多元化</li><li>用户标签管理：个人信息标签片面式–&gt;综合性标签推送—&gt;标签模糊化，大数据推送</li><li>用户分层营销策略流程化+关键人群用户流程化</li><li>CMS（Content Management System），碎片化内容—&gt;内容系统化管理</li></ul>]]></content>
     
     <summary type="html">
     
@@ -47,7 +47,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;用户质量&quot;&gt;&lt;a href=&quot;#用户质量&quot; class=&quot;headerlink&quot; title=&quot;用户质量&quot;&gt;&lt;/a&gt;用户质量&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id=&quot;用户质量&quot;&gt;&lt;a href=&quot;#用户质量&quot; class=&quot;headerlink&quot; title=&quot;用户质量&quot;&gt;&lt;/a&gt;用户质量&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;用户来源的质量分析&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;媒体用户质量分析&lt;/p&gt;
@@ -57,7 +57,7 @@
 &lt;li&gt;&lt;p&gt;用户质量控制&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&quot;用户生命周期&quot;&gt;&lt;a href=&quot;#用户生命周期&quot; class=&quot;headerlink&quot; title=&quot;用户生命周期&quot;&gt;&lt;/a&gt;用户生命周期&lt;/h4&gt;&lt;ul&gt;
+&lt;h3 id=&quot;用户生命周期&quot;&gt;&lt;a href=&quot;#用户生命周期&quot; class=&quot;headerlink&quot; title=&quot;用户生命周期&quot;&gt;&lt;/a&gt;用户生命周期&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;常见的产业生命周期/产品生命周期&lt;/li&gt;
 &lt;li&gt;用户生命周期，（循环式上升的生命周期better）&lt;/li&gt;
 &lt;li&gt;用户价值&lt;ul&gt;
