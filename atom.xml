@@ -5,9 +5,9 @@
   <subtitle>愚钝拙言，闲逛人间</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://liheyuting.github.io/"/>
   <updated>2019-07-14T13:56:56.378Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://liheyuting.github.io/</id>
   
   <author>
     <name>Dora Li</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>回顾和总结：线下会数字营销支持</title>
-    <link href="http://yoursite.com/2019/07/14/2019/Event_digital/"/>
-    <id>http://yoursite.com/2019/07/14/2019/Event_digital/</id>
+    <link href="https://liheyuting.github.io/2019/07/14/2019/Event_digital/"/>
+    <id>https://liheyuting.github.io/2019/07/14/2019/Event_digital/</id>
     <published>2019-07-13T16:00:00.000Z</published>
     <updated>2019-07-14T13:56:56.378Z</updated>
     
@@ -63,16 +63,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="Work" scheme="http://yoursite.com/tags/Work/"/>
+      <category term="Work" scheme="https://liheyuting.github.io/tags/Work/"/>
     
   </entry>
   
   <entry>
     <title>营销自动化—对用户我们做了什么？</title>
-    <link href="http://yoursite.com/2019/05/28/2019/SMA_User/"/>
-    <id>http://yoursite.com/2019/05/28/2019/SMA_User/</id>
+    <link href="https://liheyuting.github.io/2019/05/28/2019/SMA_User/"/>
+    <id>https://liheyuting.github.io/2019/05/28/2019/SMA_User/</id>
     <published>2019-05-27T16:00:00.000Z</published>
     <updated>2019-07-14T14:05:47.957Z</updated>
     
@@ -118,16 +118,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="work" scheme="http://yoursite.com/tags/work/"/>
+      <category term="work" scheme="https://liheyuting.github.io/tags/work/"/>
     
   </entry>
   
   <entry>
     <title>在北方生活的第7年</title>
-    <link href="http://yoursite.com/2019/05/13/2019/water/"/>
-    <id>http://yoursite.com/2019/05/13/2019/water/</id>
+    <link href="https://liheyuting.github.io/2019/05/13/2019/water/"/>
+    <id>https://liheyuting.github.io/2019/05/13/2019/water/</id>
     <published>2019-05-12T16:00:00.000Z</published>
     <updated>2019-05-19T02:27:42.136Z</updated>
     
@@ -144,14 +144,14 @@
     </summary>
     
     
-      <category term="soft" scheme="http://yoursite.com/tags/soft/"/>
+      <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
     
   </entry>
   
   <entry>
     <title>Flask-web搭建学习笔记（1）-bootstrap</title>
-    <link href="http://yoursite.com/2019/03/17/2019/Flask-web(1)/"/>
-    <id>http://yoursite.com/2019/03/17/2019/Flask-web(1)/</id>
+    <link href="https://liheyuting.github.io/2019/03/17/2019/Flask-web(1)/"/>
+    <id>https://liheyuting.github.io/2019/03/17/2019/Flask-web(1)/</id>
     <published>2019-03-16T16:00:00.000Z</published>
     <updated>2019-03-17T10:57:50.645Z</updated>
     
@@ -166,20 +166,51 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
     
-      <category term="flask" scheme="http://yoursite.com/tags/flask/"/>
+      <category term="flask" scheme="https://liheyuting.github.io/tags/flask/"/>
     
-      <category term="bootstrap" scheme="http://yoursite.com/tags/bootstrap/"/>
+      <category term="bootstrap" scheme="https://liheyuting.github.io/tags/bootstrap/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>安装dlib</title>
+    <link href="https://liheyuting.github.io/2019/01/28/2019/install-dlib/"/>
+    <id>https://liheyuting.github.io/2019/01/28/2019/install-dlib/</id>
+    <published>2019-01-27T16:00:00.000Z</published>
+    <updated>2019-01-28T15:03:17.438Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p><h3 id="dlib的依赖"><a href="#dlib的依赖" class="headerlink" title="dlib的依赖"></a>dlib的依赖</h3><ul><li>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure></li></ul><p>安装出现：gcc安装失败（具体显示如问题），<a href="https://liheyuting.github.io/2019/01/28/install-openblas:opencv:gcc/">安装gcc</a></p><ul><li>Mac的X11<br>X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。<a id="more"></a></li></ul><p>运行dlib需要X11，但Mac目前没有自带X11，需要重新下载安装，<a href="https://www.xquartz.org/" target="_blank" rel="noopener">下载地址</a>，下载后直接安装，默认安装目录为/opt/X11，需要在/usr/loca/opt目录下创建软连接，创建命令如下，创建后重启Mac。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/local/opt</span><br><span class="line">$ ln -s /opt/X11 X11</span><br></pre></td></tr></table></figure><h4 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h4><p><code>brew install openblas</code>安装时显示如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Warning: Your Xcode (10.0) is outdated.</span><br><span class="line">Please update to Xcode 10.1 (or delete it).</span><br><span class="line">Xcode can be updated from the App Store.</span><br><span class="line"></span><br><span class="line">Warning: Building gcc from source:</span><br><span class="line">  The bottle needs the Xcode CLT to be installed.</span><br><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br><span class="line">Error: An exception occurred within a child process:</span><br><span class="line">  CompilerSelectionError: gcc cannot be built with any available compilers.</span><br><span class="line">Install GNU&apos;s GCC</span><br><span class="line">  brew install gcc</span><br></pre></td></tr></table></figure></p><p> <strong>解决办法</strong>：安装或更新到最新版本的Xcode</p><p> 重新安装Xcode后，重新安装gcc，显示：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> Warning: Building gcc from source:</span><br><span class="line">  The bottle needs the Xcode CLT to be installed.</span><br><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br><span class="line">Error: An exception occurred within a child process:</span><br><span class="line">  CompilerSelectionError: gcc cannot be built with any available compilers.</span><br><span class="line">Install GNU&apos;s GCC</span><br><span class="line">  brew install gcc</span><br></pre></td></tr></table></figure></p><p><strong>解决办法</strong>：需要安装Xcode CLT</p><h3 id="参考地址"><a href="#参考地址" class="headerlink" title="参考地址"></a>参考地址</h3><ul><li><a href="https://blog.csdn.net/Quincuntial/article/details/53572415" target="_blank" rel="noopener">Mac下的dlib安装</a> 作者：SnailTyan </li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;安装dlib&quot;&gt;&lt;a href=&quot;#安装dlib&quot; class=&quot;headerlink&quot; title=&quot;安装dlib&quot;&gt;&lt;/a&gt;安装dlib&lt;/h3&gt;&lt;p&gt;官方文档，可查看&lt;a href=&quot;https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;How to install dlib from source on macOS or Ubuntu&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;dlib的依赖&quot;&gt;&lt;a href=&quot;#dlib的依赖&quot; class=&quot;headerlink&quot; title=&quot;dlib的依赖&quot;&gt;&lt;/a&gt;dlib的依赖&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ brew install openblas&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install opencv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装出现：gcc安装失败（具体显示如问题），&lt;a href=&quot;https://liheyuting.github.io/2019/01/28/install-openblas:opencv:gcc/&quot;&gt;安装gcc&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Mac的X11&lt;br&gt;X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。
+    
+    </summary>
+    
+    
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
+    
+      <category term="big data" scheme="https://liheyuting.github.io/tags/big-data/"/>
     
   </entry>
   
   <entry>
     <title>Mac安装openblas或opencv或gcc</title>
-    <link href="http://yoursite.com/2019/01/28/2019/install-openblas:opencv:gcc/"/>
-    <id>http://yoursite.com/2019/01/28/2019/install-openblas:opencv:gcc/</id>
+    <link href="https://liheyuting.github.io/2019/01/28/2019/install-openblas:opencv:gcc/"/>
+    <id>https://liheyuting.github.io/2019/01/28/2019/install-openblas:opencv:gcc/</id>
     <published>2019-01-27T16:00:00.000Z</published>
     <updated>2019-01-28T15:03:25.844Z</updated>
     
@@ -199,51 +230,20 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装dlib</title>
-    <link href="http://yoursite.com/2019/01/28/2019/install-dlib/"/>
-    <id>http://yoursite.com/2019/01/28/2019/install-dlib/</id>
-    <published>2019-01-27T16:00:00.000Z</published>
-    <updated>2019-01-28T15:03:17.438Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p><h3 id="dlib的依赖"><a href="#dlib的依赖" class="headerlink" title="dlib的依赖"></a>dlib的依赖</h3><ul><li>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure></li></ul><p>安装出现：gcc安装失败（具体显示如问题），<a href="https://liheyuting.github.io/2019/01/28/install-openblas:opencv:gcc/" target="_blank" rel="noopener">安装gcc</a></p><ul><li>Mac的X11<br>X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。<a id="more"></a></li></ul><p>运行dlib需要X11，但Mac目前没有自带X11，需要重新下载安装，<a href="https://www.xquartz.org/" target="_blank" rel="noopener">下载地址</a>，下载后直接安装，默认安装目录为/opt/X11，需要在/usr/loca/opt目录下创建软连接，创建命令如下，创建后重启Mac。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/local/opt</span><br><span class="line">$ ln -s /opt/X11 X11</span><br></pre></td></tr></table></figure><h4 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h4><p><code>brew install openblas</code>安装时显示如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Warning: Your Xcode (10.0) is outdated.</span><br><span class="line">Please update to Xcode 10.1 (or delete it).</span><br><span class="line">Xcode can be updated from the App Store.</span><br><span class="line"></span><br><span class="line">Warning: Building gcc from source:</span><br><span class="line">  The bottle needs the Xcode CLT to be installed.</span><br><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br><span class="line">Error: An exception occurred within a child process:</span><br><span class="line">  CompilerSelectionError: gcc cannot be built with any available compilers.</span><br><span class="line">Install GNU&apos;s GCC</span><br><span class="line">  brew install gcc</span><br></pre></td></tr></table></figure></p><p> <strong>解决办法</strong>：安装或更新到最新版本的Xcode</p><p> 重新安装Xcode后，重新安装gcc，显示：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> Warning: Building gcc from source:</span><br><span class="line">  The bottle needs the Xcode CLT to be installed.</span><br><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br><span class="line">Error: An exception occurred within a child process:</span><br><span class="line">  CompilerSelectionError: gcc cannot be built with any available compilers.</span><br><span class="line">Install GNU&apos;s GCC</span><br><span class="line">  brew install gcc</span><br></pre></td></tr></table></figure></p><p><strong>解决办法</strong>：需要安装Xcode CLT</p><h3 id="参考地址"><a href="#参考地址" class="headerlink" title="参考地址"></a>参考地址</h3><ul><li><a href="https://blog.csdn.net/Quincuntial/article/details/53572415" target="_blank" rel="noopener">Mac下的dlib安装</a> 作者：SnailTyan </li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;安装dlib&quot;&gt;&lt;a href=&quot;#安装dlib&quot; class=&quot;headerlink&quot; title=&quot;安装dlib&quot;&gt;&lt;/a&gt;安装dlib&lt;/h3&gt;&lt;p&gt;官方文档，可查看&lt;a href=&quot;https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;How to install dlib from source on macOS or Ubuntu&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;dlib的依赖&quot;&gt;&lt;a href=&quot;#dlib的依赖&quot; class=&quot;headerlink&quot; title=&quot;dlib的依赖&quot;&gt;&lt;/a&gt;dlib的依赖&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ brew install openblas&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install opencv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;安装出现：gcc安装失败（具体显示如问题），&lt;a href=&quot;https://liheyuting.github.io/2019/01/28/install-openblas:opencv:gcc/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;安装gcc&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Mac的X11&lt;br&gt;X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。
-    
-    </summary>
-    
-    
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="big data" scheme="http://yoursite.com/tags/big-data/"/>
+      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>Mac 安装人脸识别face_recognition python包</title>
-    <link href="http://yoursite.com/2019/01/26/2019/face_collection_install/"/>
-    <id>http://yoursite.com/2019/01/26/2019/face_collection_install/</id>
+    <link href="https://liheyuting.github.io/2019/01/26/2019/face_collection_install/"/>
+    <id>https://liheyuting.github.io/2019/01/26/2019/face_collection_install/</id>
     <published>2019-01-25T16:00:00.000Z</published>
     <updated>2019-02-06T12:13:51.720Z</updated>
     
-    <content type="html"><![CDATA[<p>一、安装face_recognition</p><p>二、完成功能开发</p><p>二、部署在云服务器上(Heroku,AWS)<br>部署在Heroku或者AWS的云端服务器上是很明智的<br>为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成<a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。</p><p><em>此篇为安装篇</em></p><h3 id="一、系统搭建"><a href="#一、系统搭建" class="headerlink" title="一、系统搭建"></a>一、系统搭建</h3><h4 id="1-系统环境"><a href="#1-系统环境" class="headerlink" title="1. 系统环境"></a>1. 系统环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- python 3.3+</span><br><span class="line">- mac</span><br><span class="line">- 已安装homebrew</span><br></pre></td></tr></table></figure><h4 id="2-Dlib安装"><a href="#2-Dlib安装" class="headerlink" title="2. Dlib安装"></a>2. Dlib安装</h4><h5 id="dlib的依赖点击查看安装教程"><a href="#dlib的依赖点击查看安装教程" class="headerlink" title="dlib的依赖点击查看安装教程"></a>dlib的依赖<a href="https://liheyuting.github.io/2019/01/28/install-dlib/" target="_blank" rel="noopener">点击查看安装教程</a></h5><p>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure><h5 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h5><p>点击查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p><ul><li><p>从GitHub中克隆代码<br><code>git clone https://github.com/davisking/dlib.git</code></p></li><li><p>建立 dlib library</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd dlib</span><br><span class="line">mkdir build; cd build; cmake ..; cmake --build .</span><br></pre></td></tr></table></figure></li><li><p>建立和安装python拓展包</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure><h4 id="3-安装face-recoginition"><a href="#3-安装face-recoginition" class="headerlink" title="3. 安装face_recoginition"></a>3. 安装face_recoginition</h4><p><code>pip3 install face_recognition</code></p><h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><ul><li><a href="https://github.com/ageitgey/face_recognition" target="_blank" rel="noopener">face_recognition</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>一、安装face_recognition</p><p>二、完成功能开发</p><p>二、部署在云服务器上(Heroku,AWS)<br>部署在Heroku或者AWS的云端服务器上是很明智的<br>为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成<a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。</p><p><em>此篇为安装篇</em></p><h3 id="一、系统搭建"><a href="#一、系统搭建" class="headerlink" title="一、系统搭建"></a>一、系统搭建</h3><h4 id="1-系统环境"><a href="#1-系统环境" class="headerlink" title="1. 系统环境"></a>1. 系统环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- python 3.3+</span><br><span class="line">- mac</span><br><span class="line">- 已安装homebrew</span><br></pre></td></tr></table></figure><h4 id="2-Dlib安装"><a href="#2-Dlib安装" class="headerlink" title="2. Dlib安装"></a>2. Dlib安装</h4><h5 id="dlib的依赖点击查看安装教程"><a href="#dlib的依赖点击查看安装教程" class="headerlink" title="dlib的依赖点击查看安装教程"></a>dlib的依赖<a href="https://liheyuting.github.io/2019/01/28/install-dlib/">点击查看安装教程</a></h5><p>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure><h5 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h5><p>点击查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p><ul><li><p>从GitHub中克隆代码<br><code>git clone https://github.com/davisking/dlib.git</code></p></li><li><p>建立 dlib library</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd dlib</span><br><span class="line">mkdir build; cd build; cmake ..; cmake --build .</span><br></pre></td></tr></table></figure></li><li><p>建立和安装python拓展包</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure><h4 id="3-安装face-recoginition"><a href="#3-安装face-recoginition" class="headerlink" title="3. 安装face_recoginition"></a>3. 安装face_recoginition</h4><p><code>pip3 install face_recognition</code></p><h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><ul><li><a href="https://github.com/ageitgey/face_recognition" target="_blank" rel="noopener">face_recognition</a></li></ul>]]></content>
     
     <summary type="html">
     
@@ -252,25 +252,25 @@
 &lt;p&gt;二、部署在云服务器上(Heroku,AWS)&lt;br&gt;部署在Heroku或者AWS的云端服务器上是很明智的&lt;br&gt;为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成&lt;a href=&quot;https://www.docker.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Docker&lt;/a&gt;容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;此篇为安装篇&lt;/em&gt;&lt;/p&gt;
 &lt;h3 id=&quot;一、系统搭建&quot;&gt;&lt;a href=&quot;#一、系统搭建&quot; class=&quot;headerlink&quot; title=&quot;一、系统搭建&quot;&gt;&lt;/a&gt;一、系统搭建&lt;/h3&gt;&lt;h4 id=&quot;1-系统环境&quot;&gt;&lt;a href=&quot;#1-系统环境&quot; class=&quot;headerlink&quot; title=&quot;1. 系统环境&quot;&gt;&lt;/a&gt;1. 系统环境&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- python 3.3+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- mac&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- 已安装homebrew&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;2-Dlib安装&quot;&gt;&lt;a href=&quot;#2-Dlib安装&quot; class=&quot;headerlink&quot; title=&quot;2. Dlib安装&quot;&gt;&lt;/a&gt;2. Dlib安装&lt;/h4&gt;&lt;h5 id=&quot;dlib的依赖点击查看安装教程&quot;&gt;&lt;a href=&quot;#dlib的依赖点击查看安装教程&quot; class=&quot;headerlink&quot; title=&quot;dlib的依赖点击查看安装教程&quot;&gt;&lt;/a&gt;dlib的依赖&lt;a href=&quot;https://liheyuting.github.io/2019/01/28/install-dlib/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;点击查看安装教程&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。&lt;/p&gt;
+&lt;h4 id=&quot;2-Dlib安装&quot;&gt;&lt;a href=&quot;#2-Dlib安装&quot; class=&quot;headerlink&quot; title=&quot;2. Dlib安装&quot;&gt;&lt;/a&gt;2. Dlib安装&lt;/h4&gt;&lt;h5 id=&quot;dlib的依赖点击查看安装教程&quot;&gt;&lt;a href=&quot;#dlib的依赖点击查看安装教程&quot; class=&quot;headerlink&quot; title=&quot;dlib的依赖点击查看安装教程&quot;&gt;&lt;/a&gt;dlib的依赖&lt;a href=&quot;https://liheyuting.github.io/2019/01/28/install-dlib/&quot;&gt;点击查看安装教程&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
     
-      <category term="big data" scheme="http://yoursite.com/tags/big-data/"/>
+      <category term="big data" scheme="https://liheyuting.github.io/tags/big-data/"/>
     
-      <category term="人脸识别" scheme="http://yoursite.com/tags/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/"/>
+      <category term="人脸识别" scheme="https://liheyuting.github.io/tags/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/"/>
     
   </entry>
   
   <entry>
     <title>Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</title>
-    <link href="http://yoursite.com/2019/01/23/2019/Hexo_190123/"/>
-    <id>http://yoursite.com/2019/01/23/2019/Hexo_190123/</id>
+    <link href="https://liheyuting.github.io/2019/01/23/2019/Hexo_190123/"/>
+    <id>https://liheyuting.github.io/2019/01/23/2019/Hexo_190123/</id>
     <published>2019-01-22T16:00:00.000Z</published>
     <updated>2019-03-17T11:27:13.439Z</updated>
     
@@ -291,16 +291,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
-      <category term="blog" scheme="http://yoursite.com/tags/blog/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
   </entry>
   
   <entry>
     <title>杂思</title>
-    <link href="http://yoursite.com/2018/12/23/2018/daily1203/"/>
-    <id>http://yoursite.com/2018/12/23/2018/daily1203/</id>
+    <link href="https://liheyuting.github.io/2018/12/23/2018/daily1203/"/>
+    <id>https://liheyuting.github.io/2018/12/23/2018/daily1203/</id>
     <published>2018-12-22T16:00:00.000Z</published>
     <updated>2018-12-23T11:58:34.480Z</updated>
     
@@ -318,14 +318,14 @@
     </summary>
     
     
-      <category term="soft" scheme="http://yoursite.com/tags/soft/"/>
+      <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
     
   </entry>
   
   <entry>
     <title>有趣之人如此多，少我一人也无妨</title>
-    <link href="http://yoursite.com/2018/12/01/2018/daily1201/"/>
-    <id>http://yoursite.com/2018/12/01/2018/daily1201/</id>
+    <link href="https://liheyuting.github.io/2018/12/01/2018/daily1201/"/>
+    <id>https://liheyuting.github.io/2018/12/01/2018/daily1201/</id>
     <published>2018-11-30T16:00:00.000Z</published>
     <updated>2018-12-23T11:41:37.125Z</updated>
     
@@ -339,14 +339,14 @@
     </summary>
     
     
-      <category term="soft" scheme="http://yoursite.com/tags/soft/"/>
+      <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
     
   </entry>
   
   <entry>
     <title>这个世界太严肃，想到这点，我毛骨悚然。</title>
-    <link href="http://yoursite.com/2018/11/24/2018/daily1124/"/>
-    <id>http://yoursite.com/2018/11/24/2018/daily1124/</id>
+    <link href="https://liheyuting.github.io/2018/11/24/2018/daily1124/"/>
+    <id>https://liheyuting.github.io/2018/11/24/2018/daily1124/</id>
     <published>2018-11-23T16:00:00.000Z</published>
     <updated>2018-12-23T11:41:38.798Z</updated>
     
@@ -362,14 +362,14 @@
     </summary>
     
     
-      <category term="soft" scheme="http://yoursite.com/tags/soft/"/>
+      <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
     
   </entry>
   
   <entry>
     <title>Python数据可视化：pyecharts</title>
-    <link href="http://yoursite.com/2018/11/04/2018/pyecharts/"/>
-    <id>http://yoursite.com/2018/11/04/2018/pyecharts/</id>
+    <link href="https://liheyuting.github.io/2018/11/04/2018/pyecharts/"/>
+    <id>https://liheyuting.github.io/2018/11/04/2018/pyecharts/</id>
     <published>2018-11-04T04:54:00.000Z</published>
     <updated>2018-11-10T07:03:13.379Z</updated>
     
@@ -390,16 +390,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>Python CGI准备：IIS 配置</title>
-    <link href="http://yoursite.com/2018/10/22/2018/IISDeploy/"/>
-    <id>http://yoursite.com/2018/10/22/2018/IISDeploy/</id>
+    <link href="https://liheyuting.github.io/2018/10/22/2018/IISDeploy/"/>
+    <id>https://liheyuting.github.io/2018/10/22/2018/IISDeploy/</id>
     <published>2018-10-22T04:59:28.000Z</published>
     <updated>2018-11-10T07:00:55.933Z</updated>
     
@@ -417,16 +417,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
     
   </entry>
   
   <entry>
     <title>git 清单</title>
-    <link href="http://yoursite.com/2018/09/28/2018/gitlist/"/>
-    <id>http://yoursite.com/2018/09/28/2018/gitlist/</id>
+    <link href="https://liheyuting.github.io/2018/09/28/2018/gitlist/"/>
+    <id>https://liheyuting.github.io/2018/09/28/2018/gitlist/</id>
     <published>2018-09-28T05:02:31.000Z</published>
     <updated>2018-11-10T06:55:19.352Z</updated>
     
@@ -444,16 +444,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
+      <category term="git" scheme="https://liheyuting.github.io/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>Excel 蓝图</title>
-    <link href="http://yoursite.com/2018/09/16/2018/Excel/"/>
-    <id>http://yoursite.com/2018/09/16/2018/Excel/</id>
+    <link href="https://liheyuting.github.io/2018/09/16/2018/Excel/"/>
+    <id>https://liheyuting.github.io/2018/09/16/2018/Excel/</id>
     <published>2018-09-15T16:00:00.000Z</published>
     <updated>2018-09-19T12:17:20.810Z</updated>
     
@@ -475,38 +475,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="Excel" scheme="http://yoursite.com/tags/Excel/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HTML 相关常用汇总</title>
-    <link href="http://yoursite.com/2018/09/14/2018/HTML%20and%20CSS/"/>
-    <id>http://yoursite.com/2018/09/14/2018/HTML and CSS/</id>
-    <published>2018-09-13T16:00:00.000Z</published>
-    <updated>2018-11-10T06:54:35.749Z</updated>
-    
-    <content type="html"><![CDATA[<p>Home<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;!-- 插入外部样式表 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; </span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;啦啦啦&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;我是卖报的小行家&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p><a id="more"></a><h4 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h4><p><strong> 标题 </strong></p><p></p><h1>一级标题</h1><p></p><p></p><h2>二级标题</h2><p></p><p></p><h3>三级标题</h3><p></p><p></p><h4>四级标题</h4><p></p><p></p><h5>五级标题</h5><p></p><p></p><h6>六级标题</h6><p></p><p><hr>创建水平线，分割内容<br><!--  注释  --></p><p><strong> 段落 </strong></p><p></p><p>段落</p><br><br>折行<p></p><p><strong> 链接 </strong><br><a href="https://liheyuting.github.io/" target="_blank">This is my blog</a></p><p>target=”_blank” 在新窗口打开文档</p><p><a name="label">锚</a> #也可以用id属性替代MAME属性<br>建立锚了，可以在其他地方创建指向这个锚的链接</p><ul><li><p>同一页面<br><a href="#lable">xxxx</a></p></li><li><p>其他页面<br><a href="https://liheyuting.github.io/html/html_links.asp#label" target="_blank" rel="noopener">xxxxx</a><br>(Q这个链接是怎么确定的呢)</p></li></ul><p><strong> 图片 </strong><br><img src="dora.jpg" alt="https://liheyuting.github.io/" width="" height=""></p><ul><li><p>背景图片<br>&lt;body background=”//“</p></li><li><p>排列图片<br>&lt;img src=”” align=”botton(/middle/top)”</p></li><li><p>浮动图片<br>&lt;img src=”//“ align=”left(/fight)”</p></li><li><p>增加图片链接<br>在<img> 前后加上<br><a href="https://liheyuting.github.io/html" target="_blank" rel="noopener"><br></a></p></li></ul><p><strong> 按钮 </strong></p><botton>click</botton><p><strong> 列表 </strong></p><ul> #unorder list 无序列表<br>    <li>a</li><br>    <li>b</li><br></ul><p><ol> #order list 有序列表</ol></p><ul><li>定义列表<br><dl><br><dt>1111</dt><br><dd>2222</dd><br><dt>3333</dt><br><dd>4444</dd><br>定义列表的列表项内部可以使用段落、换行符、图片、链接以及其他列表等<br>（Q这个不是太明白）</dl></li></ul><p>dl 定义定义列表<br>dt 定义定义项目<br>dd 定义定义的描述</p><ul><li>嵌套列表<br>多加几层</li></ul><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>class 规定元素的类名<br>id 元素的唯一id<br>style inline style 行内样式<br>title 规定元素的额外信息</p><p><strong> 文本标签 </strong><br><b> 粗体</b></p><p><big> 大号字<br><em> 着重文字<br><i> 斜体<br><small> 小号字<br><strong> 加重语气<br><sub> 定义下标字<br><sup> 定义上标字<br><ins> 增加下划线<br><del> 增加删除线</del></ins></sup></sub></strong></small></i></em></big></p><p><strong> 引用 </strong><br><q> 短引用</q></p><p><blockquote> 长引用<br><abbr> 定义缩写<br><dfn> 定义项目或缩写的定义</dfn></abbr></blockquote></p><p><address> 定义文档或文章的联系方式/作者(通常斜体显示，大多数浏览器在此元素前后折行)<br><cite> 定义著作的标题（斜体显示）</cite></address></p><p><strong> 表格 </strong></p><ul><li>表格<br><table border="1"><tr><br><td> row 1, cell 1</td></tr><br><td> row 1, cell 2<br></td></table></li></ul><p><tr></tr></p><td> row 2, cell 1<br></td><td> row 2, cell 2<br><br><br><br>#table 定义表格<br>#tr 若干行<br>#td table data 表格数据<br><br>- 边框属性<br>border<br><br>- 表头<br><th>heading</th><br>#th table heading<br><br>- 空单元格<br></td><td>&nbsp;</td><ul><li>跨行跨列<br>colspan<br>eg <th colspan="2"></th></li></ul><p>rowspan<br>eg <th rowspan="2"></th></p><ul><li><p>表格内的标签<br>（比如实现图片一块块）</p></li><li><p>单元格边距（cell padding）</p><table cellpadding="10"></table></li><li><p>单元格间距（cell spacing）</p><table cellspacing="10"></table></li><li><p>背景颜色或图片<br><table bgcolor="blue"></table><br>or (background=’//‘)</p></li><li><p>表格内排列内容对齐<br>align=”left(/right)”</p></li><li><p>frame 外框<br>frame=””<br>box 四面铁框<br>above 头顶有框<br>below 脚下有框<br>hsides 上头下头被框<br>vsides 两边有框</p></li></ul><h4 id="块、类、布局等其他"><a href="#块、类、布局等其他" class="headerlink" title="块、类、布局等其他"></a>块、类、布局等其他</h4><p><strong> 块 </strong></p><p><div> 在CSS里设置样式属性<br>可用于文档布局</div></p><p><span> 为部分文本设置样式属性</span></p><p><strong> 类 </strong><br>类-块-行<br>（Q这块有点疑问，id, name, class相关）</p><p><strong> 布局 </strong></p><ul><li>header 页眉</li><li>nav 导航链接的容器</li><li>section 定义文档中的节</li><li>article 定义独立的自包含文章</li><li>aside 定义内容之外的内容（比如侧栏）</li><li>footer 定义文档或节的页脚</li><li>details 定义额外的细节</li><li>summary 定义details 元素的标题</li></ul><p>（detail/article/summary Q下次注意下）</p><p><strong> 响应式web设计 </strong><br>（Q虽然你现在还不懂，最好要有印象，以后再回头看）</p><p>RWD响应式web设计（responsive web design）</p><ul><li><p>自己创建<br>在head中<style>中设置</p></li><li><p>Bootstrap<br>（Q之后学）<br>使用现成的CSS框架<br>在head中加入：<br><meta charset="utf-8"><br><meta name="viewport" content="width=device-width, initial-scale=1"></p><link rel="stylesheet" href="////"></li></ul><p><strong> 内联框架 </strong><br>  <iframe src="//"(width="" height="" frameborder="0")></iframe></p><ul><li>作为连接的目标时<br>加入name属性<br>name=””</li></ul><p><strong> 脚本 </strong><br>(Q之后学)</p><p>”假设6个月之后的你在教现在的你学习“<br>”强迫输出促进输入“</p><p>整理过程是一个复习的过程，虽然离现在实质工作内容相差千万，还应起项目直接实操才好。<br>稍加整理，如有错误或者其他的建议，还请不吝赐教，万分感谢。</p></style></p></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Home&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!-- 插入外部样式表 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;title&amp;gt;title&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;h1&amp;gt;啦啦啦&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;p&amp;gt;我是卖报的小行家&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
-    
-      <category term="HTML" scheme="http://yoursite.com/tags/HTML/"/>
+      <category term="Excel" scheme="https://liheyuting.github.io/tags/Excel/"/>
     
   </entry>
   
   <entry>
     <title>VBS</title>
-    <link href="http://yoursite.com/2018/09/14/2018/VB/"/>
-    <id>http://yoursite.com/2018/09/14/2018/VB/</id>
+    <link href="https://liheyuting.github.io/2018/09/14/2018/VB/"/>
+    <id>https://liheyuting.github.io/2018/09/14/2018/VB/</id>
     <published>2018-09-13T16:00:00.000Z</published>
     <updated>2018-11-10T07:05:57.957Z</updated>
     
@@ -523,16 +501,38 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="VBS" scheme="http://yoursite.com/tags/VBS/"/>
+      <category term="VBS" scheme="https://liheyuting.github.io/tags/VBS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML 相关常用汇总</title>
+    <link href="https://liheyuting.github.io/2018/09/14/2018/HTML%20and%20CSS/"/>
+    <id>https://liheyuting.github.io/2018/09/14/2018/HTML and CSS/</id>
+    <published>2018-09-13T16:00:00.000Z</published>
+    <updated>2018-11-10T06:54:35.749Z</updated>
+    
+    <content type="html"><![CDATA[<p>Home<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;!-- 插入外部样式表 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; </span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;啦啦啦&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;我是卖报的小行家&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p><a id="more"></a><h4 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h4><p><strong> 标题 </strong></p><p></p><h1>一级标题</h1><p></p><p></p><h2>二级标题</h2><p></p><p></p><h3>三级标题</h3><p></p><p></p><h4>四级标题</h4><p></p><p></p><h5>五级标题</h5><p></p><p></p><h6>六级标题</h6><p></p><p><hr>创建水平线，分割内容<br><!--  注释  --></p><p><strong> 段落 </strong></p><p></p><p>段落</p><br><br>折行<p></p><p><strong> 链接 </strong><br><a href="https://liheyuting.github.io/" target="_blank">This is my blog</a></p><p>target=”_blank” 在新窗口打开文档</p><p><a name="label">锚</a> #也可以用id属性替代MAME属性<br>建立锚了，可以在其他地方创建指向这个锚的链接</p><ul><li><p>同一页面<br><a href="#lable">xxxx</a></p></li><li><p>其他页面<br><a href="https://liheyuting.github.io/html/html_links.asp#label">xxxxx</a><br>(Q这个链接是怎么确定的呢)</p></li></ul><p><strong> 图片 </strong><br><img src="dora.jpg" alt="https://liheyuting.github.io/" width="" height=""></p><ul><li><p>背景图片<br>&lt;body background=”//“</p></li><li><p>排列图片<br>&lt;img src=”” align=”botton(/middle/top)”</p></li><li><p>浮动图片<br>&lt;img src=”//“ align=”left(/fight)”</p></li><li><p>增加图片链接<br>在<img> 前后加上<br><a href="https://liheyuting.github.io/html"><br></a></p></li></ul><p><strong> 按钮 </strong></p><botton>click</botton><p><strong> 列表 </strong></p><ul> #unorder list 无序列表<br>    <li>a</li><br>    <li>b</li><br></ul><p><ol> #order list 有序列表</ol></p><ul><li>定义列表<br><dl><br><dt>1111</dt><br><dd>2222</dd><br><dt>3333</dt><br><dd>4444</dd><br>定义列表的列表项内部可以使用段落、换行符、图片、链接以及其他列表等<br>（Q这个不是太明白）</dl></li></ul><p>dl 定义定义列表<br>dt 定义定义项目<br>dd 定义定义的描述</p><ul><li>嵌套列表<br>多加几层</li></ul><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>class 规定元素的类名<br>id 元素的唯一id<br>style inline style 行内样式<br>title 规定元素的额外信息</p><p><strong> 文本标签 </strong><br><b> 粗体</b></p><p><big> 大号字<br><em> 着重文字<br><i> 斜体<br><small> 小号字<br><strong> 加重语气<br><sub> 定义下标字<br><sup> 定义上标字<br><ins> 增加下划线<br><del> 增加删除线</del></ins></sup></sub></strong></small></i></em></big></p><p><strong> 引用 </strong><br><q> 短引用</q></p><p><blockquote> 长引用<br><abbr> 定义缩写<br><dfn> 定义项目或缩写的定义</dfn></abbr></blockquote></p><p><address> 定义文档或文章的联系方式/作者(通常斜体显示，大多数浏览器在此元素前后折行)<br><cite> 定义著作的标题（斜体显示）</cite></address></p><p><strong> 表格 </strong></p><ul><li>表格<br><table border="1"><tr><br><td> row 1, cell 1</td></tr><br><td> row 1, cell 2<br></td></table></li></ul><p><tr></tr></p><td> row 2, cell 1<br></td><td> row 2, cell 2<br><br><br><br>#table 定义表格<br>#tr 若干行<br>#td table data 表格数据<br><br>- 边框属性<br>border<br><br>- 表头<br><th>heading</th><br>#th table heading<br><br>- 空单元格<br></td><td>&nbsp;</td><ul><li>跨行跨列<br>colspan<br>eg <th colspan="2"></th></li></ul><p>rowspan<br>eg <th rowspan="2"></th></p><ul><li><p>表格内的标签<br>（比如实现图片一块块）</p></li><li><p>单元格边距（cell padding）</p><table cellpadding="10"></table></li><li><p>单元格间距（cell spacing）</p><table cellspacing="10"></table></li><li><p>背景颜色或图片<br><table bgcolor="blue"></table><br>or (background=’//‘)</p></li><li><p>表格内排列内容对齐<br>align=”left(/right)”</p></li><li><p>frame 外框<br>frame=””<br>box 四面铁框<br>above 头顶有框<br>below 脚下有框<br>hsides 上头下头被框<br>vsides 两边有框</p></li></ul><h4 id="块、类、布局等其他"><a href="#块、类、布局等其他" class="headerlink" title="块、类、布局等其他"></a>块、类、布局等其他</h4><p><strong> 块 </strong></p><p><div> 在CSS里设置样式属性<br>可用于文档布局</div></p><p><span> 为部分文本设置样式属性</span></p><p><strong> 类 </strong><br>类-块-行<br>（Q这块有点疑问，id, name, class相关）</p><p><strong> 布局 </strong></p><ul><li>header 页眉</li><li>nav 导航链接的容器</li><li>section 定义文档中的节</li><li>article 定义独立的自包含文章</li><li>aside 定义内容之外的内容（比如侧栏）</li><li>footer 定义文档或节的页脚</li><li>details 定义额外的细节</li><li>summary 定义details 元素的标题</li></ul><p>（detail/article/summary Q下次注意下）</p><p><strong> 响应式web设计 </strong><br>（Q虽然你现在还不懂，最好要有印象，以后再回头看）</p><p>RWD响应式web设计（responsive web design）</p><ul><li><p>自己创建<br>在head中<style>中设置</p></li><li><p>Bootstrap<br>（Q之后学）<br>使用现成的CSS框架<br>在head中加入：<br><meta charset="utf-8"><br><meta name="viewport" content="width=device-width, initial-scale=1"></p><link rel="stylesheet" href="////"></li></ul><p><strong> 内联框架 </strong><br>  <iframe src="//"(width="" height="" frameborder="0")></iframe></p><ul><li>作为连接的目标时<br>加入name属性<br>name=””</li></ul><p><strong> 脚本 </strong><br>(Q之后学)</p><p>”假设6个月之后的你在教现在的你学习“<br>”强迫输出促进输入“</p><p>整理过程是一个复习的过程，虽然离现在实质工作内容相差千万，还应起项目直接实操才好。<br>稍加整理，如有错误或者其他的建议，还请不吝赐教，万分感谢。</p></style></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Home&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!-- 插入外部样式表 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;title&amp;gt;title&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;h1&amp;gt;啦啦啦&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;p&amp;gt;我是卖报的小行家&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="HTML" scheme="https://liheyuting.github.io/tags/HTML/"/>
     
   </entry>
   
   <entry>
     <title>连接Python和MySQL</title>
-    <link href="http://yoursite.com/2018/08/30/2018/connectpythonsql/"/>
-    <id>http://yoursite.com/2018/08/30/2018/connectpythonsql/</id>
+    <link href="https://liheyuting.github.io/2018/08/30/2018/connectpythonsql/"/>
+    <id>https://liheyuting.github.io/2018/08/30/2018/connectpythonsql/</id>
     <published>2018-08-29T16:00:00.000Z</published>
     <updated>2018-09-02T08:09:44.756Z</updated>
     
@@ -547,18 +547,18 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
     
-      <category term="sql" scheme="http://yoursite.com/tags/sql/"/>
+      <category term="sql" scheme="https://liheyuting.github.io/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>SQL常用函数</title>
-    <link href="http://yoursite.com/2018/08/29/2018/SQL2/"/>
-    <id>http://yoursite.com/2018/08/29/2018/SQL2/</id>
+    <link href="https://liheyuting.github.io/2018/08/29/2018/SQL2/"/>
+    <id>https://liheyuting.github.io/2018/08/29/2018/SQL2/</id>
     <published>2018-08-28T16:00:00.000Z</published>
     <updated>2018-09-02T07:47:20.611Z</updated>
     
@@ -595,16 +595,16 @@
     </summary>
     
     
-      <category term="learn" scheme="http://yoursite.com/tags/learn/"/>
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
-      <category term="sql" scheme="http://yoursite.com/tags/sql/"/>
+      <category term="sql" scheme="https://liheyuting.github.io/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title>《一个人的村庄》</title>
-    <link href="http://yoursite.com/2018/08/27/2018/read_village/"/>
-    <id>http://yoursite.com/2018/08/27/2018/read_village/</id>
+    <link href="https://liheyuting.github.io/2018/08/27/2018/read_village/"/>
+    <id>https://liheyuting.github.io/2018/08/27/2018/read_village/</id>
     <published>2018-08-26T16:00:00.000Z</published>
     <updated>2018-08-27T15:23:45.703Z</updated>
     
@@ -620,9 +620,9 @@
     </summary>
     
     
-      <category term="soft" scheme="http://yoursite.com/tags/soft/"/>
+      <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
     
-      <category term="read" scheme="http://yoursite.com/tags/read/"/>
+      <category term="read" scheme="https://liheyuting.github.io/tags/read/"/>
     
   </entry>
   
