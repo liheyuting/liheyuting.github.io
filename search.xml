@@ -5,7 +5,7 @@
     <url>/2019/10/24/2019/next_daovoice/</url>
     <content><![CDATA[<h3 id="注册登陆DaoVoice"><a href="#注册登陆DaoVoice" class="headerlink" title="注册登陆DaoVoice"></a>注册登陆DaoVoice</h3><p><a href="http://www.daovoice.io/" target="_blank" rel="noopener">注册地址</a></p>
 <p>在<code>博客/themes/next/layout/_partials/head/head.swig</code>增加代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.daovoice %&#125;</span><br><span class="line"> &lt;script&gt;(function(i,s,o,g,r,a,m)&#123;i[&quot;DaoVoiceObject&quot;]=r;i[r]=i[r]||function()&#123;(i[r].q=i[r].q||[]).push(arguments)&#125;,i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset=&quot;utf-8&quot;;m.parentNode.insertBefore(a,m)&#125;)(window,document,&quot;script&quot;,(&apos;https:&apos; == document.location.protocol ? &apos;https:&apos; : &apos;http:&apos;) + &quot;//widget.daovoice.io/widget/b6dbddb6.js&quot;,&quot;daovoice&quot;)</span><br><span class="line"> daovoice(&apos;init&apos;, &#123;</span><br><span class="line">  app_id: &quot;用户ID&quot;</span><br><span class="line">&#125;);</span><br><span class="line">daovoice(&apos;update&apos;);</span><br><span class="line"> &lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p>如图所示：</p>
 <p><img src="/img/daovoice.png" ,="" height="75%" width="75%"></p>
 <h3 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h3><p>在<code>/themes/next/_config.yml</code><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: 用户ID</span><br></pre></td></tr></table></figure></p>
@@ -1172,6 +1172,38 @@ href="////">
       </tags>
   </entry>
   <entry>
+    <title>Markdown语法文档</title>
+    <url>/2018/05/12/2018/Markdown/</url>
+    <content><![CDATA[<h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+<p><strong> 加粗 </strong><br><code>** 加粗 **</code></p>
+<p><em>斜体</em></p>
+<p><code>*斜体*</code></p>
+<a id="more"></a> 
+<p><strong><em> 斜体加粗 </em></strong><br><code>*** 斜体加粗 ***</code></p>
+<p><del>删除线</del><br><code>~~删除线~~</code></p>
+<blockquote>
+<p>引用<br><code>&gt; 引用</code></p>
+</blockquote>
+<hr>
+<p>分割线<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure></p>
+<p>图片<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src=&apos;/img/0-5.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt; &lt;img src=&apos;/img/0-8.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>超链接<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure></p>
+<p>无序列表</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
+<p>有序列表</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
+<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
+<p>表格<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure></p>
+<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
+<p>插入视频<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
+<p>插入音乐<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=28381611&amp;auto=1&amp;height=66&quot; width=330 height=86&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>建立第一篇博客</title>
     <url>/2018/05/12/2018/first_blog/</url>
     <content><![CDATA[<p><strong><em> 发布文章 </em></strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
@@ -1207,38 +1239,6 @@ href="////">
       <tags>
         <tag>learn</tag>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown语法文档</title>
-    <url>/2018/05/12/2018/Markdown/</url>
-    <content><![CDATA[<h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
-<p><strong> 加粗 </strong><br><code>** 加粗 **</code></p>
-<p><em>斜体</em></p>
-<p><code>*斜体*</code></p>
-<a id="more"></a> 
-<p><strong><em> 斜体加粗 </em></strong><br><code>*** 斜体加粗 ***</code></p>
-<p><del>删除线</del><br><code>~~删除线~~</code></p>
-<blockquote>
-<p>引用<br><code>&gt; 引用</code></p>
-</blockquote>
-<hr>
-<p>分割线<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure></p>
-<p>图片<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src=&apos;/img/0-5.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt; &lt;img src=&apos;/img/0-8.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>超链接<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure></p>
-<p>无序列表</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
-<p>有序列表</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
-<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
-<p>表格<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure></p>
-<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
-<p>插入视频<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
-<p>插入音乐<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=28381611&amp;auto=1&amp;height=66&quot; width=330 height=86&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <tags>
-        <tag>learn</tag>
-        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
