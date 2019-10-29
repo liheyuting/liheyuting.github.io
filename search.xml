@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>今年厦门出差第3次</title>
+    <url>/2019/10/29/2019/xiamen_3rd/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+    <div id="aplayer-MogHsQCP" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
+      <tags>
+        <tag>soft</tag>
+        <tag>行走</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hexo博客增加aplayer音乐播放器</title>
     <url>/2019/10/29/2019/hexo_aplayer/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>之前使用的是网易云外链链接，<a href="https://liheyuting.github.io/2018/05/12/2018/Markdown/">点击查看</a>文章尾部如何使用，发现很受版权的限制，QQ音乐无法生成外链。</p>
@@ -17,23 +27,13 @@
       </tags>
   </entry>
   <entry>
-    <title>今年厦门出差第3次</title>
-    <url>/2019/10/29/2019/xiamen_3rd/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-ELwoHwmV" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
-      <tags>
-        <tag>soft</tag>
-        <tag>行走</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>DaoVoice实现在线联系</title>
     <url>/2019/10/24/2019/next_daovoice/</url>
-    <content><![CDATA[<h3 id="注册登陆DaoVoice"><a href="#注册登陆DaoVoice" class="headerlink" title="注册登陆DaoVoice"></a>注册登陆DaoVoice</h3><p><a href="http://www.daovoice.io/" target="_blank" rel="noopener">注册地址</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="注册登陆DaoVoice"><a href="#注册登陆DaoVoice" class="headerlink" title="注册登陆DaoVoice"></a>注册登陆DaoVoice</h3><p><a href="http://www.daovoice.io/" target="_blank" rel="noopener">注册地址</a></p>
 <p>在<code>博客/themes/next/layout/_partials/head/head.swig</code>增加代码</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.daovoice %&#125;</span><br><span class="line"> &lt;script&gt;(function(i,s,o,g,r,a,m)&#123;i[&quot;DaoVoiceObject&quot;]=r;i[r]=i[r]||function()&#123;(i[r].q=i[r].q||[]).push(arguments)&#125;,i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset=&quot;utf-8&quot;;m.parentNode.insertBefore(a,m)&#125;)(window,document,&quot;script&quot;,(&apos;https:&apos; == document.location.protocol ? &apos;https:&apos; : &apos;http:&apos;) + &quot;//widget.daovoice.io/widget/b6dbddb6.js&quot;,&quot;daovoice&quot;)</span><br><span class="line"> daovoice(&apos;init&apos;, &#123;</span><br><span class="line">  app_id: &quot;用户ID&quot;</span><br><span class="line">&#125;);</span><br><span class="line">daovoice(&apos;update&apos;);</span><br><span class="line"> &lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p>如图所示：</p>
-<p><img src="/img/daovoice.png" ,="" height="75%" width="75%"></p>
+<p>&lt;img src=’/img/daovoice.png’, height= ‘75%’, width = ‘75%’&gt;</p>
 <h3 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h3><p>在<code>/themes/next/_config.yml</code><br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: 用户ID</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h3 id="微信消息提醒"><a href="#微信消息提醒" class="headerlink" title="微信消息提醒"></a>微信消息提醒</h3><p>可以绑定微信，以及默认将信息分派给自己，这样就可以用微信接收网站聊天信息了</p>
@@ -49,7 +49,7 @@
   <entry>
     <title>Hexo next主题建立标签云</title>
     <url>/2019/10/23/2019/next_tagcloud/</url>
-    <content><![CDATA[<p>效果如首页</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>效果如首页</p>
 <h3 id="使用hexo-tag-cloud插件"><a href="#使用hexo-tag-cloud插件" class="headerlink" title="使用hexo-tag-cloud插件"></a>使用<code>hexo-tag-cloud</code>插件</h3><p><a href="https://github.com/MikeCoder/hexo-tag-cloud" target="_blank" rel="noopener">hexo-tag-cloud github 地址</a></p>
 <h4 id="安装hexo-tag-cloud"><a href="#安装hexo-tag-cloud" class="headerlink" title="安装hexo-tag-cloud"></a>安装<code>hexo-tag-cloud</code></h4><p>进入到博客根目录，安装<br><code>npm install hexo-tag-cloud@^2.0.* --save</code></p>
 <h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p>在主题文件夹找到文件 <code>theme/next/layout/_macro/sidebar.swig</code>, 然后添加如下代码：</p>
@@ -139,7 +139,7 @@
   <entry>
     <title>回顾和总结：线下会数字营销支持</title>
     <url>/2019/07/14/2019/Event_digital/</url>
-    <content><![CDATA[<p>这份工作已经进入尾声，在过去的一年多里，公司给我展示了一个跨国大公司在业务和营销的专业性。<br>我把线下会digital部分的工作内容和tips整理下来，回顾复盘。<br>意义不累述。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这份工作已经进入尾声，在过去的一年多里，公司给我展示了一个跨国大公司在业务和营销的专业性。<br>我把线下会digital部分的工作内容和tips整理下来，回顾复盘。<br>意义不累述。</p>
 <ul>
 <li><p><strong>会前</strong></p>
 <ul>
@@ -220,7 +220,7 @@
   <entry>
     <title>营销自动化—对用户我们做了什么？</title>
     <url>/2019/05/28/2019/SMA_User/</url>
-    <content><![CDATA[<p>留坑待填</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>留坑待填</p>
 <p>在做营销自动化（Sales &amp; Marketing Automation）的过程中，整理了用户相关的一些思考。<br>关于渠道，营销自动化更多的基于邮件营销在做，也在和微信打通，多渠道集成的过程中。<br>关于用户，新客成本越来越高，旧用户的运营绝对是未来的一个很重要的方向。如何让旧用户的粘性越来越高，如何让旧用户再次消费，如何让旧用户继续产生价值，这些都是值得我们思考的问题。</p>
 <p>2B的营销自动化，还在比较新的一个阶段，大家也都是在探索阶段。来这家公司，也是我第一次接触营销自动化，从不看好邮件营销，到现在觉得邮件营销还是有所可为，也经历了一个比较长的阶段。但仍是处于非常懵懂的阶段。</p>
 <p>我把对于用户的相关思考也整理如下，一个是回顾复盘，一个也希望在未来可以有更深入的思考。</p>
@@ -316,7 +316,7 @@
   <entry>
     <title>在北方生活的第7年</title>
     <url>/2019/05/13/2019/water/</url>
-    <content><![CDATA[<p>清明节和朋友一起去了桂林，又去了广州。路途中本应是畅意游览，竟又品味出了另一种倦怠感，对北方的倦怠感，是的没错，来南方旅行，品味出了北方生活的倦怠感。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>清明节和朋友一起去了桂林，又去了广州。路途中本应是畅意游览，竟又品味出了另一种倦怠感，对北方的倦怠感，是的没错，来南方旅行，品味出了北方生活的倦怠感。</p>
 <p>2012年8月末来北京，到现在2019年5月，在这个城市快7年时间了，而似乎也一直像是一条淡水鱼，在大海里辗转游览。</p>
 <p>7年里，除了回家，去南方玩过3次，</p>
 <p>第一次，估摸着应该是大二的五一，去武汉。那时候担任学校某个社团的社长，算是第一次公费出行。那时候还没做过轮渡，看到渡口的轮渡感觉好稀奇，当时有个朋友在武汉，陪着我来来回回坐了好几趟，半夜了我还不想回家，坐在外滩，吹着江风，和着时光吹乱我的头发和心情。现在想来那时候还真是，怎么说呢，有一种年轻人的矜持感，大概就是”我想要但我绝不会说，还要推开你”的深井冰吧…现在的性格里大概还残留了一些，但对自己倒是坦诚了很多，也世俗了很多。风景总是流动着的，回忆留在江风里，就莫名已经很美好了。</p>
@@ -342,7 +342,7 @@
   <entry>
     <title>Flask-web搭建学习笔记（1）-bootstrap</title>
     <url>/2019/03/17/2019/Flask-web(1)/</url>
-    <content><![CDATA[<p>先安装python，以及flask和flask_bootstrap包</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>先安装python，以及flask和flask_bootstrap包</p>
 <p>首先梳理一下文件夹，也就是网站最基本的框架</p>
 <h3 id="xxx-py"><a href="#xxx-py" class="headerlink" title="xxx.py"></a>xxx.py</h3><p>程序主页面，用命令行运行，或是通过pycharm这些都OK，此处例举最基础的语法<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">from flask import Flask, render_template</span><br><span class="line">from flask_bootstrap import Bootstrap</span><br><span class="line"># 引入flask和flask_bootstrap两个包</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">bootstrap = Bootstrap(app)</span><br><span class="line"></span><br><span class="line">@app.route(&apos;/&apos;)</span><br><span class="line">def index():</span><br><span class="line">    return render_template(&apos;base.html&apos;)</span><br><span class="line"># 这段可以复制，再修改增加功能，上面三行仅为index的设置，其他页面再设置 </span><br><span class="line">    </span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    app.run()</span><br><span class="line"># 当然也可以加入其他的一些功能，例如debug=True</span><br></pre></td></tr></table></figure></p>
   <a id="more"></a>
@@ -358,36 +358,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Mac安装openblas或opencv或gcc</title>
-    <url>/2019/01/28/2019/install-openblas:opencv:gcc/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure>
-<p>如果都安装成功，则无须看以下内容，否则需要：</p>
-<blockquote>
-<ul>
-<li>安装或更新Xcode 最新版本</li>
-<li>安装Xcode CLT</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-<p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p>
-<ul>
-<li>在终端输入：<code>xcode-select --install</code></li>
-<li>弹出提示框中选择“安装”</li>
-<li>选择同意协议</li>
-<li>安装</li>
-<li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li>
-</ul>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>
-]]></content>
-      <tags>
-        <tag>learn</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装dlib</title>
     <url>/2019/01/28/2019/install-dlib/</url>
-    <content><![CDATA[<h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p>
 <h3 id="dlib的依赖"><a href="#dlib的依赖" class="headerlink" title="dlib的依赖"></a>dlib的依赖</h3><ul>
 <li>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure>
 </li>
@@ -414,9 +387,36 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac安装openblas或opencv或gcc</title>
+    <url>/2019/01/28/2019/install-openblas:opencv:gcc/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure>
+<p>如果都安装成功，则无须看以下内容，否则需要：</p>
+<blockquote>
+<ul>
+<li>安装或更新Xcode 最新版本</li>
+<li>安装Xcode CLT</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p>
+<ul>
+<li>在终端输入：<code>xcode-select --install</code></li>
+<li>弹出提示框中选择“安装”</li>
+<li>选择同意协议</li>
+<li>安装</li>
+<li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li>
+</ul>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mac 安装人脸识别face_recognition python包</title>
     <url>/2019/01/26/2019/face_collection_install/</url>
-    <content><![CDATA[<p>一、安装face_recognition</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>一、安装face_recognition</p>
 <p>二、完成功能开发</p>
 <p>二、部署在云服务器上(Heroku,AWS)<br>部署在Heroku或者AWS的云端服务器上是很明智的<br>为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成<a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。</p>
 <p><em>此篇为安装篇</em></p>
@@ -450,7 +450,7 @@
   <entry>
     <title>Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</title>
     <url>/2019/01/23/2019/Hexo_190123/</url>
-    <content><![CDATA[<h3 id="增加RSS功能"><a href="#增加RSS功能" class="headerlink" title="增加RSS功能"></a>增加RSS功能</h3><ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="增加RSS功能"><a href="#增加RSS功能" class="headerlink" title="增加RSS功能"></a>增加RSS功能</h3><ul>
 <li><p>安装RSS插件<br>注意一定要安装到blog的根目录<br><code>npm install --save hexo-generator-feed</code></p>
 </li>
 <li><p>在你的项目的‘_config.yml‘配置文件下找到Extensions添加如下内容：</p>
@@ -494,7 +494,7 @@
   <entry>
     <title>杂思</title>
     <url>/2018/12/23/2018/daily1203/</url>
-    <content><![CDATA[<h4 id="离别后遗症"><a href="#离别后遗症" class="headerlink" title="离别后遗症"></a>离别后遗症</h4><p>两周前回家了一趟。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h4 id="离别后遗症"><a href="#离别后遗症" class="headerlink" title="离别后遗症"></a>离别后遗症</h4><p>两周前回家了一趟。</p>
 <p>无计划的临时回家多半不是什么好事。</p>
 <p>毕业两年多，突感沧桑了很多。衰老和死亡倒不是一件急于求成的事情，它终将如期而至，幸运而来，对此无疑惑，也暂时做不到释怀。惶恐于成熟与衰老并不是完全的正相关，忽觉天已晚，仍疑自己还可年少无措。</p>
 <p>人心会变柔软吗，会变得僵硬青白么，或视为生物对于危险和伤害的应激性反应。生离让人伤感，死别让人悲痛，常见会让人感到些微的好受些吗，还是让心变得僵硬些，伤心难受也是可以有些习惯的。人生在世，是不是就得习惯于生离死别，生活的真相呢。</p>
@@ -532,7 +532,7 @@
   <entry>
     <title>有趣之人如此多，少我一人也无妨</title>
     <url>/2018/12/01/2018/daily1201/</url>
-    <content><![CDATA[<p>一天待在家里，偶尔出来一下，找了个咖啡厅，假装自己今天也是有所收获吧。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>一天待在家里，偶尔出来一下，找了个咖啡厅，假装自己今天也是有所收获吧。</p>
 <p>每天日复一日，有时候忍不住在想，这样下去又有什么意思呢。这种没意思的话，说出来又有什么意思呢。今天看群里有人说，即使你是个小ID，也应该表达自身的观点，否则就会被带着走。回想下，自己一直有点抗拒输出自己的价值观，虽然生活工作中价值观输出又是日常。但说的东西似乎就会让别人给你下tag的这种感觉，并不舒服，人性复杂，性格多变，稳定才是奇怪的事情，但人比较容易刻板印象，这也是奇怪，大概是惯性思维习惯导致的？倘若为他人的标签化过于忧虑，似乎也是一种焦虑且不够有安全感的表现了。如果按自尊的定义“喜欢自身的程度”来说，这岂不又是一种“低自尊”的状态？这样不好不好，这不算是“坦然平静”的生活处理方式了，但生活为什么有需要“坦然泰然”的态度呢，这就源源不绝的废话连篇了。</p>
 <a id="more"></a>  
 <p>所以如果脑袋自动转，就会有这样源源不断的废话，萦绕不绝，令人烦忧。人多数时候还是无聊的紧啊，制造物理化学垃圾，还要制造精神垃圾。当然，我这样的胡言乱语还是不要多想比较好，关于意义啊有趣啊这类话题啊，还是不加多想为好，毕竟有趣的人那么多，多或者少一个你这样无趣的人，也是毫无关系的。</p>
@@ -552,7 +552,7 @@
   <entry>
     <title>这个世界太严肃，想到这点，我毛骨悚然。</title>
     <url>/2018/11/24/2018/daily1124/</url>
-    <content><![CDATA[<p>什么时候变得像现在这个样子，每到落笔，似乎灾难性的事情一下子都全部落到了肩上一样，各种幻想自己的悲惨。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>什么时候变得像现在这个样子，每到落笔，似乎灾难性的事情一下子都全部落到了肩上一样，各种幻想自己的悲惨。</p>
 <p>眼睛像是蒙上了一层薄雾，明知自己无限制的玩游戏之后又摸索着用电脑写东西，就好像狗屁不通的胡乱撕咬，也像是自由的在冰面上滑行。</p>
 <p>文字自有其欺骗性的本性以及自由自在的自在。她既是脆弱的不堪一击的比玻璃和爱情还更不靠谱，又像是穿越过无数时光还死乞白赖的活着精彩又长久。让人欲罢不能。</p>
 <p>时常不想动笔，动笔即各种生活的坏处涌上心头，就不知说些什么好，和自己对话，总是乱七八糟的糟心事，当作和别人对话吧，又好像喋喋不休的祥林嫂，让人联想到圆规。索性就还是不写。要真写点正经话吧，又要挠头摆尾，鱼鳞都好像要挠掉一样，半天憋不出一句半句来。说出的话来，像是一个个的泡泡，即怕它落在半空不落地，心就空落落，要是落地了，又是严肃的要命，没意思的紧。<br><a id="more"></a><br>一落笔，你这心里乌黑的墨汁，心里头阴惨惨的角落就好像显露无疑。平时在别人面前，总要保持个沉默靠谱的模样，别人说你文静温柔吧，你这心里头也高兴不起来，无趣的像个木头人，想想就觉得没意思。还真是没啥意思，现在出门遇到人，都不晓得想讲什么话，讲的多是无趣话。不讲话，又是闷的可以。讲的多了，就又想是裹布。</p>
@@ -572,7 +572,7 @@
   <entry>
     <title>Python数据可视化：pyecharts</title>
     <url>/2018/11/04/2018/pyecharts/</url>
-    <content><![CDATA[<p>预想是学习通过python开发一个数据图表的平台，用API获取数据，数据可视化。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>预想是学习通过python开发一个数据图表的平台，用API获取数据，数据可视化。</p>
 <p>通过搜索等，发现echarts可以实现数据可视化，并且还有针对python的第三方库。以下记录过程</p>
 <h4 id="安装pyecharts"><a href="#安装pyecharts" class="headerlink" title="安装pyecharts"></a>安装pyecharts</h4><p><code>pip install pyecharts</code><br>不知道为什么我总是不成功，最终还是在下载了pyecharts库文件才安装成功。</p>
 <ol>
@@ -625,7 +625,7 @@
   <entry>
     <title>Python CGI准备：IIS 配置</title>
     <url>/2018/10/22/2018/IISDeploy/</url>
-    <content><![CDATA[<p><strong>什么是CGI</strong></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong>什么是CGI</strong></p>
 <p>CGI 目前由NCSA维护，NCSA定义CGI如下：</p>
 <p>CGI(Common Gateway Interface),通用网关接口,它是一段程序,运行在服务器上如：HTTP服务器，提供同客户端HTML页面的接口。</p>
 <p>大部分教程接下来会详细讲明CGI是怎么工作，怎么实现的。</p>
@@ -661,8 +661,8 @@
   <entry>
     <title>git 清单</title>
     <url>/2018/09/28/2018/gitlist/</url>
-    <content><![CDATA[<h4 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h4><p>git config工具专门用来配置或读取相应的工作环境变量</p>
-<p>git config –global user.name “dora”<br>git config –global user.email xxx@163.com</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h4 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h4><p>git config工具专门用来配置或读取相应的工作环境变量</p>
+<p>git config –global user.name “dora”<br>git config –global user.email <a href="mailto:xxx@163.com" target="_blank" rel="noopener">xxx@163.com</a></p>
 <p>–global所有项目会默认使用这个配置信息</p>
 <p>在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里</p>
 <p><strong>文本编辑器</strong><br>默认的是Vi或者Vim，重新设置：<br>git config –global core.editor sublime</p>
@@ -705,7 +705,7 @@
   <entry>
     <title>Excel 蓝图</title>
     <url>/2018/09/16/2018/Excel/</url>
-    <content><![CDATA[<p>刚毕业开始工作的同事对excel小技巧还存在比较强烈的好奇，想起当初刚刚毕业的时候也曾东找西找教程，每天早半小时到公司，先看两个excel公众号推送学习，找一些小视频课的时候。她比较羞涩，似乎很担心打扰到别人。也出于渐渐淡忘这些，所以今天准备把一些常用的功能列举下来，让她更有方向点。同时也希望她今后可以更加大胆的说出自己的想法。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>刚毕业开始工作的同事对excel小技巧还存在比较强烈的好奇，想起当初刚刚毕业的时候也曾东找西找教程，每天早半小时到公司，先看两个excel公众号推送学习，找一些小视频课的时候。她比较羞涩，似乎很担心打扰到别人。也出于渐渐淡忘这些，所以今天准备把一些常用的功能列举下来，让她更有方向点。同时也希望她今后可以更加大胆的说出自己的想法。</p>
 <p>我把excel的使用分成几部分</p>
 <ol>
 <li>快捷按键/自带功能</li>
@@ -751,13 +751,13 @@
 <li>Phone<br>…</li>
 </ul>
 <p>这个时候分裂功能就很有用了，先使用特殊符号分裂，再按长度分离“姓名”</p>
-<ol>
+<ol start="2">
 <li><p>条件格式<br>这个在数据透视表中也说过，结合使用</p>
 </li>
 <li><p>快速填充<br>有时候需要获取前一列的某几个字符，前列虽然是有同样规则，但是获取的字符长度却不一样，这时候可以用快速填充-快速填充</p>
 </li>
 </ol>
-<ol>
+<ol start="4">
 <li><p>数据验证<br>下拉框的使用等</p>
 </li>
 <li><p>组合</p>
@@ -807,7 +807,7 @@
   <entry>
     <title>VBS</title>
     <url>/2018/09/14/2018/VB/</url>
-    <content><![CDATA[<p>在HTML中放置<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;script  type=&quot;text/vbscript&quot;&gt;</span><br><span class="line">	document.write(&quot;hello from VBScirpt&quot;)</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>在HTML中放置<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;script  type=&quot;text/vbscript&quot;&gt;</span><br><span class="line">	document.write(&quot;hello from VBScirpt&quot;)</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
 <p>在Head部分的脚本：当脚本被调用时，它们就会被执行，或者某个事件被触发，脚本也有可能被触发。当脚本被放置在head，就可以确保用户在使用前已经被载入</p>
 <p>在body部分：当页面body部分被载入时，脚本就会被执行。当我们把脚本放置在body部分，它会生成页面的内容。</p>
 <h4 id="变量-（始于被声明，死于页面被关闭）"><a href="#变量-（始于被声明，死于页面被关闭）" class="headerlink" title="变量 ####（始于被声明，死于页面被关闭）"></a>变量 ####（始于被声明，死于页面被关闭）</h4><p>option explicit<br>dim name<br>name = values</p>
@@ -832,7 +832,7 @@
   <entry>
     <title>HTML 相关常用汇总</title>
     <url>/2018/09/14/2018/HTML%20and%20CSS/</url>
-    <content><![CDATA[<p>Home<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;!-- 插入外部样式表 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; </span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;啦啦啦&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;我是卖报的小行家&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>Home<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;!-- 插入外部样式表 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; </span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;啦啦啦&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;我是卖报的小行家&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h4 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h4><p><strong> 标题 </strong></p>
 <p></p><h1>一级标题</h1><p></p>
@@ -940,7 +940,7 @@ href="////">
 
 </li>
 </ul>
-<p><strong> 内联框架 </strong><br>  <iframe src="//"(width="" height="" frameborder="0")></iframe></p>
+<p><strong> 内联框架 </strong><br>  &lt;iframe src=”//“(width=”” height=”” frameborder=”0”)&gt;</iframe></p>
 <ul>
 <li>作为连接的目标时<br>加入name属性<br>name=””</li>
 </ul>
@@ -949,14 +949,14 @@ href="////">
 <p>整理过程是一个复习的过程，虽然离现在实质工作内容相差千万，还应起项目直接实操才好。<br>稍加整理，如有错误或者其他的建议，还请不吝赐教，万分感谢。</p>
 </style></p></li></ul>]]></content>
       <tags>
-        <tag>learn</tag>
         <tag>HTML</tag>
+        <tag>learn</tag>
       </tags>
   </entry>
   <entry>
     <title>连接Python和MySQL</title>
     <url>/2018/08/30/2018/connectpythonsql/</url>
-    <content><![CDATA[<h3 id="安装“MySQL-Connector“"><a href="#安装“MySQL-Connector“" class="headerlink" title="安装“MySQL Connector“"></a>安装“MySQL Connector“</h3><p><code>pip install mysql-connector</code></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="安装“MySQL-Connector“"><a href="#安装“MySQL-Connector“" class="headerlink" title="安装“MySQL Connector“"></a>安装“MySQL Connector“</h3><p><code>pip install mysql-connector</code></p>
 <h3 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import mysql.connector</span><br><span class="line"></span><br><span class="line">mydb = mysql.connector.connect(</span><br><span class="line">    host = &quot;localhost&quot;,</span><br><span class="line">    user = &quot;username&quot;,</span><br><span class="line">    passwd = &quot;password&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">print(mydb)</span><br></pre></td></tr></table></figure>
 <h3 id="创建一个database"><a href="#创建一个database" class="headerlink" title="创建一个database"></a>创建一个database</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import mysql.connector</span><br><span class="line"></span><br><span class="line">mydb = mysql.connector.connect(</span><br><span class="line">    host = &quot;localhost&quot;,</span><br><span class="line">    user = &quot;username&quot;,</span><br><span class="line">    passwd = &quot;password&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">mycursor = mydb.cursor()</span><br><span class="line"></span><br><span class="line">mycursor.execute(&quot;CREATE DATABASE mydatabase&quot;)</span><br><span class="line"></span><br><span class="line">#check</span><br><span class="line"></span><br><span class="line">for x in mycursor:</span><br><span class="line">    print(x)</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
@@ -983,7 +983,7 @@ href="////">
   <entry>
     <title>SQL常用函数</title>
     <url>/2018/08/29/2018/SQL2/</url>
-    <content><![CDATA[<ul>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><ul>
 <li>AVG: 平均数</li>
 </ul>
 <ol>
@@ -1059,7 +1059,7 @@ href="////">
   <entry>
     <title>Hexo+Yilia 所遇问题解决方法汇总</title>
     <url>/2018/08/26/2019/hexo_yilia/</url>
-    <content><![CDATA[<h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p>
 <p>这里花费的时间最久，在issues里找了很久，终于在<a href="https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/?nsukey=%2BijgAVH%2B4eCTudP96Bul1%2FQsAa44sS5wREOMSjzWZhpp5HNtgQ5lYQXXWgsrEjpRXfaVUvIfj1pVXj%2FYnFSdjAf0TR900HBBZYQThmSrRTtVwFlzfcGL9KfVT67ohG1XyYvT35Te2BXTqDo5Vh8nrUA6pr55q0Xs2nagi4yyiQFrPsRNMcql82iJ5ltbcivhdE%2Fe3i3m8aBleHrwZkGOWA%3D%3D" target="_blank" rel="noopener">Ziven</a>找到对应的</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#6、gitalk评论</span><br><span class="line">gitalk:</span><br><span class="line">  enable:  true</span><br><span class="line">  githubID:  liheyuting  </span><br><span class="line">  repo: liheyuting.github.io （填写repo的名字）</span><br><span class="line">  ClientID: &apos;&apos;</span><br><span class="line">  ClientSecret: &apos;&apos;</span><br><span class="line">  adminUser: &apos;&apos;</span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure>
 <p>这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。</p>
@@ -1085,7 +1085,7 @@ href="////">
   <entry>
     <title>SQL常用语句</title>
     <url>/2018/08/22/2018/SQL/</url>
-    <content><![CDATA[<p>假设</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>假设</p>
 <ul>
 <li>表1：Persons</li>
 <li>表2：Behaviors</li>
@@ -1146,9 +1146,9 @@ href="////">
   <entry>
     <title>岁月走在美的光影里</title>
     <url>/2018/08/19/2018/beauty/</url>
-    <content><![CDATA[<blockquote>
-<p>我认识你，永远记得你。那时候，你还很年轻，人人都说你美，现在，我是特为来告诉你，对我来说，我觉得现在你比年轻的时候更美，那时你是年轻女人，与你那时的面貌相比，我更爱你现在备受摧残的面容。<br>– 杜拉斯《情人》</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
 </blockquote>
+<p>我认识你，永远记得你。那时候，你还很年轻，人人都说你美，现在，我是特为来告诉你，对我来说，我觉得现在你比年轻的时候更美，那时你是年轻女人，与你那时的面貌相比，我更爱你现在备受摧残的面容。<br>– 杜拉斯《情人》</p>
 <p>原本今天想推林清玄的散文集《在云上》，今天遇到的一个女人改变了我的想法。她就像一场清风，让我感觉，美就像是穿越过时光的星空，依旧灼灼其华熠熠生辉，酝酿的美酒，清香内敛而值得细细回味。</p>
 <p>你可能会遇到这样一个女人，头发还是黝黑，细致的卷起，刘海细碎而妥帖。时间的针脚已经爬上了她的眉眼面庞，有时会遗留下点点斑纹，皮肤还是比较紧致，法令纹也是细细的，难受时，眉头细细颦起。最让人注意的是她的眼睛，深邃的眼睛看着你时，似乎所有的光都聚在了她的黑色瞳孔里，像是一闪一闪亮晶晶的小星星，对世界充满了好奇和热忱，跳跃着跳跃着要跳出时间的枷锁，拥抱这个痛苦而温暖的现实。</p>
 <a id="more"></a> 
@@ -1200,41 +1200,9 @@ href="////">
       </tags>
   </entry>
   <entry>
-    <title>Markdown语法文档</title>
-    <url>/2018/05/12/2018/Markdown/</url>
-    <content><![CDATA[<h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
-<p><strong> 加粗 </strong><br><code>** 加粗 **</code></p>
-<p><em>斜体</em></p>
-<p><code>*斜体*</code></p>
-<a id="more"></a> 
-<p><strong><em> 斜体加粗 </em></strong><br><code>*** 斜体加粗 ***</code></p>
-<p><del>删除线</del><br><code>~~删除线~~</code></p>
-<blockquote>
-<p>引用<br><code>&gt; 引用</code></p>
-</blockquote>
-<hr>
-<p>分割线<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure></p>
-<p>图片<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src=&apos;/img/0-5.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt; &lt;img src=&apos;/img/0-8.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>超链接<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure></p>
-<p>无序列表</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
-<p>有序列表</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
-<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
-<p>表格<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure></p>
-<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
-<p>插入视频<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
-<p>插入音乐<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=28381611&amp;auto=1&amp;height=66&quot; width=330 height=86&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <tags>
-        <tag>learn</tag>
-        <tag>markdown</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>建立第一篇博客</title>
     <url>/2018/05/12/2018/first_blog/</url>
-    <content><![CDATA[<p><strong><em> 发布文章 </em></strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong><em> 发布文章 </em></strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
 <p>每次部署的步骤，三步</p>
 <ul>
 <li>hexo clean</li>
@@ -1270,9 +1238,41 @@ href="////">
       </tags>
   </entry>
   <entry>
+    <title>Markdown语法文档</title>
+    <url>/2018/05/12/2018/Markdown/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+<p><strong> 加粗 </strong><br><code>** 加粗 **</code></p>
+<p><em>斜体</em></p>
+<p><code>*斜体*</code></p>
+<a id="more"></a> 
+<p><strong><em> 斜体加粗 </em></strong><br><code>*** 斜体加粗 ***</code></p>
+<p><del>删除线</del><br><code>~~删除线~~</code></p>
+<blockquote>
+<p>引用<br><code>&gt; 引用</code></p>
+</blockquote>
+<hr>
+<p>分割线<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure></p>
+<p>图片<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src=&apos;/img/0-5.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt; &lt;img src=&apos;/img/0-8.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>超链接<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure></p>
+<p>无序列表</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
+<p>有序列表</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
+<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
+<p>表格<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure></p>
+<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
+<p>插入视频<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
+<p>插入音乐<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=28381611&amp;auto=1&amp;height=66&quot; width=330 height=86&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>那个沉默着送你回家却不告诉你的男生</title>
     <url>/2018/03/16/2018/thatboy/</url>
-    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=28381611&auto=1&height=66" width="330" height="86"></iframe>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=28381611&auto=1&height=66" width="330" height="86"></iframe>
 
 <p>（<em>旧文</em>）<br>Z小姐个子很高，一米七，走起路来大开大合，很是潇洒，她的笑声也是。</p>
 <p>在我说了”不过单身二十三年而已”，上铺的她接到”我也不过二十四年而已”，然后两人相视大笑。谈到单身这个问题，她忽然说起了一个几乎伴随着她整个学生生涯的男孩。</p>
@@ -1361,7 +1361,7 @@ href="////">
   <entry>
     <title>从零开始搭建博客</title>
     <url>/2017/11/23/2018/0-1blog/</url>
-    <content><![CDATA[<p><strong>1-2Day：搭建Blog到GitHub</strong></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong>1-2Day：搭建Blog到GitHub</strong></p>
 <h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>详情可以借鉴<a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">官方网站</a>,</p>
 <p>安装homebrew<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure></p>
 <p>安装nodejs<br>    <code>brew install node</code></p>
@@ -1407,7 +1407,7 @@ href="////">
   <entry>
     <title>头发半长不短时</title>
     <url>/2017/09/13/2018/hair/</url>
-    <content><![CDATA[<p>终归要熬过这个时间。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>终归要熬过这个时间。</p>
 <p>大学的一个普通下午，舍友们都不在，一个人到校门口的理发店剪了短发。</p>
 <p>两个多月前，第一次染了头发，亚麻绿，初颜色还亮着，慢慢的，头发开始泛黄，失去色泽。</p>
 <p>头发半长不短，在耳下，丛丛杂杂的，棕黑色的头发新长出来。半黄绿半黑棕，长不及肩短过耳。</p>
