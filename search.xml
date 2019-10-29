@@ -1,6 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo博客增加aplayer音乐播放器</title>
+    <url>/2019/10/29/2019/hexo_aplayer/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>之前使用的是网易云外链链接，<a href="https://liheyuting.github.io/2018/05/12/2018/Markdown/">点击查看</a>文章尾部如何使用，发现很受版权的限制，QQ音乐无法生成外链。</p>
+<p>遂，试试看使用插件来插入音乐。</p>
+<h3 id="下载hexo-tag-aplayer"><a href="#下载hexo-tag-aplayer" class="headerlink" title="下载hexo-tag-aplayer"></a>下载hexo-tag-aplayer</h3><p>进入博客根目录：<br><code>npm install --save hexo-tag-aplayer</code><br><a id="more"></a><br>在根目录的<code>_config.yml</code>中增加<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 音乐播放器</span><br><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="在博客中增加音乐"><a href="#在博客中增加音乐" class="headerlink" title="在博客中增加音乐"></a>在博客中增加音乐</h3><p>可用模板<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;歌曲id&quot; &quot;netease（音乐平台）&quot; &quot;song&quot; &quot;theme:#555&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure></p>
+<p>音乐平台：<br>netease, tencent, kugou, xiami, baidu</p>
+<p>具体参数等<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">参考文档</a></p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+        <tag>blog</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>今年厦门出差第3次</title>
+    <url>/2019/10/29/2019/xiamen_3rd/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+    <div id="aplayer-ELwoHwmV" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
+      <tags>
+        <tag>soft</tag>
+        <tag>行走</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>DaoVoice实现在线联系</title>
     <url>/2019/10/24/2019/next_daovoice/</url>
     <content><![CDATA[<h3 id="注册登陆DaoVoice"><a href="#注册登陆DaoVoice" class="headerlink" title="注册登陆DaoVoice"></a>注册登陆DaoVoice</h3><p><a href="http://www.daovoice.io/" target="_blank" rel="noopener">注册地址</a></p>
@@ -44,7 +70,7 @@
   <entry>
     <title>Hexo更换主题Yilia为Next及Next主题优化</title>
     <url>/2019/10/15/2019/hexo_next/</url>
-    <content><![CDATA[<h3 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>安装next主题</h3><p><strong>下载</strong> next主题<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd  xxxx/themes</span><br><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>安装next主题</h3><p><strong>下载</strong> next主题<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd  xxxx/themes</span><br><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
 <p><strong>编辑主题</strong><br>在<code>hexo/_config.yml</code>中修改</p>
 <p><code>theme: next</code></p>
 <h3 id="Menu更新"><a href="#Menu更新" class="headerlink" title="Menu更新"></a>Menu更新</h3><p>tags：</p>
@@ -83,7 +109,7 @@
 <li>已修改<code>next\source\css_variables\custom.styl</code>的css文件，增加以下代码</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">//底部爱心小图标跳动</span><br><span class="line">keyframes heartAnimate &#123;</span><br><span class="line">    0%,100%&#123;transform:scale(1);&#125;</span><br><span class="line">    10%,30%&#123;transform:scale(0.9);&#125;</span><br><span class="line">    20%,40%,60%,80%&#123;transform:scale(1.1);&#125;</span><br><span class="line">    50%,70%&#123;transform:scale(1.1);&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//图标所对应的span中的ID</span><br><span class="line">#heart &#123;</span><br><span class="line">    animation: heartAnimate 1.33s ease-in-out infinite;</span><br><span class="line">&#125;</span><br><span class="line">.with-love &#123;</span><br><span class="line">    color: rgb(255, 113, 113);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="2">
 <li>底部为增加对应的ID</li>
 </ol>
 <h3 id="修改界面内容默认的设置【没有起效果】"><a href="#修改界面内容默认的设置【没有起效果】" class="headerlink" title="修改界面内容默认的设置【没有起效果】"></a>修改界面内容默认的设置【没有起效果】</h3><p>在<code>themes\next\source\css\_custom的custom.styl</code>添加下面参数</p>
@@ -96,7 +122,7 @@
 <p>背景效果设置：<br>‘themes\next_config.yml ‘中找到<code>canvas</code></p>
 <h3 id="字体不闪动设置"><a href="#字体不闪动设置" class="headerlink" title="字体不闪动设置"></a>字体不闪动设置</h3><p>修改文件<code>next/source/css/_common/components/post/post-reward.styl</code>，然后注释其中的函数<code>wechat:hover和alipay:hover</code>，如下：</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">/* 注释文字闪动函数</span><br><span class="line">#wechat:hover p&#123;</span><br><span class="line">animation: roll 0.1s infinite linear;</span><br><span class="line">-webkit-animation: roll 0.1s infinite linear;</span><br><span class="line">-moz-animation: roll 0.1s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">#alipay:hover p&#123;</span><br><span class="line">animation: roll 0.1s infinite linear;</span><br><span class="line">-webkit-animation: roll 0.1s infinite linear;</span><br><span class="line">-moz-animation: roll 0.1s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
-<h3 id="标签云"><a href="#标签云" class="headerlink" title="标签云"></a>标签云</h3><h3 id="解决zlib-Cannot-read-property-39-length-39-of-null"><a href="#解决zlib-Cannot-read-property-39-length-39-of-null" class="headerlink" title="解决zlib: Cannot read property &#39;length&#39; of null"></a>解决<code>zlib: Cannot read property &#39;length&#39; of null</code></h3><p>用npm安装什么都显示这样，是nodejs版本不够 <a href="https://github.com/ionic-team/ionic-cli/issues/3816" target="_blank" rel="noopener">github issue</a></p>
+<h3 id="解决zlib-Cannot-read-property-39-length-39-of-null"><a href="#解决zlib-Cannot-read-property-39-length-39-of-null" class="headerlink" title="解决zlib: Cannot read property &#39;length&#39; of null"></a>解决<code>zlib: Cannot read property &#39;length&#39; of null</code></h3><p>用npm安装什么都显示这样，是nodejs版本不够 <a href="https://github.com/ionic-team/ionic-cli/issues/3816" target="_blank" rel="noopener">github issue</a></p>
 <p><a href="https://stackoverflow.com/questions/10075990/upgrading-node-js-to-latest-version" target="_blank" rel="noopener">stack中的解决方案</a><br>方案一：<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install n -g</span><br><span class="line">sudo n stable 安装稳定版本</span><br><span class="line">或 sudo n latest 安装最新版本</span><br></pre></td></tr></table></figure></p>
 <p>失败，仍旧显示同样错误</p>
 <p>方案二：<br>不使用sudo</p>
@@ -332,6 +358,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Mac安装openblas或opencv或gcc</title>
+    <url>/2019/01/28/2019/install-openblas:opencv:gcc/</url>
+    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure>
+<p>如果都安装成功，则无须看以下内容，否则需要：</p>
+<blockquote>
+<ul>
+<li>安装或更新Xcode 最新版本</li>
+<li>安装Xcode CLT</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p>
+<ul>
+<li>在终端输入：<code>xcode-select --install</code></li>
+<li>弹出提示框中选择“安装”</li>
+<li>选择同意协议</li>
+<li>安装</li>
+<li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li>
+</ul>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>安装dlib</title>
     <url>/2019/01/28/2019/install-dlib/</url>
     <content><![CDATA[<h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p>
@@ -358,33 +411,6 @@
         <tag>learn</tag>
         <tag>python</tag>
         <tag>big data</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Mac安装openblas或opencv或gcc</title>
-    <url>/2019/01/28/2019/install-openblas:opencv:gcc/</url>
-    <content><![CDATA[<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure>
-<p>如果都安装成功，则无须看以下内容，否则需要：</p>
-<blockquote>
-<ul>
-<li>安装或更新Xcode 最新版本</li>
-<li>安装Xcode CLT</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-<p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p>
-<ul>
-<li>在终端输入：<code>xcode-select --install</code></li>
-<li>弹出提示框中选择“安装”</li>
-<li>选择同意协议</li>
-<li>安装</li>
-<li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li>
-</ul>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>
-]]></content>
-      <tags>
-        <tag>learn</tag>
-        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -1020,14 +1046,14 @@ href="////">
   <entry>
     <title>《一个人的村庄》</title>
     <url>/2018/08/27/2018/read_village/</url>
-    <content><![CDATA[<h4 id="鸟语的孤独"><a href="#鸟语的孤独" class="headerlink" title="鸟语的孤独"></a>鸟语的孤独</h4><p>刘亮程在《一个人的村庄》里写到“不知道那只鸟最后找到知音了没有。听过它孤独鸟语的一个人，却从此默默无声。多少年后，这种孤独的声音出现在他的声音里。“</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h4 id="鸟语的孤独"><a href="#鸟语的孤独" class="headerlink" title="鸟语的孤独"></a>鸟语的孤独</h4><p>刘亮程在《一个人的村庄》里写到“不知道那只鸟最后找到知音了没有。听过它孤独鸟语的一个人，却从此默默无声。多少年后，这种孤独的声音出现在他的声音里。“</p>
 <p>看到这段话时，我正坐在公交车里，窗两侧的树木和汽车，如模糊后退不断浓缩的影像，渐渐离开视野。不知怎的，眼睛突然就热了，眼泪沿着眼角划下。怆然之感，骤上心头。</p>
 <p>就如同，举目无边的荒原里，有野草，有风声，有淅淅沥沥的雨落在手心，也有墨色苍穹静默，却只能一个人站着，声音出自胸腔，悬落在半空，也许风听到了，野草也摇曳着应和，你却明白，这世界辽阔响亮，却寂然无回声。</p>
 <p>有些庆幸，不是年少时翻看，那时未离家多年，不用想到原来同样的草长在不同的地方，竟会让人有不同的感情，不用体会原来说着话也不曾让人远离孤独。</p>
 ]]></content>
       <tags>
         <tag>soft</tag>
-        <tag>read</tag>
+        <tag>读书</tag>
       </tags>
   </entry>
   <entry>
@@ -1146,7 +1172,7 @@ href="////">
   <entry>
     <title>“科学上网”攻略</title>
     <url>/2018/05/16/2018/search/</url>
-    <content><![CDATA[<h3 id="Windows-Mac-安卓"><a href="#Windows-Mac-安卓" class="headerlink" title="Windows/Mac/安卓"></a>Windows/Mac/安卓</h3><p>蓝灯即可，蓝灯即可，蓝灯即可，直接<a href="http://www.landengpro.org/index.php#download" target="_blank" rel="noopener">官网</a></p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="Windows-Mac-安卓"><a href="#Windows-Mac-安卓" class="headerlink" title="Windows/Mac/安卓"></a>Windows/Mac/安卓</h3><p>蓝灯即可，蓝灯即可，蓝灯即可，直接<a href="http://www.landengpro.org/index.php#download" target="_blank" rel="noopener">官网</a></p>
 <h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>之前记得pad下过一个蓝灯，手机怎么搜也搜不到，蓝灯官网说iOS版正在开发中。</p>
 <p>最初只是想要下载一个 Google keep，只能在非大陆的app store里下载，神烦。</p>
 <p><strong><em> 注册一个非大陆的apple id </em></strong><br>目前store里几乎只有那些试用一次收费的软件，其他的VPN几乎全被下架。免费的VPN一般都需要在非大陆的store里下载，所以申请一个非大陆的账号还是有点用的。</p>
@@ -1170,7 +1196,39 @@ href="////">
 <p>完。</p>
 ]]></content>
       <tags>
-        <tag>other</tag>
+        <tag>翻墙</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown语法文档</title>
+    <url>/2018/05/12/2018/Markdown/</url>
+    <content><![CDATA[<h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+<p><strong> 加粗 </strong><br><code>** 加粗 **</code></p>
+<p><em>斜体</em></p>
+<p><code>*斜体*</code></p>
+<a id="more"></a> 
+<p><strong><em> 斜体加粗 </em></strong><br><code>*** 斜体加粗 ***</code></p>
+<p><del>删除线</del><br><code>~~删除线~~</code></p>
+<blockquote>
+<p>引用<br><code>&gt; 引用</code></p>
+</blockquote>
+<hr>
+<p>分割线<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure></p>
+<p>图片<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src=&apos;/img/0-5.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt; &lt;img src=&apos;/img/0-8.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt;</span><br></pre></td></tr></table></figure></p>
+<p>超链接<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure></p>
+<p>无序列表</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
+<p>有序列表</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
+<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
+<p>表格<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure></p>
+<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
+<p>插入视频<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
+<p>插入音乐<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=28381611&amp;auto=1&amp;height=66&quot; width=330 height=86&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1209,38 +1267,6 @@ href="////">
       <tags>
         <tag>learn</tag>
         <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown语法文档</title>
-    <url>/2018/05/12/2018/Markdown/</url>
-    <content><![CDATA[<h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
-<p><strong> 加粗 </strong><br><code>** 加粗 **</code></p>
-<p><em>斜体</em></p>
-<p><code>*斜体*</code></p>
-<a id="more"></a> 
-<p><strong><em> 斜体加粗 </em></strong><br><code>*** 斜体加粗 ***</code></p>
-<p><del>删除线</del><br><code>~~删除线~~</code></p>
-<blockquote>
-<p>引用<br><code>&gt; 引用</code></p>
-</blockquote>
-<hr>
-<p>分割线<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure></p>
-<p>图片<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &apos;&apos;图片title&apos;&apos;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src=&apos;/img/0-5.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt; &lt;img src=&apos;/img/0-8.jpg&apos;, height= &apos;37%&apos;, width = &apos;37%&apos;&gt;</span><br></pre></td></tr></table></figure></p>
-<p>超链接<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure></p>
-<p>无序列表</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
-<p>有序列表</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
-<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
-<p>表格<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure></p>
-<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
-<p>插入视频<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
-<p>插入音乐<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; src=&quot;//music.163.com/outchain/player?type=2&amp;id=28381611&amp;auto=1&amp;height=66&quot; width=330 height=86&gt;&lt;/iframe&gt;</span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <tags>
-        <tag>learn</tag>
-        <tag>markdown</tag>
       </tags>
   </entry>
   <entry>
@@ -1307,7 +1333,7 @@ href="////">
   <entry>
     <title>那里有一棵枣树</title>
     <url>/2017/12/09/2018/tree/</url>
-    <content><![CDATA[<p>小时候总喜欢仰头看着家门口大枣树最低的树桠，似乎盼着盼着，枣儿就落满枝头，自己不用力的蹦也能够到枣儿。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>小时候总喜欢仰头看着家门口大枣树最低的树桠，似乎盼着盼着，枣儿就落满枝头，自己不用力的蹦也能够到枣儿。</p>
 <p>春天似乎一个晚上就席卷了来，裸奔了个满冬的树干枝头终于开始冒出绿芽。</p>
 <p>没几日，嫩叶就爬满了枝头，一颗一颗米粒大的花点儿就隐隐在叶子间探出头来，熙熙攘攘的簇拥了每个枝头。</p>
 <p>花点是嫩黄嫩黄的，簇在一起，也是大朵大朵的，风吹来，一颤一颤的，有些点点的就吹落了。满地点点嫩蕊叶叶新绿。</p>
@@ -1329,6 +1355,7 @@ href="////">
 ]]></content>
       <tags>
         <tag>soft</tag>
+        <tag>思念</tag>
       </tags>
   </entry>
   <entry>
@@ -1408,22 +1435,22 @@ href="////">
   <entry>
     <title>草原莽莽，野草蔓地--乌兰布统</title>
     <url>/2017/08/15/2018/travel_wulanbutong/</url>
-    <content><![CDATA[<p>去了乌兰布统草原，夏季的草原和秋季迥然不同。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>去了乌兰布统草原，夏季的草原和秋季迥然不同。</p>
 <p>北京，周五晚上八点，大巴出发，一路向北，向着内蒙古行进。</p>
 <p>晚来风急，夜雨骤下，玻璃窗上淅淅沥沥的小水珠顺着滑落，路也变得颠簸，车上人都东倒西歪的睡着，睡着的神情不算安稳。</p>
 <p>凌晨四五点离目的地不算遥远，外面的天阴沉细雨，夜幕稍稍撕开一方透亮，饶长的黑夜行驶过来的司机师傅已然到了不耐烦的边界，夜开七八个小时，路的颠簸超过司机的预期，达到时间也延后很多。司机师傅终于忍不住大声的抱怨。领队交涉了会，司机师傅按耐下来，继续行驶。</p>
 <p>吵醒的车里人开始往窗外眺望，蒙蒙亮的清晨，细细密密的小雨洒落草上，草绿的有点亮，没有太阳，却泛着莹莹的光，细碎细碎的。乌色的天际，云层压得低低的，车厢里的声音似乎在这也被隔在了另一个世界里，一切变得有点宁静，宁静得让人觉得冷。<br><a id="more"></a><br>耳机的声音却更像是嘈杂的呐喊，像小锤子砸在太阳穴，格格不入的，最终被关在了手机里面。靠在背椅上，任这微弱的窗景抚慰疲惫的眼睛。</p>
 <p>到了目的地，稍加休息，出发，雨势不停，一朵一朵开在窗户上，让人忍不住用手指点啊点。</p>
 <p>困倦的身体并不想拿起相机拍照，静静看会，云从头顶过去，远方的云也在急急的赶来。</p>
-<p><img src="/img/0-5.jpg" ,="" height="37%" width="37%"> <img src="/img/0-8.jpg" ,="" height="37%" width="37%"><br><img src="/img/0-7.jpg" ,="" height="37%" width="37%"> <img src="/img/0-6.jpg" ,="" height="37%" width="37%"></p>
-<p><img src="/img/0-9.jpg" ,="" height="37%" width="37%"> <img src="/img/0-10.jpg" ,="" height="37%" width="37%"></p>
-<p><img src="/img/0-11.jpg" ,="" height="37%" width="37%"> <img src="/img/0-12.jpg" ,="" height="37%" width="37%"> <img src="/img/0-13.jpg" ,="" height="37%" width="37%"> <img src="/img/0-14.jpg" ,="" height="37%" width="37%"></p>
+<p>&lt;img src=’/img/0-5.jpg’, height= ‘37%’, width = ‘37%’&gt; &lt;img src=’/img/0-8.jpg’, height= ‘37%’, width = ‘37%’&gt;<br>&lt;img src=’/img/0-7.jpg’, height= ‘37%’, width = ‘37%’&gt; &lt;img src=’/img/0-6.jpg’, height= ‘37%’, width = ‘37%’&gt;</p>
+<p>&lt;img src=’/img/0-9.jpg’, height= ‘37%’, width = ‘37%’&gt; &lt;img src=’/img/0-10.jpg’, height= ‘37%’, width = ‘37%’&gt;</p>
+<p>&lt;img src=’/img/0-11.jpg’, height=’37%’, width = ‘37%’&gt; &lt;img src=’/img/0-12.jpg’, height=’37%’, width = ‘37%’&gt; &lt;img src=’/img/0-13.jpg’, height=’37%’, width = ‘37%’&gt; &lt;img src=’/img/0-14.jpg’, height=’37%’, width = ‘37%’&gt;</p>
 <p>草原莽莽，野草蔓地，不及膝盖。依稀各种小花摇摇曳曳，娉娉婷婷，迎着阳光晚风，也算颇有野趣。</p>
-<p><img src="/img/0-15.jpg" ,="" height="37%" width="37%"> <img src="/img/0-17.jpg" ,="" height="37%" width="37%"><br><img src="/img/0-18.jpg" ,="" height="37%" width="37%"> <img src="/img/0-21.jpg" ,="" height="37%" width="37%"></p>
-<p><img src="/img/0-16.jpg" ,="" height="75%" width="75%"></p>
+<p>&lt;img src=’/img/0-15.jpg’, height=’37%’, width = ‘37%’&gt; &lt;img src=’/img/0-17.jpg’, height=’37%’, width = ‘37%’&gt;<br>&lt;img src=’/img/0-18.jpg’, height=’37%’, width = ‘37%’&gt; &lt;img src=’/img/0-21.jpg’, height=’37%’, width = ‘37%’&gt;</p>
+<p>&lt;img src=’/img/0-16.jpg’, height=’75%’, width = ‘75%’&gt;</p>
 <p>下午的天气倒是好了些，心情也随着阳光灿烂了起来，越野车师傅一直在放着这首歌，最后大家都忍不住跟唱起来。</p>
-<p><img src="/img/0-20.jpg" ,="" height="75%" width="75%"> </p>
-<p><img src="/img/0-22.jpg" ,="" height="75%" width="75%"></p>
+<p>&lt;img src=’/img/0-20.jpg’, height=’75%’, width = ‘75%’&gt; </p>
+<p>&lt;img src=’/img/0-22.jpg’, height=’75%’, width = ‘75%’&gt;</p>
 <iframe width="560" height="315" src="/img/WeChatSight1034.mp4" frameborder="0" allowfullscreen></iframe>
 
 <p>第二天的时候去了将军泡子，随便的拿了相机拍了几张照片，都有些意兴阑珊。</p>
@@ -1436,12 +1463,13 @@ href="////">
 ]]></content>
       <tags>
         <tag>soft</tag>
+        <tag>行走</tag>
       </tags>
   </entry>
   <entry>
     <title>今夜无月，不待星辰</title>
     <url>/2017/08/14/2018/month/</url>
-    <content><![CDATA[<p>我曾穿越过沙滩与大海，曾翻越过雪原和山川，看过起伏的蔓草枯黄了季节，看过湛蓝的天空暗黑了星夜。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>我曾穿越过沙滩与大海，曾翻越过雪原和山川，看过起伏的蔓草枯黄了季节，看过湛蓝的天空暗黑了星夜。</p>
 <p>我看见车水马龙的灯红酒绿，也看见地铁晚归人群的眼神，看过拥挤的人潮穿过地铁的风，看过好心人递来的纸巾浸透的样子。</p>
 <p><strong> 我们一生，都在贪心的追逐，更绚烂的风景。</strong></p>
 <p>然而，他们始终在那里，在你二十岁时，他们是高不可攀远不可及的远方，当你三十岁时，他们依旧是高耸入云远在天边的旗帜，当你五十岁时，他们不曾会感到自己的力气减小，不曾会感到两鬓斑白，不曾感到死亡的脚步像是幽灵的摇铃，带着幽暗的气息。</p>
@@ -1458,12 +1486,13 @@ href="////">
 ]]></content>
       <tags>
         <tag>soft</tag>
+        <tag>思念</tag>
       </tags>
   </entry>
   <entry>
     <title>西藏day3：纳木错，跋山涉水，为你来过</title>
     <url>/2017/07/04/2018/trevel_mulanbutong/</url>
-    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1294566073&auto=1&height=66"></iframe><br>（版权限制，暂用张韶涵版本）<br><br>西藏有三个圣湖，前一天去了羊卓雍错，隔一天去纳木错的路上，还在想，是不是值得这么跑一趟。<br><br>去纳木错远比羊卓雍错要远的多，早上七点到了集合的地方，幸运的找了个靠窗的位置，很快就出发了。<br><br>汽车渐渐离开市区，太阳依旧很辣眼。时而为了避开阳光的强烈照射而带上墨镜，有时又为了看些风景，带上眼睛，有点烦不胜烦，心里想着，回去一定要配一副有度数的墨镜。司机师傅说大概中午十二点左右才会到，所以最后决定睡觉。<br><a id="more"></a><br><img src="/img/travel_lasa/0.jpg" ,="" height="75%" width="75%"><br><br>睡了不知多久，车窗外的风景已然离开了市区，车窗外有各式各样的山石，像一只只匍匐着的野兽，随时准备爬起。<br><br>右边（我在左车窗）窗外出现了一大滩湖泊，倒映着蓝天白云绿树，翻着粼粼的光，湖面上的白云似乎也在缓缓的随着流动的水行走。<br><br>整个画面在阳光下显着优点白，有点日系，却真实的让你感到，怎么形容呢，好像有一种生机，生命在律动的感觉。<br><br>我很想赞叹一下，于是就和旁边的妹纸扯了扯话。旁边的妹子脸有点圆圆的，娇憨可爱。说是从尼泊尔那边玩完了过来西藏，已经在路上有段时间了，还会继续浪。。<br><br>据说，她老板已经收到了一封“世界很大，我的去看看”的离别信，所以时间上还蛮充裕，接下来想去青海湖（我也想去！），成都四川稻城云南等等（好想去！）。<br><br>说着的时候，她略略抿了抿嘴，显得有点不好意思，大概我在旁边一直用羡慕的眼光盯着她吧。。和路上的人聊天，总会有一种特别的感觉，好像地图那么多地方那么多美景记下来也并不算是困难的事情。<br><br>似乎他们走过的路越长，他们的腿会更长，生命也会特别长，这可能是我的错觉。<br><br>到了纳木错的牌照大门前面，大家停顿整休了一下。有买油饼的，就在厕所门口，等待洗完手的人们临幸。<br><br>我控制住了自己，即使当时真的又冷也很饿。那个圆脸小妹子买了一个，几口吃完了，一脸满足的和我说，真好吃啊！（晚上回到拉萨市内的时候，她又再三和我感叹，那个饼真的是好好吃啊，虽然只是一层饼皮和几颗葱）<br><br>我微笑着表示赞同，其实是冷的说不出话来了，微信里和弹弹表示我个傻x拿错了衣服，竟然带了这么薄的衣服。。深感世事苍凉，冷暖天决定啊！<br><br>大家忙着拍照，我想了想，没把手拿出口袋，节约力气。幸运的是，我带着大家一起过安检，以为可以将那张团体票占为己有；不幸的是，为表公平，票被司机师傅拿走了。<br><br><img src="/img/travel_lasa/0-1.jpg" ,="" height="75%" width="75%"><br><br>—<br>接下来的风景开始绚烂起来。<br><br><img src="/img/travel_lasa/0-2.jpg" ,="" height="75%" width="75%"><br><br>平铺开来的草坪，各种颜色夹杂。远远的雪山入云，近点的云朵稀薄飘扬。现在回想起来，依旧觉得恍如在眼前，<br><br><img src="/img/travel_lasa/0-3.jpg" ,="" height="75%" width="75%"><br><br>枯黄翠绿泛红灰棕的草参差不齐，深浅交错；丝丝缕缕的白云轻盈缠绕，天略低垂。疾驰的风景在眼前浮光掠影般穿梭，却不让人觉得腻烦。<br><br><img src="/img/travel_lasa/0-4.jpg" ,="" height="75%" width="75%"><br><br>那些奇怪的石头像是沉睡随时会醒来的野兽，身体虽然与大地已经融为一体，面部却还算清晰，隐约还能看出表情，汽车从他们旁边路过，我心里总有点惴惴的，他们的身体算是庞大，突然起身，车这么小，我这么近，略觉危险。<br><br><img src="/img/travel_lasa/0-5.jpg" ,="" height="75%" width="75%"><br><img src="/img/travel_lasa/0-6.jpg" ,="" height="75%" width="75%"><br>—<br><br>在中午的时候终于到了纳木错。<br><br>如果是羊卓雍错给人的感觉是宁静悠扬，那么这儿的感觉则是静谧恬淡。<br><br><img src="/img/travel_lasa/0-7.jpg" ,="" height="37%" width="37%"> <img src="/img/travel_lasa/0-8.jpg" ,="" height="37%" width="37%"><br><br>坐在鸽子前面不动了，静静地看一会。旁边的大姐很激动，一直试图用声音唤起鸽子的恐惧感。我静静不动，很大原因在于，缺氧，动了就累得很。所以在敬佩大姐肺活量的同时，也敬佩她的身体素质很棒。。<br><br><iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=1294566073&auto=1&height=66"></iframe><br>（版权限制，暂用张韶涵版本）<br><br>西藏有三个圣湖，前一天去了羊卓雍错，隔一天去纳木错的路上，还在想，是不是值得这么跑一趟。<br><br>去纳木错远比羊卓雍错要远的多，早上七点到了集合的地方，幸运的找了个靠窗的位置，很快就出发了。<br><br>汽车渐渐离开市区，太阳依旧很辣眼。时而为了避开阳光的强烈照射而带上墨镜，有时又为了看些风景，带上眼睛，有点烦不胜烦，心里想着，回去一定要配一副有度数的墨镜。司机师傅说大概中午十二点左右才会到，所以最后决定睡觉。<br><a id="more"></a><br>&lt;img src=’/img/travel_lasa/0.jpg’, height= ‘75%’, width = ‘75%’&gt;<br><br>睡了不知多久，车窗外的风景已然离开了市区，车窗外有各式各样的山石，像一只只匍匐着的野兽，随时准备爬起。<br><br>右边（我在左车窗）窗外出现了一大滩湖泊，倒映着蓝天白云绿树，翻着粼粼的光，湖面上的白云似乎也在缓缓的随着流动的水行走。<br><br>整个画面在阳光下显着优点白，有点日系，却真实的让你感到，怎么形容呢，好像有一种生机，生命在律动的感觉。<br><br>我很想赞叹一下，于是就和旁边的妹纸扯了扯话。旁边的妹子脸有点圆圆的，娇憨可爱。说是从尼泊尔那边玩完了过来西藏，已经在路上有段时间了，还会继续浪。。<br><br>据说，她老板已经收到了一封“世界很大，我的去看看”的离别信，所以时间上还蛮充裕，接下来想去青海湖（我也想去！），成都四川稻城云南等等（好想去！）。<br><br>说着的时候，她略略抿了抿嘴，显得有点不好意思，大概我在旁边一直用羡慕的眼光盯着她吧。。和路上的人聊天，总会有一种特别的感觉，好像地图那么多地方那么多美景记下来也并不算是困难的事情。<br><br>似乎他们走过的路越长，他们的腿会更长，生命也会特别长，这可能是我的错觉。<br><br>到了纳木错的牌照大门前面，大家停顿整休了一下。有买油饼的，就在厕所门口，等待洗完手的人们临幸。<br><br>我控制住了自己，即使当时真的又冷也很饿。那个圆脸小妹子买了一个，几口吃完了，一脸满足的和我说，真好吃啊！（晚上回到拉萨市内的时候，她又再三和我感叹，那个饼真的是好好吃啊，虽然只是一层饼皮和几颗葱）<br><br>我微笑着表示赞同，其实是冷的说不出话来了，微信里和弹弹表示我个傻x拿错了衣服，竟然带了这么薄的衣服。。深感世事苍凉，冷暖天决定啊！<br><br>大家忙着拍照，我想了想，没把手拿出口袋，节约力气。幸运的是，我带着大家一起过安检，以为可以将那张团体票占为己有；不幸的是，为表公平，票被司机师傅拿走了。<br><br>&lt;img src=’/img/travel_lasa/0-1.jpg’, height= ‘75%’, width = ‘75%’&gt;<br><br>—<br>接下来的风景开始绚烂起来。<br><br>&lt;img src=’/img/travel_lasa/0-2.jpg’, height= ‘75%’, width = ‘75%’&gt;<br><br>平铺开来的草坪，各种颜色夹杂。远远的雪山入云，近点的云朵稀薄飘扬。现在回想起来，依旧觉得恍如在眼前，<br><br>&lt;img src=’/img/travel_lasa/0-3.jpg’, height= ‘75%’, width = ‘75%’&gt;<br><br>枯黄翠绿泛红灰棕的草参差不齐，深浅交错；丝丝缕缕的白云轻盈缠绕，天略低垂。疾驰的风景在眼前浮光掠影般穿梭，却不让人觉得腻烦。<br><br>&lt;img src=’/img/travel_lasa/0-4.jpg’, height= ‘75%’, width = ‘75%’&gt;<br><br>那些奇怪的石头像是沉睡随时会醒来的野兽，身体虽然与大地已经融为一体，面部却还算清晰，隐约还能看出表情，汽车从他们旁边路过，我心里总有点惴惴的，他们的身体算是庞大，突然起身，车这么小，我这么近，略觉危险。<br><br>&lt;img src=’/img/travel_lasa/0-5.jpg’, height= ‘75%’, width = ‘75%’&gt;<br>&lt;img src=’/img/travel_lasa/0-6.jpg’, height= ‘75%’, width = ‘75%’&gt;<br>—<br><br>在中午的时候终于到了纳木错。<br><br>如果是羊卓雍错给人的感觉是宁静悠扬，那么这儿的感觉则是静谧恬淡。<br><br>&lt;img src=’/img/travel_lasa/0-7.jpg’, height=’37%’, width = ‘37%’&gt; &lt;img src=’/img/travel_lasa/0-8.jpg’, height=’37%’, width = ‘37%’&gt;<br><br>坐在鸽子前面不动了，静静地看一会。旁边的大姐很激动，一直试图用声音唤起鸽子的恐惧感。我静静不动，很大原因在于，缺氧，动了就累得很。所以在敬佩大姐肺活量的同时，也敬佩她的身体素质很棒。。<br><br><iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
 
 <p>路上大概五小时左右，在这儿却只待了四十五分钟，据说多了可能身体吃不消。和一个单行小伙伴一起互相拍了会照。后来发现原来不是一个车的。。</p>
 <p>回程的路上，我问旁边的圆脸小菇凉，</p>
@@ -1483,13 +1512,13 @@ href="////">
 ]]></content>
       <tags>
         <tag>soft</tag>
-        <tag>travel</tag>
+        <tag>行走</tag>
       </tags>
   </entry>
   <entry>
     <title>为了取暖，我们失去了什么</title>
     <url>/2017/04/15/2018/lost/</url>
-    <content><![CDATA[<p>看瓦尔登湖写的，人类依靠着衣饰暖气等工具保暖，那么一缕寒风将断绝生命。</p>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>看瓦尔登湖写的，人类依靠着衣饰暖气等工具保暖，那么一缕寒风将断绝生命。</p>
 <p>而如今，我们不仅需要衣饰来保暖，还妄想要用衣饰来加以装饰，加以美观的体验，用眼镜来看清世界。</p>
 <p>那些外来的工具来辅助生活，便利的同时，增加了人类对于这些物质、工具等的依赖。</p>
 <p>越来越紧密的同时，我们个人的抵抗力越来越低，怕冷怕热怕无代步工具怕下雨怕打雷怕孤独怕死亡。</p>
@@ -1531,6 +1560,7 @@ href="////">
 ]]></content>
       <tags>
         <tag>soft</tag>
+        <tag>读书</tag>
       </tags>
   </entry>
 </search>

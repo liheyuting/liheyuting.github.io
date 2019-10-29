@@ -222,17 +222,7 @@ daovoice('update');
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-learn">
-          <a href="/tags/learn" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            成长
+            Startseite
           </a>
         </li>
       
@@ -242,7 +232,17 @@ daovoice('update');
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
-            徉徜
+            soft
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
           </a>
         </li>
       
@@ -252,7 +252,7 @@ daovoice('update');
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            归档
+            Archiv
           </a>
         </li>
       
@@ -262,7 +262,7 @@ daovoice('update');
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于
+            Über
           </a>
         </li>
       
@@ -275,7 +275,7 @@ daovoice('update');
             
               <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
             
-            搜索
+            Suche
           </a>
         </li>
       
@@ -295,7 +295,7 @@ daovoice('update');
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
-             placeholder="搜索..." spellcheck="false"
+             placeholder="Searching..." spellcheck="false"
              type="text" id="local-search-input">
     </div>
   </div>
@@ -319,6 +319,310 @@ daovoice('update');
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2019/01/28/2019/install-dlib/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dora Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="虚妄之城">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/28/2019/install-dlib/" itemprop="url">安装dlib</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-28T00:00:00+08:00">
+                2019-01-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/28/2019/install-dlib/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/28/2019/install-dlib/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/28/2019/install-dlib/" class="leancloud_visitors" data-flag-title="安装dlib">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p>
+<h3 id="dlib的依赖"><a href="#dlib的依赖" class="headerlink" title="dlib的依赖"></a>dlib的依赖</h3><ul>
+<li>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>安装出现：gcc安装失败（具体显示如问题），<a href="https://liheyuting.github.io/2019/01/28/install-openblas:opencv:gcc/">安装gcc</a></p>
+<ul>
+<li>Mac的X11<br>X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/28/2019/install-dlib/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2019/01/26/2019/face_collection_install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dora Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="虚妄之城">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/26/2019/face_collection_install/" itemprop="url">Mac 安装人脸识别face_recognition python包</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-26T00:00:00+08:00">
+                2019-01-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/01/26/2019/face_collection_install/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/01/26/2019/face_collection_install/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/01/26/2019/face_collection_install/" class="leancloud_visitors" data-flag-title="Mac 安装人脸识别face_recognition python包">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">Visitors&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>一、安装face_recognition</p>
+<p>二、完成功能开发</p>
+<p>二、部署在云服务器上(Heroku,AWS)<br>部署在Heroku或者AWS的云端服务器上是很明智的<br>为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成<a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。</p>
+<p><em>此篇为安装篇</em></p>
+<h3 id="一、系统搭建"><a href="#一、系统搭建" class="headerlink" title="一、系统搭建"></a>一、系统搭建</h3><h4 id="1-系统环境"><a href="#1-系统环境" class="headerlink" title="1. 系统环境"></a>1. 系统环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- python 3.3+</span><br><span class="line">- mac</span><br><span class="line">- 已安装homebrew</span><br></pre></td></tr></table></figure>
+<h4 id="2-Dlib安装"><a href="#2-Dlib安装" class="headerlink" title="2. Dlib安装"></a>2. Dlib安装</h4><h5 id="dlib的依赖点击查看安装教程"><a href="#dlib的依赖点击查看安装教程" class="headerlink" title="dlib的依赖点击查看安装教程"></a>dlib的依赖<a href="https://liheyuting.github.io/2019/01/28/install-dlib/">点击查看安装教程</a></h5><p>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/26/2019/face_collection_install/#more" rel="contents">
+              Weiterlesen &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -362,9 +666,9 @@ daovoice('update');
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2019-01-23T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-23T00:00:00+08:00">
                 2019-01-23
               </time>
             
@@ -398,7 +702,7 @@ daovoice('update');
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">Visitors&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
                  <span>℃</span>
@@ -436,8 +740,8 @@ daovoice('update');
 <li>在主题配置文件里，在rss位置，添加‘/atom.xml‘
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2019/01/23/2019/Hexo_190123/#更多" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2019/01/23/2019/Hexo_190123/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -516,9 +820,9 @@ daovoice('update');
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-12-23T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-23T00:00:00+08:00">
                 2018-12-23
               </time>
             
@@ -552,7 +856,7 @@ daovoice('update');
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">Visitors&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
                  <span>℃</span>
@@ -587,8 +891,8 @@ daovoice('update');
 <p>每天要怎么过呢，不想做事，也提不起精神来，除了说起丧气话来，还有些话好抱怨，其他真的是一点兴致也提不起来。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/12/23/2018/daily1203/#更多" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2018/12/23/2018/daily1203/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -667,9 +971,9 @@ daovoice('update');
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-12-01T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-01T00:00:00+08:00">
                 2018-12-01
               </time>
             
@@ -703,7 +1007,7 @@ daovoice('update');
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">Visitors&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
                  <span>℃</span>
@@ -734,8 +1038,8 @@ daovoice('update');
 <p>每天日复一日，有时候忍不住在想，这样下去又有什么意思呢。这种没意思的话，说出来又有什么意思呢。今天看群里有人说，即使你是个小ID，也应该表达自身的观点，否则就会被带着走。回想下，自己一直有点抗拒输出自己的价值观，虽然生活工作中价值观输出又是日常。但说的东西似乎就会让别人给你下tag的这种感觉，并不舒服，人性复杂，性格多变，稳定才是奇怪的事情，但人比较容易刻板印象，这也是奇怪，大概是惯性思维习惯导致的？倘若为他人的标签化过于忧虑，似乎也是一种焦虑且不够有安全感的表现了。如果按自尊的定义“喜欢自身的程度”来说，这岂不又是一种“低自尊”的状态？这样不好不好，这不算是“坦然平静”的生活处理方式了，但生活为什么有需要“坦然泰然”的态度呢，这就源源不绝的废话连篇了。</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/12/01/2018/daily1201/#更多" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2018/12/01/2018/daily1201/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -814,9 +1118,9 @@ daovoice('update');
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-11-24T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-24T00:00:00+08:00">
                 2018-11-24
               </time>
             
@@ -850,7 +1154,7 @@ daovoice('update');
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">Visitors&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
                  <span>℃</span>
@@ -883,8 +1187,8 @@ daovoice('update');
 <p>时常不想动笔，动笔即各种生活的坏处涌上心头，就不知说些什么好，和自己对话，总是乱七八糟的糟心事，当作和别人对话吧，又好像喋喋不休的祥林嫂，让人联想到圆规。索性就还是不写。要真写点正经话吧，又要挠头摆尾，鱼鳞都好像要挠掉一样，半天憋不出一句半句来。说出的话来，像是一个个的泡泡，即怕它落在半空不落地，心就空落落，要是落地了，又是严肃的要命，没意思的紧。<br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/24/2018/daily1124/#更多" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2018/11/24/2018/daily1124/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -963,9 +1267,9 @@ daovoice('update');
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-11-04T12:54:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-04T12:54:00+08:00">
                 2018-11-04
               </time>
             
@@ -999,7 +1303,7 @@ daovoice('update');
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">Visitors&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
                  <span>℃</span>
@@ -1037,8 +1341,8 @@ daovoice('update');
 </ol>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/11/04/2018/pyecharts/#更多" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2018/11/04/2018/pyecharts/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1117,9 +1421,9 @@ daovoice('update');
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-10-22T12:59:28+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-22T12:59:28+08:00">
                 2018-10-22
               </time>
             
@@ -1153,7 +1457,7 @@ daovoice('update');
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">Visitors&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
                  <span>℃</span>
@@ -1188,8 +1492,8 @@ daovoice('update');
 <h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/10/22/2018/IISDeploy/#更多" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2018/10/22/2018/IISDeploy/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1268,9 +1572,9 @@ daovoice('update');
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-09-28T13:02:31+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-28T13:02:31+08:00">
                 2018-09-28
               </time>
             
@@ -1304,7 +1608,7 @@ daovoice('update');
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">Visitors&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
                  <span>℃</span>
@@ -1339,8 +1643,8 @@ daovoice('update');
 <p><strong>差异分析工具</strong><br>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/28/2018/gitlist/#更多" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2018/09/28/2018/gitlist/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1419,9 +1723,9 @@ daovoice('update');
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-09-16T00:00:00+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-09-16T00:00:00+08:00">
                 2018-09-16
               </time>
             
@@ -1455,7 +1759,7 @@ daovoice('update');
                  <i class="fa fa-eye"></i>
                </span>
                
-                 <span class="post-meta-item-text">热度&#58;</span>
+                 <span class="post-meta-item-text">Visitors&#58;</span>
                
                  <span class="leancloud-visitors-count"></span>
                  <span>℃</span>
@@ -1494,304 +1798,8 @@ daovoice('update');
 <p>数据透视表已经整理过了，这里略过不提</p>
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/09/16/2018/Excel/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2018/09/14/2018/VB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dora Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="虚妄之城">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/2018/VB/" itemprop="url">VBS</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-09-14T00:00:00+08:00">
-                2018-09-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/14/2018/VB/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/14/2018/VB/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/09/14/2018/VB/" class="leancloud_visitors" data-flag-title="VBS">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>在HTML中放置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;script  type=&quot;text/vbscript&quot;&gt;</span><br><span class="line">	document.write(&quot;hello from VBScirpt&quot;)</span><br><span class="line">	&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure></p>
-<p>在Head部分的脚本：当脚本被调用时，它们就会被执行，或者某个事件被触发，脚本也有可能被触发。当脚本被放置在head，就可以确保用户在使用前已经被载入</p>
-<p>在body部分：当页面body部分被载入时，脚本就会被执行。当我们把脚本放置在body部分，它会生成页面的内容。</p>
-<h4 id="变量-（始于被声明，死于页面被关闭）"><a href="#变量-（始于被声明，死于页面被关闭）" class="headerlink" title="变量 ####（始于被声明，死于页面被关闭）"></a>变量 ####（始于被声明，死于页面被关闭）</h4><p>option explicit<br>dim name<br>name = values</p>
-<p>创建了一个变量name<br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/14/2018/VB/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2018/09/14/2018/HTML and CSS/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dora Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="虚妄之城">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/14/2018/HTML and CSS/" itemprop="url">HTML 相关常用汇总</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-09-14T00:00:00+08:00">
-                2018-09-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/14/2018/HTML and CSS/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/14/2018/HTML and CSS/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/09/14/2018/HTML and CSS/" class="leancloud_visitors" data-flag-title="HTML 相关常用汇总">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Home<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;!-- 插入外部样式表 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; </span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;啦啦啦&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;我是卖报的小行家&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/14/2018/HTML and CSS/#更多" rel="contents">
-              阅读全文 &raquo;
+            <a class="btn" href="/2018/09/16/2018/Excel/#more" rel="contents">
+              Weiterlesen &raquo;
             </a>
           </div>
           <!--/noindex-->
@@ -1882,8 +1890,8 @@ daovoice('update');
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">37</span>
-                  <span class="site-state-item-name">日志</span>
+                  <span class="site-state-item-count">39</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -1895,8 +1903,8 @@ daovoice('update');
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">21</span>
-                  <span class="site-state-item-name">标签</span>
+                  <span class="site-state-item-count">27</span>
+                  <span class="site-state-item-name">Tags</span>
                 </a>
               </div>
             
@@ -1972,7 +1980,7 @@ daovoice('update');
           # <h3 class="widget-title"></h3>
           <div id="myCanvasContainer" class="widget tagcloud">
               <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VBS/">VBS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/big-data/">big data</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a><span class="tag-list-count">23</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/other/">other</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/read/">read</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">13</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/travel/">travel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/人脸识别/">人脸识别</a><span class="tag-list-count">1</span></li></ul>
+                  <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VBS/">VBS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/">Work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/big-data/">big data</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a><span class="tag-list-count">8</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/bootstrap/">bootstrap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/flask/">flask</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/">learn</a><span class="tag-list-count">24</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/">next</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/">soft</a><span class="tag-list-count">14</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/">sql</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/work/">work</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/人脸识别/">人脸识别</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/思念/">思念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/翻墙/">翻墙</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/行走/">行走</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书/">读书</a><span class="tag-list-count">2</span></li></ul>
               </canvas>
           </div>
         </div>
@@ -1989,7 +1997,7 @@ daovoice('update');
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
