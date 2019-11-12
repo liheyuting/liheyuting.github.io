@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>今年厦门出差第3次</title>
-    <url>/2019/10/29/2019/xiamen_3rd/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-YGylQdJi" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
+    <title></title>
+    <url>/2019/11/13/2019/unhappy/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>刚刚发出最后一封邮件，1点的凌晨，有一点的清醒</p>
+<p>耳边绕着音乐，庆幸，没有吵醒这个夜晚的寂静</p>
+<p>深秋的上海，和北京大不相同：<br>在北京，暖气应该来了吧，大衣也可以背出门了<br>而上海的此刻，我穿着长袖的睡衣，盘腿坐在椅子上，窗外的风撩动窗帘，并不冷</p>
+<p>连续的加班，让情绪似乎要到了一个临界点<br>神经绷绷的，却长时间怠懒思考</p>
+<p>好想做一个米虫啊，<br>面朝大海，我吃的很少<br>春暖花开，还可以少吃点</p>
+<p>3天前的水果<br>也怠懒于桌角<br>吉他在墙角落灰沉默<br>而垃圾总会错过可投递的时间</p>
+<p>我没有想哭，<br>也可以弄一些啤酒<br>假装是喜爱的味道<br>来忍受渐渐冰凉的脚掌</p>
+<p>疲倦容易让人衰老<br>电子屏让人面无表情<br>时间没让人更加坚强<br>竟先使皱纹爬山眉梢</p>
+<p>现在的心情有点糟糕啊<br>很不可爱的我和很不可爱的心情</p>
+]]></content>
       <tags>
         <tag>soft</tag>
-        <tag>行走</tag>
+        <tag>无聊</tag>
       </tags>
   </entry>
   <entry>
@@ -15,15 +23,26 @@
     <url>/2019/10/29/2019/hexo_aplayer/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>之前使用的是网易云外链链接，<a href="https://liheyuting.github.io/2018/05/12/2018/Markdown/">点击查看</a>文章尾部如何使用，发现很受版权的限制，QQ音乐无法生成外链。</p>
 <p>遂，试试看使用插件来插入音乐。</p>
-<h3 id="下载hexo-tag-aplayer"><a href="#下载hexo-tag-aplayer" class="headerlink" title="下载hexo-tag-aplayer"></a>下载hexo-tag-aplayer</h3><p>进入博客根目录：<br><code>npm install --save hexo-tag-aplayer</code><br><a id="more"></a><br>在根目录的<code>_config.yml</code>中增加<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 音乐播放器</span><br><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure></p>
+<h3 id="下载hexo-tag-aplayer"><a href="#下载hexo-tag-aplayer" class="headerlink" title="下载hexo-tag-aplayer"></a>下载hexo-tag-aplayer</h3><p>进入博客根目录：<br><code>npm install --save hexo-tag-aplayer</code><br><a id="more"></a></p>
+<p>在根目录的<code>_config.yml</code>中增加<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 音乐播放器</span><br><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure></p>
 <h3 id="在博客中增加音乐"><a href="#在博客中增加音乐" class="headerlink" title="在博客中增加音乐"></a>在博客中增加音乐</h3><p>可用模板<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;歌曲id&quot; &quot;netease（音乐平台）&quot; &quot;song&quot; &quot;theme:#555&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure></p>
 <p>音乐平台：<br>netease, tencent, kugou, xiami, baidu</p>
 <p>具体参数等<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">参考文档</a></p>
 ]]></content>
       <tags>
-        <tag>blog</tag>
         <tag>learn</tag>
+        <tag>blog</tag>
         <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>今年厦门出差第3次</title>
+    <url>/2019/10/29/2019/xiamen_3rd/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+    <div id="aplayer-trbznXMa" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
+      <tags>
+        <tag>soft</tag>
+        <tag>行走</tag>
       </tags>
   </entry>
   <entry>
@@ -40,8 +59,8 @@
 <h3 id="修改聊天图标设置"><a href="#修改聊天图标设置" class="headerlink" title="修改聊天图标设置"></a>修改聊天图标设置</h3><p>应用设置-聊天设置中进行简单的设置</p>
 ]]></content>
       <tags>
-        <tag>blog</tag>
         <tag>learn</tag>
+        <tag>blog</tag>
         <tag>hexo</tag>
         <tag>next</tag>
       </tags>
@@ -61,8 +80,8 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># hexo-tag-cloud</span><br><span class="line">tag_cloud:</span><br><span class="line">    textFont: Trebuchet MS, Helvetica</span><br><span class="line">    textColor: &apos;#333&apos;</span><br><span class="line">    textHeight: 25</span><br><span class="line">    outlineColor: &apos;#E2E1D1&apos;</span><br><span class="line">    maxSpeed: 0.1</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>blog</tag>
         <tag>learn</tag>
+        <tag>blog</tag>
         <tag>hexo</tag>
         <tag>next</tag>
       </tags>
@@ -131,8 +150,8 @@
 <h3 id="取消点击效果"><a href="#取消点击效果" class="headerlink" title="取消点击效果"></a>取消点击效果</h3><p><code>fireworks: false</code></p>
 ]]></content>
       <tags>
-        <tag>blog</tag>
         <tag>learn</tag>
+        <tag>blog</tag>
         <tag>hexo</tag>
       </tags>
   </entry>
@@ -358,33 +377,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Mac安装openblas或opencv或gcc</title>
-    <url>/2019/01/28/2019/install-openblas:opencv:gcc/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure>
-<p>如果都安装成功，则无须看以下内容，否则需要：</p>
-<blockquote>
-<ul>
-<li>安装或更新Xcode 最新版本</li>
-<li>安装Xcode CLT</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-<p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p>
-<ul>
-<li>在终端输入：<code>xcode-select --install</code></li>
-<li>弹出提示框中选择“安装”</li>
-<li>选择同意协议</li>
-<li>安装</li>
-<li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li>
-</ul>
-<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>
-]]></content>
-      <tags>
-        <tag>learn</tag>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>安装dlib</title>
     <url>/2019/01/28/2019/install-dlib/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p>
@@ -411,6 +403,33 @@
         <tag>learn</tag>
         <tag>python</tag>
         <tag>big data</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Mac安装openblas或opencv或gcc</title>
+    <url>/2019/01/28/2019/install-openblas:opencv:gcc/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure>
+<p>如果都安装成功，则无须看以下内容，否则需要：</p>
+<blockquote>
+<ul>
+<li>安装或更新Xcode 最新版本</li>
+<li>安装Xcode CLT</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+<p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p>
+<ul>
+<li>在终端输入：<code>xcode-select --install</code></li>
+<li>弹出提示框中选择“安装”</li>
+<li>选择同意协议</li>
+<li>安装</li>
+<li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li>
+</ul>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+        <tag>python</tag>
       </tags>
   </entry>
   <entry>
@@ -487,8 +506,8 @@
 <h3 id="修改代码块的颜色"><a href="#修改代码块的颜色" class="headerlink" title="修改代码块的颜色"></a>修改代码块的颜色</h3><p>在‘themes/yilia/source/main.266c1c.css中的.article-entry .highlight’中修改对应背景和字体颜色即可</p>
 ]]></content>
       <tags>
-        <tag>blog</tag>
         <tag>learn</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -1078,8 +1097,8 @@ href="////">
 <h3 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h3><p>在文中中想要分页的地方加上<br><code>&lt;!--more--&gt;</code></p>
 ]]></content>
       <tags>
-        <tag>blog</tag>
         <tag>learn</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -1265,8 +1284,8 @@ href="////">
 <p><strong><em> 常用同步操作 </em></strong><br>​<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull #同步更新</span><br><span class="line">hexo new test “新建文章” （hexo n xxx）</span><br><span class="line">hexo clean 清除旧的public文件夹</span><br><span class="line">hexo d -g</span><br><span class="line">git add .</span><br><span class="line">git commit - m “更新说明”</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure></p>
 ]]></content>
       <tags>
-        <tag>blog</tag>
         <tag>learn</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -1400,8 +1419,8 @@ href="////">
 </ul>
 ]]></content>
       <tags>
-        <tag>blog</tag>
         <tag>learn</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
