@@ -49,7 +49,7 @@
     <published>2019-10-28T16:00:00.000Z</published>
     <updated>2019-10-29T10:19:51.033Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-SSQdcmWg" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-sYJNPQDI" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
     
     <summary type="html">
     
@@ -85,9 +85,9 @@
     </summary>
     
     
-      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
-    
       <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
       <category term="hexo" scheme="https://liheyuting.github.io/tags/hexo/"/>
     
@@ -114,9 +114,9 @@
     </summary>
     
     
-      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
-    
       <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
       <category term="hexo" scheme="https://liheyuting.github.io/tags/hexo/"/>
     
@@ -144,9 +144,9 @@
     </summary>
     
     
-      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
-    
       <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
       <category term="hexo" scheme="https://liheyuting.github.io/tags/hexo/"/>
     
@@ -180,9 +180,9 @@
     </summary>
     
     
-      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
-    
       <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
       <category term="hexo" scheme="https://liheyuting.github.io/tags/hexo/"/>
     
@@ -321,125 +321,6 @@
   </entry>
   
   <entry>
-    <title>Flask-web搭建学习笔记（1）-bootstrap</title>
-    <link href="https://liheyuting.github.io/2019/03/17/2019/Flask-web(1)/"/>
-    <id>https://liheyuting.github.io/2019/03/17/2019/Flask-web(1)/</id>
-    <published>2019-03-16T16:00:00.000Z</published>
-    <updated>2019-03-17T10:57:50.645Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>先安装python，以及flask和flask_bootstrap包</p><p>首先梳理一下文件夹，也就是网站最基本的框架</p><h3 id="xxx-py"><a href="#xxx-py" class="headerlink" title="xxx.py"></a>xxx.py</h3><p>程序主页面，用命令行运行，或是通过pycharm这些都OK，此处例举最基础的语法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from flask import Flask, render_template</span><br><span class="line">from flask_bootstrap import Bootstrap</span><br><span class="line"># 引入flask和flask_bootstrap两个包</span><br><span class="line"></span><br><span class="line">app = Flask(__name__)</span><br><span class="line">bootstrap = Bootstrap(app)</span><br><span class="line"></span><br><span class="line">@app.route(&apos;/&apos;)</span><br><span class="line">def index():</span><br><span class="line">    return render_template(&apos;base.html&apos;)</span><br><span class="line"># 这段可以复制，再修改增加功能，上面三行仅为index的设置，其他页面再设置 </span><br><span class="line">    </span><br><span class="line">if __name__ == &apos;__main__&apos;:</span><br><span class="line">    app.run()</span><br><span class="line"># 当然也可以加入其他的一些功能，例如debug=True</span><br></pre></td></tr></table></figure></p>  <a id="more"></a><h3 id="templates"><a href="#templates" class="headerlink" title="templates"></a>templates</h3><p>可以放一些template，比如，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- index.html或是base.html 命名没关系，但要有一些基础的‘.html‘页面</span><br><span class="line">- 其他，比如user.html/404.html等，看页面功能，可以“继承”index.html的一些元素，</span><br></pre></td></tr></table></figure><h3 id="static-css：放css样式以及图片等静态内容"><a href="#static-css：放css样式以及图片等静态内容" class="headerlink" title="static/css：放css样式以及图片等静态内容"></a>static/css：放css样式以及图片等静态内容</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">main.css 放page的css代码</span><br></pre></td></tr></table></figure><h3 id="xxx-db：数据库"><a href="#xxx-db：数据库" class="headerlink" title="xxx.db：数据库"></a>xxx.db：数据库</h3>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;先安装python，以及flask和flask_bootstrap包&lt;/p&gt;
-&lt;p&gt;首先梳理一下文件夹，也就是网站最基本的框架&lt;/p&gt;
-&lt;h3 id=&quot;xxx-py&quot;&gt;&lt;a href=&quot;#xxx-py&quot; class=&quot;headerlink&quot; title=&quot;xxx.py&quot;&gt;&lt;/a&gt;xxx.py&lt;/h3&gt;&lt;p&gt;程序主页面，用命令行运行，或是通过pycharm这些都OK，此处例举最基础的语法&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;from flask import Flask, render_template&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;from flask_bootstrap import Bootstrap&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 引入flask和flask_bootstrap两个包&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;app = Flask(__name__)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;bootstrap = Bootstrap(app)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;@app.route(&amp;apos;/&amp;apos;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;def index():&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    return render_template(&amp;apos;base.html&amp;apos;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 这段可以复制，再修改增加功能，上面三行仅为index的设置，其他页面再设置 &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;if __name__ == &amp;apos;__main__&amp;apos;:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    app.run()&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;# 当然也可以加入其他的一些功能，例如debug=True&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
-    
-      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
-    
-      <category term="flask" scheme="https://liheyuting.github.io/tags/flask/"/>
-    
-      <category term="bootstrap" scheme="https://liheyuting.github.io/tags/bootstrap/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac安装openblas或opencv或gcc</title>
-    <link href="https://liheyuting.github.io/2019/01/28/2019/install-openblas:opencv:gcc/"/>
-    <id>https://liheyuting.github.io/2019/01/28/2019/install-openblas:opencv:gcc/</id>
-    <published>2019-01-27T16:00:00.000Z</published>
-    <updated>2019-01-28T15:03:25.844Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br><span class="line">$ brew install gcc</span><br></pre></td></tr></table></figure><p>如果都安装成功，则无须看以下内容，否则需要：</p><blockquote><ul><li>安装或更新Xcode 最新版本</li><li>安装Xcode CLT</li></ul></blockquote><a id="more"></a><p>从app store中下载的Xcode，默认没有安装Command Line Tools，需要单独安装CLT</p><ul><li>在终端输入：<code>xcode-select --install</code></li><li>弹出提示框中选择“安装”</li><li>选择同意协议</li><li>安装</li><li>安装成功后，在终端输入 gcc-v命令查看是否安装成功</li></ul><h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p><a href="https://railsapps.github.io/xcode-command-line-tools.html" target="_blank" rel="noopener">Xcode Command Line Tools</a> </p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ brew install openblas&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install opencv&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install gcc&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;如果都安装成功，则无须看以下内容，否则需要：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;ul&gt;
-&lt;li&gt;安装或更新Xcode 最新版本&lt;/li&gt;
-&lt;li&gt;安装Xcode CLT&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
-    
-      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>安装dlib</title>
-    <link href="https://liheyuting.github.io/2019/01/28/2019/install-dlib/"/>
-    <id>https://liheyuting.github.io/2019/01/28/2019/install-dlib/</id>
-    <published>2019-01-27T16:00:00.000Z</published>
-    <updated>2019-01-28T15:03:17.438Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h3><p>官方文档，可查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p><h3 id="dlib的依赖"><a href="#dlib的依赖" class="headerlink" title="dlib的依赖"></a>dlib的依赖</h3><ul><li>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure></li></ul><p>安装出现：gcc安装失败（具体显示如问题），<a href="https://liheyuting.github.io/2019/01/28/install-openblas:opencv:gcc/">安装gcc</a></p><ul><li>Mac的X11<br>X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。<a id="more"></a></li></ul><p>运行dlib需要X11，但Mac目前没有自带X11，需要重新下载安装，<a href="https://www.xquartz.org/" target="_blank" rel="noopener">下载地址</a>，下载后直接安装，默认安装目录为/opt/X11，需要在/usr/loca/opt目录下创建软连接，创建命令如下，创建后重启Mac。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd /usr/local/opt</span><br><span class="line">$ ln -s /opt/X11 X11</span><br></pre></td></tr></table></figure><h4 id="遇到的问题："><a href="#遇到的问题：" class="headerlink" title="遇到的问题："></a>遇到的问题：</h4><p><code>brew install openblas</code>安装时显示如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Warning: Your Xcode (10.0) is outdated.</span><br><span class="line">Please update to Xcode 10.1 (or delete it).</span><br><span class="line">Xcode can be updated from the App Store.</span><br><span class="line"></span><br><span class="line">Warning: Building gcc from source:</span><br><span class="line">  The bottle needs the Xcode CLT to be installed.</span><br><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br><span class="line">Error: An exception occurred within a child process:</span><br><span class="line">  CompilerSelectionError: gcc cannot be built with any available compilers.</span><br><span class="line">Install GNU&apos;s GCC</span><br><span class="line">  brew install gcc</span><br></pre></td></tr></table></figure></p><p> <strong>解决办法</strong>：安装或更新到最新版本的Xcode</p><p> 重新安装Xcode后，重新安装gcc，显示：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> Warning: Building gcc from source:</span><br><span class="line">  The bottle needs the Xcode CLT to be installed.</span><br><span class="line">xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</span><br><span class="line">Error: An exception occurred within a child process:</span><br><span class="line">  CompilerSelectionError: gcc cannot be built with any available compilers.</span><br><span class="line">Install GNU&apos;s GCC</span><br><span class="line">  brew install gcc</span><br></pre></td></tr></table></figure></p><p><strong>解决办法</strong>：需要安装Xcode CLT</p><h3 id="参考地址"><a href="#参考地址" class="headerlink" title="参考地址"></a>参考地址</h3><ul><li><a href="https://blog.csdn.net/Quincuntial/article/details/53572415" target="_blank" rel="noopener">Mac下的dlib安装</a> 作者：SnailTyan </li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h3 id=&quot;安装dlib&quot;&gt;&lt;a href=&quot;#安装dlib&quot; class=&quot;headerlink&quot; title=&quot;安装dlib&quot;&gt;&lt;/a&gt;安装dlib&lt;/h3&gt;&lt;p&gt;官方文档，可查看&lt;a href=&quot;https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;How to install dlib from source on macOS or Ubuntu&lt;/a&gt;&lt;/p&gt;
-&lt;h3 id=&quot;dlib的依赖&quot;&gt;&lt;a href=&quot;#dlib的依赖&quot; class=&quot;headerlink&quot; title=&quot;dlib的依赖&quot;&gt;&lt;/a&gt;dlib的依赖&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ brew install openblas&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ brew install opencv&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;安装出现：gcc安装失败（具体显示如问题），&lt;a href=&quot;https://liheyuting.github.io/2019/01/28/install-openblas:opencv:gcc/&quot;&gt;安装gcc&lt;/a&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Mac的X11&lt;br&gt;X11是执行Unix程序的图形窗口环境。Mac OS X本身的程序是Aqua界面的，但是为了能够兼容unix和linux移植过来的程序（Mac OS X由BSD-UNIX修改而来），比如MatLab，就需要x11窗口环境。
-    
-    </summary>
-    
-    
-      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
-    
-      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
-    
-      <category term="big data" scheme="https://liheyuting.github.io/tags/big-data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mac 安装人脸识别face_recognition python包</title>
-    <link href="https://liheyuting.github.io/2019/01/26/2019/face_collection_install/"/>
-    <id>https://liheyuting.github.io/2019/01/26/2019/face_collection_install/</id>
-    <published>2019-01-25T16:00:00.000Z</published>
-    <updated>2019-02-06T12:13:51.720Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>一、安装face_recognition</p><p>二、完成功能开发</p><p>二、部署在云服务器上(Heroku,AWS)<br>部署在Heroku或者AWS的云端服务器上是很明智的<br>为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成<a href="https://www.docker.com/" target="_blank" rel="noopener">Docker</a>容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。</p><p><em>此篇为安装篇</em></p><h3 id="一、系统搭建"><a href="#一、系统搭建" class="headerlink" title="一、系统搭建"></a>一、系统搭建</h3><h4 id="1-系统环境"><a href="#1-系统环境" class="headerlink" title="1. 系统环境"></a>1. 系统环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- python 3.3+</span><br><span class="line">- mac</span><br><span class="line">- 已安装homebrew</span><br></pre></td></tr></table></figure><h4 id="2-Dlib安装"><a href="#2-Dlib安装" class="headerlink" title="2. Dlib安装"></a>2. Dlib安装</h4><h5 id="dlib的依赖点击查看安装教程"><a href="#dlib的依赖点击查看安装教程" class="headerlink" title="dlib的依赖点击查看安装教程"></a>dlib的依赖<a href="https://liheyuting.github.io/2019/01/28/install-dlib/">点击查看安装教程</a></h5><p>dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。</p><a id="more"></a><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ brew install openblas</span><br><span class="line">$ brew install opencv</span><br></pre></td></tr></table></figure><h5 id="安装dlib"><a href="#安装dlib" class="headerlink" title="安装dlib"></a>安装dlib</h5><p>点击查看<a href="https://gist.github.com/ageitgey/629d75c1baac34dfa5ca2a1928a7aeaf" target="_blank" rel="noopener">How to install dlib from source on macOS or Ubuntu</a></p><ul><li><p>从GitHub中克隆代码<br><code>git clone https://github.com/davisking/dlib.git</code></p></li><li><p>建立 dlib library</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd dlib</span><br><span class="line">mkdir build; cd build; cmake ..; cmake --build .</span><br></pre></td></tr></table></figure></li><li><p>建立和安装python拓展包</p></li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">python3 setup.py install</span><br></pre></td></tr></table></figure><h4 id="3-安装face-recoginition"><a href="#3-安装face-recoginition" class="headerlink" title="3. 安装face_recoginition"></a>3. 安装face_recoginition</h4><p><code>pip3 install face_recognition</code></p><h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><ul><li><a href="https://github.com/ageitgey/face_recognition" target="_blank" rel="noopener">face_recognition</a></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;一、安装face_recognition&lt;/p&gt;
-&lt;p&gt;二、完成功能开发&lt;/p&gt;
-&lt;p&gt;二、部署在云服务器上(Heroku,AWS)&lt;br&gt;部署在Heroku或者AWS的云端服务器上是很明智的&lt;br&gt;为了简化这个过程，有一个Dockerfile案例，教你怎么把face_recognition开发的app封装成&lt;a href=&quot;https://www.docker.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Docker&lt;/a&gt;容器文件，你可以把它部署在所以支持Docker镜像文件的云服务上。&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;此篇为安装篇&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&quot;一、系统搭建&quot;&gt;&lt;a href=&quot;#一、系统搭建&quot; class=&quot;headerlink&quot; title=&quot;一、系统搭建&quot;&gt;&lt;/a&gt;一、系统搭建&lt;/h3&gt;&lt;h4 id=&quot;1-系统环境&quot;&gt;&lt;a href=&quot;#1-系统环境&quot; class=&quot;headerlink&quot; title=&quot;1. 系统环境&quot;&gt;&lt;/a&gt;1. 系统环境&lt;/h4&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;- python 3.3+&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- mac&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;- 已安装homebrew&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h4 id=&quot;2-Dlib安装&quot;&gt;&lt;a href=&quot;#2-Dlib安装&quot; class=&quot;headerlink&quot; title=&quot;2. Dlib安装&quot;&gt;&lt;/a&gt;2. Dlib安装&lt;/h4&gt;&lt;h5 id=&quot;dlib的依赖点击查看安装教程&quot;&gt;&lt;a href=&quot;#dlib的依赖点击查看安装教程&quot; class=&quot;headerlink&quot; title=&quot;dlib的依赖点击查看安装教程&quot;&gt;&lt;/a&gt;dlib的依赖&lt;a href=&quot;https://liheyuting.github.io/2019/01/28/install-dlib/&quot;&gt;点击查看安装教程&lt;/a&gt;&lt;/h5&gt;&lt;p&gt;dlib安装需要的依赖有openblas，opencv。可以直接使用brew安装。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
-    
-      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
-    
-      <category term="big data" scheme="https://liheyuting.github.io/tags/big-data/"/>
-    
-      <category term="人脸识别" scheme="https://liheyuting.github.io/tags/%E4%BA%BA%E8%84%B8%E8%AF%86%E5%88%AB/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</title>
     <link href="https://liheyuting.github.io/2019/01/23/2019/Hexo_190123/"/>
     <id>https://liheyuting.github.io/2019/01/23/2019/Hexo_190123/</id>
@@ -463,9 +344,9 @@
     </summary>
     
     
-      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
-    
       <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
   </entry>
   
@@ -569,33 +450,6 @@
   </entry>
   
   <entry>
-    <title>Python CGI准备：IIS 配置</title>
-    <link href="https://liheyuting.github.io/2018/10/22/2018/IISDeploy/"/>
-    <id>https://liheyuting.github.io/2018/10/22/2018/IISDeploy/</id>
-    <published>2018-10-22T04:59:28.000Z</published>
-    <updated>2018-11-10T07:00:55.933Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong>什么是CGI</strong></p><p>CGI 目前由NCSA维护，NCSA定义CGI如下：</p><p>CGI(Common Gateway Interface),通用网关接口,它是一段程序,运行在服务器上如：HTTP服务器，提供同客户端HTML页面的接口。</p><p>大部分教程接下来会详细讲明CGI是怎么工作，怎么实现的。</p><p>但是对于很多如我从头开始，小白要直接理解使用是有一定的困难的。这里涉及到一个如何实现CGI的环境配置。这里把过程记录下来，如果有遇到和我同样问题的同学，也可少走点弯路。</p><h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><a id="more"></a><p><strong>1. 安装启动IIS</strong></p><p>控制面板-程序-程序与功能-打开或关闭Windows功能-Internet information services（按所需功能）-确定<br><img src="https://img-blog.csdn.net/20181022133300750?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p><p><strong>2. 创建快捷方式</strong></p><p>安装完了，到哪儿去找到IIS呢？</p><p>控制面板-系统与安全-管理工具</p><p>这里就会出现 Internetinformation services(IIS)管理器，邮件发送桌面快捷方式就可以了<br><img src="https://img-blog.csdn.net/20181022133314366?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p><p><strong>3. 配置python环境</strong></p><p>打开IIS</p><ul><li>配置ISAPI和CGI限制</li></ul><p>点击右上角添加</p><p><img src="https://img-blog.csdn.net/20181022133325143?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p><ul><li>处理程序映射</li></ul><p>右上角添加模块映射</p><p>（这里已经配置完了，模块选择CgiModule就行）<br><img src="https://img-blog.csdn.net/20181022133335516?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p><p>接下来就可以创建一个网站测试一下了。</p><p>然而未真正实操CGI，这个权作为记录吧。</p><p>有时候会心慌，时常恐慌于自己的愚钝和怠懒，在高速公路上的停滞倒退，导致最终的车毁人亡。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;strong&gt;什么是CGI&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;CGI 目前由NCSA维护，NCSA定义CGI如下：&lt;/p&gt;
-&lt;p&gt;CGI(Common Gateway Interface),通用网关接口,它是一段程序,运行在服务器上如：HTTP服务器，提供同客户端HTML页面的接口。&lt;/p&gt;
-&lt;p&gt;大部分教程接下来会详细讲明CGI是怎么工作，怎么实现的。&lt;/p&gt;
-&lt;p&gt;但是对于很多如我从头开始，小白要直接理解使用是有一定的困难的。这里涉及到一个如何实现CGI的环境配置。这里把过程记录下来，如果有遇到和我同样问题的同学，也可少走点弯路。&lt;/p&gt;
-&lt;h2 id=&quot;环境配置&quot;&gt;&lt;a href=&quot;#环境配置&quot; class=&quot;headerlink&quot; title=&quot;环境配置&quot;&gt;&lt;/a&gt;环境配置&lt;/h2&gt;
-    
-    </summary>
-    
-    
-      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
-    
-      <category term="python" scheme="https://liheyuting.github.io/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
     <title>git 清单</title>
     <link href="https://liheyuting.github.io/2018/09/28/2018/gitlist/"/>
     <id>https://liheyuting.github.io/2018/09/28/2018/gitlist/</id>
@@ -619,6 +473,155 @@
       <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
     
       <category term="git" scheme="https://liheyuting.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Excel 学习笔记</title>
+    <link href="https://liheyuting.github.io/2018/09/16/2018/Excel/"/>
+    <id>https://liheyuting.github.io/2018/09/16/2018/Excel/</id>
+    <published>2018-09-15T16:00:00.000Z</published>
+    <updated>2019-11-12T17:34:40.775Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>刚毕业开始工作的同事对excel小技巧还存在比较强烈的好奇，想起当初刚刚毕业的时候也曾东找西找教程，每天早半小时到公司，先看两个excel公众号推送学习，找一些小视频课的时候。她比较羞涩，似乎很担心打扰到别人。也出于渐渐淡忘这些，所以今天准备把一些常用的功能列举下来，让她更有方向点。同时也希望她今后可以更加大胆的说出自己的想法。</p><p>我把excel的使用分成几部分</p><ol><li>快捷按键/自带功能</li><li>函数</li><li>数据透视表</li><li>数据可视化</li><li>VBA（初学可先略过）</li></ol><p>数据透视表已经整理过了，这里略过不提</p><a id="more"></a><h4 id="快捷按键-自带功能"><a href="#快捷按键-自带功能" class="headerlink" title="快捷按键/自带功能"></a>快捷按键/自带功能</h4><p>将自定义导航栏放到主导航栏下面，放入常用的命令，比如</p><ul><li>插入数据透视表</li><li>降序排序/升序排序</li><li>分裂</li><li>文字颜色</li><li>筛选/消除筛选</li><li>条件格式</li><li>数据验证</li><li>格式刷</li><li>…</li></ul><p><strong> 快捷键 </strong></p><ol><li>shift + control + 方向键 可以块状多选数据</li><li>control + 1  设置单元格格式</li><li>shift + control + “+” 增加行列</li><li>control + “-” 删除行列</li><li>F4 这个键有很多妙用，比如在公式里“绝对引用”，复制填充功能，可以自行搜索，不展开了</li><li>control + F  搜索</li><li>control + H 搜索替换</li><li>control + G 定位</li><li>… </li></ol><p>常用功能</p><ol><li>分列<br>将一列数据分成几列<br>比如有一列数据是整齐的这种格式“ 姓名：木子/电话：13111“</li></ol><p>老板想要的是英文列名：</p><ul><li>Last name</li><li>First name</li><li>Phone<br>…</li></ul><p>这个时候分裂功能就很有用了，先使用特殊符号分裂，再按长度分离“姓名”</p><ol start="2"><li><p>条件格式<br>这个在数据透视表中也说过，结合使用</p></li><li><p>快速填充<br>有时候需要获取前一列的某几个字符，前列虽然是有同样规则，但是获取的字符长度却不一样，这时候可以用快速填充-快速填充</p></li></ol><ol start="4"><li><p>数据验证<br>下拉框的使用等</p></li><li><p>组合</p></li><li>分类汇总</li><li>保护工作表（结合设置单元格格式可以设置个别保护）</li><li>冻结窗格</li><li>定义名称</li><li>空行的妙用</li></ol><h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p>在excel中直接看函数使用说明就足够了。<br>只说几个常用的，其他的可以直接下载百度云链接中的文档，很全</p><ul><li><p>vlookup(张三，选择大表，n，0) 比如要在信息表中知道张三的女朋友是谁，信息表中姓名第n例是女朋友，0表示精确查找，1表示模糊查询</p></li><li><p>lookup</p></li><li>index+match</li><li>len 字符串长度</li><li>left/right/middle 获取字符串从左/右/中间的字符串，（哪个格子，第几个字符起，取几个）</li><li>count/counta/countif/countifs 计算</li><li>if/iferror</li><li>sum/sumif/average/averageif/min/max</li></ul><p>函数百度网盘：</p><h4 id="数据可视化"><a href="#数据可视化" class="headerlink" title="数据可视化"></a>数据可视化</h4><p><strong> 基本图表 </strong><br>可以参考下面这张图</p><p><strong> 迷你图 </strong><br>可以在一个格子里展示，比如大批的数据都展示不同的维度，就可以用迷你图仅示意性展示数据趋势，也不会占有太多地方</p><p><strong> 美化图表 </strong><br>地图</p><ul><li>Office自带两种，平面地图+3D地图</li><li>像素地图等：</li></ul><p>复制小图标，再选中柱状图的柱，粘贴，在格式填充中选择层叠<br>（或者复制图片，“设置数据系列格式-颜色-填充-图片或者纹理填充”+“插入图片来自剪贴板+层叠”）</p><p>这样就会出现图案替换原来的简单柱子了，仅作为抛砖引玉。<br>还是那句话，“逻辑能带你从A到B，想象力却能带你去任何地方”，同一个功能初看来是简陋不堪，权看人的使用。</p><p>网址推荐：<br>地图<br>amCharts Free SVG Maps：<a href="https://www.amcharts.com/svg-maps/" target="_blank" rel="noopener">https://www.amcharts.com/svg-maps/</a><br>像素地图：<a href="http://pixelmap.amcharts.com/" target="_blank" rel="noopener">http://pixelmap.amcharts.com/</a></p><p>图表：<br>amCharts：<a href="https://www.amcharts.com/" target="_blank" rel="noopener">https://www.amcharts.com/</a><br>infographics：<a href="https://infogr.am/app/#/library" target="_blank" rel="noopener">https://infogr.am/app/#/library</a><br>文字云：<a href="https://wordart.com/" target="_blank" rel="noopener">https://wordart.com/</a></p><p>其他不列举了，还有很多其他的网站，更偏向于Designer所需要的。毕竟数据分析中呈现数据趋势，数据异常，洞察这些等实质性内容更多于美的展示。</p><p>之前会觉得发布会那种图表会非常绚烂，后来发现日常PPT图表或者Excel中更追求简洁明了直指实质，当然PPT中用一些图表小技巧还是会显得专业和美感。</p><p>也可以用Power BI或者Tableau，之前也有使用过，发现Excel和PPT基本满足需求之后，也没有深入学习。最近准备学一学Tableau，因为发现有些招聘中有这个要求。。</p><p>配色/图形搭配这些需平时积累，有个小建议，比如上Behance/花瓣网/站酷这些设计网站找到喜欢的图片设计，从图片里取色。当然很多公司都会有自己的主色调，从logo或者官网取色不会错的。</p><p>略显匆促，补充或者建议还请留言。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;刚毕业开始工作的同事对excel小技巧还存在比较强烈的好奇，想起当初刚刚毕业的时候也曾东找西找教程，每天早半小时到公司，先看两个excel公众号推送学习，找一些小视频课的时候。她比较羞涩，似乎很担心打扰到别人。也出于渐渐淡忘这些，所以今天准备把一些常用的功能列举下来，让她更有方向点。同时也希望她今后可以更加大胆的说出自己的想法。&lt;/p&gt;
+&lt;p&gt;我把excel的使用分成几部分&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;快捷按键/自带功能&lt;/li&gt;
+&lt;li&gt;函数&lt;/li&gt;
+&lt;li&gt;数据透视表&lt;/li&gt;
+&lt;li&gt;数据可视化&lt;/li&gt;
+&lt;li&gt;VBA（初学可先略过）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;数据透视表已经整理过了，这里略过不提&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="Excel" scheme="https://liheyuting.github.io/tags/Excel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTML 相关常用汇总</title>
+    <link href="https://liheyuting.github.io/2018/09/14/2018/HTML%20and%20CSS/"/>
+    <id>https://liheyuting.github.io/2018/09/14/2018/HTML and CSS/</id>
+    <published>2018-09-13T16:00:00.000Z</published>
+    <updated>2018-11-10T06:54:35.749Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>Home<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;!-- 插入外部样式表 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; </span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;啦啦啦&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;我是卖报的小行家&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p><a id="more"></a><h4 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h4><p><strong> 标题 </strong></p><p></p><h1>一级标题</h1><p></p><p></p><h2>二级标题</h2><p></p><p></p><h3>三级标题</h3><p></p><p></p><h4>四级标题</h4><p></p><p></p><h5>五级标题</h5><p></p><p></p><h6>六级标题</h6><p></p><p><hr>创建水平线，分割内容<br><!--  注释  --></p><p><strong> 段落 </strong></p><p></p><p>段落</p><br><br>折行<p></p><p><strong> 链接 </strong><br><a href="https://liheyuting.github.io/" target="_blank">This is my blog</a></p><p>target=”_blank” 在新窗口打开文档</p><p><a name="label">锚</a> #也可以用id属性替代MAME属性<br>建立锚了，可以在其他地方创建指向这个锚的链接</p><ul><li><p>同一页面<br><a href="#lable">xxxx</a></p></li><li><p>其他页面<br><a href="https://liheyuting.github.io/html/html_links.asp#label">xxxxx</a><br>(Q这个链接是怎么确定的呢)</p></li></ul><p><strong> 图片 </strong><br><img src="dora.jpg" alt="https://liheyuting.github.io/" width="" height=""></p><ul><li><p>背景图片<br>&lt;body background=”//“</p></li><li><p>排列图片<br>&lt;img src=”” align=”botton(/middle/top)”</p></li><li><p>浮动图片<br>&lt;img src=”//“ align=”left(/fight)”</p></li><li><p>增加图片链接<br>在<img> 前后加上<br><a href="https://liheyuting.github.io/html"><br></a></p></li></ul><p><strong> 按钮 </strong></p><botton>click</botton><p><strong> 列表 </strong></p><ul> #unorder list 无序列表<br>    <li>a</li><br>    <li>b</li><br></ul><p><ol> #order list 有序列表</ol></p><ul><li>定义列表<br><dl><br><dt>1111</dt><br><dd>2222</dd><br><dt>3333</dt><br><dd>4444</dd><br>定义列表的列表项内部可以使用段落、换行符、图片、链接以及其他列表等<br>（Q这个不是太明白）</dl></li></ul><p>dl 定义定义列表<br>dt 定义定义项目<br>dd 定义定义的描述</p><ul><li>嵌套列表<br>多加几层</li></ul><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>class 规定元素的类名<br>id 元素的唯一id<br>style inline style 行内样式<br>title 规定元素的额外信息</p><p><strong> 文本标签 </strong><br><b> 粗体</b></p><p><big> 大号字<br><em> 着重文字<br><i> 斜体<br><small> 小号字<br><strong> 加重语气<br><sub> 定义下标字<br><sup> 定义上标字<br><ins> 增加下划线<br><del> 增加删除线</del></ins></sup></sub></strong></small></i></em></big></p><p><strong> 引用 </strong><br><q> 短引用</q></p><p><blockquote> 长引用<br><abbr> 定义缩写<br><dfn> 定义项目或缩写的定义</dfn></abbr></blockquote></p><p><address> 定义文档或文章的联系方式/作者(通常斜体显示，大多数浏览器在此元素前后折行)<br><cite> 定义著作的标题（斜体显示）</cite></address></p><p><strong> 表格 </strong></p><ul><li>表格<br><table border="1"><tr><br><td> row 1, cell 1</td></tr><br><td> row 1, cell 2<br></td></table></li></ul><p><tr></tr></p><td> row 2, cell 1<br></td><td> row 2, cell 2<br><br><br><br>#table 定义表格<br>#tr 若干行<br>#td table data 表格数据<br><br>- 边框属性<br>border<br><br>- 表头<br><th>heading</th><br>#th table heading<br><br>- 空单元格<br></td><td>&nbsp;</td><ul><li>跨行跨列<br>colspan<br>eg <th colspan="2"></th></li></ul><p>rowspan<br>eg <th rowspan="2"></th></p><ul><li><p>表格内的标签<br>（比如实现图片一块块）</p></li><li><p>单元格边距（cell padding）</p><table cellpadding="10"></table></li><li><p>单元格间距（cell spacing）</p><table cellspacing="10"></table></li><li><p>背景颜色或图片<br><table bgcolor="blue"></table><br>or (background=’//‘)</p></li><li><p>表格内排列内容对齐<br>align=”left(/right)”</p></li><li><p>frame 外框<br>frame=””<br>box 四面铁框<br>above 头顶有框<br>below 脚下有框<br>hsides 上头下头被框<br>vsides 两边有框</p></li></ul><h4 id="块、类、布局等其他"><a href="#块、类、布局等其他" class="headerlink" title="块、类、布局等其他"></a>块、类、布局等其他</h4><p><strong> 块 </strong></p><p><div> 在CSS里设置样式属性<br>可用于文档布局</div></p><p><span> 为部分文本设置样式属性</span></p><p><strong> 类 </strong><br>类-块-行<br>（Q这块有点疑问，id, name, class相关）</p><p><strong> 布局 </strong></p><ul><li>header 页眉</li><li>nav 导航链接的容器</li><li>section 定义文档中的节</li><li>article 定义独立的自包含文章</li><li>aside 定义内容之外的内容（比如侧栏）</li><li>footer 定义文档或节的页脚</li><li>details 定义额外的细节</li><li>summary 定义details 元素的标题</li></ul><p>（detail/article/summary Q下次注意下）</p><p><strong> 响应式web设计 </strong><br>（Q虽然你现在还不懂，最好要有印象，以后再回头看）</p><p>RWD响应式web设计（responsive web design）</p><ul><li><p>自己创建<br>在head中<style>中设置</p></li><li><p>Bootstrap<br>（Q之后学）<br>使用现成的CSS框架<br>在head中加入：<br><meta charset="utf-8"><br><meta name="viewport" content="width=device-width, initial-scale=1"></p><link rel="stylesheet" href="////"></li></ul><p><strong> 内联框架 </strong><br>  &lt;iframe src=”//“(width=”” height=”” frameborder=”0”)&gt;</iframe></p><ul><li>作为连接的目标时<br>加入name属性<br>name=””</li></ul><p><strong> 脚本 </strong><br>(Q之后学)</p><p>”假设6个月之后的你在教现在的你学习“<br>”强迫输出促进输入“</p><p>整理过程是一个复习的过程，虽然离现在实质工作内容相差千万，还应起项目直接实操才好。<br>稍加整理，如有错误或者其他的建议，还请不吝赐教，万分感谢。</p></style></p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Home&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;!-- 插入外部样式表 --&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;style.css&amp;quot;&amp;gt; &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;title&amp;gt;title&amp;lt;/title&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;h1&amp;gt;啦啦啦&amp;lt;/h1&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;p&amp;gt;我是卖报的小行家&amp;lt;/p&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="HTML" scheme="https://liheyuting.github.io/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL常用函数</title>
+    <link href="https://liheyuting.github.io/2018/08/29/2018/SQL2/"/>
+    <id>https://liheyuting.github.io/2018/08/29/2018/SQL2/</id>
+    <published>2018-08-28T16:00:00.000Z</published>
+    <updated>2018-09-02T07:47:20.611Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><ul><li>AVG: 平均数</li></ul><ol><li>直接在SELECT里使用</li><li>作为条件在WHERE中使用</li></ol><ul><li>COUNT: 计数</li></ul><ol><li>COUNT(*)</li><li>COUNT(指定列)</li></ol><ul><li>FIRST: 第一个记录的值</li><li><p>LAST</p></li><li><p>MAX: 最大数</p></li><li><p>MIN: 最小数</p></li><li><p>SUM: 数值总计</p></li><li><p>GROUP BY: 根据某字段，分组汇总，可多个字段</p><a id="more"></a></li><li><p>HAVING: 给分组设置条件</p></li><li><p>UCASE/UPPER: 转换为大写，想upper</p></li><li><p>LCASE/LOWER: 转换为小写，想lower</p></li><li><p>MID(列名，1, 3): 从中间取数，对应Excel函数，（哪列数据，第几个开始取，取几个）</p></li><li><p>LEN: 获取文本长度，对应Excel</p></li><li><p>ROUND（列名, 2): 指定小数位数，(列名, 几位小数)</p></li><li><p>NOW: 当前日期和时间</p></li><li><p>FORMAT: 对字段显示格式化，比如时间</p></li><li><p>RAND: 取随机数</p></li><li><p>ABS: 取绝对值</p></li><li><p>CEILING: 大于其的最小整数值</p></li><li><p>IFNULL: null的判断</p></li><li><p>TRIM: 去除字符串首尾空格</p></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;AVG: 平均数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;直接在SELECT里使用&lt;/li&gt;
+&lt;li&gt;作为条件在WHERE中使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;COUNT: 计数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;COUNT(*)&lt;/li&gt;
+&lt;li&gt;COUNT(指定列)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;FIRST: 第一个记录的值&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;LAST&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;MAX: 最大数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;MIN: 最小数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;SUM: 数值总计&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GROUP BY: 根据某字段，分组汇总，可多个字段&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="sql" scheme="https://liheyuting.github.io/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《一个人的村庄》</title>
+    <link href="https://liheyuting.github.io/2018/08/27/2018/read_village/"/>
+    <id>https://liheyuting.github.io/2018/08/27/2018/read_village/</id>
+    <published>2018-08-26T16:00:00.000Z</published>
+    <updated>2019-10-29T09:29:45.847Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h4 id="鸟语的孤独"><a href="#鸟语的孤独" class="headerlink" title="鸟语的孤独"></a>鸟语的孤独</h4><p>刘亮程在《一个人的村庄》里写到“不知道那只鸟最后找到知音了没有。听过它孤独鸟语的一个人，却从此默默无声。多少年后，这种孤独的声音出现在他的声音里。“</p><p>看到这段话时，我正坐在公交车里，窗两侧的树木和汽车，如模糊后退不断浓缩的影像，渐渐离开视野。不知怎的，眼睛突然就热了，眼泪沿着眼角划下。怆然之感，骤上心头。</p><p>就如同，举目无边的荒原里，有野草，有风声，有淅淅沥沥的雨落在手心，也有墨色苍穹静默，却只能一个人站着，声音出自胸腔，悬落在半空，也许风听到了，野草也摇曳着应和，你却明白，这世界辽阔响亮，却寂然无回声。</p><p>有些庆幸，不是年少时翻看，那时未离家多年，不用想到原来同样的草长在不同的地方，竟会让人有不同的感情，不用体会原来说着话也不曾让人远离孤独。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
+    
+      <category term="读书" scheme="https://liheyuting.github.io/tags/%E8%AF%BB%E4%B9%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+Yilia 所遇问题解决方法汇总</title>
+    <link href="https://liheyuting.github.io/2018/08/26/2019/hexo_yilia/"/>
+    <id>https://liheyuting.github.io/2018/08/26/2019/hexo_yilia/</id>
+    <published>2018-08-25T16:00:00.000Z</published>
+    <updated>2019-01-23T14:16:33.083Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p><p>这里花费的时间最久，在issues里找了很久，终于在<a href="https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/?nsukey=%2BijgAVH%2B4eCTudP96Bul1%2FQsAa44sS5wREOMSjzWZhpp5HNtgQ5lYQXXWgsrEjpRXfaVUvIfj1pVXj%2FYnFSdjAf0TR900HBBZYQThmSrRTtVwFlzfcGL9KfVT67ohG1XyYvT35Te2BXTqDo5Vh8nrUA6pr55q0Xs2nagi4yyiQFrPsRNMcql82iJ5ltbcivhdE%2Fe3i3m8aBleHrwZkGOWA%3D%3D" target="_blank" rel="noopener">Ziven</a>找到对应的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#6、gitalk评论</span><br><span class="line">gitalk:</span><br><span class="line">  enable:  true</span><br><span class="line">  githubID:  liheyuting  </span><br><span class="line">  repo: liheyuting.github.io （填写repo的名字）</span><br><span class="line">  ClientID: &apos;&apos;</span><br><span class="line">  ClientSecret: &apos;&apos;</span><br><span class="line">  adminUser: &apos;&apos;</span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure><p>这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。</p><a id="more"></a> <p><strong> GitHub授权ClientID和ClientSecret </strong><br>进入setting-developer settings - OAuth Apps<br><a href="https://github.com/settings/applications/861324" target="_blank" rel="noopener">点击直接进入</a></p><p><img src="/img/client.png" alt=""></p><p>homepage url 只需要填写blog首页链接即可<br>Authorization callback URL 填写的是授权返回的页面，这样也只需要填写blog地址即可</p><p>提交之后会生成“ClientID”和“ClientSecret”放到主题配置文件中就可以了。</p><p>按上面提交之后，怎么页面还是提示“未找到对应issue，需要联系管理员”呢？</p><p><strong> 评论初始化 </strong></p><p>首先，先注意下地址是不是本地化地址，评论需要在正式环境中初始化有效。</p><p>第二步：只需要简单的点击issue，授权adminUser的GitHub权限。</p><p>再试试，是不是页面评论就可以了？</p><h3 id="多标签"><a href="#多标签" class="headerlink" title="多标签"></a>多标签</h3><p>这个比较简单，如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Markdown语法文档</span><br><span class="line">date: 2018-05-12</span><br><span class="line">tags: </span><br><span class="line">- blog </span><br><span class="line">- markdown</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p><h3 id="页面浏览统计"><a href="#页面浏览统计" class="headerlink" title="页面浏览统计"></a>页面浏览统计</h3><p>这个实现比较快，<a href="https://ziven.cc/2018/06/25/Hexo%E4%B8%BB%E9%A2%98Yilia%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E6%B5%8F%E8%A7%88%E9%87%8F%E7%BB%9F%E8%AE%A1/" target="_blank" rel="noopener">Hexo主题Yilia添加网站浏览量统计</a></p><h3 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h3><p>在文中中想要分页的地方加上<br><code>&lt;!--more--&gt;</code></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;gitalk评论部署&quot;&gt;&lt;a href=&quot;#gitalk评论部署&quot; class=&quot;headerlink&quot; title=&quot;gitalk评论部署&quot;&gt;&lt;/a&gt;gitalk评论部署&lt;/h3&gt;&lt;p&gt;我用的是gitalk评论&lt;/p&gt;
+&lt;p&gt;这里花费的时间最久，在issues里找了很久，终于在&lt;a href=&quot;https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/?nsukey=%2BijgAVH%2B4eCTudP96Bul1%2FQsAa44sS5wREOMSjzWZhpp5HNtgQ5lYQXXWgsrEjpRXfaVUvIfj1pVXj%2FYnFSdjAf0TR900HBBZYQThmSrRTtVwFlzfcGL9KfVT67ohG1XyYvT35Te2BXTqDo5Vh8nrUA6pr55q0Xs2nagi4yyiQFrPsRNMcql82iJ5ltbcivhdE%2Fe3i3m8aBleHrwZkGOWA%3D%3D&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Ziven&lt;/a&gt;找到对应的&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;#6、gitalk评论&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;gitalk:&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  enable:  true&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  githubID:  liheyuting  &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  repo: liheyuting.github.io （填写repo的名字）&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ClientID: &amp;apos;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  ClientSecret: &amp;apos;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  adminUser: &amp;apos;&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  distractionFreeMode: true&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
   </entry>
   
