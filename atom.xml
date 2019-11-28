@@ -31,7 +31,7 @@
 &lt;p&gt;耳边绕着音乐，庆幸，没有吵醒这个夜晚的寂静&lt;/p&gt;
 &lt;p&gt;深秋的上海，和北京大不相同：&lt;br&gt;在北京，暖气应该来了吧，大衣也可以背出门了&lt;br&gt;而上海的此刻，我穿着长袖的睡衣，盘腿坐在椅子上，窗外的风撩动窗帘，并不冷&lt;/p&gt;
 &lt;p&gt;连续的加班，让情绪似乎要到了一个临界点&lt;br&gt;神经绷绷的，却长时间怠懒思考&lt;/p&gt;
-&lt;p&gt;好想做一个米虫啊，&lt;br&gt;面朝大海，我吃的很少&lt;br&gt;春暖花开，还可以少吃点&lt;br&gt;
+&lt;p&gt;好想做一个米虫啊，&lt;br&gt;面朝大海，我吃的很少&lt;br&gt;春暖花开，还可以少吃点&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -39,31 +39,6 @@
       <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
     
       <category term="无聊" scheme="https://liheyuting.github.io/tags/%E6%97%A0%E8%81%8A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>今年厦门出差第3次</title>
-    <link href="https://liheyuting.github.io/2019/10/29/2019/xiamen_3rd/"/>
-    <id>https://liheyuting.github.io/2019/10/29/2019/xiamen_3rd/</id>
-    <published>2019-10-28T16:00:00.000Z</published>
-    <updated>2019-10-29T10:19:51.033Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-sYJNPQDI" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
-    
-      <category term="行走" scheme="https://liheyuting.github.io/tags/%E8%A1%8C%E8%B5%B0/"/>
     
   </entry>
   
@@ -80,7 +55,7 @@
     
       &lt;p&gt;之前使用的是网易云外链链接，&lt;a href=&quot;https://liheyuting.github.io/2018/05/12/2018/Markdown/&quot;&gt;点击查看&lt;/a&gt;文章尾部如何使用，发现很受版权的限制，QQ音乐无法生成外链。&lt;/p&gt;
 &lt;p&gt;遂，试试看使用插件来插入音乐。&lt;/p&gt;
-&lt;h3 id=&quot;下载hexo-tag-aplayer&quot;&gt;&lt;a href=&quot;#下载hexo-tag-aplayer&quot; class=&quot;headerlink&quot; title=&quot;下载hexo-tag-aplayer&quot;&gt;&lt;/a&gt;下载hexo-tag-aplayer&lt;/h3&gt;&lt;p&gt;进入博客根目录：&lt;br&gt;&lt;code&gt;npm install --save hexo-tag-aplayer&lt;/code&gt;&lt;br&gt;
+&lt;h3 id=&quot;下载hexo-tag-aplayer&quot;&gt;&lt;a href=&quot;#下载hexo-tag-aplayer&quot; class=&quot;headerlink&quot; title=&quot;下载hexo-tag-aplayer&quot;&gt;&lt;/a&gt;下载hexo-tag-aplayer&lt;/h3&gt;&lt;p&gt;进入博客根目录：&lt;br&gt;&lt;code&gt;npm install --save hexo-tag-aplayer&lt;/code&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -90,6 +65,31 @@
       <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
       <category term="hexo" scheme="https://liheyuting.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>今年厦门出差第3次</title>
+    <link href="https://liheyuting.github.io/2019/10/29/2019/xiamen_3rd/"/>
+    <id>https://liheyuting.github.io/2019/10/29/2019/xiamen_3rd/</id>
+    <published>2019-10-28T16:00:00.000Z</published>
+    <updated>2019-10-29T10:19:51.033Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>    <div id="aplayer-iIplnYIs" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="soft" scheme="https://liheyuting.github.io/tags/soft/"/>
+    
+      <category term="行走" scheme="https://liheyuting.github.io/tags/%E8%A1%8C%E8%B5%B0/"/>
     
   </entry>
   
@@ -175,7 +175,7 @@
 &lt;li&gt;&lt;p&gt;编辑&lt;code&gt;tags/index.md&lt;/code&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;about: 类同于tags页面创建&lt;br&gt;
+&lt;p&gt;about: 类同于tags页面创建&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -230,7 +230,7 @@
 &lt;li&gt;数据分析+汇总报告&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;其他&lt;/em&gt;&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;其他&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -311,7 +311,7 @@
 &lt;p&gt;2012年8月末来北京，到现在2019年5月，在这个城市快7年时间了，而似乎也一直像是一条淡水鱼，在大海里辗转游览。&lt;/p&gt;
 &lt;p&gt;7年里，除了回家，去南方玩过3次，&lt;/p&gt;
 &lt;p&gt;第一次，估摸着应该是大二的五一，去武汉。那时候担任学校某个社团的社长，算是第一次公费出行。那时候还没做过轮渡，看到渡口的轮渡感觉好稀奇，当时有个朋友在武汉，陪着我来来回回坐了好几趟，半夜了我还不想回家，坐在外滩，吹着江风，和着时光吹乱我的头发和心情。现在想来那时候还真是，怎么说呢，有一种年轻人的矜持感，大概就是”我想要但我绝不会说，还要推开你”的深井冰吧…现在的性格里大概还残留了一些，但对自己倒是坦诚了很多，也世俗了很多。风景总是流动着的，回忆留在江风里，就莫名已经很美好了。&lt;/p&gt;
-&lt;p&gt;第二次应该是大三上学期的十一，和朋友一起回她的老家湖南玩，还去爬了衡山。上山时，月牙儿弯弯又朦胧，像是蒙上了一层白雾，远远近近的凝视着我们。爬至半山，空气开始微微湿润了起来，确有”万丈祝融拔地起，欲见不见轻烟里”的感觉，微微的手电筒光，扑面而来的细细丝丝的水汽，像是轻烟浮起，少吸气来，那带着些微湿润的空气便顺着鼻子呼吸道肺部，又似乎沁入到血管里，整个人从内而外的轻松起来。&lt;br&gt;
+&lt;p&gt;第二次应该是大三上学期的十一，和朋友一起回她的老家湖南玩，还去爬了衡山。上山时，月牙儿弯弯又朦胧，像是蒙上了一层白雾，远远近近的凝视着我们。爬至半山，空气开始微微湿润了起来，确有”万丈祝融拔地起，欲见不见轻烟里”的感觉，微微的手电筒光，扑面而来的细细丝丝的水汽，像是轻烟浮起，少吸气来，那带着些微湿润的空气便顺着鼻子呼吸道肺部，又似乎沁入到血管里，整个人从内而外的轻松起来。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -339,7 +339,7 @@
 &lt;/ul&gt;
 &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;# Extensions  #插件和主题&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Plugins: https://hexo.io/plugins/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;## Themes: https://hexo.io/themes/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;#RSS订阅&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;plugins: hexo-generater-feed&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;ul&gt;
-&lt;li&gt;在主题配置文件里，在rss位置，添加‘/atom.xml‘
+&lt;li&gt;在主题配置文件里，在rss位置，添加‘/atom.xml‘&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -366,7 +366,7 @@
 &lt;p&gt;毕业两年多，突感沧桑了很多。衰老和死亡倒不是一件急于求成的事情，它终将如期而至，幸运而来，对此无疑惑，也暂时做不到释怀。惶恐于成熟与衰老并不是完全的正相关，忽觉天已晚，仍疑自己还可年少无措。&lt;/p&gt;
 &lt;p&gt;人心会变柔软吗，会变得僵硬青白么，或视为生物对于危险和伤害的应激性反应。生离让人伤感，死别让人悲痛，常见会让人感到些微的好受些吗，还是让心变得僵硬些，伤心难受也是可以有些习惯的。人生在世，是不是就得习惯于生离死别，生活的真相呢。&lt;/p&gt;
 &lt;p&gt;落笔无力，言语无力，心情也无着落点，想想这么颓败，真是让人头疼呢。冷笑话也并不好笑呢。听着点破歌，好像也没什么意思呢。&lt;/p&gt;
-&lt;p&gt;每天要怎么过呢，不想做事，也提不起精神来，除了说起丧气话来，还有些话好抱怨，其他真的是一点兴致也提不起来。&lt;br&gt;
+&lt;p&gt;每天要怎么过呢，不想做事，也提不起精神来，除了说起丧气话来，还有些话好抱怨，其他真的是一点兴致也提不起来。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -410,7 +410,7 @@
       &lt;p&gt;什么时候变得像现在这个样子，每到落笔，似乎灾难性的事情一下子都全部落到了肩上一样，各种幻想自己的悲惨。&lt;/p&gt;
 &lt;p&gt;眼睛像是蒙上了一层薄雾，明知自己无限制的玩游戏之后又摸索着用电脑写东西，就好像狗屁不通的胡乱撕咬，也像是自由的在冰面上滑行。&lt;/p&gt;
 &lt;p&gt;文字自有其欺骗性的本性以及自由自在的自在。她既是脆弱的不堪一击的比玻璃和爱情还更不靠谱，又像是穿越过无数时光还死乞白赖的活着精彩又长久。让人欲罢不能。&lt;/p&gt;
-&lt;p&gt;时常不想动笔，动笔即各种生活的坏处涌上心头，就不知说些什么好，和自己对话，总是乱七八糟的糟心事，当作和别人对话吧，又好像喋喋不休的祥林嫂，让人联想到圆规。索性就还是不写。要真写点正经话吧，又要挠头摆尾，鱼鳞都好像要挠掉一样，半天憋不出一句半句来。说出的话来，像是一个个的泡泡，即怕它落在半空不落地，心就空落落，要是落地了，又是严肃的要命，没意思的紧。&lt;br&gt;
+&lt;p&gt;时常不想动笔，动笔即各种生活的坏处涌上心头，就不知说些什么好，和自己对话，总是乱七八糟的糟心事，当作和别人对话吧，又好像喋喋不休的祥林嫂，让人联想到圆规。索性就还是不写。要真写点正经话吧，又要挠头摆尾，鱼鳞都好像要挠掉一样，半天憋不出一句半句来。说出的话来，像是一个个的泡泡，即怕它落在半空不落地，心就空落落，要是落地了，又是严肃的要命，没意思的紧。&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -465,7 +465,7 @@
 &lt;p&gt;–global所有项目会默认使用这个配置信息&lt;/p&gt;
 &lt;p&gt;在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;文本编辑器&lt;/strong&gt;&lt;br&gt;默认的是Vi或者Vim，重新设置：&lt;br&gt;git config –global core.editor sublime&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;差异分析工具&lt;/strong&gt;&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;差异分析工具&lt;/strong&gt;&lt;br&gt;&lt;/p&gt;
     
     </summary>
     
@@ -514,7 +514,7 @@
     <published>2018-09-13T16:00:00.000Z</published>
     <updated>2018-11-10T06:54:35.749Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>Home<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;!-- 插入外部样式表 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; </span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;啦啦啦&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;我是卖报的小行家&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p><a id="more"></a><h4 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h4><p><strong> 标题 </strong></p><p></p><h1>一级标题</h1><p></p><p></p><h2>二级标题</h2><p></p><p></p><h3>三级标题</h3><p></p><p></p><h4>四级标题</h4><p></p><p></p><h5>五级标题</h5><p></p><p></p><h6>六级标题</h6><p></p><p><hr>创建水平线，分割内容<br><!--  注释  --></p><p><strong> 段落 </strong></p><p></p><p>段落</p><br><br>折行<p></p><p><strong> 链接 </strong><br><a href="https://liheyuting.github.io/" target="_blank">This is my blog</a></p><p>target=”_blank” 在新窗口打开文档</p><p><a name="label">锚</a> #也可以用id属性替代MAME属性<br>建立锚了，可以在其他地方创建指向这个锚的链接</p><ul><li><p>同一页面<br><a href="#lable">xxxx</a></p></li><li><p>其他页面<br><a href="https://liheyuting.github.io/html/html_links.asp#label">xxxxx</a><br>(Q这个链接是怎么确定的呢)</p></li></ul><p><strong> 图片 </strong><br><img src="dora.jpg" alt="https://liheyuting.github.io/" width="" height=""></p><ul><li><p>背景图片<br>&lt;body background=”//“</p></li><li><p>排列图片<br>&lt;img src=”” align=”botton(/middle/top)”</p></li><li><p>浮动图片<br>&lt;img src=”//“ align=”left(/fight)”</p></li><li><p>增加图片链接<br>在<img> 前后加上<br><a href="https://liheyuting.github.io/html"><br></a></p></li></ul><p><strong> 按钮 </strong></p><botton>click</botton><p><strong> 列表 </strong></p><ul> #unorder list 无序列表<br>    <li>a</li><br>    <li>b</li><br></ul><p><ol> #order list 有序列表</ol></p><ul><li>定义列表<br><dl><br><dt>1111</dt><br><dd>2222</dd><br><dt>3333</dt><br><dd>4444</dd><br>定义列表的列表项内部可以使用段落、换行符、图片、链接以及其他列表等<br>（Q这个不是太明白）</dl></li></ul><p>dl 定义定义列表<br>dt 定义定义项目<br>dd 定义定义的描述</p><ul><li>嵌套列表<br>多加几层</li></ul><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>class 规定元素的类名<br>id 元素的唯一id<br>style inline style 行内样式<br>title 规定元素的额外信息</p><p><strong> 文本标签 </strong><br><b> 粗体</b></p><p><big> 大号字<br><em> 着重文字<br><i> 斜体<br><small> 小号字<br><strong> 加重语气<br><sub> 定义下标字<br><sup> 定义上标字<br><ins> 增加下划线<br><del> 增加删除线</del></ins></sup></sub></strong></small></i></em></big></p><p><strong> 引用 </strong><br><q> 短引用</q></p><p><blockquote> 长引用<br><abbr> 定义缩写<br><dfn> 定义项目或缩写的定义</dfn></abbr></blockquote></p><p><address> 定义文档或文章的联系方式/作者(通常斜体显示，大多数浏览器在此元素前后折行)<br><cite> 定义著作的标题（斜体显示）</cite></address></p><p><strong> 表格 </strong></p><ul><li>表格<br><table border="1"><tr><br><td> row 1, cell 1</td></tr><br><td> row 1, cell 2<br></td></table></li></ul><p><tr></tr></p><td> row 2, cell 1<br></td><td> row 2, cell 2<br><br><br><br>#table 定义表格<br>#tr 若干行<br>#td table data 表格数据<br><br>- 边框属性<br>border<br><br>- 表头<br><th>heading</th><br>#th table heading<br><br>- 空单元格<br></td><td>&nbsp;</td><ul><li>跨行跨列<br>colspan<br>eg <th colspan="2"></th></li></ul><p>rowspan<br>eg <th rowspan="2"></th></p><ul><li><p>表格内的标签<br>（比如实现图片一块块）</p></li><li><p>单元格边距（cell padding）</p><table cellpadding="10"></table></li><li><p>单元格间距（cell spacing）</p><table cellspacing="10"></table></li><li><p>背景颜色或图片<br><table bgcolor="blue"></table><br>or (background=’//‘)</p></li><li><p>表格内排列内容对齐<br>align=”left(/right)”</p></li><li><p>frame 外框<br>frame=””<br>box 四面铁框<br>above 头顶有框<br>below 脚下有框<br>hsides 上头下头被框<br>vsides 两边有框</p></li></ul><h4 id="块、类、布局等其他"><a href="#块、类、布局等其他" class="headerlink" title="块、类、布局等其他"></a>块、类、布局等其他</h4><p><strong> 块 </strong></p><p><div> 在CSS里设置样式属性<br>可用于文档布局</div></p><p><span> 为部分文本设置样式属性</span></p><p><strong> 类 </strong><br>类-块-行<br>（Q这块有点疑问，id, name, class相关）</p><p><strong> 布局 </strong></p><ul><li>header 页眉</li><li>nav 导航链接的容器</li><li>section 定义文档中的节</li><li>article 定义独立的自包含文章</li><li>aside 定义内容之外的内容（比如侧栏）</li><li>footer 定义文档或节的页脚</li><li>details 定义额外的细节</li><li>summary 定义details 元素的标题</li></ul><p>（detail/article/summary Q下次注意下）</p><p><strong> 响应式web设计 </strong><br>（Q虽然你现在还不懂，最好要有印象，以后再回头看）</p><p>RWD响应式web设计（responsive web design）</p><ul><li><p>自己创建<br>在head中<style>中设置</p></li><li><p>Bootstrap<br>（Q之后学）<br>使用现成的CSS框架<br>在head中加入：<br><meta charset="utf-8"><br><meta name="viewport" content="width=device-width, initial-scale=1"></p><link rel="stylesheet" href="////"></li></ul><p><strong> 内联框架 </strong><br>  &lt;iframe src=”//“(width=”” height=”” frameborder=”0”)&gt;</iframe></p><ul><li>作为连接的目标时<br>加入name属性<br>name=””</li></ul><p><strong> 脚本 </strong><br>(Q之后学)</p><p>”假设6个月之后的你在教现在的你学习“<br>”强迫输出促进输入“</p><p>整理过程是一个复习的过程，虽然离现在实质工作内容相差千万，还应起项目直接实操才好。<br>稍加整理，如有错误或者其他的建议，还请不吝赐教，万分感谢。</p></style></p></li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>Home<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;!-- 插入外部样式表 --&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; </span><br><span class="line">&lt;title&gt;title&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;h1&gt;啦啦啦&lt;/h1&gt;</span><br><span class="line">&lt;p&gt;我是卖报的小行家&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p><a id="more"></a><h4 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h4><p><strong> 标题 </strong></p><p></p><h1>一级标题</h1><p></p><p></p><h2>二级标题</h2><p></p><p></p><h3>三级标题</h3><p></p><p></p><h4>四级标题</h4><p></p><p></p><h5>五级标题</h5><p></p><p></p><h6>六级标题</h6><p></p><p><hr>创建水平线，分割内容<br><!--  注释  --></p><p><strong> 段落 </strong></p><p></p><p>段落</p><br><br>折行<p></p><p><strong> 链接 </strong><br><a href="https://liheyuting.github.io/" target="_blank">This is my blog</a></p><p>target=”_blank” 在新窗口打开文档</p><p><a name="label">锚</a> #也可以用id属性替代MAME属性<br>建立锚了，可以在其他地方创建指向这个锚的链接</p><ul><li><p>同一页面<br><a href="#lable">xxxx</a></p></li><li><p>其他页面<br><a href="https://liheyuting.github.io/html/html_links.asp#label">xxxxx</a><br>(Q这个链接是怎么确定的呢)</p></li></ul><p><strong> 图片 </strong><br><img src="/.io//dora.jpg" alt="https://liheyuting.github.io/" width height></p><ul><li><p>背景图片<br>&lt;body background=”//“</p></li><li><p>排列图片<br>&lt;img src=”” align=”botton(/middle/top)”</p></li><li><p>浮动图片<br>&lt;img src=”//“ align=”left(/fight)”</p></li><li><p>增加图片链接<br>在<img> 前后加上<br><a href="https://liheyuting.github.io/html"><br></a></p></li></ul><p><strong> 按钮 </strong></p><botton>click</botton><p><strong> 列表 </strong></p><ul> #unorder list 无序列表<br>    <li>a</li><br>    <li>b</li><br></ul><p><ol> #order list 有序列表</ol></p><ul><li>定义列表<br><dl><br><dt>1111</dt><br><dd>2222</dd><br><dt>3333</dt><br><dd>4444</dd><br>定义列表的列表项内部可以使用段落、换行符、图片、链接以及其他列表等<br>（Q这个不是太明白）</dl></li></ul><p>dl 定义定义列表<br>dt 定义定义项目<br>dd 定义定义的描述</p><ul><li>嵌套列表<br>多加几层</li></ul><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><p>class 规定元素的类名<br>id 元素的唯一id<br>style inline style 行内样式<br>title 规定元素的额外信息</p><p><strong> 文本标签 </strong><br><b> 粗体</b></p><p><big> 大号字<br><em> 着重文字<br><i> 斜体<br><small> 小号字<br><strong> 加重语气<br><sub> 定义下标字<br><sup> 定义上标字<br><ins> 增加下划线<br><del> 增加删除线</del></ins></sup></sub></strong></small></i></em></big></p><p><strong> 引用 </strong><br><q> 短引用</q></p><p><blockquote> 长引用<br><abbr> 定义缩写<br><dfn> 定义项目或缩写的定义</dfn></abbr></blockquote></p><p><address> 定义文档或文章的联系方式/作者(通常斜体显示，大多数浏览器在此元素前后折行)<br><cite> 定义著作的标题（斜体显示）</cite></address></p><p><strong> 表格 </strong></p><ul><li>表格<br><table border="1"><tr><br><td> row 1, cell 1</td></tr><br><td> row 1, cell 2<br></td></table></li></ul><p><tr></tr></p><td> row 2, cell 1<br></td><td> row 2, cell 2<br><br><br><br>#table 定义表格<br>#tr 若干行<br>#td table data 表格数据<br><br>- 边框属性<br>border<br><br>- 表头<br><th>heading</th><br>#th table heading<br><br>- 空单元格<br></td><td>&nbsp;</td><ul><li>跨行跨列<br>colspan<br>eg <th colspan="2"></th></li></ul><p>rowspan<br>eg <th rowspan="2"></th></p><ul><li><p>表格内的标签<br>（比如实现图片一块块）</p></li><li><p>单元格边距（cell padding）</p><table cellpadding="10"></table></li><li><p>单元格间距（cell spacing）</p><table cellspacing="10"></table></li><li><p>背景颜色或图片<br><table bgcolor="blue"></table><br>or (background=’//‘)</p></li><li><p>表格内排列内容对齐<br>align=”left(/right)”</p></li><li><p>frame 外框<br>frame=””<br>box 四面铁框<br>above 头顶有框<br>below 脚下有框<br>hsides 上头下头被框<br>vsides 两边有框</p></li></ul><h4 id="块、类、布局等其他"><a href="#块、类、布局等其他" class="headerlink" title="块、类、布局等其他"></a>块、类、布局等其他</h4><p><strong> 块 </strong></p><p><div> 在CSS里设置样式属性<br>可用于文档布局</div></p><p><span> 为部分文本设置样式属性</span></p><p><strong> 类 </strong><br>类-块-行<br>（Q这块有点疑问，id, name, class相关）</p><p><strong> 布局 </strong></p><ul><li>header 页眉</li><li>nav 导航链接的容器</li><li>section 定义文档中的节</li><li>article 定义独立的自包含文章</li><li>aside 定义内容之外的内容（比如侧栏）</li><li>footer 定义文档或节的页脚</li><li>details 定义额外的细节</li><li>summary 定义details 元素的标题</li></ul><p>（detail/article/summary Q下次注意下）</p><p><strong> 响应式web设计 </strong><br>（Q虽然你现在还不懂，最好要有印象，以后再回头看）</p><p>RWD响应式web设计（responsive web design）</p><ul><li><p>自己创建<br>在head中<style>中设置</p></li><li><p>Bootstrap<br>（Q之后学）<br>使用现成的CSS框架<br>在head中加入：<br><meta charset="utf-8"><br><meta name="viewport" content="width=device-width, initial-scale=1"></p><link rel="stylesheet" href="////"></li></ul><p><strong> 内联框架 </strong><br>  &lt;iframe src=”//“(width=”” height=”” frameborder=”0”)&gt;</iframe></p><ul><li>作为连接的目标时<br>加入name属性<br>name=””</li></ul><p><strong> 脚本 </strong><br>(Q之后学)</p><p>”假设6个月之后的你在教现在的你学习“<br>”强迫输出促进输入“</p><p>整理过程是一个复习的过程，虽然离现在实质工作内容相差千万，还应起项目直接实操才好。<br>稍加整理，如有错误或者其他的建议，还请不吝赐教，万分感谢。</p></style></p></li></ul>]]></content>
     
     <summary type="html">
     
@@ -564,7 +564,7 @@
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;SUM: 数值总计&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;GROUP BY: 根据某字段，分组汇总，可多个字段&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;GROUP BY: 根据某字段，分组汇总，可多个字段&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
     
     </summary>
     
@@ -607,7 +607,7 @@
     <published>2018-08-25T16:00:00.000Z</published>
     <updated>2019-01-23T14:16:33.083Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p><p>这里花费的时间最久，在issues里找了很久，终于在<a href="https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/?nsukey=%2BijgAVH%2B4eCTudP96Bul1%2FQsAa44sS5wREOMSjzWZhpp5HNtgQ5lYQXXWgsrEjpRXfaVUvIfj1pVXj%2FYnFSdjAf0TR900HBBZYQThmSrRTtVwFlzfcGL9KfVT67ohG1XyYvT35Te2BXTqDo5Vh8nrUA6pr55q0Xs2nagi4yyiQFrPsRNMcql82iJ5ltbcivhdE%2Fe3i3m8aBleHrwZkGOWA%3D%3D" target="_blank" rel="noopener">Ziven</a>找到对应的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#6、gitalk评论</span><br><span class="line">gitalk:</span><br><span class="line">  enable:  true</span><br><span class="line">  githubID:  liheyuting  </span><br><span class="line">  repo: liheyuting.github.io （填写repo的名字）</span><br><span class="line">  ClientID: &apos;&apos;</span><br><span class="line">  ClientSecret: &apos;&apos;</span><br><span class="line">  adminUser: &apos;&apos;</span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure><p>这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。</p><a id="more"></a> <p><strong> GitHub授权ClientID和ClientSecret </strong><br>进入setting-developer settings - OAuth Apps<br><a href="https://github.com/settings/applications/861324" target="_blank" rel="noopener">点击直接进入</a></p><p><img src="/img/client.png" alt=""></p><p>homepage url 只需要填写blog首页链接即可<br>Authorization callback URL 填写的是授权返回的页面，这样也只需要填写blog地址即可</p><p>提交之后会生成“ClientID”和“ClientSecret”放到主题配置文件中就可以了。</p><p>按上面提交之后，怎么页面还是提示“未找到对应issue，需要联系管理员”呢？</p><p><strong> 评论初始化 </strong></p><p>首先，先注意下地址是不是本地化地址，评论需要在正式环境中初始化有效。</p><p>第二步：只需要简单的点击issue，授权adminUser的GitHub权限。</p><p>再试试，是不是页面评论就可以了？</p><h3 id="多标签"><a href="#多标签" class="headerlink" title="多标签"></a>多标签</h3><p>这个比较简单，如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Markdown语法文档</span><br><span class="line">date: 2018-05-12</span><br><span class="line">tags: </span><br><span class="line">- blog </span><br><span class="line">- markdown</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p><h3 id="页面浏览统计"><a href="#页面浏览统计" class="headerlink" title="页面浏览统计"></a>页面浏览统计</h3><p>这个实现比较快，<a href="https://ziven.cc/2018/06/25/Hexo%E4%B8%BB%E9%A2%98Yilia%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E6%B5%8F%E8%A7%88%E9%87%8F%E7%BB%9F%E8%AE%A1/" target="_blank" rel="noopener">Hexo主题Yilia添加网站浏览量统计</a></p><h3 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h3><p>在文中中想要分页的地方加上<br><code>&lt;!--more--&gt;</code></p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p><p>这里花费的时间最久，在issues里找了很久，终于在<a href="https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/?nsukey=%2BijgAVH%2B4eCTudP96Bul1%2FQsAa44sS5wREOMSjzWZhpp5HNtgQ5lYQXXWgsrEjpRXfaVUvIfj1pVXj%2FYnFSdjAf0TR900HBBZYQThmSrRTtVwFlzfcGL9KfVT67ohG1XyYvT35Te2BXTqDo5Vh8nrUA6pr55q0Xs2nagi4yyiQFrPsRNMcql82iJ5ltbcivhdE%2Fe3i3m8aBleHrwZkGOWA%3D%3D" target="_blank" rel="noopener">Ziven</a>找到对应的</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#6、gitalk评论</span><br><span class="line">gitalk:</span><br><span class="line">  enable:  true</span><br><span class="line">  githubID:  liheyuting  </span><br><span class="line">  repo: liheyuting.github.io （填写repo的名字）</span><br><span class="line">  ClientID: &apos;&apos;</span><br><span class="line">  ClientSecret: &apos;&apos;</span><br><span class="line">  adminUser: &apos;&apos;</span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure><p>这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。</p><a id="more"></a> <p><strong> GitHub授权ClientID和ClientSecret </strong><br>进入setting-developer settings - OAuth Apps<br><a href="https://github.com/settings/applications/861324" target="_blank" rel="noopener">点击直接进入</a></p><p><img src="/.io//client.png" alt></p><p>homepage url 只需要填写blog首页链接即可<br>Authorization callback URL 填写的是授权返回的页面，这样也只需要填写blog地址即可</p><p>提交之后会生成“ClientID”和“ClientSecret”放到主题配置文件中就可以了。</p><p>按上面提交之后，怎么页面还是提示“未找到对应issue，需要联系管理员”呢？</p><p><strong> 评论初始化 </strong></p><p>首先，先注意下地址是不是本地化地址，评论需要在正式环境中初始化有效。</p><p>第二步：只需要简单的点击issue，授权adminUser的GitHub权限。</p><p>再试试，是不是页面评论就可以了？</p><h3 id="多标签"><a href="#多标签" class="headerlink" title="多标签"></a>多标签</h3><p>这个比较简单，如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Markdown语法文档</span><br><span class="line">date: 2018-05-12</span><br><span class="line">tags: </span><br><span class="line">- blog </span><br><span class="line">- markdown</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p><h3 id="页面浏览统计"><a href="#页面浏览统计" class="headerlink" title="页面浏览统计"></a>页面浏览统计</h3><p>这个实现比较快，<a href="https://ziven.cc/2018/06/25/Hexo%E4%B8%BB%E9%A2%98Yilia%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E6%B5%8F%E8%A7%88%E9%87%8F%E7%BB%9F%E8%AE%A1/" target="_blank" rel="noopener">Hexo主题Yilia添加网站浏览量统计</a></p><h3 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h3><p>在文中中想要分页的地方加上<br><code>&lt;!--more--&gt;</code></p>]]></content>
     
     <summary type="html">
     
