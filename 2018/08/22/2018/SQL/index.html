@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="假设  表1：Persons 表2：Behaviors  SELECT- SELECT 查询 SELECT * FROM Persons - 从Persons表里查询姓名和电话 SELECT name,phoneFROM Persons  - DISTINCT 返回唯一不同的值 SELECT DISTINCT name,phoneFROM Persons  - WHERE 找出地域为北京的用户姓名">
+<meta name="description" content="假设  表1：Persons 表2：Behaviors  SELECT-** SELECT 查询 **SELECT * FROM Persons -** 从Persons表里查询姓名和电话 **SELECT name,phoneFROM Persons  -** DISTINCT 返回唯一不同的值 **SELECT DISTINCT name,phoneFROM Persons  -** WHER">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL常用语句">
 <meta property="og:url" content="https://liheyuting.github.io/2018/08/22/2018/SQL/index.html">
 <meta property="og:site_name" content="虚妄之城">
-<meta property="og:description" content="假设  表1：Persons 表2：Behaviors  SELECT- SELECT 查询 SELECT * FROM Persons - 从Persons表里查询姓名和电话 SELECT name,phoneFROM Persons  - DISTINCT 返回唯一不同的值 SELECT DISTINCT name,phoneFROM Persons  - WHERE 找出地域为北京的用户姓名">
+<meta property="og:description" content="假设  表1：Persons 表2：Behaviors  SELECT-** SELECT 查询 **SELECT * FROM Persons -** 从Persons表里查询姓名和电话 **SELECT name,phoneFROM Persons  -** DISTINCT 返回唯一不同的值 **SELECT DISTINCT name,phoneFROM Persons  -** WHER">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-08-21T16:00:00.000Z">
 <meta property="article:modified_time" content="2020-06-17T15:07:44.020Z">
@@ -231,8 +231,48 @@ daovoice('update');
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益 404
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-soft">
-          <a href="/tags/%E6%9A%87%E6%80%9D%20" rel="section">
+          <a href="/tags/%E6%9A%87%E6%80%9D%20%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
@@ -426,52 +466,58 @@ daovoice('update');
 <li>表1：Persons</li>
 <li>表2：Behaviors</li>
 </ul>
-<h3 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h3><p>-<strong> SELECT 查询 </strong><br>SELECT * FROM Persons</p>
-<p>-<strong> 从Persons表里查询姓名和电话 </strong><br>SELECT name,phone<br>FROM Persons </p>
-<p>-<strong> DISTINCT 返回唯一不同的值 </strong><br>SELECT DISTINCT name,phone<br>FROM Persons </p>
-<p>-<strong> WHERE 找出地域为北京的用户姓名和电话 </strong><br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’</p>
+<h3 id="SELECT"><a href="#SELECT" class="headerlink" title="SELECT"></a>SELECT</h3><p>-** SELECT 查询 **<br>SELECT * FROM Persons</p>
+<p>-** 从Persons表里查询姓名和电话 **<br>SELECT name,phone<br>FROM Persons </p>
+<p>-** DISTINCT 返回唯一不同的值 **<br>SELECT DISTINCT name,phone<br>FROM Persons </p>
+<p>-** WHERE 找出地域为北京的用户姓名和电话 **<br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’</p>
 <a id="more"></a>
-<p>-<strong> AND/OR 找出来源是微信且（或）地域是北京的用户姓名和电话 </strong><br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’ and（/or） source = ‘wechat’</p>
-<p>-<strong> ORDER BY 找出北京地区用户，按公司字母(和名字)排序 </strong><br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company (,name) </p>
-<p>-<strong> DESC/ASC 找出北京地区用户，按公司字母顺序和名字逆序排序 </strong><br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company ASC (,name DESC)</p>
-<p>-<strong> 找出前n名 </strong><br>SELECT city(列名)<br>FROM Persons<br>LIMIT number</p>
-<p>-<strong> 找出名字带有‘二’的人 </strong><br>SELECT * FROM Persons<br>WHERE city = ‘%二%’</p>
-<p>-<strong> 找出在上海和北京的人，用in </strong><br>SELECT * FROM Persons<br>WHERE city in (‘beijing’,’shanghai’)</p>
-<p>-<strong> 值在什么之间 </strong><br>SELECT * FROM Persons<br>WHERE birth<br>BETWEEN ‘2017/02/03’ AND ‘2018/04/03’</p>
+
+<p>-** AND/OR 找出来源是微信且（或）地域是北京的用户姓名和电话 **<br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’ and（/or） source = ‘wechat’</p>
+<p>-** ORDER BY 找出北京地区用户，按公司字母(和名字)排序 **<br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company (,name) </p>
+<p>-** DESC/ASC 找出北京地区用户，按公司字母顺序和名字逆序排序 **<br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company ASC (,name DESC)</p>
+<p>-** 找出前n名 **<br>SELECT city(列名)<br>FROM Persons<br>LIMIT number</p>
+<p>-** 找出名字带有‘二’的人 **<br>SELECT * FROM Persons<br>WHERE city = ‘%二%’</p>
+<p>-** 找出在上海和北京的人，用in **<br>SELECT * FROM Persons<br>WHERE city in (‘beijing’,’shanghai’)</p>
+<p>-** 值在什么之间 **<br>SELECT * FROM Persons<br>WHERE birth<br>BETWEEN ‘2017/02/03’ AND ‘2018/04/03’</p>
 <p>-<strong>两表间查询</strong></p>
-<p><strong> 对应相同的名字 </strong></p>
+<p>** 对应相同的名字 **</p>
 <ul>
 <li><p>方式1<br>SELECT * FROM Persons, Behaviors<br>WHERE Persons.name = Behaviors.name</p>
 </li>
-<li><p>方式2<br><strong> JOIN  </strong><br>SELECT * FROM Persons<br>INNER JOIN Behaviors<br>ON Persons.name = Behaviors.name</p>
+<li><p>方式2</p>
 </li>
 </ul>
-<p>-<strong> Left Join 想象左对齐，心里只有左表，不管它怎样，都保留它 </strong><br>SELECT * FROM Persons<br>LEFT JOIN Behaviors<br>ON Persons.name = Behaviors.name</p>
-<p>-<strong> RIGHT JOIN 全为右右右 </strong></p>
-<p>-<strong> FULL JOIN 全部都要，左表右表全在一块儿 </strong></p>
-<p>-<strong> UNION 汇总：两个表表头一样，合并在一起,只取唯一值 </strong><br>SELECT name FROM Persons1<br>UNION<br>SELECT name FROM Persons2</p>
-<p>-<strong> UNION ALL 汇总所有值（用法如上） </strong></p>
-<p>-<strong> SELECT INTO 从前表选取数据插入后表中 </strong><br>SELECT */name(列名)<br>INTO new_Persons (IN Externaldb.mdb)<br>FROM old_Persons</p>
-<p>-<strong> GROUP BY 感觉某字段，分类统计 </strong></p>
+<p>** JOIN  **<br>SELECT * FROM Persons<br>INNER JOIN Behaviors<br>ON Persons.name = Behaviors.name</p>
+<p>-** Left Join 想象左对齐，心里只有左表，不管它怎样，都保留它 **<br>SELECT * FROM Persons<br>LEFT JOIN Behaviors<br>ON Persons.name = Behaviors.name</p>
+<p>-** RIGHT JOIN 全为右右右 **</p>
+<p>-** FULL JOIN 全部都要，左表右表全在一块儿 **</p>
+<p>-** UNION 汇总：两个表表头一样，合并在一起,只取唯一值 **<br>SELECT name FROM Persons1<br>UNION<br>SELECT name FROM Persons2</p>
+<p>-** UNION ALL 汇总所有值（用法如上） **</p>
+<p>-** SELECT INTO 从前表选取数据插入后表中 **<br>SELECT */name(列名)<br>INTO new_Persons (IN Externaldb.mdb)<br>FROM old_Persons</p>
+<p>-** GROUP BY 感觉某字段，分类统计 **</p>
 <hr>
-<p>-<strong> INSERT 插入新的行 </strong><br>INSERT INTO table_name(列1， 列2)<br>VALUES (VALUE 1, VALUE 2, VALUE 3)</p>
-<p>-<strong> 插入指定行的值，在value里加入限定的值 </strong></p>
-<p>-<strong> UPDATE 更新值 </strong><br>UPDATE Persons<br>SET city（列值）= ‘beijing’<br>WHERE phone=’12122222222’</p>
-<p>-<strong> 删除表(表的行） </strong><br>DELETE FROM Persons<br>(WEHRE city=’beijing’)</p>
-<p>-<strong> AS 指定命名 </strong></p>
+<p>-** INSERT 插入新的行 **<br>INSERT INTO table_name(列1， 列2)<br>VALUES (VALUE 1, VALUE 2, VALUE 3)</p>
+<p>-** 插入指定行的值，在value里加入限定的值 **</p>
+<p>-** UPDATE 更新值 **<br>UPDATE Persons<br>SET city（列值）= ‘beijing’<br>WHERE phone=’12122222222’</p>
+<p>-** 删除表(表的行） **<br>DELETE FROM Persons<br>(WEHRE city=’beijing’)</p>
+<p>-** AS 指定命名 **</p>
 <hr>
-<p>-<strong> CREATE DATABASE 创建数据库 </strong><br>CREATE DATABASE new_db</p>
-<p>-<strong> CREATE TABLE </strong><br>CREATE TABLE new_Persons{<br>name varchar,<br>city varchar,<br>…<br>}</p>
-<p>-<strong> 字段约束 </strong></p>
+<p>-** CREATE DATABASE 创建数据库 **<br>CREATE DATABASE new_db</p>
+<p>-** CREATE TABLE **<br>CREATE TABLE new_Persons{<br>name varchar,<br>city varchar,<br>…<br>}</p>
+<p>-** 字段约束 **</p>
 <ul>
 <li><p>NOT NULL 不为空<br>ALERT TABLE Persons<br>DROP INDEX PersonID</p>
 </li>
 <li><p>UNIQUE 唯一标识</p>
 </li>
-<li>PRIMARY KEY 主键</li>
-<li>FOREIGN KEY</li>
-<li>CHECK</li>
-<li>DEFAULT</li>
+<li><p>PRIMARY KEY 主键</p>
+</li>
+<li><p>FOREIGN KEY</p>
+</li>
+<li><p>CHECK</p>
+</li>
+<li><p>DEFAULT</p>
+</li>
 </ul>
 
       

@@ -231,8 +231,48 @@ daovoice('update');
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益 404
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-soft">
-          <a href="/tags/%E6%9A%87%E6%80%9D%20" rel="section">
+          <a href="/tags/%E6%9A%87%E6%80%9D%20%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
@@ -422,18 +462,17 @@ daovoice('update');
 
       
         <h4 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h4><p>git config工具专门用来配置或读取相应的工作环境变量</p>
-<p>git config –global user.name “dora”<br>git config –global user.email <a href="mailto:xxx@163.com" target="_blank" rel="noopener">xxx@163.com</a></p>
+<p>git config –global user.name “dora”<br>git config –global user.email <a href="mailto:xxx@163.com">xxx@163.com</a></p>
 <p>–global所有项目会默认使用这个配置信息</p>
 <p>在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里</p>
 <p><strong>文本编辑器</strong><br>默认的是Vi或者Vim，重新设置：<br>git config –global core.editor sublime</p>
-<p><strong>差异分析工具</strong><br><a id="more"></a></p>
-<h4 id="Git创建仓库"><a href="#Git创建仓库" class="headerlink" title="Git创建仓库"></a>Git创建仓库</h4><p><strong>git 创建仓库</strong></p>
-<p>#使用当前目录作为Git仓库，使它初始化<br>git init</p>
+<p><strong>差异分析工具</strong></p>
+<a id="more"></a>
+
+<h4 id="Git创建仓库"><a href="#Git创建仓库" class="headerlink" title="Git创建仓库"></a>Git创建仓库</h4><p><strong>git 创建仓库</strong><br>#使用当前目录作为Git仓库，使它初始化<br>git init</p>
 <p>#使用指定目录作为仓库<br>git init newrepo</p>
-<p>当前目录会出现一个名叫.git的目录。<br>如果当前目录下有几个文件需要纳入版本控制，需要先用git add命令告诉git开始对这些文件进行跟踪，然后提交。</p>
-<p>#Q 需要后期往前再看一下<br>git add *.c<br>git add README #类似增加一个说明文档<br>git commit -m ‘initial project version’</p>
-<p><strong>从现有仓库克隆</strong><br>git clone [url] xxxx</p>
-<p>#xxx 用来指定新名字</p>
+<p>当前目录会出现一个名叫.git的目录。<br>如果当前目录下有几个文件需要纳入版本控制，需要先用git add命令告诉git开始对这些文件进行跟踪，然后提交。<br>#Q 需要后期往前再看一下<br>git add *.c<br>git add README #类似增加一个说明文档<br>git commit -m ‘initial project version’</p>
+<p><strong>从现有仓库克隆</strong><br>git clone [url] xxxx<br>#xxx 用来指定新名字</p>
 <h4 id="git-基本操作"><a href="#git-基本操作" class="headerlink" title="git 基本操作"></a>git 基本操作</h4><p>git init #创建新仓库<br>git clone [url] #拷贝已存在的仓库到本地<br>git add #将文件添加到缓存<br>git status #查看状态<br>git diff #查看执行git status结果的详细信息</p>
 <ul>
 <li>git diff #尚未缓存</li>

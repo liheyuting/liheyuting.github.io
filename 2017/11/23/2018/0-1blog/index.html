@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="1-2Day：搭建Blog到GitHub 安装过程：详情可以借鉴官方网站, 安装homebrew1ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot; 安装nodejs    brew install node 安装hexo1sudo npm insta">
+<meta name="description" content="1-2Day：搭建Blog到GitHub 安装过程：详情可以借鉴官方网站, 安装homebrew 1ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;  安装nodejs    brew in">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从零开始搭建博客">
 <meta property="og:url" content="https://liheyuting.github.io/2017/11/23/2018/0-1blog/index.html">
 <meta property="og:site_name" content="虚妄之城">
-<meta property="og:description" content="1-2Day：搭建Blog到GitHub 安装过程：详情可以借鉴官方网站, 安装homebrew1ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot; 安装nodejs    brew install node 安装hexo1sudo npm insta">
+<meta property="og:description" content="1-2Day：搭建Blog到GitHub 安装过程：详情可以借鉴官方网站, 安装homebrew 1ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;  安装nodejs    brew in">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2017-11-23T11:23:56.000Z">
 <meta property="article:modified_time" content="2020-06-17T15:07:43.110Z">
@@ -231,8 +231,48 @@ daovoice('update');
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益 404
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-soft">
-          <a href="/tags/%E6%9A%87%E6%80%9D%20" rel="section">
+          <a href="/tags/%E6%9A%87%E6%80%9D%20%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
@@ -423,19 +463,36 @@ daovoice('update');
       
         <p><strong>1-2Day：搭建Blog到GitHub</strong></p>
 <h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>详情可以借鉴<a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">官方网站</a>,</p>
-<p>安装homebrew<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;</span><br></pre></td></tr></table></figure></p>
+<p>安装homebrew</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
+
 <p>安装nodejs<br>    <code>brew install node</code></p>
-<p>安装hexo<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure></p>
+<p>安装hexo</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
 <a id="more"></a> 
+
 <p>安装git<br><code>- sudo brew install git</code><br><br></p>
-<h3 id="建立博客"><a href="#建立博客" class="headerlink" title="建立博客"></a>建立博客</h3><p>创建文件夹<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
-<p>生成静态页面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate /** 生成一套静态网页 **/</span><br><span class="line">hexo server /** 在服务器上运行 **/</span><br></pre></td></tr></table></figure></p>
-<p>建立第一篇博客<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(cd 进入blog文件夹)</span><br><span class="line">hexo new post &quot;博客名&quot;</span><br><span class="line">info created：～／blog/souce/_posts/博客名.md</span><br></pre></td></tr></table></figure></p>
-<p>连接GitHub<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">liheyuting.github.io</span><br><span class="line">（一定要和账户名一致）</span><br></pre></td></tr></table></figure></p>
-<p>修改文件夹中yml文件，如下：（注意空格）<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/liheyuting/Dora.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
-<p>发布博客到服务器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save   (第一次安装所需)</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p><br></p>
-<h3 id="回顾"><a href="#回顾" class="headerlink" title="回顾"></a>回顾</h3><p>总耗时：3h（一心二用，聆听朋友倾诉）+ 0.5h (整理)<br>First Day（1.5h）：跟着浚宇的博客进入官方网站搭建，在hexo环境配置中断<br>Second Day：</p>
+<h3 id="建立博客"><a href="#建立博客" class="headerlink" title="建立博客"></a>建立博客</h3><p>创建文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>生成静态页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate &#x2F;** 生成一套静态网页 **&#x2F;</span><br><span class="line">hexo server &#x2F;** 在服务器上运行 **&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>建立第一篇博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(cd 进入blog文件夹)</span><br><span class="line">hexo new post &quot;博客名&quot;</span><br><span class="line">info created：～／blog&#x2F;souce&#x2F;_posts&#x2F;博客名.md</span><br></pre></td></tr></table></figure>
+
+<p>连接GitHub</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">liheyuting.github.io</span><br><span class="line">（一定要和账户名一致）</span><br></pre></td></tr></table></figure>
+
+<p>修改文件夹中yml文件，如下：（注意空格）<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;liheyuting&#x2F;Dora.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>发布博客到服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save   (第一次安装所需)</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<br>
+### 回顾 ###
+总耗时：3h（一心二用，聆听朋友倾诉）+ 0.5h (整理)
+First Day（1.5h）：跟着浚宇的博客进入官方网站搭建，在hexo环境配置中断
+Second Day：
+
 <h3 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h3><ul>
 <li><a href="http://blog.csdn.net/jasonjwl/article/details/52887575" target="_blank" rel="noopener">http://blog.csdn.net/jasonjwl/article/details/52887575</a></li>
 <li><a href="http://blog.csdn.net/qq_30379689/article/details/52854003" target="_blank" rel="noopener">http://blog.csdn.net/qq_30379689/article/details/52854003</a></li>
@@ -705,7 +762,7 @@ daovoice('update');
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装过程："><span class="nav-number">1.</span> <span class="nav-text">安装过程：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立博客"><span class="nav-number">2.</span> <span class="nav-text">建立博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回顾"><span class="nav-number">3.</span> <span class="nav-text">回顾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考网站"><span class="nav-number">4.</span> <span class="nav-text">参考网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坑点"><span class="nav-number">5.</span> <span class="nav-text">坑点</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装过程："><span class="nav-number">1.</span> <span class="nav-text">安装过程：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#建立博客"><span class="nav-number">2.</span> <span class="nav-text">建立博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考网站"><span class="nav-number">3.</span> <span class="nav-text">参考网站</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坑点"><span class="nav-number">4.</span> <span class="nav-text">坑点</span></a></li></ol></div>
             
 
           </div>

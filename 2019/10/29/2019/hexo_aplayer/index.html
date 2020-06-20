@@ -64,7 +64,7 @@
 
 
 
-  <meta name="keywords" content="blog,earn,hexo," />
+  <meta name="keywords" content="blog,hexo,earn," />
 
 
 
@@ -90,8 +90,8 @@
 <meta property="article:modified_time" content="2020-06-17T15:07:42.340Z">
 <meta property="article:author" content="Dora Li">
 <meta property="article:tag" content="blog">
-<meta property="article:tag" content="earn">
 <meta property="article:tag" content="hexo">
+<meta property="article:tag" content="earn">
 <meta name="twitter:card" content="summary">
 
 
@@ -232,8 +232,48 @@ daovoice('update');
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益 404
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-soft">
-          <a href="/tags/%E6%9A%87%E6%80%9D%20" rel="section">
+          <a href="/tags/%E6%9A%87%E6%80%9D%20%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
@@ -424,9 +464,16 @@ daovoice('update');
       
         <p>之前使用的是网易云外链链接，<a href="https://liheyuting.github.io/2018/05/12/2018/Markdown/">点击查看</a>文章尾部如何使用，发现很受版权的限制，QQ音乐无法生成外链。</p>
 <p>遂，试试看使用插件来插入音乐。</p>
-<h3 id="下载hexo-tag-aplayer"><a href="#下载hexo-tag-aplayer" class="headerlink" title="下载hexo-tag-aplayer"></a>下载hexo-tag-aplayer</h3><p>进入博客根目录：<br><code>npm install --save hexo-tag-aplayer</code><br><a id="more"></a></p>
-<p>在根目录的<code>_config.yml</code>中增加<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 音乐播放器</span><br><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure></p>
-<h3 id="在博客中增加音乐"><a href="#在博客中增加音乐" class="headerlink" title="在博客中增加音乐"></a>在博客中增加音乐</h3><p>可用模板<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;歌曲id&quot; &quot;netease（音乐平台）&quot; &quot;song&quot; &quot;theme:#555&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="下载hexo-tag-aplayer"><a href="#下载hexo-tag-aplayer" class="headerlink" title="下载hexo-tag-aplayer"></a>下载hexo-tag-aplayer</h3><p>进入博客根目录：<br><code>npm install --save hexo-tag-aplayer</code></p>
+<a id="more"></a>
+
+<p>在根目录的<code>_config.yml</code>中增加</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 音乐播放器</span><br><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="在博客中增加音乐"><a href="#在博客中增加音乐" class="headerlink" title="在博客中增加音乐"></a>在博客中增加音乐</h3><p>可用模板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% meting &quot;歌曲id&quot; &quot;netease（音乐平台）&quot; &quot;song&quot; &quot;theme:#555&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+
 <p>音乐平台：<br>netease, tencent, kugou, xiami, baidu</p>
 <p>具体参数等<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">参考文档</a></p>
 
@@ -472,9 +519,9 @@ daovoice('update');
           
             <a href="/tags/blog/" rel="tag"># blog</a>
           
-            <a href="/tags/earn/" rel="tag"># earn</a>
-          
             <a href="/tags/hexo/" rel="tag"># hexo</a>
+          
+            <a href="/tags/earn/" rel="tag"># earn</a>
           
         </div>
       
@@ -502,8 +549,8 @@ daovoice('update');
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/29/2019/xiamen_3rd/" rel="next" title="今年厦门出差第3次">
-                <i class="fa fa-chevron-left"></i> 今年厦门出差第3次
+              <a href="/2019/10/24/2019/next_daovoice/" rel="next" title="DaoVoice实现在线联系">
+                <i class="fa fa-chevron-left"></i> DaoVoice实现在线联系
               </a>
             
           </div>
@@ -512,8 +559,8 @@ daovoice('update');
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/11/13/2019/unhappy/" rel="prev" title="严肃的米虫脸">
-                严肃的米虫脸 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/29/2019/xiamen_3rd/" rel="prev" title="今年厦门出差第3次">
+                今年厦门出差第3次 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

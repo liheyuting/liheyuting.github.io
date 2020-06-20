@@ -79,12 +79,12 @@
 
 
 
-<meta name="description" content="注册登陆DaoVoice注册地址 在博客&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;head&#x2F;head.swig增加代码 12345678&amp;#123;% if theme.daovoice %&amp;#125; &lt;script&gt;(function(i,s,o,g,r,a,m)&amp;#123;i[&quot;DaoVoiceObject&quot;]&#x3D;r;i[r]&#x3D;i[r]||fu">
+<meta name="description" content="注册登陆DaoVoice注册地址 在博客&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;head&#x2F;head.swig增加代码 12345678&amp;#123;% if theme.daovoice %&amp;#125; &lt;script&gt;(function(i,s,o,g,r,a,m)&amp;#123;i[&quot;DaoVoiceObject&quot;]&#x3D;r;i[r]&amp;#x3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DaoVoice实现在线联系">
 <meta property="og:url" content="https://liheyuting.github.io/2019/10/24/2019/next_daovoice/index.html">
 <meta property="og:site_name" content="虚妄之城">
-<meta property="og:description" content="注册登陆DaoVoice注册地址 在博客&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;head&#x2F;head.swig增加代码 12345678&amp;#123;% if theme.daovoice %&amp;#125; &lt;script&gt;(function(i,s,o,g,r,a,m)&amp;#123;i[&quot;DaoVoiceObject&quot;]&#x3D;r;i[r]&#x3D;i[r]||fu">
+<meta property="og:description" content="注册登陆DaoVoice注册地址 在博客&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;head&#x2F;head.swig增加代码 12345678&amp;#123;% if theme.daovoice %&amp;#125; &lt;script&gt;(function(i,s,o,g,r,a,m)&amp;#123;i[&quot;DaoVoiceObject&quot;]&#x3D;r;i[r]&amp;#x3">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2019-10-23T16:00:00.000Z">
 <meta property="article:modified_time" content="2020-06-17T15:07:34.300Z">
@@ -233,8 +233,48 @@ daovoice('update');
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益 404
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-soft">
-          <a href="/tags/%E6%9A%87%E6%80%9D%20" rel="section">
+          <a href="/tags/%E6%9A%87%E6%80%9D%20%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
@@ -425,10 +465,11 @@ daovoice('update');
       
         <h3 id="注册登陆DaoVoice"><a href="#注册登陆DaoVoice" class="headerlink" title="注册登陆DaoVoice"></a>注册登陆DaoVoice</h3><p><a href="http://www.daovoice.io/" target="_blank" rel="noopener">注册地址</a></p>
 <p>在<code>博客/themes/next/layout/_partials/head/head.swig</code>增加代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.daovoice %&#125;</span><br><span class="line"> &lt;script&gt;(function(i,s,o,g,r,a,m)&#123;i[&quot;DaoVoiceObject&quot;]=r;i[r]=i[r]||function()&#123;(i[r].q=i[r].q||[]).push(arguments)&#125;,i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset=&quot;utf-8&quot;;m.parentNode.insertBefore(a,m)&#125;)(window,document,&quot;script&quot;,(&apos;https:&apos; == document.location.protocol ? &apos;https:&apos; : &apos;http:&apos;) + &quot;//widget.daovoice.io/widget/b6dbddb6.js&quot;,&quot;daovoice&quot;)</span><br><span class="line"> daovoice(&apos;init&apos;, &#123;</span><br><span class="line">  app_id: &quot;用户ID&quot;</span><br><span class="line">&#125;);</span><br><span class="line">daovoice(&apos;update&apos;);</span><br><span class="line"> &lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if theme.daovoice %&#125;</span><br><span class="line"> &lt;script&gt;(function(i,s,o,g,r,a,m)&#123;i[&quot;DaoVoiceObject&quot;]&#x3D;r;i[r]&#x3D;i[r]||function()&#123;(i[r].q&#x3D;i[r].q||[]).push(arguments)&#125;,i[r].l&#x3D;1*new Date();a&#x3D;s.createElement(o),m&#x3D;s.getElementsByTagName(o)[0];a.async&#x3D;1;a.src&#x3D;g;a.charset&#x3D;&quot;utf-8&quot;;m.parentNode.insertBefore(a,m)&#125;)(window,document,&quot;script&quot;,(&#39;https:&#39; &#x3D;&#x3D; document.location.protocol ? &#39;https:&#39; : &#39;http:&#39;) + &quot;&#x2F;&#x2F;widget.daovoice.io&#x2F;widget&#x2F;b6dbddb6.js&quot;,&quot;daovoice&quot;)</span><br><span class="line"> daovoice(&#39;init&#39;, &#123;</span><br><span class="line">  app_id: &quot;用户ID&quot;</span><br><span class="line">&#125;);</span><br><span class="line">daovoice(&#39;update&#39;);</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p>如图所示：</p>
 <p>&lt;img src=’/img/daovoice.png’, height= ‘75%’, width = ‘75%’&gt;</p>
-<h3 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h3><p>在<code>/themes/next/_config.yml</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: 用户ID</span><br></pre></td></tr></table></figure></p>
+<h3 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h3><p>在<code>/themes/next/_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: 用户ID</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <h3 id="微信消息提醒"><a href="#微信消息提醒" class="headerlink" title="微信消息提醒"></a>微信消息提醒</h3><p>可以绑定微信，以及默认将信息分派给自己，这样就可以用微信接收网站聊天信息了</p>
 <h3 id="修改聊天图标设置"><a href="#修改聊天图标设置" class="headerlink" title="修改聊天图标设置"></a>修改聊天图标设置</h3><p>应用设置-聊天设置中进行简单的设置</p>
@@ -517,8 +558,8 @@ daovoice('update');
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/29/2019/xiamen_3rd/" rel="prev" title="今年厦门出差第3次">
-                今年厦门出差第3次 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/10/29/2019/hexo_aplayer/" rel="prev" title="Hexo博客增加aplayer音乐播放器">
+                Hexo博客增加aplayer音乐播放器 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

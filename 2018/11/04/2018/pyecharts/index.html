@@ -233,8 +233,48 @@ daovoice('update');
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益 404
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-soft">
-          <a href="/tags/%E6%9A%87%E6%80%9D%20" rel="section">
+          <a href="/tags/%E6%9A%87%E6%80%9D%20%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
             
@@ -458,7 +498,7 @@ daovoice('update');
 <li>ThemeRiver（主题河流图） </li>
 <li>WordCloud（词云图）</li>
 </ul>
-<h4 id="第一个图表"><a href="#第一个图表" class="headerlink" title="第一个图表"></a>第一个图表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts import Line</span><br><span class="line"></span><br><span class="line">attr=[&quot;衬衫&quot;,&quot;羊毛衫&quot;,&quot;雪纺衫&quot;,&quot;裤子&quot;,&quot;高跟鞋&quot;,&quot;袜子&quot;]</span><br><span class="line">v1=[5,20,36,10,75,90]</span><br><span class="line">v2=[10,25,8,60,20,80]</span><br><span class="line">bar=Line(&quot;各商家产品销售情况&quot;)</span><br><span class="line">bar.add(&quot;商家A&quot;,attr,v1,is_stack=True)</span><br><span class="line">bar.add(&quot;商家B&quot;,attr,v2,is_stack=True)</span><br><span class="line">bar.show_config()</span><br><span class="line">bar.render()</span><br></pre></td></tr></table></figure>
+<h4 id="第一个图表"><a href="#第一个图表" class="headerlink" title="第一个图表"></a>第一个图表</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">from pyecharts import Line</span><br><span class="line"></span><br><span class="line">attr&#x3D;[&quot;衬衫&quot;,&quot;羊毛衫&quot;,&quot;雪纺衫&quot;,&quot;裤子&quot;,&quot;高跟鞋&quot;,&quot;袜子&quot;]</span><br><span class="line">v1&#x3D;[5,20,36,10,75,90]</span><br><span class="line">v2&#x3D;[10,25,8,60,20,80]</span><br><span class="line">bar&#x3D;Line(&quot;各商家产品销售情况&quot;)</span><br><span class="line">bar.add(&quot;商家A&quot;,attr,v1,is_stack&#x3D;True)</span><br><span class="line">bar.add(&quot;商家B&quot;,attr,v2,is_stack&#x3D;True)</span><br><span class="line">bar.show_config()</span><br><span class="line">bar.render()</span><br></pre></td></tr></table></figure>
 <p><img src="https://img-blog.csdnimg.cn/20181104174725420.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5MTgxMTAw,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p>bar = Bar(“主标题”，”副标题”)<br>bar.add（） 调用add()函数添加图表的数据和设置各种配置项<br>bar.show_config() 打印输出图表的所有配置项<br>bar.render() 生成render.html文件，也可以设置路径和文件名<br>bar.use_theme(‘dark’) 更改主体色系</p>
 <h4 id="绘制图表过程"><a href="#绘制图表过程" class="headerlink" title="绘制图表过程"></a>绘制图表过程</h4><ol>
