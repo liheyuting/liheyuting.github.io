@@ -2098,4 +2098,65 @@ href="////">
 </ul>
 ]]></content>
   </entry>
+  <entry>
+    <title>Hexo解决图片加载问题</title>
+    <url>/2020/07/05/2020/Hexo%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>自从主题改成next之后，发现图片加载出了问题<br>本地绝对引用以及html的img标签都失败了。。</p>
+<h1 id="图片相对路径加载出错"><a href="#图片相对路径加载出错" class="headerlink" title="图片相对路径加载出错"></a>图片相对路径加载出错</h1><h2 id="按照网上教程，查看插件"><a href="#按照网上教程，查看插件" class="headerlink" title="按照网上教程，查看插件"></a>按照网上教程，查看插件</h2><h3 id="config设置"><a href="#config设置" class="headerlink" title="config设置"></a>config设置</h3><p><code>post_asset_folder: true</code></p>
+<h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><ol>
+<li>重新按照插件<br><code>npm install hexo-filter-image --save</code></li>
+</ol>
+<p>1-1 遇到问题，显示：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">found 22 vulnerabilities (17 low, 1 moderate, 4 high)</span><br><span class="line">  run &#96;npm audit fix&#96; to fix them, or &#96;npm audit&#96; for details</span><br></pre></td></tr></table></figure>
+
+<p>2.1 继续尝试<br><code>npm audit fix</code></p>
+<p>2.1 -1 显示问题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">22 vulnerabilities required manual review and could not be updated</span><br></pre></td></tr></table></figure>
+
+<p>2.2 强制执行及重新安装</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm audit fix --force</span><br><span class="line">npm instal</span><br></pre></td></tr></table></figure>
+<a id="more"></a> 
+
+<p>2.2 -1 显示失败</p>
+<p>2.3.1 重新安装及更新node</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure>
+
+<p>2.3.2 npm升级 失败<br><code>npm install npm -g</code></p>
+<ul>
+<li>先安装n<br><code>npm install n -g</code></li>
+<li>显示失败<br><code>Missing write access to /usr/local/lib/node_modules/n</code><ul>
+<li>解决方案<br><code>sudo</code></li>
+<li>更新成功，安装了最新版的npm</li>
+</ul>
+</li>
+</ul>
+<p>继续安装插件，失败，啊！！！！！！！！！</p>
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>最终未解决问题，啊啊啊啊啊啊啊啊！！！！！！！！！！！！</p>
+<p>此时我的心情非常爆炸啊！前前后后好几个月陆陆续续没找到原因，还花了好多时间，今天又花了好多时间，试了好多方法，啊！！！！</p>
+<h2 id="重新梳理"><a href="#重新梳理" class="headerlink" title="重新梳理"></a>重新梳理</h2><p>重新启程，从前端野页面查看，发现从blog中查看图片样式显示，发现路径多了”.io”</p>
+<p>所以问题是，图片引用的路径错误啊！</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p><strong>文件地址</strong>：node_modules/hexo-asset-image/index.js</p>
+<p>将img内容替换</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$(&#39;img&#39;).each(function()&#123;</span><br><span class="line">  if ($(this).attr(&#39;src&#39;))&#123;</span><br><span class="line">      &#x2F;&#x2F; For windows style path, we replace &#39;\&#39; to &#39;&#x2F;&#39;.</span><br><span class="line">      var src &#x3D; $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;&#x2F;&#39;);</span><br><span class="line">      if(!&#x2F;http[s]*.*|\&#x2F;\&#x2F;.*&#x2F;.test(src) &amp;&amp;</span><br><span class="line">         !&#x2F;^\s*\&#x2F;&#x2F;.test(src)) &#123;</span><br><span class="line">        &#x2F;&#x2F; For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.</span><br><span class="line">        &#x2F;&#x2F; In addition, to support multi-level local directory.</span><br><span class="line">        var linkArray &#x3D; link.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">          return elem !&#x3D; &#39;&#39;;</span><br><span class="line">        &#125;);</span><br><span class="line">        var srcArray &#x3D; src.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">          return elem !&#x3D; &#39;&#39; &amp;&amp; elem !&#x3D; &#39;.&#39;;</span><br><span class="line">        &#125;);</span><br><span class="line">        if(srcArray.length &gt; 1)</span><br><span class="line">          srcArray.shift();</span><br><span class="line">        src &#x3D; srcArray.join(&#39;&#x2F;&#39;);</span><br><span class="line">        $(this).attr(&#39;src&#39;, config.root + link + src);</span><br><span class="line">        console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<p>!(hexo 图片路径错误/.com//)[<a href="https://segmentfault.com/q/1010000020310187/a-1020000020311907]" target="_blank" rel="noopener">https://segmentfault.com/q/1010000020310187/a-1020000020311907]</a></p>
+<h1 id="绝对图片路径"><a href="#绝对图片路径" class="headerlink" title="绝对图片路径"></a>绝对图片路径</h1><p>在查找问题的过程中，发现了有其他的办法加载图片，记录如下</p>
+<ul>
+<li><p>插件开启</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>图片插入格式</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p>看起来就不是很方便的亚子</p>
+<p>!(官方文档)[<a href="https://hexo.io/zh-cn/docs/asset-folders]" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/asset-folders]</a></p>
+]]></content>
+      <tags>
+        <tag>learn</tag>
+        <tag>blog</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
 </search>

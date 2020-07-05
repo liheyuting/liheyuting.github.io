@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://liheyuting.github.io/"/>
-  <updated>2020-07-05T09:45:17.835Z</updated>
+  <updated>2020-07-05T11:10:47.797Z</updated>
   <id>https://liheyuting.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo解决图片加载问题</title>
+    <link href="https://liheyuting.github.io/2020/07/05/2020/Hexo%E8%A7%A3%E5%86%B3%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E9%97%AE%E9%A2%98/"/>
+    <id>https://liheyuting.github.io/2020/07/05/2020/Hexo解决图片加载问题/</id>
+    <published>2020-07-04T16:00:00.000Z</published>
+    <updated>2020-07-05T11:10:47.797Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>自从主题改成next之后，发现图片加载出了问题<br>本地绝对引用以及html的img标签都失败了。。</p><h1 id="图片相对路径加载出错"><a href="#图片相对路径加载出错" class="headerlink" title="图片相对路径加载出错"></a>图片相对路径加载出错</h1><h2 id="按照网上教程，查看插件"><a href="#按照网上教程，查看插件" class="headerlink" title="按照网上教程，查看插件"></a>按照网上教程，查看插件</h2><h3 id="config设置"><a href="#config设置" class="headerlink" title="config设置"></a>config设置</h3><p><code>post_asset_folder: true</code></p><h3 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h3><ol><li>重新按照插件<br><code>npm install hexo-filter-image --save</code></li></ol><p>1-1 遇到问题，显示：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">found 22 vulnerabilities (17 low, 1 moderate, 4 high)</span><br><span class="line">  run &#96;npm audit fix&#96; to fix them, or &#96;npm audit&#96; for details</span><br></pre></td></tr></table></figure><p>2.1 继续尝试<br><code>npm audit fix</code></p><p>2.1 -1 显示问题</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">22 vulnerabilities required manual review and could not be updated</span><br></pre></td></tr></table></figure><p>2.2 强制执行及重新安装</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm audit fix --force</span><br><span class="line">npm instal</span><br></pre></td></tr></table></figure><a id="more"></a> <p>2.2 -1 显示失败</p><p>2.3.1 重新安装及更新node</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install node</span><br></pre></td></tr></table></figure><p>2.3.2 npm升级 失败<br><code>npm install npm -g</code></p><ul><li>先安装n<br><code>npm install n -g</code></li><li>显示失败<br><code>Missing write access to /usr/local/lib/node_modules/n</code><ul><li>解决方案<br><code>sudo</code></li><li>更新成功，安装了最新版的npm</li></ul></li></ul><p>继续安装插件，失败，啊！！！！！！！！！</p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>最终未解决问题，啊啊啊啊啊啊啊啊！！！！！！！！！！！！</p><p>此时我的心情非常爆炸啊！前前后后好几个月陆陆续续没找到原因，还花了好多时间，今天又花了好多时间，试了好多方法，啊！！！！</p><h2 id="重新梳理"><a href="#重新梳理" class="headerlink" title="重新梳理"></a>重新梳理</h2><p>重新启程，从前端野页面查看，发现从blog中查看图片样式显示，发现路径多了”.io”</p><p>所以问题是，图片引用的路径错误啊！</p><h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p><strong>文件地址</strong>：node_modules/hexo-asset-image/index.js</p><p>将img内容替换</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$(&#39;img&#39;).each(function()&#123;</span><br><span class="line">  if ($(this).attr(&#39;src&#39;))&#123;</span><br><span class="line">      &#x2F;&#x2F; For windows style path, we replace &#39;\&#39; to &#39;&#x2F;&#39;.</span><br><span class="line">      var src &#x3D; $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;&#x2F;&#39;);</span><br><span class="line">      if(!&#x2F;http[s]*.*|\&#x2F;\&#x2F;.*&#x2F;.test(src) &amp;&amp;</span><br><span class="line">         !&#x2F;^\s*\&#x2F;&#x2F;.test(src)) &#123;</span><br><span class="line">        &#x2F;&#x2F; For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.</span><br><span class="line">        &#x2F;&#x2F; In addition, to support multi-level local directory.</span><br><span class="line">        var linkArray &#x3D; link.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">          return elem !&#x3D; &#39;&#39;;</span><br><span class="line">        &#125;);</span><br><span class="line">        var srcArray &#x3D; src.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">          return elem !&#x3D; &#39;&#39; &amp;&amp; elem !&#x3D; &#39;.&#39;;</span><br><span class="line">        &#125;);</span><br><span class="line">        if(srcArray.length &gt; 1)</span><br><span class="line">          srcArray.shift();</span><br><span class="line">        src &#x3D; srcArray.join(&#39;&#x2F;&#39;);</span><br><span class="line">        $(this).attr(&#39;src&#39;, config.root + link + src);</span><br><span class="line">        console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure><p>!(hexo 图片路径错误/.com//)[<a href="https://segmentfault.com/q/1010000020310187/a-1020000020311907]" target="_blank" rel="noopener">https://segmentfault.com/q/1010000020310187/a-1020000020311907]</a></p><h1 id="绝对图片路径"><a href="#绝对图片路径" class="headerlink" title="绝对图片路径"></a>绝对图片路径</h1><p>在查找问题的过程中，发现了有其他的办法加载图片，记录如下</p><ul><li><p>插件开启</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">_config.yml</span><br><span class="line">post_asset_folder: true</span><br></pre></td></tr></table></figure></li><li><p>图片插入格式</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_path slug %&#125;</span><br><span class="line">&#123;% asset_img slug [title] %&#125;</span><br><span class="line">&#123;% asset_link slug [title] %&#125;</span><br></pre></td></tr></table></figure></li></ul><p>看起来就不是很方便的亚子</p><p>!(官方文档)[<a href="https://hexo.io/zh-cn/docs/asset-folders]" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/asset-folders]</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;自从主题改成next之后，发现图片加载出了问题&lt;br&gt;本地绝对引用以及html的img标签都失败了。。&lt;/p&gt;
+&lt;h1 id=&quot;图片相对路径加载出错&quot;&gt;&lt;a href=&quot;#图片相对路径加载出错&quot; class=&quot;headerlink&quot; title=&quot;图片相对路径加载出错&quot;&gt;&lt;/a&gt;图片相对路径加载出错&lt;/h1&gt;&lt;h2 id=&quot;按照网上教程，查看插件&quot;&gt;&lt;a href=&quot;#按照网上教程，查看插件&quot; class=&quot;headerlink&quot; title=&quot;按照网上教程，查看插件&quot;&gt;&lt;/a&gt;按照网上教程，查看插件&lt;/h2&gt;&lt;h3 id=&quot;config设置&quot;&gt;&lt;a href=&quot;#config设置&quot; class=&quot;headerlink&quot; title=&quot;config设置&quot;&gt;&lt;/a&gt;config设置&lt;/h3&gt;&lt;p&gt;&lt;code&gt;post_asset_folder: true&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&quot;安装插件&quot;&gt;&lt;a href=&quot;#安装插件&quot; class=&quot;headerlink&quot; title=&quot;安装插件&quot;&gt;&lt;/a&gt;安装插件&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;重新按照插件&lt;br&gt;&lt;code&gt;npm install hexo-filter-image --save&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;1-1 遇到问题，显示：&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;found 22 vulnerabilities (17 low, 1 moderate, 4 high)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;  run &amp;#96;npm audit fix&amp;#96; to fix them, or &amp;#96;npm audit&amp;#96; for details&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;2.1 继续尝试&lt;br&gt;&lt;code&gt;npm audit fix&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;2.1 -1 显示问题&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;22 vulnerabilities required manual review and could not be updated&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;2.2 强制执行及重新安装&lt;/p&gt;
+&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm audit fix --force&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;npm instal&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
+    
+      <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
+    
+      <category term="next" scheme="https://liheyuting.github.io/tags/next/"/>
+    
+  </entry>
   
   <entry>
     <title>什么是PARA及如何运用PARA优化工作流</title>
@@ -595,61 +632,6 @@
       <category term="blog" scheme="https://liheyuting.github.io/tags/blog/"/>
     
       <category term="hexo" scheme="https://liheyuting.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回顾和总结：线下会数字营销支持</title>
-    <link href="https://liheyuting.github.io/2019/07/14/2019/Event_digital/"/>
-    <id>https://liheyuting.github.io/2019/07/14/2019/Event_digital/</id>
-    <published>2019-07-13T16:00:00.000Z</published>
-    <updated>2020-06-17T15:07:41.230Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这份工作已经进入尾声，在过去的一年多里，公司给我展示了一个跨国大公司在业务和营销的专业性。<br>我把线下会digital部分的工作内容和tips整理下来，回顾复盘。<br>意义不累述。</p><ul><li><p><strong>会前</strong></p><ul><li><p><em>准备阶段</em>：需求梳理+供应商选择+方案</p></li><li><p><em>eDM制作</em>：设计+文案+发送+用户注册</p></li><li><p><em>注册数据</em>：流程+审核（Y or N）+报告</p></li><li><p><em>选课</em>（Y or N)：逻辑+设计+开发</p></li><li><p><em>官网页面制作</em></p></li><li><p><em>微网站平台搭建</em>：需求梳理+资料收集+权限管理+设计开发</p><ul><li>嫁接平台：小程序 or H5，公众号 or 企业号</li><li>常用版块：日程+个人中心+精彩时刻+调查问卷+会场概览+展区资料+（现场互动+合作伙伴+直播页面）</li><li>权限管理：微信权限、个性化信息、参会/非参会人员</li></ul></li><li><p><em>现场注册人员的培训</em>：签到流程+培训手册</p></li><li><p><em>市场推广</em>：内部渠道（Marketo + IC+微信微博等）+ 外部渠道</p><ul><li>物料制作：各渠道物料的需求收集+ 制作+发放</li><li>市场推广时间和物料的监控：（上线报告）</li><li>Performance的监控</li><li>数据分析+汇总报告</li></ul></li><li><p><em>其他</em></p><a id="more"></a><ul><li><p>支持人员的酒店预订</p></li><li><p>项目时间的控制、进度梳理和汇报</p></li><li><p>供应商管理+多方沟通</p></li><li><p>微信消息+短信息处理</p></li><li><p>投屏互动</p></li></ul></li></ul></li></ul><pre><code>- *Tips*    - 每个阶段给自己留一点时间的buffer    - 多方协作的事情都形成文件，流程清楚+精炼文字说明    - 重要的资料或需求都使用邮件，每个事情都要对应到个人    - 重要的时间点一定要标注清楚，让对应的相关人也非常清楚    - 资料收集一定要阶段性的提醒，不要到deadline    - 确认：需求要确认，设计要确认，物料要符合branding，时刻记得要确认</code></pre><ul><li><p><strong>会中</strong></p><ul><li>签到功能+现场支持</li><li>微网站功能</li><li>大会信息支持：信息通知（微信消息/短信消息）、数据支持</li></ul></li><li><p><strong>会后</strong></p><ul><li>会后报告、参会情况及其他</li><li>用户培育的跟进：Marketo + 微信</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;这份工作已经进入尾声，在过去的一年多里，公司给我展示了一个跨国大公司在业务和营销的专业性。&lt;br&gt;我把线下会digital部分的工作内容和tips整理下来，回顾复盘。&lt;br&gt;意义不累述。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;会前&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;准备阶段&lt;/em&gt;：需求梳理+供应商选择+方案&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;eDM制作&lt;/em&gt;：设计+文案+发送+用户注册&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;注册数据&lt;/em&gt;：流程+审核（Y or N）+报告&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;选课&lt;/em&gt;（Y or N)：逻辑+设计+开发&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;官网页面制作&lt;/em&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;微网站平台搭建&lt;/em&gt;：需求梳理+资料收集+权限管理+设计开发&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;嫁接平台：小程序 or H5，公众号 or 企业号&lt;/li&gt;
-&lt;li&gt;常用版块：日程+个人中心+精彩时刻+调查问卷+会场概览+展区资料+（现场互动+合作伙伴+直播页面）&lt;/li&gt;
-&lt;li&gt;权限管理：微信权限、个性化信息、参会/非参会人员&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;现场注册人员的培训&lt;/em&gt;：签到流程+培训手册&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;市场推广&lt;/em&gt;：内部渠道（Marketo + IC+微信微博等）+ 外部渠道&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;物料制作：各渠道物料的需求收集+ 制作+发放&lt;/li&gt;
-&lt;li&gt;市场推广时间和物料的监控：（上线报告）&lt;/li&gt;
-&lt;li&gt;Performance的监控&lt;/li&gt;
-&lt;li&gt;数据分析+汇总报告&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;&lt;em&gt;其他&lt;/em&gt;&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;
-    
-    </summary>
-    
-    
-      <category term="learn" scheme="https://liheyuting.github.io/tags/learn/"/>
-    
-      <category term="Work" scheme="https://liheyuting.github.io/tags/Work/"/>
-    
-      <category term="数字营销" scheme="https://liheyuting.github.io/tags/%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80/"/>
     
   </entry>
   
