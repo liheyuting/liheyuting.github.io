@@ -344,6 +344,178 @@ daovoice('update');
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2019/10/23/2019/191023Hexo%20next%E4%B8%BB%E9%A2%98%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dora Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="虚妄之城">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/10/23/2019/191023Hexo%20next%E4%B8%BB%E9%A2%98%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91/" itemprop="url">Hexo next主题建立标签云</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2019-10-23T00:00:00+08:00">
+                2019-10-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/10/23/2019/191023Hexo%20next%E4%B8%BB%E9%A2%98%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/10/23/2019/191023Hexo%20next%E4%B8%BB%E9%A2%98%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/10/23/2019/191023Hexo%20next%E4%B8%BB%E9%A2%98%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91/" class="leancloud_visitors" data-flag-title="Hexo next主题建立标签云">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>效果如首页</p>
+<h3 id="使用hexo-tag-cloud插件"><a href="#使用hexo-tag-cloud插件" class="headerlink" title="使用hexo-tag-cloud插件"></a>使用<code>hexo-tag-cloud</code>插件</h3><p><a href="https://github.com/MikeCoder/hexo-tag-cloud" target="_blank" rel="noopener">hexo-tag-cloud github 地址</a></p>
+<h4 id="安装hexo-tag-cloud"><a href="#安装hexo-tag-cloud" class="headerlink" title="安装hexo-tag-cloud"></a>安装<code>hexo-tag-cloud</code></h4><p>进入到博客根目录，安装<br><code>npm install hexo-tag-cloud@^2.0.* --save</code></p>
+<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p>在主题文件夹找到文件 <code>theme/next/layout/_macro/sidebar.swig</code>, 然后添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;% if site.tags.length &gt; 1 %&#125;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcloud.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcanvas.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;widget-wrap&quot;&gt;</span><br><span class="line">    &lt;h3 class&#x3D;&quot;widget-title&quot;&gt;Tag Cloud&lt;&#x2F;h3&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;myCanvasContainer&quot; class&#x3D;&quot;widget tagcloud&quot;&gt;</span><br><span class="line">        &lt;canvas width&#x3D;&quot;250&quot; height&#x3D;&quot;250&quot; id&#x3D;&quot;resCanvas&quot; style&#x3D;&quot;width&#x3D;100%&quot;&gt;</span><br><span class="line">            &#123;&#123; list_tags() &#125;&#125;</span><br><span class="line">        &lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/10/23/2019/191023Hexo%20next%E4%B8%BB%E9%A2%98%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91/#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2019/10/15/2019/191015Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Yilia%E4%B8%BANext%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1950,179 +2122,6 @@ daovoice('update');
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dora Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="虚妄之城">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/" itemprop="url">git 清单</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2018-09-28T13:02:31+08:00">
-                2018-09-28
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
-                    <span itemprop="name">工具</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/" class="leancloud_visitors" data-flag-title="git 清单">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h4><p>git config工具专门用来配置或读取相应的工作环境变量</p>
-<p>git config –global user.name “dora”<br>git config –global user.email <a href="mailto:xxx@163.com">xxx@163.com</a></p>
-<p>–global所有项目会默认使用这个配置信息</p>
-<p>在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里</p>
-<p><strong>文本编辑器</strong><br>默认的是Vi或者Vim，重新设置：<br>git config –global core.editor sublime</p>
-<p><strong>差异分析工具</strong></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2177,7 +2176,7 @@ daovoice('update');
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-count">50</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2292,7 +2291,7 @@ daovoice('update');
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
