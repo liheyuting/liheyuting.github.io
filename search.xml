@@ -1,6 +1,639 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo+Yilia 所遇问题解决方法汇总</title>
+    <url>/2018/08/26/2019/180826Hexo+Yilia%20%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p>
+<p>这里花费的时间最久，在issues里找了很久，终于在<a href="https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/?nsukey=%2BijgAVH%2B4eCTudP96Bul1%2FQsAa44sS5wREOMSjzWZhpp5HNtgQ5lYQXXWgsrEjpRXfaVUvIfj1pVXj%2FYnFSdjAf0TR900HBBZYQThmSrRTtVwFlzfcGL9KfVT67ohG1XyYvT35Te2BXTqDo5Vh8nrUA6pr55q0Xs2nagi4yyiQFrPsRNMcql82iJ5ltbcivhdE%2Fe3i3m8aBleHrwZkGOWA%3D%3D" target="_blank" rel="noopener">Ziven</a>找到对应的</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#6、gitalk评论</span><br><span class="line">gitalk:</span><br><span class="line">  enable:  true</span><br><span class="line">  githubID:  liheyuting  </span><br><span class="line">  repo: liheyuting.github.io （填写repo的名字）</span><br><span class="line">  ClientID: &#39;&#39;</span><br><span class="line">  ClientSecret: &#39;&#39;</span><br><span class="line">  adminUser: &#39;&#39;</span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure>
+
+<p>这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。</p>
+<a id="more"></a> 
+
+<p>** GitHub授权ClientID和ClientSecret **<br>进入setting-developer settings - OAuth Apps<br><a href="https://github.com/settings/applications/861324" target="_blank" rel="noopener">点击直接进入</a></p>
+<p><img src="/img/client.png" alt></p>
+<p>homepage url 只需要填写blog首页链接即可<br>Authorization callback URL 填写的是授权返回的页面，这样也只需要填写blog地址即可</p>
+<p>提交之后会生成“ClientID”和“ClientSecret”放到主题配置文件中就可以了。</p>
+<p>按上面提交之后，怎么页面还是提示“未找到对应issue，需要联系管理员”呢？</p>
+<p>** 评论初始化 **</p>
+<p>首先，先注意下地址是不是本地化地址，评论需要在正式环境中初始化有效。</p>
+<p>第二步：只需要简单的点击issue，授权adminUser的GitHub权限。</p>
+<p>再试试，是不是页面评论就可以了？</p>
+<h3 id="多标签"><a href="#多标签" class="headerlink" title="多标签"></a>多标签</h3><p>这个比较简单，如下</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Markdown语法文档</span><br><span class="line">date: 2018-05-12</span><br><span class="line">tags: </span><br><span class="line">- blog </span><br><span class="line">- markdown</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="页面浏览统计"><a href="#页面浏览统计" class="headerlink" title="页面浏览统计"></a>页面浏览统计</h3><p>这个实现比较快，<a href="https://ziven.cc/2018/06/25/Hexo%E4%B8%BB%E9%A2%98Yilia%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E6%B5%8F%E8%A7%88%E9%87%8F%E7%BB%9F%E8%AE%A1/" target="_blank" rel="noopener">Hexo主题Yilia添加网站浏览量统计</a></p>
+<h3 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h3><p>在文中中想要分页的地方加上<br><code>&lt;!--more--&gt;</code></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>blog</tag>
+        <tag>Yilia</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</title>
+    <url>/2019/01/23/2019/190123Hexo%20blog%20yilia%E4%B8%BB%E9%A2%98%E8%BF%AD%E4%BB%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="增加RSS功能"><a href="#增加RSS功能" class="headerlink" title="增加RSS功能"></a>增加RSS功能</h3><ul>
+<li><p>安装RSS插件<br>注意一定要安装到blog的根目录<br><code>npm install --save hexo-generator-feed</code></p>
+</li>
+<li><p>在你的项目的‘_config.yml‘配置文件下找到Extensions添加如下内容：</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions  #插件和主题</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">#RSS订阅</span><br><span class="line">plugins: hexo-generater-feed</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在主题配置文件里，在rss位置，添加‘/atom.xml‘<a id="more"></a></li>
+<li>刷新页面</li>
+</ul>
+<h3 id="更换到百度统计"><a href="#更换到百度统计" class="headerlink" title="更换到百度统计"></a>更换到百度统计</h3><ul>
+<li>注册一个<a href="http://tongji.baidu.com" target="_blank" rel="noopener">百度统计</a>账号<ul>
+<li>网站域名：用博客首页链接</li>
+<li>网站首页：用博客首页链接</li>
+</ul>
+</li>
+<li>hexo\themes\yilia\layout_partial\baidu-analytics.ejs中修改代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;% if (theme.baidu_tongji)&#123; %&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">#你的百度统计代码</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在hexo\themes\yilia\layout_partial\head.ejs文件中，在前增加<br><code>&lt;%- partial(&#39;baidu-analytics&#39;) %&gt;</code></li>
+</ul>
+<h3 id="google-analytics-谷歌统计"><a href="#google-analytics-谷歌统计" class="headerlink" title="google analytics 谷歌统计"></a>google analytics 谷歌统计</h3><ul>
+<li>注册一个<a href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener">google analytics账号</a></li>
+<li>hexo\themes\yilia\layout_partial\google-analytics.ejs 修改代码</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#google里全局代码，直接copy</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>在hexo\themes\yilia\layout_partial\head.ejs文件中，在前增加<br><code>&lt;%- partial(&#39;google-analytics&#39;) %&gt;</code></p>
+</li>
+<li><p>使用google tag assistant来验证设置<br><a href="https://support.google.com/tagassistant/answer/2947093?hl=zh_CN" target="_blank" rel="noopener">google tag assistant</a>是一款chrome扩展插件</p>
+</li>
+</ul>
+<h3 id="修改代码块的颜色"><a href="#修改代码块的颜色" class="headerlink" title="修改代码块的颜色"></a>修改代码块的颜色</h3><p>在‘themes/yilia/source/main.266c1c.css中的.article-entry .highlight’中修改对应背景和字体颜色即可</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>在北方生活的第7年</title>
+    <url>/2019/05/13/2019/190513%E5%9C%A8%E5%8C%97%E6%96%B9%E7%94%9F%E6%B4%BB%E7%9A%84%E7%AC%AC7%E5%B9%B4/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>清明节和朋友一起去了桂林，又去了广州。路途中本应是畅意游览，竟又品味出了另一种倦怠感，对北方的倦怠感，是的没错，来南方旅行，品味出了北方生活的倦怠感。</p>
+<p>2012年8月末来北京，到现在2019年5月，在这个城市快7年时间了，而似乎也一直像是一条淡水鱼，在大海里辗转游览。</p>
+<p>7年里，除了回家，去南方玩过3次，</p>
+<p>第一次，估摸着应该是大二的五一，去武汉。那时候担任学校某个社团的社长，算是第一次公费出行。那时候还没做过轮渡，看到渡口的轮渡感觉好稀奇，当时有个朋友在武汉，陪着我来来回回坐了好几趟，半夜了我还不想回家，坐在外滩，吹着江风，和着时光吹乱我的头发和心情。现在想来那时候还真是，怎么说呢，有一种年轻人的矜持感，大概就是”我想要但我绝不会说，还要推开你”的深井冰吧…现在的性格里大概还残留了一些，但对自己倒是坦诚了很多，也世俗了很多。风景总是流动着的，回忆留在江风里，就莫名已经很美好了。</p>
+<p>第二次应该是大三上学期的十一，和朋友一起回她的老家湖南玩，还去爬了衡山。上山时，月牙儿弯弯又朦胧，像是蒙上了一层白雾，远远近近的凝视着我们。爬至半山，空气开始微微湿润了起来，确有”万丈祝融拔地起，欲见不见轻烟里”的感觉，微微的手电筒光，扑面而来的细细丝丝的水汽，像是轻烟浮起，少吸气来，那带着些微湿润的空气便顺着鼻子呼吸道肺部，又似乎沁入到血管里，整个人从内而外的轻松起来。</p>
+<a id="more"></a>
+
+<p>两旁是郁郁葱葱的树丛，间或有枝桠相拦，甚有妙趣。愈往上，夜更深，空气里的水汽似乎慢慢的汇聚，沉重起来。通行小伙伴有经验，在乌云闻风而来时，便决定买了雨披，我们当时还乐观得很，觉得肯定用不上。没过半小时，淅淅沥沥的小雨也来了。</p>
+<p>到山顶时，我们还抱着希望，时间还早，也许还有机会可以看得到日出呢。不知怎的，那时候，对任何事都还抱有神秘的自信，然而老天有另一番打算，雨开始越下越大，我们恨不得缩成一团，来减缓身体热量的散发。天大亮了，我们想着没机会看到了，便决定下山。</p>
+<p>有个小伙伴还让我捎带块石头回去给他。我没想到山上不是泥就是水泥地，别说漂亮石头了，下雨泥泞地，连一块干净点的都没。矮子里挑高子，想着要千里迢迢（湖南北京也算是千里吧）带回去，选了块偏小的石头。现在这个朋友联系渐少，石头估摸着不知去处了。</p>
+<p>第三次，大概就是这次了。都说桂林山水甲天下，不负其称，阳朔之美，似流动着的山水画，更富有诗情画意。乘船游湖，恰是微雨，那远远近近深深浅浅的山林，像是被抹在画布上的随意几笔，淡处有闲适悠空之感，浓处自有其错乱有致之美，再撒上轻轻淡淡朦朦胧胧的微雨，像是晕开了的雪。船越是开得飞快，这阳朔之美便越是汹涌而来。</p>
+<p>这美揉成的感受像是塞在心里的发酵剂，她催化着回家的欲望，也催化着对多山多水的渴望。</p>
+<p>我对同事说，来北京几年了，我感觉我枯萎了。</p>
+<p>他们笑</p>
+<p>我对朋友说，来北京待了好久，感觉自己都要枯萎了。</p>
+<p>他们仍然笑</p>
+<p>似乎感觉自己都要枯萎了。</p>
+<p>身体里的水分少了很多，心里也是。</p>
+<p>像是一棵渴水的小草，来到干燥的土地上，也许对于活着和生活，她会有另一番感受。</p>
+<p>大概”贫穷会影响人的流体智力”一样，”缺水让枯萎的小草失去思想”</p>
+]]></content>
+      <categories>
+        <category>杂思</category>
+      </categories>
+      <tags>
+        <tag>暇思</tag>
+        <tag>行走</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>回顾和总结：线下会数字营销支持</title>
+    <url>/2019/07/14/2019/190714%E5%9B%9E%E9%A1%BE%E5%92%8C%E6%80%BB%E7%BB%93%EF%BC%9A%E7%BA%BF%E4%B8%8B%E4%BC%9A%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80%E6%94%AF%E6%8C%81/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这份工作已经进入尾声，在过去的一年多里，公司给我展示了一个跨国大公司在业务和营销的专业性。<br>我把线下会digital部分的工作内容和tips整理下来，回顾复盘。<br>意义不累述。</p>
+<ul>
+<li><p><strong>会前</strong></p>
+<ul>
+<li><p><em>准备阶段</em>：需求梳理+供应商选择+方案</p>
+</li>
+<li><p><em>eDM制作</em>：设计+文案+发送+用户注册</p>
+</li>
+<li><p><em>注册数据</em>：流程+审核（Y or N）+报告</p>
+</li>
+<li><p><em>选课</em>（Y or N)：逻辑+设计+开发</p>
+</li>
+<li><p><em>官网页面制作</em></p>
+</li>
+<li><p><em>微网站平台搭建</em>：需求梳理+资料收集+权限管理+设计开发</p>
+<ul>
+<li>嫁接平台：小程序 or H5，公众号 or 企业号</li>
+<li>常用版块：日程+个人中心+精彩时刻+调查问卷+会场概览+展区资料+（现场互动+合作伙伴+直播页面）</li>
+<li>权限管理：微信权限、个性化信息、参会/非参会人员</li>
+</ul>
+</li>
+<li><p><em>现场注册人员的培训</em>：签到流程+培训手册</p>
+</li>
+<li><p><em>市场推广</em>：内部渠道（Marketo + IC+微信微博等）+ 外部渠道</p>
+<ul>
+<li>物料制作：各渠道物料的需求收集+ 制作+发放</li>
+<li>市场推广时间和物料的监控：（上线报告）</li>
+<li>Performance的监控</li>
+<li>数据分析+汇总报告</li>
+</ul>
+</li>
+<li><p><em>其他</em></p>
+<a id="more"></a>
+<ul>
+<li><p>支持人员的酒店预订</p>
+</li>
+<li><p>项目时间的控制、进度梳理和汇报</p>
+</li>
+<li><p>供应商管理+多方沟通</p>
+</li>
+<li><p>微信消息+短信息处理</p>
+</li>
+<li><p>投屏互动</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>- *Tips*
+
+    - 每个阶段给自己留一点时间的buffer
+    - 多方协作的事情都形成文件，流程清楚+精炼文字说明
+    - 重要的资料或需求都使用邮件，每个事情都要对应到个人
+    - 重要的时间点一定要标注清楚，让对应的相关人也非常清楚
+    - 资料收集一定要阶段性的提醒，不要到deadline
+    - 确认：需求要确认，设计要确认，物料要符合branding，时刻记得要确认</code></pre><ul>
+<li><p><strong>会中</strong></p>
+<ul>
+<li>签到功能+现场支持</li>
+<li>微网站功能</li>
+<li>大会信息支持：信息通知（微信消息/短信消息）、数据支持</li>
+</ul>
+</li>
+<li><p><strong>会后</strong></p>
+<ul>
+<li>会后报告、参会情况及其他</li>
+<li>用户培育的跟进：Marketo + 微信</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生存技能</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>Work</tag>
+        <tag>数字营销</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>营销自动化—对用户我们做了什么？</title>
+    <url>/2019/05/28/2019/190528%E8%90%A5%E9%94%80%E8%87%AA%E5%8A%A8%E5%8C%96%E2%80%94%E5%AF%B9%E7%94%A8%E6%88%B7%E6%88%91%E4%BB%AC%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>留坑待填</p>
+<p>在做营销自动化（Sales &amp; Marketing Automation）的过程中，整理了用户相关的一些思考。<br>关于渠道，营销自动化更多的基于邮件营销在做，也在和微信打通，多渠道集成的过程中。<br>关于用户，新客成本越来越高，旧用户的运营绝对是未来的一个很重要的方向。如何让旧用户的粘性越来越高，如何让旧用户再次消费，如何让旧用户继续产生价值，这些都是值得我们思考的问题。</p>
+<p>2B的营销自动化，还在比较新的一个阶段，大家也都是在探索阶段。来这家公司，也是我第一次接触营销自动化，从不看好邮件营销，到现在觉得邮件营销还是有所可为，也经历了一个比较长的阶段。但仍是处于非常懵懂的阶段。</p>
+<p>我把对于用户的相关思考也整理如下，一个是回顾复盘，一个也希望在未来可以有更深入的思考。</p>
+<h3 id="营销自动化"><a href="#营销自动化" class="headerlink" title="营销自动化"></a>营销自动化</h3><ul>
+<li><p>增加新用户/培育旧用户</p>
+</li>
+<li><p>为什么邮件营销是被低估的渠道</p>
+<ul>
+<li>成本低、速度快</li>
+<li>投放精准、内容丰富</li>
+<li>主动性强，连续推销</li>
+<li>点对点的私域流量</li>
+<li>异步消息，人群更加精准</li>
+<li>内容质量更高（邮件营销而非垃圾邮件）</li>
+</ul>
+</li>
+<li><p>营销自动化，多渠道触达</p>
+<ul>
+<li>邮件渠道</li>
+<li>微信公众号</li>
+</ul>
+</li>
+</ul>
+<h3 id="用户质量"><a href="#用户质量" class="headerlink" title="用户质量"></a>用户质量</h3><ul>
+<li><p>用户来源的质量分析</p>
+</li>
+<li><p>媒体用户质量分析</p>
+</li>
+<li><p>active or engage用户数字</p>
+</li>
+<li><p>用户质量控制</p>
+</li>
+</ul>
+<h3 id="用户生命周期"><a href="#用户生命周期" class="headerlink" title="用户生命周期"></a>用户生命周期</h3><a id="more"></a> 
+
+<ul>
+<li>常见的产业生命周期/产品生命周期</li>
+<li>用户生命周期，（循环式上升的生命周期better）</li>
+<li>用户价值<ul>
+<li>举例：RIO &amp; LTV （用户终身价值）</li>
+<li>公司SMA对于revenue的贡献（数据）</li>
+</ul>
+</li>
+</ul>
+<h3 id="用户分层-对应nurture策略"><a href="#用户分层-对应nurture策略" class="headerlink" title="用户分层+对应nurture策略"></a>用户分层+对应nurture策略</h3><ul>
+<li>用户分层+策略</li>
+<li>用户筛选<ul>
+<li>nurture stream 用户标签筛选+（行为偏好筛选）</li>
+<li>用户阶段性筛选</li>
+</ul>
+</li>
+</ul>
+<h3 id="用户画像"><a href="#用户画像" class="headerlink" title="用户画像"></a>用户画像</h3><ul>
+<li>用户画像完善<ul>
+<li>举例说明用户画像的价值（+用户标签使用）</li>
+<li>SMA现在的情况</li>
+<li>如何完善用户画像</li>
+<li>用户标签</li>
+</ul>
+</li>
+</ul>
+<h3 id="关键群体的用户激活-用户培育"><a href="#关键群体的用户激活-用户培育" class="headerlink" title="关键群体的用户激活/用户培育"></a>关键群体的用户激活/用户培育</h3><ul>
+<li>Person score 0-20分用户 用户激活</li>
+<li>Person score 20 -40分，demographic score/behavior score 二维分析</li>
+<li>Oil&amp;Gas/data center segment nurture</li>
+<li>data center&gt;Person score 75分用户，探索</li>
+</ul>
+<h3 id="从数据看效果"><a href="#从数据看效果" class="headerlink" title="从数据看效果"></a>从数据看效果</h3><ul>
+<li>A/B test <ul>
+<li>小红书的案例</li>
+<li>2018年SMA的A/B test</li>
+</ul>
+</li>
+<li>Key数字：Open rate/  Click rate/ CTO<ul>
+<li>2018年SMA的表现</li>
+<li>从rate看效果</li>
+<li>精准化筛选人群效果分析</li>
+</ul>
+</li>
+</ul>
+<h3 id="Learning-接下来的方向"><a href="#Learning-接下来的方向" class="headerlink" title="Learning + 接下来的方向"></a>Learning + 接下来的方向</h3><ul>
+<li>用户质量控制</li>
+<li>用户行为分析—&gt;丰满用户画像</li>
+<li>用户活跃性评估维度多元化</li>
+<li>用户标签管理：个人信息标签片面式–&gt;综合性标签推送—&gt;标签模糊化，大数据推送</li>
+<li>用户分层营销策略流程化+关键人群用户流程化</li>
+<li>CMS（Content Management System），碎片化内容—&gt;内容系统化管理</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生存技能</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>Work</tag>
+        <tag>营销自动化</tag>
+        <tag>市场营销</tag>
+        <tag>marketo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo next主题建立标签云</title>
+    <url>/2019/10/23/2019/191023Hexo%20next%E4%B8%BB%E9%A2%98%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>效果如首页</p>
+<h3 id="使用hexo-tag-cloud插件"><a href="#使用hexo-tag-cloud插件" class="headerlink" title="使用hexo-tag-cloud插件"></a>使用<code>hexo-tag-cloud</code>插件</h3><p><a href="https://github.com/MikeCoder/hexo-tag-cloud" target="_blank" rel="noopener">hexo-tag-cloud github 地址</a></p>
+<h4 id="安装hexo-tag-cloud"><a href="#安装hexo-tag-cloud" class="headerlink" title="安装hexo-tag-cloud"></a>安装<code>hexo-tag-cloud</code></h4><p>进入到博客根目录，安装<br><code>npm install hexo-tag-cloud@^2.0.* --save</code></p>
+<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p>在主题文件夹找到文件 <code>theme/next/layout/_macro/sidebar.swig</code>, 然后添加如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#123;% if site.tags.length &gt; 1 %&#125;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcloud.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcanvas.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;widget-wrap&quot;&gt;</span><br><span class="line">    &lt;h3 class&#x3D;&quot;widget-title&quot;&gt;Tag Cloud&lt;&#x2F;h3&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;myCanvasContainer&quot; class&#x3D;&quot;widget tagcloud&quot;&gt;</span><br><span class="line">        &lt;canvas width&#x3D;&quot;250&quot; height&#x3D;&quot;250&quot; id&#x3D;&quot;resCanvas&quot; style&#x3D;&quot;width&#x3D;100%&quot;&gt;</span><br><span class="line">            &#123;&#123; list_tags() &#125;&#125;</span><br><span class="line">        &lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>到倒数第四行，在以下字符前，</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;aside&gt;</span><br><span class="line">&#123;% endmacro %&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4><p>博客根目录的<code>——config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># hexo-tag-cloud</span><br><span class="line">tag_cloud:</span><br><span class="line">    textFont: Trebuchet MS, Helvetica</span><br><span class="line">    textColor: &#39;#333&#39;</span><br><span class="line">    textHeight: 25</span><br><span class="line">    outlineColor: &#39;#E2E1D1&#39;</span><br><span class="line">    maxSpeed: 0.1</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>blog</tag>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DaoVoice实现在线联系</title>
+    <url>/2019/10/24/2019/191024DaoVoice%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E8%81%94%E7%B3%BB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="注册登陆DaoVoice"><a href="#注册登陆DaoVoice" class="headerlink" title="注册登陆DaoVoice"></a>注册登陆DaoVoice</h3><p><a href="http://www.daovoice.io/" target="_blank" rel="noopener">注册地址</a></p>
+<p>在<code>博客/themes/next/layout/_partials/head/head.swig</code>增加代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.daovoice %&#125;</span><br><span class="line"> &lt;script&gt;(function(i,s,o,g,r,a,m)&#123;i[&quot;DaoVoiceObject&quot;]&#x3D;r;i[r]&#x3D;i[r]||function()&#123;(i[r].q&#x3D;i[r].q||[]).push(arguments)&#125;,i[r].l&#x3D;1*new Date();a&#x3D;s.createElement(o),m&#x3D;s.getElementsByTagName(o)[0];a.async&#x3D;1;a.src&#x3D;g;a.charset&#x3D;&quot;utf-8&quot;;m.parentNode.insertBefore(a,m)&#125;)(window,document,&quot;script&quot;,(&#39;https:&#39; &#x3D;&#x3D; document.location.protocol ? &#39;https:&#39; : &#39;http:&#39;) + &quot;&#x2F;&#x2F;widget.daovoice.io&#x2F;widget&#x2F;b6dbddb6.js&quot;,&quot;daovoice&quot;)</span><br><span class="line"> daovoice(&#39;init&#39;, &#123;</span><br><span class="line">  app_id: &quot;用户ID&quot;</span><br><span class="line">&#125;);</span><br><span class="line">daovoice(&#39;update&#39;);</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p>如图所示：</p>
+<p>&lt;img src=’/img/daovoice.png’, height= ‘75%’, width = ‘75%’&gt;</p>
+<h3 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h3><p>在<code>/themes/next/_config.yml</code></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: 用户ID</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="微信消息提醒"><a href="#微信消息提醒" class="headerlink" title="微信消息提醒"></a>微信消息提醒</h3><p>可以绑定微信，以及默认将信息分派给自己，这样就可以用微信接收网站聊天信息了</p>
+<h3 id="修改聊天图标设置"><a href="#修改聊天图标设置" class="headerlink" title="修改聊天图标设置"></a>修改聊天图标设置</h3><p>应用设置-聊天设置中进行简单的设置</p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>blog</tag>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客增加aplayer音乐播放器</title>
+    <url>/2019/10/29/2019/191029Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0aplayer%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>之前使用的是网易云外链链接，<a href="https://liheyuting.github.io/2018/05/12/2018/Markdown/">点击查看</a>文章尾部如何使用，发现很受版权的限制，QQ音乐无法生成外链。</p>
+<p>遂，试试看使用插件来插入音乐。</p>
+<h3 id="下载hexo-tag-aplayer"><a href="#下载hexo-tag-aplayer" class="headerlink" title="下载hexo-tag-aplayer"></a>下载hexo-tag-aplayer</h3><p>进入博客根目录：<br><code>npm install --save hexo-tag-aplayer</code></p>
+<a id="more"></a>
+
+<p>在根目录的<code>_config.yml</code>中增加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 音乐播放器</span><br><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure>
+
+<h3 id="在博客中增加音乐"><a href="#在博客中增加音乐" class="headerlink" title="在博客中增加音乐"></a>在博客中增加音乐</h3><p>可用模板</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;歌曲id&quot; &quot;netease（音乐平台）&quot; &quot;song&quot; &quot;theme:#555&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>音乐平台：<br>netease, tencent, kugou, xiami, baidu</p>
+<p>具体参数等<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">参考文档</a></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>blog</tag>
+        <tag>hexo</tag>
+        <tag>earn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo更换主题Yilia为Next及Next主题优化</title>
+    <url>/2019/10/15/2019/191015Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Yilia%E4%B8%BANext%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>安装next主题</h3><p><strong>下载</strong> next主题</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd  xxxx&#x2F;themes</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
+
+<p><strong>编辑主题</strong><br>在<code>hexo/_config.yml</code>中修改</p>
+<p><code>theme: next</code></p>
+<h3 id="Menu更新"><a href="#Menu更新" class="headerlink" title="Menu更新"></a>Menu更新</h3><p>tags：</p>
+<ol>
+<li><p>创建tags页面<br><code>hexo new page tags</code></p>
+</li>
+<li><p>编辑<code>tags/index.md</code></p>
+</li>
+</ol>
+<p>about: 类同于tags页面创建</p>
+<a id="more"></a>
+<h3 id="Social图标修改"><a href="#Social图标修改" class="headerlink" title="Social图标修改"></a>Social图标修改</h3><p>在增加的对应的渠道后面加上“|| icons”<br>icons可以在<a href="https://fontawesome.com/icons" target="_blank" rel="noopener">这里</a>查找</p>
+<!--more-->
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>1、hexo目录下，安装搜索插件<br><code>npm install hexo-generator-searchdb --save</code></p>
+<p>2、编辑<code>hexo/_config.yml</code>，添加</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># local search</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p>安装的时候显示：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zlib: Cannot read property &#39;length&#39; of null</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     &#x2F;xxxx&#x2F;.npm&#x2F;_logs&#x2F;2019-10-23T00_54_05_567Z-debug.log</span><br></pre></td></tr></table></figure>
+
+<p>已解决，详见<code>解决 zlib: Cannot read property &#39;length&#39; of null</code></p>
+<h3 id="各板块透明度修改"><a href="#各板块透明度修改" class="headerlink" title="各板块透明度修改"></a>各板块透明度修改</h3><p><strong>内容板块透明</strong><br>根博客目录<code>themes\next\source\css\_schemes\Pisces\_layout.styl</code>文件<code>.content-wrap</code>标签下<code>background: white</code>修改为：</p>
+<p><code>background: rgba(255,255,255,0.7); //0.7是透明度</code></p>
+<p><strong>菜单栏背景</strong><br>根博客目录<code>themes\next\source\css\_schemes\Pisces\_layout.styl</code>文件<code>.header-inner</code>标签下<code>background: white</code>修改为：</p>
+<p><code>background: rgba(255,255,255,0.7); //0.7是透明度</code></p>
+<p><strong>站点概况背景</strong><br>根博客目录<code>themes\next\source\css\_schemes\Pisces\_sidebar.styl</code>文件<code>.sidebar-inner</code>标签下<code>background: white</code>修改为：</p>
+<p><code>background: rgba(255,255,255,0.7); //0.7是透明度</code></p>
+<p>修改根博客目录<code>themes\next\source\css\_schemes\Pisces\_layout.styl</code>文件<code>.sidebar</code>标签下<code>background: $body-bg-color</code>修改为：</p>
+<p><code>background: rgba(255,255,255,0.7); //0.7是透明度</code></p>
+<p>底部字数显示：<br>安装插件没有成功，似乎仍然是npm的原因</p>
+<h3 id="加入valine在线评论"><a href="#加入valine在线评论" class="headerlink" title="加入valine在线评论"></a>加入valine在线评论</h3><ol>
+<li>去<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>注册一个帐号.然后再创建一个应用，获取appid 和appkey，</li>
+<li>在<code>themes/next/_config.yml</code>中的<code>valine</code>中配置</li>
+</ol>
+<p>前端显示：<code>Code 504: The app is archived, please restore in console before use.</code><br>解决办法：在leancloud的应用里重新激活</p>
+<p><strong>邮件提醒</strong><br>略</p>
+<p><strong>语言设置</strong><br>在根目录<code>_config.yml</code>设置<code>language: zh-CN</code></p>
+<p><strong>底部跳动图标实现</strong>未完成</p>
+<ol>
+<li>已修改<code>next\source\css_variables\custom.styl</code>的css文件，增加以下代码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;底部爱心小图标跳动</span><br><span class="line">keyframes heartAnimate &#123;</span><br><span class="line">    0%,100%&#123;transform:scale(1);&#125;</span><br><span class="line">    10%,30%&#123;transform:scale(0.9);&#125;</span><br><span class="line">    20%,40%,60%,80%&#123;transform:scale(1.1);&#125;</span><br><span class="line">    50%,70%&#123;transform:scale(1.1);&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;图标所对应的span中的ID</span><br><span class="line">#heart &#123;</span><br><span class="line">    animation: heartAnimate 1.33s ease-in-out infinite;</span><br><span class="line">&#125;</span><br><span class="line">.with-love &#123;</span><br><span class="line">    color: rgb(255, 113, 113);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>底部为增加对应的ID</li>
+</ol>
+<h3 id="修改界面内容默认的设置【没有起效果】"><a href="#修改界面内容默认的设置【没有起效果】" class="headerlink" title="修改界面内容默认的设置【没有起效果】"></a>修改界面内容默认的设置【没有起效果】</h3><p>在<code>themes\next\source\css\_custom的custom.styl</code>添加下面参数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 屏幕宽度小于1600px</span><br><span class="line">$content-desktop &#x3D; 700px</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 屏幕宽度大于或等于 1600px</span><br><span class="line">$content-desktop-large &#x3D; 900px</span><br></pre></td></tr></table></figure>
+
+<p>已解决：<br>当使用 Mist 和 Muse时候用上面那段话，当使用Pisces 和 Gemini 风格时增加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.header&#123;</span><br><span class="line">    width: 90%;</span><br><span class="line">    +tablet() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    +mobile() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.container .main-inner &#123;</span><br><span class="line">    width: 90%;</span><br><span class="line">    +tablet() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    +mobile() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.content-wrap &#123;</span><br><span class="line">    width: calc(100% - 260px);</span><br><span class="line">    +tablet() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    +mobile() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="修改背景样式"><a href="#修改背景样式" class="headerlink" title="修改背景样式"></a>修改背景样式</h3><p>修改<code>themes\next\source\css\ _custom\custom.styl</code>文件，这个是Next故意留给用户自己个性化定制一些样式的文件，添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    background:url(https:&#x2F;&#x2F;source.unsplash.com&#x2F;random&#x2F;1600x900);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">    background-size:cover;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数</strong><br>url：可更换为自己喜欢的图片的地址。<br>repeat：是否重复出现<br>attachment：定义背景图片随滚动轴的移动方式<br>position：设置背景图像的起始位置。<br>background-size:cover 为可能有助于大分辨率下背景图的显示</p>
+<p>背景效果设置：<br>‘themes\next_config.yml ‘中找到<code>canvas</code></p>
+<h3 id="字体不闪动设置"><a href="#字体不闪动设置" class="headerlink" title="字体不闪动设置"></a>字体不闪动设置</h3><p>修改文件<code>next/source/css/_common/components/post/post-reward.styl</code>，然后注释其中的函数<code>wechat:hover和alipay:hover</code>，如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* 注释文字闪动函数</span><br><span class="line">#wechat:hover p&#123;</span><br><span class="line">animation: roll 0.1s infinite linear;</span><br><span class="line">-webkit-animation: roll 0.1s infinite linear;</span><br><span class="line">-moz-animation: roll 0.1s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">#alipay:hover p&#123;</span><br><span class="line">animation: roll 0.1s infinite linear;</span><br><span class="line">-webkit-animation: roll 0.1s infinite linear;</span><br><span class="line">-moz-animation: roll 0.1s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="解决zlib-Cannot-read-property-39-length-39-of-null"><a href="#解决zlib-Cannot-read-property-39-length-39-of-null" class="headerlink" title="解决zlib: Cannot read property &#39;length&#39; of null"></a>解决<code>zlib: Cannot read property &#39;length&#39; of null</code></h3><p>用npm安装什么都显示这样，是nodejs版本不够 <a href="https://github.com/ionic-team/ionic-cli/issues/3816" target="_blank" rel="noopener">github issue</a></p>
+<p><a href="https://stackoverflow.com/questions/10075990/upgrading-node-js-to-latest-version" target="_blank" rel="noopener">stack中的解决方案</a><br>方案一：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install n -g</span><br><span class="line">sudo n stable 安装稳定版本</span><br><span class="line">或 sudo n latest 安装最新版本</span><br></pre></td></tr></table></figure>
+
+<p>失败，仍旧显示同样错误</p>
+<p>方案二：<br>不使用sudo</p>
+<p>step1: 下载 nvm（node version manager）<br><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</code></p>
+<p>step2: 安装最新的node.js版本<br><code>nvm install stable</code></p>
+<h3 id="取消点击效果"><a href="#取消点击效果" class="headerlink" title="取消点击效果"></a>取消点击效果</h3><p><code>fireworks: false</code></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>blog</tag>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>今年厦门出差第3次</title>
+    <url>/2019/10/29/2019/191029%E4%BB%8A%E5%B9%B4%E5%8E%A6%E9%97%A8%E5%87%BA%E5%B7%AE%E7%AC%AC3%E6%AC%A1/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+    <div id="aplayer-RVeVPSab" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
+      <categories>
+        <category>旅行</category>
+      </categories>
+      <tags>
+        <tag>暇思</tag>
+        <tag>行走</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>严肃的米虫脸</title>
+    <url>/2019/11/13/2019/191113%E4%B8%A5%E8%82%83%E7%9A%84%E7%B1%B3%E8%99%AB%E8%84%B8/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>刚刚发出最后一封邮件，1点的凌晨，有一点的清醒</p>
+<p>耳边绕着音乐，庆幸，没有吵醒这个夜晚的寂静</p>
+<p>深秋的上海，和北京大不相同：<br>在北京，暖气应该来了吧，大衣也可以背出门了<br>而上海的此刻，我穿着长袖的睡衣，盘腿坐在椅子上，窗外的风撩动窗帘，并不冷</p>
+<p>连续的加班，让情绪似乎要到了一个临界点<br>神经绷绷的，却长时间怠懒思考</p>
+<p>好想做一个米虫啊，<br>面朝大海，我吃的很少<br>春暖花开，还可以少吃点</p>
+<a id="more"></a>
+<p>3天前的水果<br>也怠懒于桌角<br>吉他在墙角落灰沉默<br>而垃圾总会错过可投递的时间</p>
+<p>我没有想哭，<br>也可以弄一些啤酒<br>假装是喜爱的味道<br>来忍受渐渐冰凉的脚掌</p>
+<p>疲倦容易让人衰老<br>电子屏让人面无表情<br>时间没让人更加坚强<br>竟先使皱纹爬山眉梢</p>
+<p>现在的心情有点糟糕啊<br>很不可爱的我和很不可爱的心情</p>
+]]></content>
+      <categories>
+        <category>杂思</category>
+      </categories>
+      <tags>
+        <tag>无聊</tag>
+        <tag>暇思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于2B营销的几个关系</title>
+    <url>/2019/12/22/2019/191222%E5%85%B3%E4%BA%8E2B%E8%90%A5%E9%94%80%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>（写的什么乱七八糟的东西啊，果然想法落到纸上还是与其在脑子里的状态不一样，先把所有的想法先写下来再说吧）</p>
+<ul>
+<li><p>（需求与产品）需求驱动产品的生产，产品占有市场较大份额，同步验证了产品的有效性和满足了用户需求</p>
+</li>
+<li><p>（销售与营销）2B公司销售具有较大的话语权，营销（数字营销）的作用不那么显性化，在经费和效果不足的情况下，怎样的突破现在的情况，增加数字营销的投入？数字营销对2B公司究竟有没有效果，效果可以这样体现，数字营销给公司带来的最大的作用是什么？</p>
+</li>
+<li><p>（产品与营销）公司分工非常细分，产品研发与产品销售分开，数字营销是基于什么目的在推广呢，Target audience又是什么呢，潜在用户，影响者，KOL或者购买决策者，针对不同的用户群体，我们使用怎样不同的营销方案来触达和影响呢？数字营销是基于用户的需求在曝光产品么，还是基于我们认为的用户的需求呢。如果给予用户的需求，是基于用户的痛点问题么，还是认为用户的兴趣方向点，用户的需求和兴趣点是一致的么；</p>
+<a id="more"></a>
+</li>
+<li><p>（营销与需求）优质的产品和营销之间形成势能，产品优秀，营销将会事半功倍。产品基于需求，营销是针对用户需求和痛点问题个性化曝光信息，增加用户的品牌认知以及增加沟通渠道。公司细分，营销脱离与需求，多偏好于产品，那么营销是否容易变成空中楼阁，花红柳绿不过好看？</p>
+</li>
+<li><p>（数字营销与2B）社交媒体的盛行，人与人的交流方式和信息获取方式有了崭新的变化，在这种情况下，2B公司是否需要数字营销？数字营销的定义是什么，是数字化手段的营销方式，还是偏向于一个渠道呢？</p>
+</li>
+</ul>
+]]></content>
+      <categories>
+        <category>生存技能</category>
+      </categories>
+      <tags>
+        <tag>Work</tag>
+        <tag>数字营销</tag>
+        <tag>市场营销</tag>
+        <tag>困惑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>要不要在2B公司做数字营销？</title>
+    <url>/2019/12/25/2019/191225%E8%A6%81%E4%B8%8D%E8%A6%81%E5%9C%A82B%E5%85%AC%E5%8F%B8%E5%81%9A%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>要随时进行反思和思考哦，机械和流程化容易固化你的思想，不要在舒适区丧失独立思考和联系的能力。记录是一种比较好的思考方式，在这个过程中，也要梳理好自己的想法和逻辑，从笔头的逻辑到嘴上的逻辑。不要羞涩于自己此刻的浅薄，要多读多看多想多写少说废话。</p>
+<hr>
+<p>数字营销究竟对于2B公司有没有用？</p>
+<p>如果有用，它带来的最大价值是什么？</p>
+<p>如果没有用，那我们还要做么？</p>
+<p>2B行业的公司也都不断的试水数字营销，几乎每家公司都也在做数字营销相关的一些内容，但数字营销究竟有什么用，带给公司最大的效益是什么呢，不太好说。</p>
+<p>那又怎样评估数字化营销的效果呢？</p>
+<h3 id="先说背景"><a href="#先说背景" class="headerlink" title="先说背景"></a>先说背景</h3><p>整个行业被技术挟裹往前，互联网、数字化、物联网、大数据…这些词也都是耳熟能详，在人与人之间的社交媒体和形式的不断改变中，推广形式也在不断的更新迭代。</p>
+<p>有人说，数字营销没有用，这是一种防御手段，只是为了预防公司在这个市场的大浪潮下被掉队的一种推广渠道，让用户有机会联系到我们。</p>
+<p>但事实上，我仍然觉得数字营销是有必要的。</p>
+<p>拿品牌这个事情来说，在最一开始的时候，大家也是不承认其价值的，但现在优质品牌价值的重要性不言而喻，可口可乐，星巴克，喝的是饮料，更多的还是他们的价值，更别说奢侈品这些了。</p>
+<p>提到这个，是想说，有些东西只能由时间来证明，一个是这些也都是在探索当中，另一个，有一些东西是长期价值，需要提前开始投资。</p>
+<a id="more"></a>
+
+<h3 id="数字营销的定义究竟是什么？"><a href="#数字营销的定义究竟是什么？" class="headerlink" title="数字营销的定义究竟是什么？"></a>数字营销的定义究竟是什么？</h3><p>首先，我们需要明确数字营销究竟是什么<br>百度百科：数字营销是使用数字传播渠道来推广产品和服务的实践活动，从而以一种及时、相关、定制化和节省成本的方式与消费者进行沟通。</p>
+<p>很多公司都将数字营销限制在微信微博领英等社交媒体的运营，事实上，如果仅仅只是这些owned social media的运营，所受的限制是非常大的，从粉丝来说，自然增长的流量很有限，多数是自我推广或者员工推广，而且对内容的要求也是非常的高，当然，如果公司的确在行业内很有影响力，可能会有一定程度上的加成，对于2B来说仍为有限。</p>
+<p>虽然数字营销的定义上加上了一个低成本，算是相对而言。数字营销绝对不仅仅只是社交媒体的运营，也不仅仅只是互联网形式的一个推广，它的范围非常的广泛，SEM/SEO，邮件营销，网站运营，H5，微网站，APP，数字化媒体推广等等都应囊括其中。</p>
+<p>内容+媒介+数字，这些都缺一不可</p>
+<h4 id="1-用户、需求"><a href="#1-用户、需求" class="headerlink" title="1. 用户、需求"></a>1. 用户、需求</h4><p>营销的起点都应该源于用户及需求，需求是产品的原动力，如果没有需求，就没有产品可言，我们的推广是为了达到最终消费，需求和消费是不可分割的。</p>
+<p>那么在数字营销，我们第一要确定的就是我们的用户需求。<br>关于用户分层和用户分类，在另一篇文章里有详细的提到。<br>我们需要根据不同的用户情况，来因地制宜，市场上常说的“千人千面”核心都一样，为了满足用户的个性化需求。</p>
+<p>我们会先通过各种渠道，来收集用户的静态数据和动态数据，将不同用户聚类分析，形成各异的用户画像，根据用户画像，来一步步探索用户的深层需求，这是在完美情况下，一般情况，我们只能根据数据推测用户可能的偏好。再通过各类群体偏好的媒介及形式，推送其可能感兴趣的内容，来不断完善用户画像，在此过程中，达到品牌的影响及增强用户粘性。在这个持续的过程中，用户的需求可能会越来越清晰，形成购买。购买之后，当然还有服务环节，仍然持续影响，以使用户成为一个忠诚用户。</p>
+<hr>
+<p>（待填空）</p>
+<h4 id="2-内容"><a href="#2-内容" class="headerlink" title="2. 内容"></a>2. 内容</h4><p>内容的构成形式非常多样</p>
+<h4 id="3-媒介"><a href="#3-媒介" class="headerlink" title="3. 媒介"></a>3. 媒介</h4><h4 id="4-数字"><a href="#4-数字" class="headerlink" title="4. 数字"></a>4. 数字</h4><h3 id="怎么评估数字营销的有效性呢？"><a href="#怎么评估数字营销的有效性呢？" class="headerlink" title="怎么评估数字营销的有效性呢？"></a>怎么评估数字营销的有效性呢？</h3><h3 id="Corporate-和-BU-内部的数字化运营有什么区别？"><a href="#Corporate-和-BU-内部的数字化运营有什么区别？" class="headerlink" title="Corporate 和 BU 内部的数字化运营有什么区别？"></a>Corporate 和 BU 内部的数字化运营有什么区别？</h3><h3 id="我们的目标群体到底是什么东西呢？"><a href="#我们的目标群体到底是什么东西呢？" class="headerlink" title="我们的目标群体到底是什么东西呢？"></a>我们的目标群体到底是什么东西呢？</h3>]]></content>
+      <categories>
+        <category>生存技能</category>
+      </categories>
+      <tags>
+        <tag>Work</tag>
+        <tag>数字营销</tag>
+        <tag>困惑</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>去爱去奔跑，去热烈的拥抱和大笑</title>
+    <url>/2019/12/12/2019/191212%E5%8E%BB%E7%88%B1%E5%8E%BB%E5%A5%94%E8%B7%91%EF%BC%8C%E5%8E%BB%E7%83%AD%E7%83%88%E7%9A%84%E6%8B%A5%E6%8A%B1%E5%92%8C%E5%A4%A7%E7%AC%91/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+    <div id="aplayer-TnBdiVnW" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="001xT6iZ2QW8kG" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+
+
+
+<p>有人的地方就会有江湖。</p>
+<p>时常被各种复杂的关系所套牢，<br>如果你在乎，你就深陷其中，<br>如果你不在乎，不知道什么时候你就已经被游离。</p>
+<p>说起来矫情，在这个年纪了，还是讨厌这种冗杂的游戏规则。<br>离开家乡的阿姨的嘴，也逃不过身边复杂的牵手。</p>
+<p>终有一天，我一定要有，想离开就离开的勇气和底气。<br>而不是在这种复杂的环境里，战战兢兢，身心俱疲，苍老颓颓。</p>
+<p>蝉蛹里的生活，也许缠绕着死去，也许破茧而出。</p>
+<a id="more"></a>
+<p>看不到明天会怎样，不确定世界是不是一定是如此的复杂。</p>
+<p>有没有什么办法，可以使自己能够在复杂的关系里脱身，<br>比如，拥有一个农场吗，哈哈哈哈<br>比如，在工作以外有自己的个人影响力在，如果离开，也不用担心食物来源<br>比如，开始存fuck you money，使自己可以有底气对于不乐意的事情，easy to say no<br>比如，拥有一个第二技能，像某个总统所说，“如果有一天我不能做总统了，还能当个厨子”，哦，虽然当不了总统也最多只能做个吃货，但理想还是要有的</p>
+<p>考拉也许过上了很多人梦想中的生活，饿了有投喂，吃完就长睡。</p>
+<p>在二十多岁的年龄里，对生活充满了焦虑和颓唐，<br>不敢正常下班，不敢迟到，不敢说不，不敢坦率说自己的所思所想所往，<br>担心下个月的房租，担心明天和身体哪个先倒，担心生命苍白无力和自己的无能为力。</p>
+<p>但当在二十多岁的年龄里，还对生活充满了热爱，充满了很多不切实际的幻想，<br>还渴望着去做一个丰富的人，去看很多美丽的风景，去吃很多美味的食物，<br>去感知自然清新的味道，去感受人与人之间的温暖和美好，<br>还想着去爱去奔跑，去热烈的拥抱和大笑。</p>
+<p>为资本主义弯腰，理想主义跌入谷底，我步履蹒跚，踽踽独行。<br>吾谁与归。</p>
+]]></content>
+      <categories>
+        <category>杂思</category>
+      </categories>
+      <tags>
+        <tag>无聊</tag>
+        <tag>暇思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>与电瓶车三两事</title>
+    <url>/2019/12/27/2019/191227%E4%B8%8E%E7%94%B5%E7%93%B6%E8%BD%A6%E4%B8%89%E4%B8%A4%E4%BA%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+    <div id="aplayer-IicGmLme" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28987655" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+<p></p>
+来上海后的9月，和朋友一起去了扬州，去看音乐节。
+
+<p>扬州整个城市都挺干净，天空蓝的发亮，草木青翠欲滴，园林精巧美妙，妙趣横生，很有一番意思。</p>
+<p>南方的城市，空气湿润很多，山水似乎都近了很多。</p>
+<p>就是电瓶车有点多，还有点猖狂。</p>
+<p>在路口等红灯，灯还有1-2s变绿。突然感觉眼睛好像睫毛进去了，低头弄了会，腿往前迈了一步，“嘭”电瓶车撞我腿上了，还好不太重，我下意识说了句“不好意思”，骑车男孩好像也下意识回了“没关系”，我还没反应过来，他们继续往前开，听到后座女孩“没长眼睛啊，看也不看路”。</p>
+<p>等过了马路，回过神，真是好生气啊，腿撞红了我还下意识先和车道歉，没几秒绿灯，他们应该从另一边马路开过来了，很大几率是闯红灯过来的，而我下意识的行为竟然是先道歉。在自己没有任何错误的情况下，先说了道歉，好像先把自己置于无理方。</p>
+<p>而对方，在带人上路，可能闯红灯的情况下，还理直气壮的骂人。</p>
+<a id="more"></a>
+
+<p>回想起来，这个事情也似乎有些荒谬。</p>
+<p>有些时候，是不是本来只是一个事实或者非过错方的情况下，自己心虚的态度更容易让人先入为主的认为是错呢。好玩了，若无其事的态度，可能显出这没什么大不了的，郑重其事反而让人正式。</p>
+<p>那下次遇到这样的事情，是不是首先就得先发制人，管他对错，抢占先机呢？<br>时常要为自己的迟钝感觉烦恼。</p>
+<p>前不久又被电瓶车撞了，今年不知怎么的和电瓶车好像杠上了，过去在北京7年没有遇到过一次，来上海，短短两三个月就遇到了两次。</p>
+<p>这次发生在小区里，在过小区过道左右环顾，背后有一辆电瓶车停住了，我就继续往前走了。结果就被撞了，当时疼的捂住小腿半蹲着好一会。那个大爷还碎碎叨叨，还想骂我不看路，看我一言不发一直捂着小腿，才问有没有关系啊什么的。当时我也是，过了一会没那么疼了就走了。到现在，3个多星期了小腿还是有肿块，乌青了大块，脚腕还是不舒服，幸好上周去医院看了没多大事皮肉伤。当时也没想着现场去医院看下，要是骨头撞坏了怎么办。。</p>
+<p>如果一开始就大声呵斥，是不是也代表自己有一些心虚呢，所以就想着先发制人，使自己看起来是有理方的，震慑住像我这样的人？</p>
+<p>那对应的，是不是不该不计较，纵容了这种行为，还让别人觉得这种方式可行？</p>
+<p>拉倒拉倒，希望腿早点好吧。</p>
+]]></content>
+      <categories>
+        <category>杂思</category>
+      </categories>
+      <tags>
+        <tag>暇思</tag>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>为了取暖，我们失去了什么</title>
     <url>/2017/04/15/2018/170415%E4%B8%BA%E4%BA%86%E5%8F%96%E6%9A%96%EF%BC%8C%E6%88%91%E4%BB%AC%E5%A4%B1%E5%8E%BB%E4%BA%86%E4%BB%80%E4%B9%88/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>看瓦尔登湖写的，人类依靠着衣饰暖气等工具保暖，那么一缕寒风将断绝生命。</p>
@@ -50,6 +683,67 @@
       <tags>
         <tag>暇思</tag>
         <tag>读书</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>2019年，她又要离开</title>
+    <url>/2019/12/26/2019/1912262019%E5%B9%B4%EF%BC%8C%E5%A5%B9%E5%8F%88%E8%A6%81%E7%A6%BB%E5%BC%80/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>想起上一次写年终总结，还是2017年本命年。</p>
+<p>至今，仍觉得那一年让人难受。有时候恍惚间觉得，从那时候开始，心情不曾有过好转，仍叫人心里惴惴甸甸的。</p>
+<p>亲眼见证衰老和死亡，如何在生命的流逝里拉扯着人往前，姿势丑陋，时间短暂又漫长。时钟秒针波动的震颤感在耳边不断的播放，眼前是冰凉苍白的阳光和阳光里四处逃窜的灰尘，一寸一寸的温暖慢慢的撤退出窗户，坐在椅子上被寒冷包围的感觉。</p>
+<p>在第二年外公离世的时候，那种麻木的感觉竟然有所缓解，不知该喜还悲。</p>
+<p>希望2020年，不要总是责备自己，多喜爱自己，多自信开心点。</p>
+<p>生活上，好好照顾自己，好好吃饭，早睡早起；<br>工作上，不要过于担忧，冷静沉着，尽力即可；</p>
+<a id="more"></a>
+<hr>
+<p>2019年整体还是感觉有点累的，</p>
+<p><strong>2019年计划达成情况</strong></p>
+<ul>
+<li>[ ]读50本书 完成率 14/50</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 人性的枷锁 毛姆</span><br><span class="line">* 一个孤独的散步者的遐思 卢梭</span><br><span class="line">* 出走十五年 余秋雨</span><br><span class="line">* 局外人</span><br><span class="line">* 伊豆的舞女 川端康成</span><br><span class="line">* 学会提问  56%</span><br><span class="line">* 过于喧嚣的孤独 博胡米尔·赫拉巴尔</span><br><span class="line">* 孤独六讲 蒋勋</span><br><span class="line">* 我与地坛 史铁生</span><br><span class="line">* 杀死一只知更鸟 哈珀·李</span><br><span class="line">* 西游日记 今何在</span><br><span class="line">* 乌合之众 48%</span><br><span class="line">* 怦然心动的人生整理魔法</span><br><span class="line">* 月亮与六便士</span><br><span class="line">如果算上泡沫小说，那就远远不止了..</span><br><span class="line">貌似2019看的书都好孤独啊，提前步入老年养生行列了么..今年没看什么专业书，基本上小说散文为主啊，感觉明年还是得多增加专业的书。</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>[x]去3个地方旅行：厦门、大连、景德镇、广州、武汉、桂林、扬州、上海算么</li>
+<li><input disabled type="checkbox"> 用Python做爬虫：2333没有达成，还是得想清楚用python来做什么呀，其实你是想用它来做数据分析，唉再想想吧</li>
+<li>[x]培养一个兴趣：吉他，学到扫弦了，在bilibili记录了学习过程，后半段更得较少，开心的是，还有人询问怎么不继续更了。明年还要继续加油啊，先把和弦和扫弦练熟了，去试试看指弹，反正啊少年，一点点来，不要急，享受音乐啊。想要换一个耳机。</li>
+<li>[x]学会游泳：学会了蛙泳，自由泳因为换城市的缘故没有继续学。明年要努力锻炼保重身体呀。</li>
+</ul>
+<p>其他：</p>
+<ul>
+<li>换了一个城市，换了一份工作：一直想要做数据分析的工作，然而好像在数字营销这条路上走远了，感觉也还好。however，慢慢来吧，还是要多多学习啊</li>
+<li>看了超过200集的TED：能感觉到听力好像好一点了，英语还是需要多多加油啊</li>
+<li>成长值年目标达成68%（245h/360h）：好像平均每天1小时的学习时间还不到，不过接近了70%，知足吧</li>
+<li>En Input: 42%(目标：5 times/week)：..同样目标下，吉他的达成率只有27%..</li>
+<li>运动别提了..这样下去好担心身体呀</li>
+<li>博文更新十来篇：要记录生活啊少年</li>
+<li>王者荣耀单排竟然上了星耀，很开心了</li>
+<li>存钱：很惭愧，很惭愧，很惭愧</li>
+</ul>
+<hr>
+<p><strong>2020的计划</strong></p>
+<ul>
+<li>[ ]看50本书</li>
+<li>[ ]学习python：<br>学习数据分析相关的，至少要学会整理数据、清理数据、储存数据；tableau的课程要看完啊，珍惜前老板支持的学费啊！</li>
+<li>[ ]学习吉他指弹：至少要学会完整的弹一首歌</li>
+<li>[ ]学一个运动或一个语言？</li>
+<li>[ ]去3个地方旅行</li>
+</ul>
+<p>关于习惯的期待：</p>
+<ul>
+<li>360h</li>
+<li>Language input: 5 times/week</li>
+<li>Guitar: 5 times/week</li>
+<li>Read: 1 min/day; 3 times/week</li>
+<li>Exercise: 3 times/week</li>
+</ul>
+]]></content>
+      <categories>
+        <category>杂思</category>
+      </categories>
+      <tags>
+        <tag>暇思</tag>
+        <tag>Year_Plan</tag>
       </tags>
   </entry>
   <entry>
@@ -186,55 +880,102 @@
       </tags>
   </entry>
   <entry>
-    <title>Markdown语法文档</title>
-    <url>/2018/05/12/2018/180512Markdown%E8%AF%AD%E6%B3%95%E6%96%87%E6%A1%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
-
-<p>** 加粗 **<br><code>** 加粗 **</code></p>
-<p><em>斜体</em></p>
-<p><code>*斜体*</code></p>
+    <title>头发半长不短时</title>
+    <url>/2017/09/13/2018/170913%E5%A4%B4%E5%8F%91%E5%8D%8A%E9%95%BF%E4%B8%8D%E7%9F%AD%E6%97%B6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>终归要熬过这个时间。</p>
+<p>大学的一个普通下午，舍友们都不在，一个人到校门口的理发店剪了短发。</p>
+<p>两个多月前，第一次染了头发，亚麻绿，初颜色还亮着，慢慢的，头发开始泛黄，失去色泽。</p>
+<p>头发半长不短，在耳下，丛丛杂杂的，棕黑色的头发新长出来。半黄绿半黑棕，长不及肩短过耳。</p>
+<p>终于到了，必须得忍受，短发长及肩的时间。</p>
+<p>可以选择视而不见，或者自欺欺人，但是不管怎样，这段时间，你必须得忍受。</p>
+<p>难过的是，你知道这样的日子，你必须得自己熬过去。</p>
+<p>幸运的是，你知道一定会过去。</p>
 <a id="more"></a> 
 
-<p><strong>* 斜体加粗 *</strong><br><code>*** 斜体加粗 ***</code></p>
-<p><del>删除线</del><br><code>~~删除线~~</code></p>
-<blockquote>
-<p>引用<br><code>&gt; 引用</code></p>
-</blockquote>
-<hr>
-<p>分割线</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
-<p>图片</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src&#x3D;&#39;&#x2F;img&#x2F;0-5.jpg&#39;, height&#x3D; &#39;37%&#39;, width &#x3D; &#39;37%&#39;&gt; &lt;img src&#x3D;&#39;&#x2F;img&#x2F;0-8.jpg&#39;, height&#x3D; &#39;37%&#39;, width &#x3D; &#39;37%&#39;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>超链接</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure>
-
-<p>无序列表</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
-
-
-<p>有序列表</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
-
-
-<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
-<p>表格</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure>
-
-<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
-<p>插入视频</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;&quot; frameborder&#x3D;&quot;0&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
-
-<p>插入音乐</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;28381611&amp;auto&#x3D;1&amp;height&#x3D;66&quot; width&#x3D;330 height&#x3D;86&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
-
+<p>麻烦和不耐烦肯定是有的，后脑勺的毛发突如其来的翘起，耳边的一戳毛自有肆意的生长，洗头后吹不吹头发，坐着的时候靠不靠沙发垫头。</p>
+<p>一点一点的烦躁从内心升起，却没有人可以解救你。</p>
+<p>有一些东西，像是磨石钝钝的磨豆，一点点把整个的豆子磨到细细的，再研磨成粉末，时日可能旷久，也许根本毫无意义，却是避无可避。</p>
+<p>研磨的粉也会像是止血的药，一点点撒落在伤口上，先是滋滋的声音，可能你还能听见烤肉的香味，再接着，麻麻的，伤口开始结疤，也许到最后，最多只是摸上去糙糙的，其他什么也不会留下。像是风经过的旷野，只有当初的野草才能回忆起风里带来的讯息，和抚摸过的感觉，再然后，一切一同被风本身带走。</p>
+<p>人，就这样寂静的坐着。思绪一下子就放空。周遭的声音像是隔着玻璃罩，空调的风吹着手臂凉凉的，汗毛竖起，嘴角抿着，一具坐立着的雕塑。</p>
+<p>却想一直坐着，并不想交谈，也不想被打扰。</p>
+<p>在这个时代，人人忙着说话，唯恐自己讲得不够响亮，胆小的人却只能听着。倾诉变成了一种不得不认真对待的欲望，嘴里心里出去的话，落在传播的空气里，落不到实处，散发着焦虑的味道，不断发酵。</p>
+<p>于是，有些酒就会储存在另一个花园里，直至到媚春初降，百草苏醒，荒芜的花园慢慢重见旭阳，春风吹开栅栏和枯霜。酒香开始混着花香，漫漫的铺满山野，若有闲花浅草点缀，幸甚。</p>
+<p><img src="/img/0.jpg" alt="/img/0.jpg"></p>
+<p>黎明将至，不若信步而去，在另一个湖畔随意歇息安眠，等待黎明后的升起的星星。</p>
+<p><img src="/img/0-1.jpg" alt></p>
 ]]></content>
       <categories>
-        <category>兴趣技能</category>
+        <category>杂思</category>
+      </categories>
+      <tags>
+        <tag>无聊</tag>
+        <tag>暇思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>从零开始搭建博客</title>
+    <url>/2017/11/23/2018/171123%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong>1-2Day：搭建Blog到GitHub</strong></p>
+<h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>详情可以借鉴<a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">官方网站</a>,</p>
+<p>安装homebrew</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>安装nodejs<br>    <code>brew install node</code></p>
+<p>安装hexo</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<a id="more"></a> 
+
+<p>安装git<br><code>- sudo brew install git</code><br><br></p>
+<h3 id="建立博客"><a href="#建立博客" class="headerlink" title="建立博客"></a>建立博客</h3><p>创建文件夹</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>生成静态页面</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate &#x2F;** 生成一套静态网页 **&#x2F;</span><br><span class="line">hexo server &#x2F;** 在服务器上运行 **&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>建立第一篇博客</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(cd 进入blog文件夹)</span><br><span class="line">hexo new post &quot;博客名&quot;</span><br><span class="line">info created：～／blog&#x2F;souce&#x2F;_posts&#x2F;博客名.md</span><br></pre></td></tr></table></figure>
+
+<p>连接GitHub</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">liheyuting.github.io</span><br><span class="line">（一定要和账户名一致）</span><br></pre></td></tr></table></figure>
+
+<p>修改文件夹中yml文件，如下：（注意空格）<br>    <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;liheyuting&#x2F;Dora.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>发布博客到服务器</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save   (第一次安装所需)</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<br>
+### 回顾 ###
+总耗时：3h（一心二用，聆听朋友倾诉）+ 0.5h (整理)
+First Day（1.5h）：跟着浚宇的博客进入官方网站搭建，在hexo环境配置中断
+Second Day：
+
+<h3 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h3><ul>
+<li><a href="http://blog.csdn.net/jasonjwl/article/details/52887575" target="_blank" rel="noopener">http://blog.csdn.net/jasonjwl/article/details/52887575</a></li>
+<li><a href="http://blog.csdn.net/qq_30379689/article/details/52854003" target="_blank" rel="noopener">http://blog.csdn.net/qq_30379689/article/details/52854003</a></li>
+</ul>
+<h3 id="坑点"><a href="#坑点" class="headerlink" title="坑点"></a>坑点</h3><ul>
+<li>对于英文文件的不习惯阅读</li>
+<li>对于命令行的不熟悉</li>
+<li>耗时于git 账户和hexo关联</li>
+<li>安装说明的关键点不清晰，未抓住说明的关键点</li>
+</ul>
+<p><em>待继续处理</em></p>
+<ul>
+<li>命令行安装软件原理</li>
+<li>用命令行来建设blog</li>
+<li>掌握 git 命令</li>
+<li>blog 页面建设内容建设等</li>
+</ul>
+<p>blog的下一步建设：主页面</p>
+<ul>
+<li>主题</li>
+<li>内容</li>
+</ul>
+]]></content>
+      <categories>
+        <category>工具</category>
       </categories>
       <tags>
         <tag>learn</tag>
-        <tag>markdown</tag>
+        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -267,54 +1008,6 @@
       <tags>
         <tag>暇思</tag>
         <tag>思念</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>建立第一篇博客</title>
-    <url>/2018/05/12/2018/180512%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong>* 发布文章 *</strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
-<p>每次部署的步骤，三步</p>
-<ul>
-<li>hexo clean</li>
-<li>hexo generate</li>
-<li>hexo deploy</li>
-</ul>
-<a id="more"></a> 
-
-<p><strong>* 增加tag *</strong><br><code>hexo new page ‘blog&#39;</code><br>在source里面多了个目录life，里面有个index.md，也可以手动建立。页面格式和文章一样</p>
-<p>接着把链接加上<code>themes/&lt;theme_name&gt;/_config.yml</code>里面的menu一项，添加一行blog: /tags/blog</p>
-<p><strong>* 主题 *</strong><br>主题可选择: <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">点击此处</a></p>
-<p>个人觉得好看的主题：</p>
-<ul>
-<li>Yilia - Responsive and simple style 优雅简洁响应式主题</li>
-<li>Winterland - A minimalistic theme based on Light with living background</li>
-<li>Iceman - A simple theme with some built-in China mainland service, based on Pacman</li>
-</ul>
-<p>YAHT - Yet Another Hexo Theme based on Pacman</p>
-<p><strong>* 多端同步管理 *</strong><br>​用coding.net来备份博客并同步博客</p>
-<p>1.新建一个博客备份的私有仓库，配置SSH，不过不需要pages服务。</p>
-<p>2.配置 .gitignore 如下： </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;.deploy_git</span><br><span class="line">&#x2F;public</span><br></pre></td></tr></table></figure>
-<p>3.如果主题是git clone 下来的，记得删除主题下的.git文件(rm -rf .git)</p>
-<p>4.初始化仓库,git init 和 git remote add origin</p>
-<p>5.git add. #添加目录下所有文件 </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git commit -m “更新说明” #提交并添加更新说明 </span><br><span class="line">git push origin master #推送更新到远程仓库</span><br></pre></td></tr></table></figure>
-<p>6.查看仓库有没有提交成功</p>
-<p><strong>* 另一台电脑的更新远程仓库 *</strong><br>​ 在B电脑安装必须要的环境后，新建文件执行</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">​ git init</span><br><span class="line">​ git remote add origin</span><br><span class="line">​ git fetch –all</span><br><span class="line">​ git pull origin master</span><br></pre></td></tr></table></figure>
-
-<p><strong>* 发布客户端同步 *</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “更新说明”</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
-<p>每次写博客之前记得先 git pull 进行同步更新</p>
-<p><strong>* 常用同步操作 *</strong><br>​```<br>git pull #同步更新<br>hexo new test “新建文章” （hexo n xxx）<br>hexo clean 清除旧的public文件夹<br>hexo d -g<br>git add .<br>git commit - m “更新说明”<br>git push origin master</p>
-<pre><code>
-</code></pre>]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>blog</tag>
       </tags>
   </entry>
   <entry>
@@ -373,6 +1066,169 @@
 <hr>
 <p>去年的时候Z小姐结婚了，婚纱照看起来很漂亮，笑容灿烂。犹记得当时把文字拿给她看时，她有些怔怔的摸样。</p>
 <p>回忆最美好的地方，大概就是被时间氤氲开，像是久穿的毛衣，起了一粒粒的毛球，那些快乐飞驰的难受郁郁的都夹杂融合在了一起，反倒是熨帖而微暖。</p>
+]]></content>
+      <categories>
+        <category>随笔</category>
+      </categories>
+      <tags>
+        <tag>暇思</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>建立第一篇博客</title>
+    <url>/2018/05/12/2018/180512%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong>* 发布文章 *</strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
+<p>每次部署的步骤，三步</p>
+<ul>
+<li>hexo clean</li>
+<li>hexo generate</li>
+<li>hexo deploy</li>
+</ul>
+<a id="more"></a> 
+
+<p><strong>* 增加tag *</strong><br><code>hexo new page ‘blog&#39;</code><br>在source里面多了个目录life，里面有个index.md，也可以手动建立。页面格式和文章一样</p>
+<p>接着把链接加上<code>themes/&lt;theme_name&gt;/_config.yml</code>里面的menu一项，添加一行blog: /tags/blog</p>
+<p><strong>* 主题 *</strong><br>主题可选择: <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">点击此处</a></p>
+<p>个人觉得好看的主题：</p>
+<ul>
+<li>Yilia - Responsive and simple style 优雅简洁响应式主题</li>
+<li>Winterland - A minimalistic theme based on Light with living background</li>
+<li>Iceman - A simple theme with some built-in China mainland service, based on Pacman</li>
+</ul>
+<p>YAHT - Yet Another Hexo Theme based on Pacman</p>
+<p><strong>* 多端同步管理 *</strong><br>​用coding.net来备份博客并同步博客</p>
+<p>1.新建一个博客备份的私有仓库，配置SSH，不过不需要pages服务。</p>
+<p>2.配置 .gitignore 如下： </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;.deploy_git</span><br><span class="line">&#x2F;public</span><br></pre></td></tr></table></figure>
+<p>3.如果主题是git clone 下来的，记得删除主题下的.git文件(rm -rf .git)</p>
+<p>4.初始化仓库,git init 和 git remote add origin</p>
+<p>5.git add. #添加目录下所有文件 </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git commit -m “更新说明” #提交并添加更新说明 </span><br><span class="line">git push origin master #推送更新到远程仓库</span><br></pre></td></tr></table></figure>
+<p>6.查看仓库有没有提交成功</p>
+<p><strong>* 另一台电脑的更新远程仓库 *</strong><br>​ 在B电脑安装必须要的环境后，新建文件执行</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">​ git init</span><br><span class="line">​ git remote add origin</span><br><span class="line">​ git fetch –all</span><br><span class="line">​ git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p><strong>* 发布客户端同步 *</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “更新说明”</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>每次写博客之前记得先 git pull 进行同步更新</p>
+<p><strong>* 常用同步操作 *</strong><br>​```<br>git pull #同步更新<br>hexo new test “新建文章” （hexo n xxx）<br>hexo clean 清除旧的public文件夹<br>hexo d -g<br>git add .<br>git commit - m “更新说明”<br>git push origin master</p>
+<pre><code>
+</code></pre>]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>blog</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Markdown语法文档</title>
+    <url>/2018/05/12/2018/180512Markdown%E8%AF%AD%E6%B3%95%E6%96%87%E6%A1%A3/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+
+<p>** 加粗 **<br><code>** 加粗 **</code></p>
+<p><em>斜体</em></p>
+<p><code>*斜体*</code></p>
+<a id="more"></a> 
+
+<p><strong>* 斜体加粗 *</strong><br><code>*** 斜体加粗 ***</code></p>
+<p><del>删除线</del><br><code>~~删除线~~</code></p>
+<blockquote>
+<p>引用<br><code>&gt; 引用</code></p>
+</blockquote>
+<hr>
+<p>分割线</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+<p>图片</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src&#x3D;&#39;&#x2F;img&#x2F;0-5.jpg&#39;, height&#x3D; &#39;37%&#39;, width &#x3D; &#39;37%&#39;&gt; &lt;img src&#x3D;&#39;&#x2F;img&#x2F;0-8.jpg&#39;, height&#x3D; &#39;37%&#39;, width &#x3D; &#39;37%&#39;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>超链接</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure>
+
+<p>无序列表</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
+
+
+<p>有序列表</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
+
+
+<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
+<p>表格</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure>
+
+<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
+<p>插入视频</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;&quot; frameborder&#x3D;&quot;0&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+
+<p>插入音乐</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;28381611&amp;auto&#x3D;1&amp;height&#x3D;66&quot; width&#x3D;330 height&#x3D;86&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>兴趣技能</category>
+      </categories>
+      <tags>
+        <tag>learn</tag>
+        <tag>markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>“科学上网”攻略</title>
+    <url>/2018/05/16/2018/180516%E2%80%9C%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E2%80%9D%E6%94%BB%E7%95%A5/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="Windows-Mac-安卓"><a href="#Windows-Mac-安卓" class="headerlink" title="Windows/Mac/安卓"></a>Windows/Mac/安卓</h3><p>蓝灯即可，蓝灯即可，蓝灯即可，直接<a href="http://www.landengpro.org/index.php#download" target="_blank" rel="noopener">官网</a></p>
+<h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>之前记得pad下过一个蓝灯，手机怎么搜也搜不到，蓝灯官网说iOS版正在开发中。</p>
+<p>最初只是想要下载一个 Google keep，只能在非大陆的app store里下载，神烦。</p>
+<p><strong>* 注册一个非大陆的apple id *</strong><br>目前store里几乎只有那些试用一次收费的软件，其他的VPN几乎全被下架。免费的VPN一般都需要在非大陆的store里下载，所以申请一个非大陆的账号还是有点用的。</p>
+<a id="more"></a> 
+<p>1.下载一个一次性免费VPN<br>只要可以免费连接一次即可，比如熊猫VPN，windly VPN，seed，wingy等等</p>
+<p>2.申请非大陆账号<br>登陆之后迅速在设置中，重新创建一个app id，设置双重验证（据说有必要），以及在付款里选择“无”（只有非大陆的网络下才可以选择无，这个很有必要，要不然无法购买app），这样就可以在app store里下载免费的VPN了。</p>
+<p>以下的可以试试，试了几个，总的来说，都没有蓝灯页面简洁少广告，还是期待今年的蓝灯iOS可以上架吧。</p>
+<ul>
+<li>赛风</li>
+<li>vypr VPN：付费</li>
+<li>Yurbo</li>
+<li>Bestline</li>
+<li>SSR</li>
+<li>Yoga VPN</li>
+<li>网易UU</li>
+<li>蜗牛加速器</li>
+</ul>
+<p>（以上来源于xxx公众号，为避免说广告，就无耻的盗用且隐藏了公众号名字）</p>
+<p>以上大致可满足普通民众如我对科学上网不太强烈的需求，需求大些也可以购买付费类的。</p>
+<p>之前有听过小伙伴说好像也可以自己搭建，可能是搬瓦工？记不清了，也需要先VPN跨越山川大海进官网。</p>
+<p>完。</p>
+]]></content>
+      <categories>
+        <category>兴趣技能</category>
+      </categories>
+      <tags>
+        <tag>翻墙</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>岁月走在美的光影里</title>
+    <url>/2018/08/19/2018/180819%E5%B2%81%E6%9C%88%E8%B5%B0%E5%9C%A8%E7%BE%8E%E7%9A%84%E5%85%89%E5%BD%B1%E9%87%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
+</blockquote>
+<p>我认识你，永远记得你。那时候，你还很年轻，人人都说你美，现在，我是特为来告诉你，对我来说，我觉得现在你比年轻的时候更美，那时你是年轻女人，与你那时的面貌相比，我更爱你现在备受摧残的面容。<br>– 杜拉斯《情人》</p>
+<p>原本今天想推林清玄的散文集《在云上》，今天遇到的一个女人改变了我的想法。她就像一场清风，让我感觉，美就像是穿越过时光的星空，依旧灼灼其华熠熠生辉，酝酿的美酒，清香内敛而值得细细回味。</p>
+<p>你可能会遇到这样一个女人，头发还是黝黑，细致的卷起，刘海细碎而妥帖。时间的针脚已经爬上了她的眉眼面庞，有时会遗留下点点斑纹，皮肤还是比较紧致，法令纹也是细细的，难受时，眉头细细颦起。最让人注意的是她的眼睛，深邃的眼睛看着你时，似乎所有的光都聚在了她的黑色瞳孔里，像是一闪一闪亮晶晶的小星星，对世界充满了好奇和热忱，跳跃着跳跃着要跳出时间的枷锁，拥抱这个痛苦而温暖的现实。</p>
+<a id="more"></a> 
+
+<p>她身着一身舒适修身的黑长裙，深色小皮鞋，身修长纤瘦，身体放松而克制的站在一副画前。</p>
+<p>《斗霸》，整幅画满满占了一堵墙，中间的那人发量很少，手被铐在身后，头颅深深深的低垂着，他面前的妇女身着白衣，双眼微闭，向后倾倒，有人掺扶着。那人身后还有个老人和一对母子，老人紧紧捂着自己的脸，似乎痛苦到无法克制，母子神情麻木，呆滞的看着捂脸老人，周边全是围观的群众，里三层外三层，高高的台阶上，身着制服的大义凌然，貌似在说着正义之理，其他人大多数神情麻木。</p>
+<p>交谈时，你才惊讶她竟然已经退休了，也曾经历了许许多多的春秋。说起那个年代，说起不平之事，说起人生惨剧，感同身受般，眼神和神情都痛苦起来。说着说着，愈加激动，声音也颤抖起来，手持胸前。她的眼里细细密密的涌现出泪，积聚积聚着也把你带入黑暗的往事之中，心情随之起伏，淹没在她诉说的黑暗中，一波一波痛苦的浪潮席卷而来，浇灌着已被平淡或名利或焦虑划割过坑坑洼洼的心。酸胀疼痛，心也在不觉中泪下。</p>
+<p>情绪缓和下来，我们在美术馆里闲逛。她的眼神率真，讲起自己的年龄毫不避讳，说到美时，她声音轻快起来，<br>“有同学老了觉得要穿着艳丽，我不认为，我喜欢黑色的。衣服带来的年轻感只是一时的，老了只是身体，心态还可以一直年轻”，<br>“我现在不害怕老了，它会沉淀下很多东西，只要你心态年轻，很多东西依然是美的”，<br>“我喜欢一切美的东西，喜欢和美一起相处，他们让我感觉美好，非常享受，让我感觉自己一直年轻”，<br>…</p>
+<p>我细细的看着她的眉眼，眼神清澈，好奇而天真。开心时眼睛都要发光，让你忍不住想把一切美的东西放到她的面前；痛苦时潸然泪下，又恨不得以身相替。</p>
+<p>我看着她，也如同看着美一样，像是享受一副自然而慢品的画，抿下一口微苦而甘甜的茶，想要细细眯起眼来，敞开来任其细细密密的阳光倾泻。</p>
+<p>世事如水，偶尔漫过脚背，偶尔奔涌而来，率真不世故，坦诚不自拗，自然而欣然。</p>
+<p>那么时间你来吧，就如同微风吹拂旷野杂草，苍穹洒落星辰大海。</p>
+<p>** 当你老了 **<br>–叶芝 袁可嘉译</p>
+<blockquote>
+<p>　<br>　　当你老了，头白了，睡意昏沉，<br>　　炉火旁打盹，请取下这部诗歌，<br>　　慢慢读，回想你过去眼神的柔和，<br>　　回想它们昔日浓重的阴影；<br>　　<br>　　多少人爱你青春欢畅的时辰，<br>　　爱慕你的美丽，假意或真心，<br>　　只有一个人爱你那朝圣者的灵魂，<br>　　爱你衰老了的脸上痛苦的皱纹；<br>　　<br>　　垂下头来，在红光闪耀的炉子旁，<br>　　凄然地轻轻诉说那爱情的消逝，<br>　　在头顶的山上它缓缓踱着步子，<br>　　在一群星星中间隐藏着脸庞。 </p>
+</blockquote>
 ]]></content>
       <categories>
         <category>随笔</category>
@@ -452,36 +1308,19 @@
       </tags>
   </entry>
   <entry>
-    <title>“科学上网”攻略</title>
-    <url>/2018/05/16/2018/180516%E2%80%9C%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E2%80%9D%E6%94%BB%E7%95%A5/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="Windows-Mac-安卓"><a href="#Windows-Mac-安卓" class="headerlink" title="Windows/Mac/安卓"></a>Windows/Mac/安卓</h3><p>蓝灯即可，蓝灯即可，蓝灯即可，直接<a href="http://www.landengpro.org/index.php#download" target="_blank" rel="noopener">官网</a></p>
-<h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>之前记得pad下过一个蓝灯，手机怎么搜也搜不到，蓝灯官网说iOS版正在开发中。</p>
-<p>最初只是想要下载一个 Google keep，只能在非大陆的app store里下载，神烦。</p>
-<p><strong>* 注册一个非大陆的apple id *</strong><br>目前store里几乎只有那些试用一次收费的软件，其他的VPN几乎全被下架。免费的VPN一般都需要在非大陆的store里下载，所以申请一个非大陆的账号还是有点用的。</p>
-<a id="more"></a> 
-<p>1.下载一个一次性免费VPN<br>只要可以免费连接一次即可，比如熊猫VPN，windly VPN，seed，wingy等等</p>
-<p>2.申请非大陆账号<br>登陆之后迅速在设置中，重新创建一个app id，设置双重验证（据说有必要），以及在付款里选择“无”（只有非大陆的网络下才可以选择无，这个很有必要，要不然无法购买app），这样就可以在app store里下载免费的VPN了。</p>
-<p>以下的可以试试，试了几个，总的来说，都没有蓝灯页面简洁少广告，还是期待今年的蓝灯iOS可以上架吧。</p>
-<ul>
-<li>赛风</li>
-<li>vypr VPN：付费</li>
-<li>Yurbo</li>
-<li>Bestline</li>
-<li>SSR</li>
-<li>Yoga VPN</li>
-<li>网易UU</li>
-<li>蜗牛加速器</li>
-</ul>
-<p>（以上来源于xxx公众号，为避免说广告，就无耻的盗用且隐藏了公众号名字）</p>
-<p>以上大致可满足普通民众如我对科学上网不太强烈的需求，需求大些也可以购买付费类的。</p>
-<p>之前有听过小伙伴说好像也可以自己搭建，可能是搬瓦工？记不清了，也需要先VPN跨越山川大海进官网。</p>
-<p>完。</p>
+    <title>鸟语的孤独 --《一个人的村庄》</title>
+    <url>/2018/08/27/2018/180827%E9%B8%9F%E8%AF%AD%E7%9A%84%E5%AD%A4%E7%8B%AC%20--%E3%80%8A%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E6%9D%91%E5%BA%84%E3%80%8B/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h4 id="鸟语的孤独"><a href="#鸟语的孤独" class="headerlink" title="鸟语的孤独"></a>鸟语的孤独</h4><p>刘亮程在《一个人的村庄》里写到“不知道那只鸟最后找到知音了没有。听过它孤独鸟语的一个人，却从此默默无声。多少年后，这种孤独的声音出现在他的声音里。“</p>
+<p>看到这段话时，我正坐在公交车里，窗两侧的树木和汽车，如模糊后退不断浓缩的影像，渐渐离开视野。不知怎的，眼睛突然就热了，眼泪沿着眼角划下。怆然之感，骤上心头。</p>
+<p>就如同，举目无边的荒原里，有野草，有风声，有淅淅沥沥的雨落在手心，也有墨色苍穹静默，却只能一个人站着，声音出自胸腔，悬落在半空，也许风听到了，野草也摇曳着应和，你却明白，这世界辽阔响亮，却寂然无回声。</p>
+<p>有些庆幸，不是年少时翻看，那时未离家多年，不用想到原来同样的草长在不同的地方，竟会让人有不同的感情，不用体会原来说着话也不曾让人远离孤独。</p>
 ]]></content>
       <categories>
-        <category>兴趣技能</category>
+        <category>读书</category>
       </categories>
       <tags>
-        <tag>翻墙</tag>
+        <tag>暇思</tag>
+        <tag>读书</tag>
       </tags>
   </entry>
   <entry>
@@ -725,98 +1564,6 @@ href="////">
       </tags>
   </entry>
   <entry>
-    <title>鸟语的孤独 --《一个人的村庄》</title>
-    <url>/2018/08/27/2018/180827%E9%B8%9F%E8%AF%AD%E7%9A%84%E5%AD%A4%E7%8B%AC%20--%E3%80%8A%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E6%9D%91%E5%BA%84%E3%80%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h4 id="鸟语的孤独"><a href="#鸟语的孤独" class="headerlink" title="鸟语的孤独"></a>鸟语的孤独</h4><p>刘亮程在《一个人的村庄》里写到“不知道那只鸟最后找到知音了没有。听过它孤独鸟语的一个人，却从此默默无声。多少年后，这种孤独的声音出现在他的声音里。“</p>
-<p>看到这段话时，我正坐在公交车里，窗两侧的树木和汽车，如模糊后退不断浓缩的影像，渐渐离开视野。不知怎的，眼睛突然就热了，眼泪沿着眼角划下。怆然之感，骤上心头。</p>
-<p>就如同，举目无边的荒原里，有野草，有风声，有淅淅沥沥的雨落在手心，也有墨色苍穹静默，却只能一个人站着，声音出自胸腔，悬落在半空，也许风听到了，野草也摇曳着应和，你却明白，这世界辽阔响亮，却寂然无回声。</p>
-<p>有些庆幸，不是年少时翻看，那时未离家多年，不用想到原来同样的草长在不同的地方，竟会让人有不同的感情，不用体会原来说着话也不曾让人远离孤独。</p>
-]]></content>
-      <categories>
-        <category>读书</category>
-      </categories>
-      <tags>
-        <tag>暇思</tag>
-        <tag>读书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>岁月走在美的光影里</title>
-    <url>/2018/08/19/2018/180819%E5%B2%81%E6%9C%88%E8%B5%B0%E5%9C%A8%E7%BE%8E%E7%9A%84%E5%85%89%E5%BD%B1%E9%87%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><blockquote>
-</blockquote>
-<p>我认识你，永远记得你。那时候，你还很年轻，人人都说你美，现在，我是特为来告诉你，对我来说，我觉得现在你比年轻的时候更美，那时你是年轻女人，与你那时的面貌相比，我更爱你现在备受摧残的面容。<br>– 杜拉斯《情人》</p>
-<p>原本今天想推林清玄的散文集《在云上》，今天遇到的一个女人改变了我的想法。她就像一场清风，让我感觉，美就像是穿越过时光的星空，依旧灼灼其华熠熠生辉，酝酿的美酒，清香内敛而值得细细回味。</p>
-<p>你可能会遇到这样一个女人，头发还是黝黑，细致的卷起，刘海细碎而妥帖。时间的针脚已经爬上了她的眉眼面庞，有时会遗留下点点斑纹，皮肤还是比较紧致，法令纹也是细细的，难受时，眉头细细颦起。最让人注意的是她的眼睛，深邃的眼睛看着你时，似乎所有的光都聚在了她的黑色瞳孔里，像是一闪一闪亮晶晶的小星星，对世界充满了好奇和热忱，跳跃着跳跃着要跳出时间的枷锁，拥抱这个痛苦而温暖的现实。</p>
-<a id="more"></a> 
-
-<p>她身着一身舒适修身的黑长裙，深色小皮鞋，身修长纤瘦，身体放松而克制的站在一副画前。</p>
-<p>《斗霸》，整幅画满满占了一堵墙，中间的那人发量很少，手被铐在身后，头颅深深深的低垂着，他面前的妇女身着白衣，双眼微闭，向后倾倒，有人掺扶着。那人身后还有个老人和一对母子，老人紧紧捂着自己的脸，似乎痛苦到无法克制，母子神情麻木，呆滞的看着捂脸老人，周边全是围观的群众，里三层外三层，高高的台阶上，身着制服的大义凌然，貌似在说着正义之理，其他人大多数神情麻木。</p>
-<p>交谈时，你才惊讶她竟然已经退休了，也曾经历了许许多多的春秋。说起那个年代，说起不平之事，说起人生惨剧，感同身受般，眼神和神情都痛苦起来。说着说着，愈加激动，声音也颤抖起来，手持胸前。她的眼里细细密密的涌现出泪，积聚积聚着也把你带入黑暗的往事之中，心情随之起伏，淹没在她诉说的黑暗中，一波一波痛苦的浪潮席卷而来，浇灌着已被平淡或名利或焦虑划割过坑坑洼洼的心。酸胀疼痛，心也在不觉中泪下。</p>
-<p>情绪缓和下来，我们在美术馆里闲逛。她的眼神率真，讲起自己的年龄毫不避讳，说到美时，她声音轻快起来，<br>“有同学老了觉得要穿着艳丽，我不认为，我喜欢黑色的。衣服带来的年轻感只是一时的，老了只是身体，心态还可以一直年轻”，<br>“我现在不害怕老了，它会沉淀下很多东西，只要你心态年轻，很多东西依然是美的”，<br>“我喜欢一切美的东西，喜欢和美一起相处，他们让我感觉美好，非常享受，让我感觉自己一直年轻”，<br>…</p>
-<p>我细细的看着她的眉眼，眼神清澈，好奇而天真。开心时眼睛都要发光，让你忍不住想把一切美的东西放到她的面前；痛苦时潸然泪下，又恨不得以身相替。</p>
-<p>我看着她，也如同看着美一样，像是享受一副自然而慢品的画，抿下一口微苦而甘甜的茶，想要细细眯起眼来，敞开来任其细细密密的阳光倾泻。</p>
-<p>世事如水，偶尔漫过脚背，偶尔奔涌而来，率真不世故，坦诚不自拗，自然而欣然。</p>
-<p>那么时间你来吧，就如同微风吹拂旷野杂草，苍穹洒落星辰大海。</p>
-<p>** 当你老了 **<br>–叶芝 袁可嘉译</p>
-<blockquote>
-<p>　<br>　　当你老了，头白了，睡意昏沉，<br>　　炉火旁打盹，请取下这部诗歌，<br>　　慢慢读，回想你过去眼神的柔和，<br>　　回想它们昔日浓重的阴影；<br>　　<br>　　多少人爱你青春欢畅的时辰，<br>　　爱慕你的美丽，假意或真心，<br>　　只有一个人爱你那朝圣者的灵魂，<br>　　爱你衰老了的脸上痛苦的皱纹；<br>　　<br>　　垂下头来，在红光闪耀的炉子旁，<br>　　凄然地轻轻诉说那爱情的消逝，<br>　　在头顶的山上它缓缓踱着步子，<br>　　在一群星星中间隐藏着脸庞。 </p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>暇思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git 清单</title>
-    <url>/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h4 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h4><p>git config工具专门用来配置或读取相应的工作环境变量</p>
-<p>git config –global user.name “dora”<br>git config –global user.email <a href="mailto:xxx@163.com">xxx@163.com</a></p>
-<p>–global所有项目会默认使用这个配置信息</p>
-<p>在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里</p>
-<p><strong>文本编辑器</strong><br>默认的是Vi或者Vim，重新设置：<br>git config –global core.editor sublime</p>
-<p><strong>差异分析工具</strong></p>
-<a id="more"></a>
-
-<h4 id="Git创建仓库"><a href="#Git创建仓库" class="headerlink" title="Git创建仓库"></a>Git创建仓库</h4><p><strong>git 创建仓库</strong><br>#使用当前目录作为Git仓库，使它初始化<br>git init</p>
-<p>#使用指定目录作为仓库<br>git init newrepo</p>
-<p>当前目录会出现一个名叫.git的目录。<br>如果当前目录下有几个文件需要纳入版本控制，需要先用git add命令告诉git开始对这些文件进行跟踪，然后提交。<br>#Q 需要后期往前再看一下<br>git add *.c<br>git add README #类似增加一个说明文档<br>git commit -m ‘initial project version’</p>
-<p><strong>从现有仓库克隆</strong><br>git clone [url] xxxx<br>#xxx 用来指定新名字</p>
-<h4 id="git-基本操作"><a href="#git-基本操作" class="headerlink" title="git 基本操作"></a>git 基本操作</h4><p>git init #创建新仓库<br>git clone [url] #拷贝已存在的仓库到本地<br>git add #将文件添加到缓存<br>git status #查看状态<br>git diff #查看执行git status结果的详细信息</p>
-<ul>
-<li>git diff #尚未缓存</li>
-<li>git diff –cached #查看已缓存的改动</li>
-<li>git diff HEAD #查看已缓存的与未缓存的所有改动</li>
-<li>git diff –stat #显示摘要<br>#git statue 显示改动，git diff 显示每行具体改动<br>git commit #记录缓存区的快照<br>#git add 写入缓存，git commit提交到云上<br>git commit -m #message 写写更新描述<br>git commit -a #一键推送到云上<br>git commit -am<br>git reset HEAD #取消已缓存的内容<br>git rm #将文件从缓存区中移除<br>git rm –cached #工作目录中保留</li>
-</ul>
-<h4 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h4><p>git branch (branch name) #创建分支<br>git checkout (branch name) #切换分支<br>git merge #合并分支内容<br>git checkout -b (branchname) 创建新分支并切换<br>git branch -d (branchname) #删除分支</p>
-<h4 id="git查看提交历史"><a href="#git查看提交历史" class="headerlink" title="git查看提交历史"></a>git查看提交历史</h4><p>git log #查看提交历史<br>git log –oneline #简洁版本<br>git –graph #查看历史提交中的分支合并<br>git –reverse #逆向显示所有日志<br>git log –author #查找某人的爪印</p>
-<h4 id="git标签"><a href="#git标签" class="headerlink" title="git标签"></a>git标签</h4><p>git tag -a xxxx  #带注释的标签<br>git log –decorate #查看打过标签的内容<br>git tag #查看所有标签</p>
-<h4 id="git-远程仓库"><a href="#git-远程仓库" class="headerlink" title="git 远程仓库"></a>git 远程仓库</h4><p>暂时用不上，留空</p>
-<h4 id="git-服务器搭建"><a href="#git-服务器搭建" class="headerlink" title="git 服务器搭建"></a>git 服务器搭建</h4><p>暂时用不上，留空</p>
-<h3 id="git-pycharm-操作过程"><a href="#git-pycharm-操作过程" class="headerlink" title="git + pycharm 操作过程"></a>git + pycharm 操作过程</h3><ul>
-<li>version control （设置界面中）</li>
-<li>导入版本控制台，点击import into CVS</li>
-<li>接着使用过程即可</li>
-</ul>
-<ol>
-<li>add</li>
-<li>commit</li>
-<li>push<br>第一次：git push –set -upsteam origin master<br>以后： git push origin master</li>
-</ol>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Excel 学习笔记</title>
     <url>/2018/09/16/2018/180916Excel%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>刚毕业开始工作的同事对excel小技巧还存在比较强烈的好奇，想起当初刚刚毕业的时候也曾东找西找教程，每天早半小时到公司，先看两个excel公众号推送学习，找一些小视频课的时候。她比较羞涩，似乎很担心打扰到别人。也出于渐渐淡忘这些，所以今天准备把一些常用的功能列举下来，让她更有方向点。同时也希望她今后可以更加大胆的说出自己的想法。</p>
@@ -934,102 +1681,49 @@ href="////">
       </tags>
   </entry>
   <entry>
-    <title>从零开始搭建博客</title>
-    <url>/2017/11/23/2018/171123%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><strong>1-2Day：搭建Blog到GitHub</strong></p>
-<h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>详情可以借鉴<a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">官方网站</a>,</p>
-<p>安装homebrew</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
+    <title>git 清单</title>
+    <url>/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h4 id="Git-配置"><a href="#Git-配置" class="headerlink" title="Git 配置"></a>Git 配置</h4><p>git config工具专门用来配置或读取相应的工作环境变量</p>
+<p>git config –global user.name “dora”<br>git config –global user.email <a href="mailto:xxx@163.com">xxx@163.com</a></p>
+<p>–global所有项目会默认使用这个配置信息</p>
+<p>在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里</p>
+<p><strong>文本编辑器</strong><br>默认的是Vi或者Vim，重新设置：<br>git config –global core.editor sublime</p>
+<p><strong>差异分析工具</strong></p>
+<a id="more"></a>
 
-<p>安装nodejs<br>    <code>brew install node</code></p>
-<p>安装hexo</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
-<a id="more"></a> 
-
-<p>安装git<br><code>- sudo brew install git</code><br><br></p>
-<h3 id="建立博客"><a href="#建立博客" class="headerlink" title="建立博客"></a>建立博客</h3><p>创建文件夹</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
-
-<p>生成静态页面</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo generate &#x2F;** 生成一套静态网页 **&#x2F;</span><br><span class="line">hexo server &#x2F;** 在服务器上运行 **&#x2F;</span><br></pre></td></tr></table></figure>
-
-<p>建立第一篇博客</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">(cd 进入blog文件夹)</span><br><span class="line">hexo new post &quot;博客名&quot;</span><br><span class="line">info created：～／blog&#x2F;souce&#x2F;_posts&#x2F;博客名.md</span><br></pre></td></tr></table></figure>
-
-<p>连接GitHub</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">liheyuting.github.io</span><br><span class="line">（一定要和账户名一致）</span><br></pre></td></tr></table></figure>
-
-<p>修改文件夹中yml文件，如下：（注意空格）<br>    <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;liheyuting&#x2F;Dora.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
-<p>发布博客到服务器</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save   (第一次安装所需)</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<br>
-### 回顾 ###
-总耗时：3h（一心二用，聆听朋友倾诉）+ 0.5h (整理)
-First Day（1.5h）：跟着浚宇的博客进入官方网站搭建，在hexo环境配置中断
-Second Day：
-
-<h3 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h3><ul>
-<li><a href="http://blog.csdn.net/jasonjwl/article/details/52887575" target="_blank" rel="noopener">http://blog.csdn.net/jasonjwl/article/details/52887575</a></li>
-<li><a href="http://blog.csdn.net/qq_30379689/article/details/52854003" target="_blank" rel="noopener">http://blog.csdn.net/qq_30379689/article/details/52854003</a></li>
-</ul>
-<h3 id="坑点"><a href="#坑点" class="headerlink" title="坑点"></a>坑点</h3><ul>
-<li>对于英文文件的不习惯阅读</li>
-<li>对于命令行的不熟悉</li>
-<li>耗时于git 账户和hexo关联</li>
-<li>安装说明的关键点不清晰，未抓住说明的关键点</li>
-</ul>
-<p><em>待继续处理</em></p>
+<h4 id="Git创建仓库"><a href="#Git创建仓库" class="headerlink" title="Git创建仓库"></a>Git创建仓库</h4><p><strong>git 创建仓库</strong><br>#使用当前目录作为Git仓库，使它初始化<br>git init</p>
+<p>#使用指定目录作为仓库<br>git init newrepo</p>
+<p>当前目录会出现一个名叫.git的目录。<br>如果当前目录下有几个文件需要纳入版本控制，需要先用git add命令告诉git开始对这些文件进行跟踪，然后提交。<br>#Q 需要后期往前再看一下<br>git add *.c<br>git add README #类似增加一个说明文档<br>git commit -m ‘initial project version’</p>
+<p><strong>从现有仓库克隆</strong><br>git clone [url] xxxx<br>#xxx 用来指定新名字</p>
+<h4 id="git-基本操作"><a href="#git-基本操作" class="headerlink" title="git 基本操作"></a>git 基本操作</h4><p>git init #创建新仓库<br>git clone [url] #拷贝已存在的仓库到本地<br>git add #将文件添加到缓存<br>git status #查看状态<br>git diff #查看执行git status结果的详细信息</p>
 <ul>
-<li>命令行安装软件原理</li>
-<li>用命令行来建设blog</li>
-<li>掌握 git 命令</li>
-<li>blog 页面建设内容建设等</li>
+<li>git diff #尚未缓存</li>
+<li>git diff –cached #查看已缓存的改动</li>
+<li>git diff HEAD #查看已缓存的与未缓存的所有改动</li>
+<li>git diff –stat #显示摘要<br>#git statue 显示改动，git diff 显示每行具体改动<br>git commit #记录缓存区的快照<br>#git add 写入缓存，git commit提交到云上<br>git commit -m #message 写写更新描述<br>git commit -a #一键推送到云上<br>git commit -am<br>git reset HEAD #取消已缓存的内容<br>git rm #将文件从缓存区中移除<br>git rm –cached #工作目录中保留</li>
 </ul>
-<p>blog的下一步建设：主页面</p>
-<ul>
-<li>主题</li>
-<li>内容</li>
+<h4 id="分支管理"><a href="#分支管理" class="headerlink" title="分支管理"></a>分支管理</h4><p>git branch (branch name) #创建分支<br>git checkout (branch name) #切换分支<br>git merge #合并分支内容<br>git checkout -b (branchname) 创建新分支并切换<br>git branch -d (branchname) #删除分支</p>
+<h4 id="git查看提交历史"><a href="#git查看提交历史" class="headerlink" title="git查看提交历史"></a>git查看提交历史</h4><p>git log #查看提交历史<br>git log –oneline #简洁版本<br>git –graph #查看历史提交中的分支合并<br>git –reverse #逆向显示所有日志<br>git log –author #查找某人的爪印</p>
+<h4 id="git标签"><a href="#git标签" class="headerlink" title="git标签"></a>git标签</h4><p>git tag -a xxxx  #带注释的标签<br>git log –decorate #查看打过标签的内容<br>git tag #查看所有标签</p>
+<h4 id="git-远程仓库"><a href="#git-远程仓库" class="headerlink" title="git 远程仓库"></a>git 远程仓库</h4><p>暂时用不上，留空</p>
+<h4 id="git-服务器搭建"><a href="#git-服务器搭建" class="headerlink" title="git 服务器搭建"></a>git 服务器搭建</h4><p>暂时用不上，留空</p>
+<h3 id="git-pycharm-操作过程"><a href="#git-pycharm-操作过程" class="headerlink" title="git + pycharm 操作过程"></a>git + pycharm 操作过程</h3><ul>
+<li>version control （设置界面中）</li>
+<li>导入版本控制台，点击import into CVS</li>
+<li>接着使用过程即可</li>
 </ul>
+<ol>
+<li>add</li>
+<li>commit</li>
+<li>push<br>第一次：git push –set -upsteam origin master<br>以后： git push origin master</li>
+</ol>
 ]]></content>
       <categories>
         <category>工具</category>
       </categories>
       <tags>
         <tag>learn</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>头发半长不短时</title>
-    <url>/2017/09/13/2018/170913%E5%A4%B4%E5%8F%91%E5%8D%8A%E9%95%BF%E4%B8%8D%E7%9F%AD%E6%97%B6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>终归要熬过这个时间。</p>
-<p>大学的一个普通下午，舍友们都不在，一个人到校门口的理发店剪了短发。</p>
-<p>两个多月前，第一次染了头发，亚麻绿，初颜色还亮着，慢慢的，头发开始泛黄，失去色泽。</p>
-<p>头发半长不短，在耳下，丛丛杂杂的，棕黑色的头发新长出来。半黄绿半黑棕，长不及肩短过耳。</p>
-<p>终于到了，必须得忍受，短发长及肩的时间。</p>
-<p>可以选择视而不见，或者自欺欺人，但是不管怎样，这段时间，你必须得忍受。</p>
-<p>难过的是，你知道这样的日子，你必须得自己熬过去。</p>
-<p>幸运的是，你知道一定会过去。</p>
-<a id="more"></a> 
-
-<p>麻烦和不耐烦肯定是有的，后脑勺的毛发突如其来的翘起，耳边的一戳毛自有肆意的生长，洗头后吹不吹头发，坐着的时候靠不靠沙发垫头。</p>
-<p>一点一点的烦躁从内心升起，却没有人可以解救你。</p>
-<p>有一些东西，像是磨石钝钝的磨豆，一点点把整个的豆子磨到细细的，再研磨成粉末，时日可能旷久，也许根本毫无意义，却是避无可避。</p>
-<p>研磨的粉也会像是止血的药，一点点撒落在伤口上，先是滋滋的声音，可能你还能听见烤肉的香味，再接着，麻麻的，伤口开始结疤，也许到最后，最多只是摸上去糙糙的，其他什么也不会留下。像是风经过的旷野，只有当初的野草才能回忆起风里带来的讯息，和抚摸过的感觉，再然后，一切一同被风本身带走。</p>
-<p>人，就这样寂静的坐着。思绪一下子就放空。周遭的声音像是隔着玻璃罩，空调的风吹着手臂凉凉的，汗毛竖起，嘴角抿着，一具坐立着的雕塑。</p>
-<p>却想一直坐着，并不想交谈，也不想被打扰。</p>
-<p>在这个时代，人人忙着说话，唯恐自己讲得不够响亮，胆小的人却只能听着。倾诉变成了一种不得不认真对待的欲望，嘴里心里出去的话，落在传播的空气里，落不到实处，散发着焦虑的味道，不断发酵。</p>
-<p>于是，有些酒就会储存在另一个花园里，直至到媚春初降，百草苏醒，荒芜的花园慢慢重见旭阳，春风吹开栅栏和枯霜。酒香开始混着花香，漫漫的铺满山野，若有闲花浅草点缀，幸甚。</p>
-<p><img src="/img/0.jpg" alt="/img/0.jpg"></p>
-<p>黎明将至，不若信步而去，在另一个湖畔随意歇息安眠，等待黎明后的升起的星星。</p>
-<p><img src="/img/0-1.jpg" alt></p>
-]]></content>
-      <categories>
-        <category>杂思</category>
-      </categories>
-      <tags>
-        <tag>无聊</tag>
-        <tag>暇思</tag>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -1089,32 +1783,6 @@ Second Day：
       </tags>
   </entry>
   <entry>
-    <title>这个世界太严肃，想到这点，我毛骨悚然</title>
-    <url>/2018/11/24/2018/181124%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E5%A4%AA%E4%B8%A5%E8%82%83%EF%BC%8C%E6%83%B3%E5%88%B0%E8%BF%99%E7%82%B9%EF%BC%8C%E6%88%91%E6%AF%9B%E9%AA%A8%E6%82%9A%E7%84%B6/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>什么时候变得像现在这个样子，每到落笔，似乎灾难性的事情一下子都全部落到了肩上一样，各种幻想自己的悲惨。</p>
-<p>眼睛像是蒙上了一层薄雾，明知自己无限制的玩游戏之后又摸索着用电脑写东西，就好像狗屁不通的胡乱撕咬，也像是自由的在冰面上滑行。</p>
-<p>文字自有其欺骗性的本性以及自由自在的自在。她既是脆弱的不堪一击的比玻璃和爱情还更不靠谱，又像是穿越过无数时光还死乞白赖的活着精彩又长久。让人欲罢不能。</p>
-<p>时常不想动笔，动笔即各种生活的坏处涌上心头，就不知说些什么好，和自己对话，总是乱七八糟的糟心事，当作和别人对话吧，又好像喋喋不休的祥林嫂，让人联想到圆规。索性就还是不写。要真写点正经话吧，又要挠头摆尾，鱼鳞都好像要挠掉一样，半天憋不出一句半句来。说出的话来，像是一个个的泡泡，即怕它落在半空不落地，心就空落落，要是落地了，又是严肃的要命，没意思的紧。</p>
-<a id="more"></a>
-<p>一落笔，你这心里乌黑的墨汁，心里头阴惨惨的角落就好像显露无疑。平时在别人面前，总要保持个沉默靠谱的模样，别人说你文静温柔吧，你这心里头也高兴不起来，无趣的像个木头人，想想就觉得没意思。还真是没啥意思，现在出门遇到人，都不晓得想讲什么话，讲的多是无趣话。不讲话，又是闷的可以。讲的多了，就又想是裹布。</p>
-<p>一开口就得输出价值观，似乎你这观点偏颇有理才是正当，要是你觉得都行，那就可不行了，那就是没性格，没想法。得表态啊，花好不好看，好看或是不好看，看花是花，看鸟是鸟那可不行，得有点实在的看法啊，对着个花，你还不能说点“花开花飞飞满天“的伤感话，或者花的香味若隐若现似柔似媚的赞美话？花怎能是个单纯的花呢，你还是年轻啊。</p>
-<p>肩膀疼，脖子也不太舒服，我时常惶恐的紧，生个急性病还好说，来吧来吧，一锤子伤害，落在身上也就那样，这慢刀子可不成啊，钝的你心都要颤着疼。后来发现，你没个职业病，还敢说敬业？</p>
-<p>有些黑色墨汁啊，传染性最强，你不知不觉，感觉自己手臂已经慢慢的浸染了，还不知晓，路边小树碰你下，你心中一阵恼怒，想要踹它，抬脚时发现自己的脚已经灰突突的让人厌恶。</p>
-<p>又是一堆垃圾话，有时候想着来这人间这一趟，到底是为了什么。</p>
-<p>有时候想着以前曾对人说过伤害的话，心里有些难受。年少不懂事那才是借口，为了显示自己比较酷比较特别，就说出一些伤人的话，有时候想起来很想对人道个歉。道歉了又怎样呢，你对他人的伤害已经造成了，你现在再重提，不谈提醒对方的二次伤害，即使接受了又怎样，你难道不是为了求得自己的心里好受吗，为了自己解脱，再去提醒对方已发生的伤害。</p>
-<p>什么乱七八糟的。</p>
-<p>想起读书时学到的伍尔夫的《墙上的斑点》，当时真觉得这个作者好无聊，一个黑点就能联想大这么多，这得有多无聊啊。想完了还得写下来，写下来还让我们学，学什么？学看一个斑点？现在长大了，写的什么我已经记不得了，奇迹般的，这篇东西的感觉我还记得很清楚。无聊无趣百无聊赖，不正是现在我的状态吗？这难道就是长大之后会生的一个无聊病？小时候能吃到薯片就好像天塌下来也不害怕的欢喜事，现在吃个美味，整个人都还是焦虑，这个蠢笨的人啊，又在浪费粮食了。诶？不对不对，换个思路岂不是”蠢笨如我，竟有幸可品尝此等美味，岂不幸哉游哉？“</p>
-<p>这个世界太严肃，想到这点，我毛骨悚然。</p>
-]]></content>
-      <categories>
-        <category>随笔</category>
-      </categories>
-      <tags>
-        <tag>无聊</tag>
-        <tag>暇思</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>有趣之人如此多，少我一人也无妨</title>
     <url>/2018/12/01/2018/181201%E6%9C%89%E8%B6%A3%E4%B9%8B%E4%BA%BA%E5%A6%82%E6%AD%A4%E5%A4%9A%EF%BC%8C%E5%B0%91%E6%88%91%E4%B8%80%E4%BA%BA%E4%B9%9F%E6%97%A0%E5%A6%A8/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>一天待在家里，偶尔出来一下，找了个咖啡厅，假装自己今天也是有所收获吧。</p>
@@ -1134,336 +1802,6 @@ Second Day：
       <tags>
         <tag>无聊</tag>
         <tag>暇思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo+Yilia 所遇问题解决方法汇总</title>
-    <url>/2018/08/26/2019/180826Hexo+Yilia%20%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p>
-<p>这里花费的时间最久，在issues里找了很久，终于在<a href="https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/?nsukey=%2BijgAVH%2B4eCTudP96Bul1%2FQsAa44sS5wREOMSjzWZhpp5HNtgQ5lYQXXWgsrEjpRXfaVUvIfj1pVXj%2FYnFSdjAf0TR900HBBZYQThmSrRTtVwFlzfcGL9KfVT67ohG1XyYvT35Te2BXTqDo5Vh8nrUA6pr55q0Xs2nagi4yyiQFrPsRNMcql82iJ5ltbcivhdE%2Fe3i3m8aBleHrwZkGOWA%3D%3D" target="_blank" rel="noopener">Ziven</a>找到对应的</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#6、gitalk评论</span><br><span class="line">gitalk:</span><br><span class="line">  enable:  true</span><br><span class="line">  githubID:  liheyuting  </span><br><span class="line">  repo: liheyuting.github.io （填写repo的名字）</span><br><span class="line">  ClientID: &#39;&#39;</span><br><span class="line">  ClientSecret: &#39;&#39;</span><br><span class="line">  adminUser: &#39;&#39;</span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure>
-
-<p>这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。</p>
-<a id="more"></a> 
-
-<p>** GitHub授权ClientID和ClientSecret **<br>进入setting-developer settings - OAuth Apps<br><a href="https://github.com/settings/applications/861324" target="_blank" rel="noopener">点击直接进入</a></p>
-<p><img src="/img/client.png" alt></p>
-<p>homepage url 只需要填写blog首页链接即可<br>Authorization callback URL 填写的是授权返回的页面，这样也只需要填写blog地址即可</p>
-<p>提交之后会生成“ClientID”和“ClientSecret”放到主题配置文件中就可以了。</p>
-<p>按上面提交之后，怎么页面还是提示“未找到对应issue，需要联系管理员”呢？</p>
-<p>** 评论初始化 **</p>
-<p>首先，先注意下地址是不是本地化地址，评论需要在正式环境中初始化有效。</p>
-<p>第二步：只需要简单的点击issue，授权adminUser的GitHub权限。</p>
-<p>再试试，是不是页面评论就可以了？</p>
-<h3 id="多标签"><a href="#多标签" class="headerlink" title="多标签"></a>多标签</h3><p>这个比较简单，如下</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: Markdown语法文档</span><br><span class="line">date: 2018-05-12</span><br><span class="line">tags: </span><br><span class="line">- blog </span><br><span class="line">- markdown</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
-
-<h3 id="页面浏览统计"><a href="#页面浏览统计" class="headerlink" title="页面浏览统计"></a>页面浏览统计</h3><p>这个实现比较快，<a href="https://ziven.cc/2018/06/25/Hexo%E4%B8%BB%E9%A2%98Yilia%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E6%B5%8F%E8%A7%88%E9%87%8F%E7%BB%9F%E8%AE%A1/" target="_blank" rel="noopener">Hexo主题Yilia添加网站浏览量统计</a></p>
-<h3 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h3><p>在文中中想要分页的地方加上<br><code>&lt;!--more--&gt;</code></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>blog</tag>
-        <tag>Yilia</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>营销自动化—对用户我们做了什么？</title>
-    <url>/2019/05/28/2019/190528%E8%90%A5%E9%94%80%E8%87%AA%E5%8A%A8%E5%8C%96%E2%80%94%E5%AF%B9%E7%94%A8%E6%88%B7%E6%88%91%E4%BB%AC%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>留坑待填</p>
-<p>在做营销自动化（Sales &amp; Marketing Automation）的过程中，整理了用户相关的一些思考。<br>关于渠道，营销自动化更多的基于邮件营销在做，也在和微信打通，多渠道集成的过程中。<br>关于用户，新客成本越来越高，旧用户的运营绝对是未来的一个很重要的方向。如何让旧用户的粘性越来越高，如何让旧用户再次消费，如何让旧用户继续产生价值，这些都是值得我们思考的问题。</p>
-<p>2B的营销自动化，还在比较新的一个阶段，大家也都是在探索阶段。来这家公司，也是我第一次接触营销自动化，从不看好邮件营销，到现在觉得邮件营销还是有所可为，也经历了一个比较长的阶段。但仍是处于非常懵懂的阶段。</p>
-<p>我把对于用户的相关思考也整理如下，一个是回顾复盘，一个也希望在未来可以有更深入的思考。</p>
-<h3 id="营销自动化"><a href="#营销自动化" class="headerlink" title="营销自动化"></a>营销自动化</h3><ul>
-<li><p>增加新用户/培育旧用户</p>
-</li>
-<li><p>为什么邮件营销是被低估的渠道</p>
-<ul>
-<li>成本低、速度快</li>
-<li>投放精准、内容丰富</li>
-<li>主动性强，连续推销</li>
-<li>点对点的私域流量</li>
-<li>异步消息，人群更加精准</li>
-<li>内容质量更高（邮件营销而非垃圾邮件）</li>
-</ul>
-</li>
-<li><p>营销自动化，多渠道触达</p>
-<ul>
-<li>邮件渠道</li>
-<li>微信公众号</li>
-</ul>
-</li>
-</ul>
-<h3 id="用户质量"><a href="#用户质量" class="headerlink" title="用户质量"></a>用户质量</h3><ul>
-<li><p>用户来源的质量分析</p>
-</li>
-<li><p>媒体用户质量分析</p>
-</li>
-<li><p>active or engage用户数字</p>
-</li>
-<li><p>用户质量控制</p>
-</li>
-</ul>
-<h3 id="用户生命周期"><a href="#用户生命周期" class="headerlink" title="用户生命周期"></a>用户生命周期</h3><a id="more"></a> 
-
-<ul>
-<li>常见的产业生命周期/产品生命周期</li>
-<li>用户生命周期，（循环式上升的生命周期better）</li>
-<li>用户价值<ul>
-<li>举例：RIO &amp; LTV （用户终身价值）</li>
-<li>公司SMA对于revenue的贡献（数据）</li>
-</ul>
-</li>
-</ul>
-<h3 id="用户分层-对应nurture策略"><a href="#用户分层-对应nurture策略" class="headerlink" title="用户分层+对应nurture策略"></a>用户分层+对应nurture策略</h3><ul>
-<li>用户分层+策略</li>
-<li>用户筛选<ul>
-<li>nurture stream 用户标签筛选+（行为偏好筛选）</li>
-<li>用户阶段性筛选</li>
-</ul>
-</li>
-</ul>
-<h3 id="用户画像"><a href="#用户画像" class="headerlink" title="用户画像"></a>用户画像</h3><ul>
-<li>用户画像完善<ul>
-<li>举例说明用户画像的价值（+用户标签使用）</li>
-<li>SMA现在的情况</li>
-<li>如何完善用户画像</li>
-<li>用户标签</li>
-</ul>
-</li>
-</ul>
-<h3 id="关键群体的用户激活-用户培育"><a href="#关键群体的用户激活-用户培育" class="headerlink" title="关键群体的用户激活/用户培育"></a>关键群体的用户激活/用户培育</h3><ul>
-<li>Person score 0-20分用户 用户激活</li>
-<li>Person score 20 -40分，demographic score/behavior score 二维分析</li>
-<li>Oil&amp;Gas/data center segment nurture</li>
-<li>data center&gt;Person score 75分用户，探索</li>
-</ul>
-<h3 id="从数据看效果"><a href="#从数据看效果" class="headerlink" title="从数据看效果"></a>从数据看效果</h3><ul>
-<li>A/B test <ul>
-<li>小红书的案例</li>
-<li>2018年SMA的A/B test</li>
-</ul>
-</li>
-<li>Key数字：Open rate/  Click rate/ CTO<ul>
-<li>2018年SMA的表现</li>
-<li>从rate看效果</li>
-<li>精准化筛选人群效果分析</li>
-</ul>
-</li>
-</ul>
-<h3 id="Learning-接下来的方向"><a href="#Learning-接下来的方向" class="headerlink" title="Learning + 接下来的方向"></a>Learning + 接下来的方向</h3><ul>
-<li>用户质量控制</li>
-<li>用户行为分析—&gt;丰满用户画像</li>
-<li>用户活跃性评估维度多元化</li>
-<li>用户标签管理：个人信息标签片面式–&gt;综合性标签推送—&gt;标签模糊化，大数据推送</li>
-<li>用户分层营销策略流程化+关键人群用户流程化</li>
-<li>CMS（Content Management System），碎片化内容—&gt;内容系统化管理</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生存技能</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>Work</tag>
-        <tag>营销自动化</tag>
-        <tag>市场营销</tag>
-        <tag>marketo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo blog yilia主题迭代 -- 增加RSS功能+百度统计/google统计</title>
-    <url>/2019/01/23/2019/190123Hexo%20blog%20yilia%E4%B8%BB%E9%A2%98%E8%BF%AD%E4%BB%A3/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="增加RSS功能"><a href="#增加RSS功能" class="headerlink" title="增加RSS功能"></a>增加RSS功能</h3><ul>
-<li><p>安装RSS插件<br>注意一定要安装到blog的根目录<br><code>npm install --save hexo-generator-feed</code></p>
-</li>
-<li><p>在你的项目的‘_config.yml‘配置文件下找到Extensions添加如下内容：</p>
-</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># Extensions  #插件和主题</span><br><span class="line">## Plugins: https:&#x2F;&#x2F;hexo.io&#x2F;plugins&#x2F;</span><br><span class="line">## Themes: https:&#x2F;&#x2F;hexo.io&#x2F;themes&#x2F;</span><br><span class="line">#RSS订阅</span><br><span class="line">plugins: hexo-generater-feed</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在主题配置文件里，在rss位置，添加‘/atom.xml‘<a id="more"></a></li>
-<li>刷新页面</li>
-</ul>
-<h3 id="更换到百度统计"><a href="#更换到百度统计" class="headerlink" title="更换到百度统计"></a>更换到百度统计</h3><ul>
-<li>注册一个<a href="http://tongji.baidu.com" target="_blank" rel="noopener">百度统计</a>账号<ul>
-<li>网站域名：用博客首页链接</li>
-<li>网站首页：用博客首页链接</li>
-</ul>
-</li>
-<li>hexo\themes\yilia\layout_partial\baidu-analytics.ejs中修改代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;% if (theme.baidu_tongji)&#123; %&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">#你的百度统计代码</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>在hexo\themes\yilia\layout_partial\head.ejs文件中，在前增加<br><code>&lt;%- partial(&#39;baidu-analytics&#39;) %&gt;</code></li>
-</ul>
-<h3 id="google-analytics-谷歌统计"><a href="#google-analytics-谷歌统计" class="headerlink" title="google analytics 谷歌统计"></a>google analytics 谷歌统计</h3><ul>
-<li>注册一个<a href="https://analytics.google.com/analytics/web/" target="_blank" rel="noopener">google analytics账号</a></li>
-<li>hexo\themes\yilia\layout_partial\google-analytics.ejs 修改代码</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#google里全局代码，直接copy</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>在hexo\themes\yilia\layout_partial\head.ejs文件中，在前增加<br><code>&lt;%- partial(&#39;google-analytics&#39;) %&gt;</code></p>
-</li>
-<li><p>使用google tag assistant来验证设置<br><a href="https://support.google.com/tagassistant/answer/2947093?hl=zh_CN" target="_blank" rel="noopener">google tag assistant</a>是一款chrome扩展插件</p>
-</li>
-</ul>
-<h3 id="修改代码块的颜色"><a href="#修改代码块的颜色" class="headerlink" title="修改代码块的颜色"></a>修改代码块的颜色</h3><p>在‘themes/yilia/source/main.266c1c.css中的.article-entry .highlight’中修改对应背景和字体颜色即可</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>blog</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在北方生活的第7年</title>
-    <url>/2019/05/13/2019/190513%E5%9C%A8%E5%8C%97%E6%96%B9%E7%94%9F%E6%B4%BB%E7%9A%84%E7%AC%AC7%E5%B9%B4/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>清明节和朋友一起去了桂林，又去了广州。路途中本应是畅意游览，竟又品味出了另一种倦怠感，对北方的倦怠感，是的没错，来南方旅行，品味出了北方生活的倦怠感。</p>
-<p>2012年8月末来北京，到现在2019年5月，在这个城市快7年时间了，而似乎也一直像是一条淡水鱼，在大海里辗转游览。</p>
-<p>7年里，除了回家，去南方玩过3次，</p>
-<p>第一次，估摸着应该是大二的五一，去武汉。那时候担任学校某个社团的社长，算是第一次公费出行。那时候还没做过轮渡，看到渡口的轮渡感觉好稀奇，当时有个朋友在武汉，陪着我来来回回坐了好几趟，半夜了我还不想回家，坐在外滩，吹着江风，和着时光吹乱我的头发和心情。现在想来那时候还真是，怎么说呢，有一种年轻人的矜持感，大概就是”我想要但我绝不会说，还要推开你”的深井冰吧…现在的性格里大概还残留了一些，但对自己倒是坦诚了很多，也世俗了很多。风景总是流动着的，回忆留在江风里，就莫名已经很美好了。</p>
-<p>第二次应该是大三上学期的十一，和朋友一起回她的老家湖南玩，还去爬了衡山。上山时，月牙儿弯弯又朦胧，像是蒙上了一层白雾，远远近近的凝视着我们。爬至半山，空气开始微微湿润了起来，确有”万丈祝融拔地起，欲见不见轻烟里”的感觉，微微的手电筒光，扑面而来的细细丝丝的水汽，像是轻烟浮起，少吸气来，那带着些微湿润的空气便顺着鼻子呼吸道肺部，又似乎沁入到血管里，整个人从内而外的轻松起来。</p>
-<a id="more"></a>
-
-<p>两旁是郁郁葱葱的树丛，间或有枝桠相拦，甚有妙趣。愈往上，夜更深，空气里的水汽似乎慢慢的汇聚，沉重起来。通行小伙伴有经验，在乌云闻风而来时，便决定买了雨披，我们当时还乐观得很，觉得肯定用不上。没过半小时，淅淅沥沥的小雨也来了。</p>
-<p>到山顶时，我们还抱着希望，时间还早，也许还有机会可以看得到日出呢。不知怎的，那时候，对任何事都还抱有神秘的自信，然而老天有另一番打算，雨开始越下越大，我们恨不得缩成一团，来减缓身体热量的散发。天大亮了，我们想着没机会看到了，便决定下山。</p>
-<p>有个小伙伴还让我捎带块石头回去给他。我没想到山上不是泥就是水泥地，别说漂亮石头了，下雨泥泞地，连一块干净点的都没。矮子里挑高子，想着要千里迢迢（湖南北京也算是千里吧）带回去，选了块偏小的石头。现在这个朋友联系渐少，石头估摸着不知去处了。</p>
-<p>第三次，大概就是这次了。都说桂林山水甲天下，不负其称，阳朔之美，似流动着的山水画，更富有诗情画意。乘船游湖，恰是微雨，那远远近近深深浅浅的山林，像是被抹在画布上的随意几笔，淡处有闲适悠空之感，浓处自有其错乱有致之美，再撒上轻轻淡淡朦朦胧胧的微雨，像是晕开了的雪。船越是开得飞快，这阳朔之美便越是汹涌而来。</p>
-<p>这美揉成的感受像是塞在心里的发酵剂，她催化着回家的欲望，也催化着对多山多水的渴望。</p>
-<p>我对同事说，来北京几年了，我感觉我枯萎了。</p>
-<p>他们笑</p>
-<p>我对朋友说，来北京待了好久，感觉自己都要枯萎了。</p>
-<p>他们仍然笑</p>
-<p>似乎感觉自己都要枯萎了。</p>
-<p>身体里的水分少了很多，心里也是。</p>
-<p>像是一棵渴水的小草，来到干燥的土地上，也许对于活着和生活，她会有另一番感受。</p>
-<p>大概”贫穷会影响人的流体智力”一样，”缺水让枯萎的小草失去思想”</p>
-]]></content>
-      <categories>
-        <category>杂思</category>
-      </categories>
-      <tags>
-        <tag>暇思</tag>
-        <tag>行走</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo next主题建立标签云</title>
-    <url>/2019/10/23/2019/191023Hexo%20next%E4%B8%BB%E9%A2%98%E5%BB%BA%E7%AB%8B%E6%A0%87%E7%AD%BE%E4%BA%91/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>效果如首页</p>
-<h3 id="使用hexo-tag-cloud插件"><a href="#使用hexo-tag-cloud插件" class="headerlink" title="使用hexo-tag-cloud插件"></a>使用<code>hexo-tag-cloud</code>插件</h3><p><a href="https://github.com/MikeCoder/hexo-tag-cloud" target="_blank" rel="noopener">hexo-tag-cloud github 地址</a></p>
-<h4 id="安装hexo-tag-cloud"><a href="#安装hexo-tag-cloud" class="headerlink" title="安装hexo-tag-cloud"></a>安装<code>hexo-tag-cloud</code></h4><p>进入到博客根目录，安装<br><code>npm install hexo-tag-cloud@^2.0.* --save</code></p>
-<h3 id="插件配置"><a href="#插件配置" class="headerlink" title="插件配置"></a>插件配置</h3><p>在主题文件夹找到文件 <code>theme/next/layout/_macro/sidebar.swig</code>, 然后添加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">&#123;% if site.tags.length &gt; 1 %&#125;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcloud.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; charset&#x3D;&quot;utf-8&quot; src&#x3D;&quot;&#x2F;js&#x2F;tagcanvas.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">&lt;div class&#x3D;&quot;widget-wrap&quot;&gt;</span><br><span class="line">    &lt;h3 class&#x3D;&quot;widget-title&quot;&gt;Tag Cloud&lt;&#x2F;h3&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;myCanvasContainer&quot; class&#x3D;&quot;widget tagcloud&quot;&gt;</span><br><span class="line">        &lt;canvas width&#x3D;&quot;250&quot; height&#x3D;&quot;250&quot; id&#x3D;&quot;resCanvas&quot; style&#x3D;&quot;width&#x3D;100%&quot;&gt;</span><br><span class="line">            &#123;&#123; list_tags() &#125;&#125;</span><br><span class="line">        &lt;&#x2F;canvas&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>到倒数第四行，在以下字符前，</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">  &lt;&#x2F;aside&gt;</span><br><span class="line">&#123;% endmacro %&#125;</span><br></pre></td></tr></table></figure>
-
-<h4 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h4><p>博客根目录的<code>——config.yml</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># hexo-tag-cloud</span><br><span class="line">tag_cloud:</span><br><span class="line">    textFont: Trebuchet MS, Helvetica</span><br><span class="line">    textColor: &#39;#333&#39;</span><br><span class="line">    textHeight: 25</span><br><span class="line">    outlineColor: &#39;#E2E1D1&#39;</span><br><span class="line">    maxSpeed: 0.1</span><br></pre></td></tr></table></figure>
-
-
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>blog</tag>
-        <tag>hexo</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>回顾和总结：线下会数字营销支持</title>
-    <url>/2019/07/14/2019/190714%E5%9B%9E%E9%A1%BE%E5%92%8C%E6%80%BB%E7%BB%93%EF%BC%9A%E7%BA%BF%E4%B8%8B%E4%BC%9A%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80%E6%94%AF%E6%8C%81/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>这份工作已经进入尾声，在过去的一年多里，公司给我展示了一个跨国大公司在业务和营销的专业性。<br>我把线下会digital部分的工作内容和tips整理下来，回顾复盘。<br>意义不累述。</p>
-<ul>
-<li><p><strong>会前</strong></p>
-<ul>
-<li><p><em>准备阶段</em>：需求梳理+供应商选择+方案</p>
-</li>
-<li><p><em>eDM制作</em>：设计+文案+发送+用户注册</p>
-</li>
-<li><p><em>注册数据</em>：流程+审核（Y or N）+报告</p>
-</li>
-<li><p><em>选课</em>（Y or N)：逻辑+设计+开发</p>
-</li>
-<li><p><em>官网页面制作</em></p>
-</li>
-<li><p><em>微网站平台搭建</em>：需求梳理+资料收集+权限管理+设计开发</p>
-<ul>
-<li>嫁接平台：小程序 or H5，公众号 or 企业号</li>
-<li>常用版块：日程+个人中心+精彩时刻+调查问卷+会场概览+展区资料+（现场互动+合作伙伴+直播页面）</li>
-<li>权限管理：微信权限、个性化信息、参会/非参会人员</li>
-</ul>
-</li>
-<li><p><em>现场注册人员的培训</em>：签到流程+培训手册</p>
-</li>
-<li><p><em>市场推广</em>：内部渠道（Marketo + IC+微信微博等）+ 外部渠道</p>
-<ul>
-<li>物料制作：各渠道物料的需求收集+ 制作+发放</li>
-<li>市场推广时间和物料的监控：（上线报告）</li>
-<li>Performance的监控</li>
-<li>数据分析+汇总报告</li>
-</ul>
-</li>
-<li><p><em>其他</em></p>
-<a id="more"></a>
-<ul>
-<li><p>支持人员的酒店预订</p>
-</li>
-<li><p>项目时间的控制、进度梳理和汇报</p>
-</li>
-<li><p>供应商管理+多方沟通</p>
-</li>
-<li><p>微信消息+短信息处理</p>
-</li>
-<li><p>投屏互动</p>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<pre><code>- *Tips*
-
-    - 每个阶段给自己留一点时间的buffer
-    - 多方协作的事情都形成文件，流程清楚+精炼文字说明
-    - 重要的资料或需求都使用邮件，每个事情都要对应到个人
-    - 重要的时间点一定要标注清楚，让对应的相关人也非常清楚
-    - 资料收集一定要阶段性的提醒，不要到deadline
-    - 确认：需求要确认，设计要确认，物料要符合branding，时刻记得要确认</code></pre><ul>
-<li><p><strong>会中</strong></p>
-<ul>
-<li>签到功能+现场支持</li>
-<li>微网站功能</li>
-<li>大会信息支持：信息通知（微信消息/短信消息）、数据支持</li>
-</ul>
-</li>
-<li><p><strong>会后</strong></p>
-<ul>
-<li>会后报告、参会情况及其他</li>
-<li>用户培育的跟进：Marketo + 微信</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生存技能</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>Work</tag>
-        <tag>数字营销</tag>
       </tags>
   </entry>
   <entry>
@@ -1508,30 +1846,6 @@ Second Day：
       <tags>
         <tag>无聊</tag>
         <tag>暇思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>DaoVoice实现在线联系</title>
-    <url>/2019/10/24/2019/191024DaoVoice%E5%AE%9E%E7%8E%B0%E5%9C%A8%E7%BA%BF%E8%81%94%E7%B3%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="注册登陆DaoVoice"><a href="#注册登陆DaoVoice" class="headerlink" title="注册登陆DaoVoice"></a>注册登陆DaoVoice</h3><p><a href="http://www.daovoice.io/" target="_blank" rel="noopener">注册地址</a></p>
-<p>在<code>博客/themes/next/layout/_partials/head/head.swig</code>增加代码</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% if theme.daovoice %&#125;</span><br><span class="line"> &lt;script&gt;(function(i,s,o,g,r,a,m)&#123;i[&quot;DaoVoiceObject&quot;]&#x3D;r;i[r]&#x3D;i[r]||function()&#123;(i[r].q&#x3D;i[r].q||[]).push(arguments)&#125;,i[r].l&#x3D;1*new Date();a&#x3D;s.createElement(o),m&#x3D;s.getElementsByTagName(o)[0];a.async&#x3D;1;a.src&#x3D;g;a.charset&#x3D;&quot;utf-8&quot;;m.parentNode.insertBefore(a,m)&#125;)(window,document,&quot;script&quot;,(&#39;https:&#39; &#x3D;&#x3D; document.location.protocol ? &#39;https:&#39; : &#39;http:&#39;) + &quot;&#x2F;&#x2F;widget.daovoice.io&#x2F;widget&#x2F;b6dbddb6.js&quot;,&quot;daovoice&quot;)</span><br><span class="line"> daovoice(&#39;init&#39;, &#123;</span><br><span class="line">  app_id: &quot;用户ID&quot;</span><br><span class="line">&#125;);</span><br><span class="line">daovoice(&#39;update&#39;);</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-<p>如图所示：</p>
-<p>&lt;img src=’/img/daovoice.png’, height= ‘75%’, width = ‘75%’&gt;</p>
-<h3 id="修改主题配置文件"><a href="#修改主题配置文件" class="headerlink" title="修改主题配置文件"></a>修改主题配置文件</h3><p>在<code>/themes/next/_config.yml</code></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">daovoice: true</span><br><span class="line">daovoice_app_id: 用户ID</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="微信消息提醒"><a href="#微信消息提醒" class="headerlink" title="微信消息提醒"></a>微信消息提醒</h3><p>可以绑定微信，以及默认将信息分派给自己，这样就可以用微信接收网站聊天信息了</p>
-<h3 id="修改聊天图标设置"><a href="#修改聊天图标设置" class="headerlink" title="修改聊天图标设置"></a>修改聊天图标设置</h3><p>应用设置-聊天设置中进行简单的设置</p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>blog</tag>
-        <tag>hexo</tag>
-        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -1600,367 +1914,76 @@ Second Day：
       </tags>
   </entry>
   <entry>
-    <title>Hexo更换主题Yilia为Next及Next主题优化</title>
-    <url>/2019/10/15/2019/191015Hexo%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98Yilia%E4%B8%BANext%E5%8F%8ANext%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="安装next主题"><a href="#安装next主题" class="headerlink" title="安装next主题"></a>安装next主题</h3><p><strong>下载</strong> next主题</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">cd  xxxx&#x2F;themes</span><br><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;theme-next&#x2F;hexo-theme-next themes&#x2F;next</span><br></pre></td></tr></table></figure>
-
-<p><strong>编辑主题</strong><br>在<code>hexo/_config.yml</code>中修改</p>
-<p><code>theme: next</code></p>
-<h3 id="Menu更新"><a href="#Menu更新" class="headerlink" title="Menu更新"></a>Menu更新</h3><p>tags：</p>
-<ol>
-<li><p>创建tags页面<br><code>hexo new page tags</code></p>
-</li>
-<li><p>编辑<code>tags/index.md</code></p>
-</li>
-</ol>
-<p>about: 类同于tags页面创建</p>
-<a id="more"></a>
-<h3 id="Social图标修改"><a href="#Social图标修改" class="headerlink" title="Social图标修改"></a>Social图标修改</h3><p>在增加的对应的渠道后面加上“|| icons”<br>icons可以在<a href="https://fontawesome.com/icons" target="_blank" rel="noopener">这里</a>查找</p>
-<!--more-->
-<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><p>1、hexo目录下，安装搜索插件<br><code>npm install hexo-generator-searchdb --save</code></p>
-<p>2、编辑<code>hexo/_config.yml</code>，添加</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># local search</span><br><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-
-<p>安装的时候显示：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">zlib: Cannot read property &#39;length&#39; of null</span><br><span class="line"></span><br><span class="line">npm ERR! A complete log of this run can be found in:</span><br><span class="line">npm ERR!     &#x2F;xxxx&#x2F;.npm&#x2F;_logs&#x2F;2019-10-23T00_54_05_567Z-debug.log</span><br></pre></td></tr></table></figure>
-
-<p>已解决，详见<code>解决 zlib: Cannot read property &#39;length&#39; of null</code></p>
-<h3 id="各板块透明度修改"><a href="#各板块透明度修改" class="headerlink" title="各板块透明度修改"></a>各板块透明度修改</h3><p><strong>内容板块透明</strong><br>根博客目录<code>themes\next\source\css\_schemes\Pisces\_layout.styl</code>文件<code>.content-wrap</code>标签下<code>background: white</code>修改为：</p>
-<p><code>background: rgba(255,255,255,0.7); //0.7是透明度</code></p>
-<p><strong>菜单栏背景</strong><br>根博客目录<code>themes\next\source\css\_schemes\Pisces\_layout.styl</code>文件<code>.header-inner</code>标签下<code>background: white</code>修改为：</p>
-<p><code>background: rgba(255,255,255,0.7); //0.7是透明度</code></p>
-<p><strong>站点概况背景</strong><br>根博客目录<code>themes\next\source\css\_schemes\Pisces\_sidebar.styl</code>文件<code>.sidebar-inner</code>标签下<code>background: white</code>修改为：</p>
-<p><code>background: rgba(255,255,255,0.7); //0.7是透明度</code></p>
-<p>修改根博客目录<code>themes\next\source\css\_schemes\Pisces\_layout.styl</code>文件<code>.sidebar</code>标签下<code>background: $body-bg-color</code>修改为：</p>
-<p><code>background: rgba(255,255,255,0.7); //0.7是透明度</code></p>
-<p>底部字数显示：<br>安装插件没有成功，似乎仍然是npm的原因</p>
-<h3 id="加入valine在线评论"><a href="#加入valine在线评论" class="headerlink" title="加入valine在线评论"></a>加入valine在线评论</h3><ol>
-<li>去<a href="https://leancloud.cn/" target="_blank" rel="noopener">LeanCloud</a>注册一个帐号.然后再创建一个应用，获取appid 和appkey，</li>
-<li>在<code>themes/next/_config.yml</code>中的<code>valine</code>中配置</li>
-</ol>
-<p>前端显示：<code>Code 504: The app is archived, please restore in console before use.</code><br>解决办法：在leancloud的应用里重新激活</p>
-<p><strong>邮件提醒</strong><br>略</p>
-<p><strong>语言设置</strong><br>在根目录<code>_config.yml</code>设置<code>language: zh-CN</code></p>
-<p><strong>底部跳动图标实现</strong>未完成</p>
-<ol>
-<li>已修改<code>next\source\css_variables\custom.styl</code>的css文件，增加以下代码</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;底部爱心小图标跳动</span><br><span class="line">keyframes heartAnimate &#123;</span><br><span class="line">    0%,100%&#123;transform:scale(1);&#125;</span><br><span class="line">    10%,30%&#123;transform:scale(0.9);&#125;</span><br><span class="line">    20%,40%,60%,80%&#123;transform:scale(1.1);&#125;</span><br><span class="line">    50%,70%&#123;transform:scale(1.1);&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;图标所对应的span中的ID</span><br><span class="line">#heart &#123;</span><br><span class="line">    animation: heartAnimate 1.33s ease-in-out infinite;</span><br><span class="line">&#125;</span><br><span class="line">.with-love &#123;</span><br><span class="line">    color: rgb(255, 113, 113);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>底部为增加对应的ID</li>
-</ol>
-<h3 id="修改界面内容默认的设置【没有起效果】"><a href="#修改界面内容默认的设置【没有起效果】" class="headerlink" title="修改界面内容默认的设置【没有起效果】"></a>修改界面内容默认的设置【没有起效果】</h3><p>在<code>themes\next\source\css\_custom的custom.styl</code>添加下面参数</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F; 屏幕宽度小于1600px</span><br><span class="line">$content-desktop &#x3D; 700px</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 屏幕宽度大于或等于 1600px</span><br><span class="line">$content-desktop-large &#x3D; 900px</span><br></pre></td></tr></table></figure>
-
-<p>已解决：<br>当使用 Mist 和 Muse时候用上面那段话，当使用Pisces 和 Gemini 风格时增加以下内容：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.header&#123;</span><br><span class="line">    width: 90%;</span><br><span class="line">    +tablet() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    +mobile() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.container .main-inner &#123;</span><br><span class="line">    width: 90%;</span><br><span class="line">    +tablet() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    +mobile() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">.content-wrap &#123;</span><br><span class="line">    width: calc(100% - 260px);</span><br><span class="line">    +tablet() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">    +mobile() &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-<h3 id="修改背景样式"><a href="#修改背景样式" class="headerlink" title="修改背景样式"></a>修改背景样式</h3><p>修改<code>themes\next\source\css\ _custom\custom.styl</code>文件，这个是Next故意留给用户自己个性化定制一些样式的文件，添加以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">body &#123;</span><br><span class="line">    background:url(https:&#x2F;&#x2F;source.unsplash.com&#x2F;random&#x2F;1600x900);</span><br><span class="line">    background-repeat: no-repeat;</span><br><span class="line">    background-attachment:fixed;</span><br><span class="line">    background-position:50% 50%;</span><br><span class="line">    background-size:cover;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>参数</strong><br>url：可更换为自己喜欢的图片的地址。<br>repeat：是否重复出现<br>attachment：定义背景图片随滚动轴的移动方式<br>position：设置背景图像的起始位置。<br>background-size:cover 为可能有助于大分辨率下背景图的显示</p>
-<p>背景效果设置：<br>‘themes\next_config.yml ‘中找到<code>canvas</code></p>
-<h3 id="字体不闪动设置"><a href="#字体不闪动设置" class="headerlink" title="字体不闪动设置"></a>字体不闪动设置</h3><p>修改文件<code>next/source/css/_common/components/post/post-reward.styl</code>，然后注释其中的函数<code>wechat:hover和alipay:hover</code>，如下：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;* 注释文字闪动函数</span><br><span class="line">#wechat:hover p&#123;</span><br><span class="line">animation: roll 0.1s infinite linear;</span><br><span class="line">-webkit-animation: roll 0.1s infinite linear;</span><br><span class="line">-moz-animation: roll 0.1s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">#alipay:hover p&#123;</span><br><span class="line">animation: roll 0.1s infinite linear;</span><br><span class="line">-webkit-animation: roll 0.1s infinite linear;</span><br><span class="line">-moz-animation: roll 0.1s infinite linear;</span><br><span class="line">&#125;</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="解决zlib-Cannot-read-property-39-length-39-of-null"><a href="#解决zlib-Cannot-read-property-39-length-39-of-null" class="headerlink" title="解决zlib: Cannot read property &#39;length&#39; of null"></a>解决<code>zlib: Cannot read property &#39;length&#39; of null</code></h3><p>用npm安装什么都显示这样，是nodejs版本不够 <a href="https://github.com/ionic-team/ionic-cli/issues/3816" target="_blank" rel="noopener">github issue</a></p>
-<p><a href="https://stackoverflow.com/questions/10075990/upgrading-node-js-to-latest-version" target="_blank" rel="noopener">stack中的解决方案</a><br>方案一：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">sudo npm install n -g</span><br><span class="line">sudo n stable 安装稳定版本</span><br><span class="line">或 sudo n latest 安装最新版本</span><br></pre></td></tr></table></figure>
-
-<p>失败，仍旧显示同样错误</p>
-<p>方案二：<br>不使用sudo</p>
-<p>step1: 下载 nvm（node version manager）<br><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash</code></p>
-<p>step2: 安装最新的node.js版本<br><code>nvm install stable</code></p>
-<h3 id="取消点击效果"><a href="#取消点击效果" class="headerlink" title="取消点击效果"></a>取消点击效果</h3><p><code>fireworks: false</code></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>learn</tag>
-        <tag>blog</tag>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客增加aplayer音乐播放器</title>
-    <url>/2019/10/29/2019/191029Hexo%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0aplayer%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>之前使用的是网易云外链链接，<a href="https://liheyuting.github.io/2018/05/12/2018/Markdown/">点击查看</a>文章尾部如何使用，发现很受版权的限制，QQ音乐无法生成外链。</p>
-<p>遂，试试看使用插件来插入音乐。</p>
-<h3 id="下载hexo-tag-aplayer"><a href="#下载hexo-tag-aplayer" class="headerlink" title="下载hexo-tag-aplayer"></a>下载hexo-tag-aplayer</h3><p>进入博客根目录：<br><code>npm install --save hexo-tag-aplayer</code></p>
-<a id="more"></a>
-
-<p>在根目录的<code>_config.yml</code>中增加</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 音乐播放器</span><br><span class="line">aplayer:</span><br><span class="line">  meting: true</span><br></pre></td></tr></table></figure>
-
-<h3 id="在博客中增加音乐"><a href="#在博客中增加音乐" class="headerlink" title="在博客中增加音乐"></a>在博客中增加音乐</h3><p>可用模板</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;% meting &quot;歌曲id&quot; &quot;netease（音乐平台）&quot; &quot;song&quot; &quot;theme:#555&quot; &quot;mutex:true&quot; &quot;listmaxheight:340px&quot; &quot;preload:auto&quot; %&#125;</span><br></pre></td></tr></table></figure>
-
-
-<p>音乐平台：<br>netease, tencent, kugou, xiami, baidu</p>
-<p>具体参数等<a href="https://github.com/MoePlayer/hexo-tag-aplayer/blob/master/docs/README-zh_cn.md" target="_blank" rel="noopener">参考文档</a></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>blog</tag>
-        <tag>hexo</tag>
-        <tag>earn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>严肃的米虫脸</title>
-    <url>/2019/11/13/2019/191113%E4%B8%A5%E8%82%83%E7%9A%84%E7%B1%B3%E8%99%AB%E8%84%B8/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>刚刚发出最后一封邮件，1点的凌晨，有一点的清醒</p>
-<p>耳边绕着音乐，庆幸，没有吵醒这个夜晚的寂静</p>
-<p>深秋的上海，和北京大不相同：<br>在北京，暖气应该来了吧，大衣也可以背出门了<br>而上海的此刻，我穿着长袖的睡衣，盘腿坐在椅子上，窗外的风撩动窗帘，并不冷</p>
-<p>连续的加班，让情绪似乎要到了一个临界点<br>神经绷绷的，却长时间怠懒思考</p>
-<p>好想做一个米虫啊，<br>面朝大海，我吃的很少<br>春暖花开，还可以少吃点</p>
-<a id="more"></a>
-<p>3天前的水果<br>也怠懒于桌角<br>吉他在墙角落灰沉默<br>而垃圾总会错过可投递的时间</p>
-<p>我没有想哭，<br>也可以弄一些啤酒<br>假装是喜爱的味道<br>来忍受渐渐冰凉的脚掌</p>
-<p>疲倦容易让人衰老<br>电子屏让人面无表情<br>时间没让人更加坚强<br>竟先使皱纹爬山眉梢</p>
-<p>现在的心情有点糟糕啊<br>很不可爱的我和很不可爱的心情</p>
-]]></content>
-      <categories>
-        <category>杂思</category>
-      </categories>
-      <tags>
-        <tag>无聊</tag>
-        <tag>暇思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>今年厦门出差第3次</title>
-    <url>/2019/10/29/2019/191029%E4%BB%8A%E5%B9%B4%E5%8E%A6%E9%97%A8%E5%87%BA%E5%B7%AE%E7%AC%AC3%E6%AC%A1/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-yinwPArJ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="004bAy660xQasD" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>]]></content>
-      <categories>
-        <category>旅行</category>
-      </categories>
-      <tags>
-        <tag>暇思</tag>
-        <tag>行走</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Obsidian 进阶使用手册</title>
-    <url>/2021/02/22/2021/20210222Obsidian%20%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="注意Obsidian的图片格式以及链接格式"><a href="#注意Obsidian的图片格式以及链接格式" class="headerlink" title="注意Obsidian的图片格式以及链接格式"></a>注意Obsidian的图片格式以及链接格式</h3><p>保证在Obsidian里保存的链接和图片在其他的markdown软件中也能正常打开</p>
-<p>设置如下：<br><img src="/img/2020/Pastedimage20210220170151.png" alt><br><img src="/img/2020/Pastedimage20210220170224.png" alt><br><img src="/img/2020/Pastedimage20210220170357.png" alt></p>
-<h3 id="第三方插件的使用"><a href="#第三方插件的使用" class="headerlink" title="第三方插件的使用"></a>第三方插件的使用</h3><ol>
-<li>Obsidian Git使用</li>
-</ol>
-<a id="more"></a>
-
-<p>1.1 插件安装</p>
-<ul>
-<li>在插件库里安装<br><img src="/img/2020/Pastedimage20210220172320.png" alt><br><img src="/img/2020/Pastedimage20210220172331.png" alt></li>
-<li>设置<br><img src="/img/2020/Pastedimage20210220172240.png" alt></li>
+    <title>医疗2B公司digital半年运营的一点想法</title>
+    <url>/2020/01/04/2020/200104%E5%8C%BB%E7%96%972B%E5%85%AC%E5%8F%B8digital%E5%8D%8A%E5%B9%B4%E8%BF%90%E8%90%A5%E7%9A%84%E4%B8%80%E7%82%B9%E6%83%B3%E6%B3%95/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>到新公司半年了，和工业行业不一样，医疗行业在媒体推广方面审核很为严格。</p>
+<p>工作一部分是公众号运营，也算是慢慢的开始熟悉起来。</p>
+<p>在数字营销这块，思考了现状和优化方向，整理如下：</p>
+<h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><ul>
+<li>增粉主要来源于线下会直播：精准用户及潜在用户应采用不同运营方式</li>
+<li>内容推广较为受限，自然增粉的趋势较为平缓：内部推广/员工推广为主/自然增粉</li>
+<li>专业内容粘性较高，品牌/大众内容效果不错（参考mylab+/贫血等）</li>
+<li>Social的内容效果更好，互动较为频繁（参考小高故事和诊断先锋）</li>
 </ul>
-<p>这里表示设置多少时间同步一次<br><img src="/img/2020/Pastedimage20210220172414.png" alt><br><img src="/img/2020/Pastedimage20210220172930.png" alt></p>
-<p><strong><a href="https://effectiveremotework.com/2020/09/obsidian-sync-your-vaults-with-git-github/" target="_blank" rel="noopener">obsidian git的补充视频</a></strong></p>
-<p>1.2 git安装及文件同步到云端</p>
-<ul>
-<li>git安装，到官网安装git 软件 </li>
-<li>配置git及链接到云端GitHub</li>
+<a id="more"></a>
+<h3 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h3><h4 id="关于微信服务号与小程序定位："><a href="#关于微信服务号与小程序定位：" class="headerlink" title="关于微信服务号与小程序定位："></a>关于微信服务号与小程序定位：</h4><ul>
+<li>微信公众号粉丝群体还较少，增粉与增加用户粘性为目标</li>
+<li>小程序建议以增加精准用户及用户粘性为主</li>
 </ul>
-<p>客户端配置保存密码，避免每次重新输入<br>1）信息配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;github用户名&quot;</span><br><span class="line">git config --global user.email &quot;github注册邮箱&quot;</span><br></pre></td></tr></table></figure>
-<p>2）设置密码更新时间</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、设置记住密码（默认15分钟）：</span><br><span class="line">git config --global credential.helper cache</span><br><span class="line"></span><br><span class="line">2、如果想自己设置时间，可以这样做：</span><br><span class="line">git config credential.helper &#39;cache --timeout&#x3D;3600&#39;</span><br><span class="line">这样就设置一个小时之后失效</span><br><span class="line"></span><br><span class="line">3、长期存储密码：</span><br><span class="line">git config --global credential.helper store</span><br><span class="line"></span><br><span class="line">4、增加远程地址的时候带上密码也是可以的。(推荐)</span><br><span class="line">http:&#x2F;&#x2F;yourname:password@git.oschina.net&#x2F;name&#x2F;project.git</span><br></pre></td></tr></table></figure>
-
-
-<ol start="2">
-<li>todo list/checklist<br>目前已有的几个比较，选择了<strong>checklist</strong></li>
-</ol>
-<p><a href="https://github.com/delashum/obsidian-checklist-plugin" target="_blank" rel="noopener">使用说明</a>__</p>
-<p>效果显示<br><img src="/img/2020/Pastedimage20210222172453.png" alt></p>
-]]></content>
-      <categories>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>自我成长</tag>
-        <tag>Obsidian</tag>
-        <tag>双向笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>git清单2</title>
-    <url>/2021/02/25/2021/20210225git%E6%B8%85%E5%8D%952/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="在不同的电脑上同步同一个repository"><a href="#在不同的电脑上同步同一个repository" class="headerlink" title="在不同的电脑上同步同一个repository"></a>在不同的电脑上同步同一个repository</h1><ol>
-<li>使用不同的分支<br>多人开发使用<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git branch [name]</span><br><span class="line">git push -g origin [name]</span><br></pre></td></tr></table></figure>
-
-
+<h4 id="关于渠道"><a href="#关于渠道" class="headerlink" title="关于渠道"></a>关于渠道</h4><ol>
+<li>可增加Owned media，比如微博（微博近两年的趋势又往上发展，较为活跃；微博定位为开放不熟悉人群，较为容易传播，更接地气）<ul>
+<li>增加品牌曝光</li>
+<li>增加KOL协助推广的渠道（例如@协和检验_李时民粉丝90K+，也会发送自己在本司的直播信息）</li>
+<li>增加产品推广渠道</li>
+<li>增加用户互动和粘性</li>
+<li>增加用户与本司的联系渠道</li>
+</ul>
 </li>
 </ol>
 <ol start="2">
-<li><p>先下载远程内容，然后同步<br>先从远程下载，再push</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>强制同步</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push -u origin master -f</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<a id="more"></a>
-<p> <strong>git pul错误</strong><br> error: Your local changes to the following files would be overwritten by merge</p>
-<p> 解决办法</p>
-<ol>
-<li>stash<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git stash</span><br><span class="line">git commit </span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure>
-
+<li>可增加paid social media及vertical media 推广<ul>
+<li>现状需要突破</li>
+<li>生产线同事有需求</li>
+<li>增加推广和曝光，使用目标用户易触达渠道</li>
+<li>增加品牌曝光</li>
+</ul>
 </li>
 </ol>
-<p>git stash: 备份当前的工作区的内容，从最近的一次提交中读取相关内容，让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保存到Git栈中。<br>git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从最近的一个stash中读取内容并恢复。<br>git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从那个地方恢复。<br>git stash clear: 清空Git栈。此时使用gitg等图形化工具会发现，原来stash的哪些节点都消失了</p>
+<h4 id="关于内容："><a href="#关于内容：" class="headerlink" title="关于内容："></a>关于内容：</h4><ol>
+<li>增加campaign mini site（内容集成页：包含推广话题的所有相关内容）：建议官网，或者小程序活动页面<ul>
+<li>全面资料的集合</li>
+<li>用户更容易找到想了解的内容</li>
+<li>有更多performance来track推广效果（符合公司2020年想做campaign performance analysis的方向）</li>
+<li>更为有效和精准的传递给用户推广信息</li>
+</ul>
+</li>
+</ol>
 <ol start="2">
-<li>放弃本地修改，直接覆盖<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --hard</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
-
+<li><p>游戏汉化：global有一些小游戏，低成本优化推广</p>
+</li>
+<li><p>基层会</p>
 </li>
 </ol>
-<h1 id="关联阅读："><a href="#关联阅读：" class="headerlink" title="关联阅读："></a>关联阅读：</h1><p><a href="https://liheyuting.github.io/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/">git清单</a></p>
-]]></content>
-      <categories>
-        <category>兴趣技能</category>
-        <category>工具</category>
-      </categories>
-      <tags>
-        <tag>Obsidian</tag>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>要不要在2B公司做数字营销？</title>
-    <url>/2019/12/25/2019/191225%E8%A6%81%E4%B8%8D%E8%A6%81%E5%9C%A82B%E5%85%AC%E5%8F%B8%E5%81%9A%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>要随时进行反思和思考哦，机械和流程化容易固化你的思想，不要在舒适区丧失独立思考和联系的能力。记录是一种比较好的思考方式，在这个过程中，也要梳理好自己的想法和逻辑，从笔头的逻辑到嘴上的逻辑。不要羞涩于自己此刻的浅薄，要多读多看多想多写少说废话。</p>
+<ul>
+<li>根据近几年的增粉趋势，基层会的粉丝增量较为可观（见近几年粉丝增长蓝图），建议可以做一个整体的推广策划（内容+推广），扩大影响力</li>
+</ul>
+<h4 id="关于形式："><a href="#关于形式：" class="headerlink" title="关于形式："></a>关于形式：</h4><ul>
+<li>Social &amp; Colorful </li>
+<li>Interaction</li>
+<li>Story</li>
+</ul>
 <hr>
-<p>数字营销究竟对于2B公司有没有用？</p>
-<p>如果有用，它带来的最大价值是什么？</p>
-<p>如果没有用，那我们还要做么？</p>
-<p>2B行业的公司也都不断的试水数字营销，几乎每家公司都也在做数字营销相关的一些内容，但数字营销究竟有什么用，带给公司最大的效益是什么呢，不太好说。</p>
-<p>那又怎样评估数字化营销的效果呢？</p>
-<h3 id="先说背景"><a href="#先说背景" class="headerlink" title="先说背景"></a>先说背景</h3><p>整个行业被技术挟裹往前，互联网、数字化、物联网、大数据…这些词也都是耳熟能详，在人与人之间的社交媒体和形式的不断改变中，推广形式也在不断的更新迭代。</p>
-<p>有人说，数字营销没有用，这是一种防御手段，只是为了预防公司在这个市场的大浪潮下被掉队的一种推广渠道，让用户有机会联系到我们。</p>
-<p>但事实上，我仍然觉得数字营销是有必要的。</p>
-<p>拿品牌这个事情来说，在最一开始的时候，大家也是不承认其价值的，但现在优质品牌价值的重要性不言而喻，可口可乐，星巴克，喝的是饮料，更多的还是他们的价值，更别说奢侈品这些了。</p>
-<p>提到这个，是想说，有些东西只能由时间来证明，一个是这些也都是在探索当中，另一个，有一些东西是长期价值，需要提前开始投资。</p>
-<a id="more"></a>
-
-<h3 id="数字营销的定义究竟是什么？"><a href="#数字营销的定义究竟是什么？" class="headerlink" title="数字营销的定义究竟是什么？"></a>数字营销的定义究竟是什么？</h3><p>首先，我们需要明确数字营销究竟是什么<br>百度百科：数字营销是使用数字传播渠道来推广产品和服务的实践活动，从而以一种及时、相关、定制化和节省成本的方式与消费者进行沟通。</p>
-<p>很多公司都将数字营销限制在微信微博领英等社交媒体的运营，事实上，如果仅仅只是这些owned social media的运营，所受的限制是非常大的，从粉丝来说，自然增长的流量很有限，多数是自我推广或者员工推广，而且对内容的要求也是非常的高，当然，如果公司的确在行业内很有影响力，可能会有一定程度上的加成，对于2B来说仍为有限。</p>
-<p>虽然数字营销的定义上加上了一个低成本，算是相对而言。数字营销绝对不仅仅只是社交媒体的运营，也不仅仅只是互联网形式的一个推广，它的范围非常的广泛，SEM/SEO，邮件营销，网站运营，H5，微网站，APP，数字化媒体推广等等都应囊括其中。</p>
-<p>内容+媒介+数字，这些都缺一不可</p>
-<h4 id="1-用户、需求"><a href="#1-用户、需求" class="headerlink" title="1. 用户、需求"></a>1. 用户、需求</h4><p>营销的起点都应该源于用户及需求，需求是产品的原动力，如果没有需求，就没有产品可言，我们的推广是为了达到最终消费，需求和消费是不可分割的。</p>
-<p>那么在数字营销，我们第一要确定的就是我们的用户需求。<br>关于用户分层和用户分类，在另一篇文章里有详细的提到。<br>我们需要根据不同的用户情况，来因地制宜，市场上常说的“千人千面”核心都一样，为了满足用户的个性化需求。</p>
-<p>我们会先通过各种渠道，来收集用户的静态数据和动态数据，将不同用户聚类分析，形成各异的用户画像，根据用户画像，来一步步探索用户的深层需求，这是在完美情况下，一般情况，我们只能根据数据推测用户可能的偏好。再通过各类群体偏好的媒介及形式，推送其可能感兴趣的内容，来不断完善用户画像，在此过程中，达到品牌的影响及增强用户粘性。在这个持续的过程中，用户的需求可能会越来越清晰，形成购买。购买之后，当然还有服务环节，仍然持续影响，以使用户成为一个忠诚用户。</p>
-<hr>
-<p>（待填空）</p>
-<h4 id="2-内容"><a href="#2-内容" class="headerlink" title="2. 内容"></a>2. 内容</h4><p>内容的构成形式非常多样</p>
-<h4 id="3-媒介"><a href="#3-媒介" class="headerlink" title="3. 媒介"></a>3. 媒介</h4><h4 id="4-数字"><a href="#4-数字" class="headerlink" title="4. 数字"></a>4. 数字</h4><h3 id="怎么评估数字营销的有效性呢？"><a href="#怎么评估数字营销的有效性呢？" class="headerlink" title="怎么评估数字营销的有效性呢？"></a>怎么评估数字营销的有效性呢？</h3><h3 id="Corporate-和-BU-内部的数字化运营有什么区别？"><a href="#Corporate-和-BU-内部的数字化运营有什么区别？" class="headerlink" title="Corporate 和 BU 内部的数字化运营有什么区别？"></a>Corporate 和 BU 内部的数字化运营有什么区别？</h3><h3 id="我们的目标群体到底是什么东西呢？"><a href="#我们的目标群体到底是什么东西呢？" class="headerlink" title="我们的目标群体到底是什么东西呢？"></a>我们的目标群体到底是什么东西呢？</h3>]]></content>
+<p>在和朋友沟通中，也谈到了品牌合作协作推广。两个方向，以生产线为坐标，横向品牌合作和纵向品牌合作（这个与战略里的生产线一体化战略有异曲同工之妙啊）。跨界品牌合作也很棒，不管是人还是品牌，跨界容易产生不一样的火花，有时候会很有趣。</p>
+<p>现在想来，将媒体推广和数字运营放到一起真的很有远见。<br>想要把数字营销做起来，除了内容质量，营销形式，将内容做活，渠道的作用绝对不可忽视。</p>
+<p>慢慢来吧。</p>
+]]></content>
       <categories>
         <category>生存技能</category>
       </categories>
       <tags>
         <tag>Work</tag>
         <tag>数字营销</tag>
-        <tag>困惑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于2B营销的几个关系</title>
-    <url>/2019/12/22/2019/191222%E5%85%B3%E4%BA%8E2B%E8%90%A5%E9%94%80%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B3%E7%B3%BB/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>（写的什么乱七八糟的东西啊，果然想法落到纸上还是与其在脑子里的状态不一样，先把所有的想法先写下来再说吧）</p>
-<ul>
-<li><p>（需求与产品）需求驱动产品的生产，产品占有市场较大份额，同步验证了产品的有效性和满足了用户需求</p>
-</li>
-<li><p>（销售与营销）2B公司销售具有较大的话语权，营销（数字营销）的作用不那么显性化，在经费和效果不足的情况下，怎样的突破现在的情况，增加数字营销的投入？数字营销对2B公司究竟有没有效果，效果可以这样体现，数字营销给公司带来的最大的作用是什么？</p>
-</li>
-<li><p>（产品与营销）公司分工非常细分，产品研发与产品销售分开，数字营销是基于什么目的在推广呢，Target audience又是什么呢，潜在用户，影响者，KOL或者购买决策者，针对不同的用户群体，我们使用怎样不同的营销方案来触达和影响呢？数字营销是基于用户的需求在曝光产品么，还是基于我们认为的用户的需求呢。如果给予用户的需求，是基于用户的痛点问题么，还是认为用户的兴趣方向点，用户的需求和兴趣点是一致的么；</p>
-<a id="more"></a>
-</li>
-<li><p>（营销与需求）优质的产品和营销之间形成势能，产品优秀，营销将会事半功倍。产品基于需求，营销是针对用户需求和痛点问题个性化曝光信息，增加用户的品牌认知以及增加沟通渠道。公司细分，营销脱离与需求，多偏好于产品，那么营销是否容易变成空中楼阁，花红柳绿不过好看？</p>
-</li>
-<li><p>（数字营销与2B）社交媒体的盛行，人与人的交流方式和信息获取方式有了崭新的变化，在这种情况下，2B公司是否需要数字营销？数字营销的定义是什么，是数字化手段的营销方式，还是偏向于一个渠道呢？</p>
-</li>
-</ul>
-]]></content>
-      <categories>
-        <category>生存技能</category>
-      </categories>
-      <tags>
-        <tag>Work</tag>
         <tag>市场营销</tag>
-        <tag>数字营销</tag>
-        <tag>困惑</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>2019年，她又要离开</title>
-    <url>/2019/12/26/2019/1912262019%E5%B9%B4%EF%BC%8C%E5%A5%B9%E5%8F%88%E8%A6%81%E7%A6%BB%E5%BC%80/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>想起上一次写年终总结，还是2017年本命年。</p>
-<p>至今，仍觉得那一年让人难受。有时候恍惚间觉得，从那时候开始，心情不曾有过好转，仍叫人心里惴惴甸甸的。</p>
-<p>亲眼见证衰老和死亡，如何在生命的流逝里拉扯着人往前，姿势丑陋，时间短暂又漫长。时钟秒针波动的震颤感在耳边不断的播放，眼前是冰凉苍白的阳光和阳光里四处逃窜的灰尘，一寸一寸的温暖慢慢的撤退出窗户，坐在椅子上被寒冷包围的感觉。</p>
-<p>在第二年外公离世的时候，那种麻木的感觉竟然有所缓解，不知该喜还悲。</p>
-<p>希望2020年，不要总是责备自己，多喜爱自己，多自信开心点。</p>
-<p>生活上，好好照顾自己，好好吃饭，早睡早起；<br>工作上，不要过于担忧，冷静沉着，尽力即可；</p>
-<a id="more"></a>
-<hr>
-<p>2019年整体还是感觉有点累的，</p>
-<p><strong>2019年计划达成情况</strong></p>
-<ul>
-<li>[ ]读50本书 完成率 14/50</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">* 人性的枷锁 毛姆</span><br><span class="line">* 一个孤独的散步者的遐思 卢梭</span><br><span class="line">* 出走十五年 余秋雨</span><br><span class="line">* 局外人</span><br><span class="line">* 伊豆的舞女 川端康成</span><br><span class="line">* 学会提问  56%</span><br><span class="line">* 过于喧嚣的孤独 博胡米尔·赫拉巴尔</span><br><span class="line">* 孤独六讲 蒋勋</span><br><span class="line">* 我与地坛 史铁生</span><br><span class="line">* 杀死一只知更鸟 哈珀·李</span><br><span class="line">* 西游日记 今何在</span><br><span class="line">* 乌合之众 48%</span><br><span class="line">* 怦然心动的人生整理魔法</span><br><span class="line">* 月亮与六便士</span><br><span class="line">如果算上泡沫小说，那就远远不止了..</span><br><span class="line">貌似2019看的书都好孤独啊，提前步入老年养生行列了么..今年没看什么专业书，基本上小说散文为主啊，感觉明年还是得多增加专业的书。</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>[x]去3个地方旅行：厦门、大连、景德镇、广州、武汉、桂林、扬州、上海算么</li>
-<li><input disabled type="checkbox"> 用Python做爬虫：2333没有达成，还是得想清楚用python来做什么呀，其实你是想用它来做数据分析，唉再想想吧</li>
-<li>[x]培养一个兴趣：吉他，学到扫弦了，在bilibili记录了学习过程，后半段更得较少，开心的是，还有人询问怎么不继续更了。明年还要继续加油啊，先把和弦和扫弦练熟了，去试试看指弹，反正啊少年，一点点来，不要急，享受音乐啊。想要换一个耳机。</li>
-<li>[x]学会游泳：学会了蛙泳，自由泳因为换城市的缘故没有继续学。明年要努力锻炼保重身体呀。</li>
-</ul>
-<p>其他：</p>
-<ul>
-<li>换了一个城市，换了一份工作：一直想要做数据分析的工作，然而好像在数字营销这条路上走远了，感觉也还好。however，慢慢来吧，还是要多多学习啊</li>
-<li>看了超过200集的TED：能感觉到听力好像好一点了，英语还是需要多多加油啊</li>
-<li>成长值年目标达成68%（245h/360h）：好像平均每天1小时的学习时间还不到，不过接近了70%，知足吧</li>
-<li>En Input: 42%(目标：5 times/week)：..同样目标下，吉他的达成率只有27%..</li>
-<li>运动别提了..这样下去好担心身体呀</li>
-<li>博文更新十来篇：要记录生活啊少年</li>
-<li>王者荣耀单排竟然上了星耀，很开心了</li>
-<li>存钱：很惭愧，很惭愧，很惭愧</li>
-</ul>
-<hr>
-<p><strong>2020的计划</strong></p>
-<ul>
-<li>[ ]看50本书</li>
-<li>[ ]学习python：<br>学习数据分析相关的，至少要学会整理数据、清理数据、储存数据；tableau的课程要看完啊，珍惜前老板支持的学费啊！</li>
-<li>[ ]学习吉他指弹：至少要学会完整的弹一首歌</li>
-<li>[ ]学一个运动或一个语言？</li>
-<li>[ ]去3个地方旅行</li>
-</ul>
-<p>关于习惯的期待：</p>
-<ul>
-<li>360h</li>
-<li>Language input: 5 times/week</li>
-<li>Guitar: 5 times/week</li>
-<li>Read: 1 min/day; 3 times/week</li>
-<li>Exercise: 3 times/week</li>
-</ul>
-]]></content>
-      <categories>
-        <category>杂思</category>
-      </categories>
-      <tags>
-        <tag>暇思</tag>
-        <tag>Year_Plan</tag>
       </tags>
   </entry>
   <entry>
@@ -1990,7 +2013,7 @@ Second Day：
     <title>黑</title>
     <url>/2020/02/20/2020/200220%E9%BB%91/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-iwxRTnxF" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="213973896" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+    <div id="aplayer-RAUqzDFS" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="213973896" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
 
 <p>黑，承载了所有其他颜色的重量，所以黑也总是显得特别的厚重。当厚厚的黑落到村庄时，好像一切动静都被压了下来。</p>
 <p>一种是夜晚的黑：</p>
@@ -2024,86 +2047,35 @@ Second Day：
       </tags>
   </entry>
   <entry>
-    <title>相遇即缘，无缘散沙，喜欢拉萨日光城</title>
-    <url>/2021/01/01/2021/%E7%9B%B8%E9%81%87%E5%8D%B3%E7%BC%98%EF%BC%8C%E6%97%A0%E7%BC%98%E6%95%A3%E6%B2%99%EF%BC%8C%E5%96%9C%E6%AC%A2%E6%8B%89%E8%90%A8%E6%97%A5%E5%85%89%E5%9F%8E/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>一个人去西藏，朋友有的说冬天不是好季节，有的说一个人危险或者无聊。找不到人，就走了。</p>
-<p>选择了上海-拉萨47小时火车，车厢连我5个全都是全程，如此幸运。一对情侣还是老乡，其他两位也都是一个人来的。聊聊天，听听别人的故事，那些没有体验过的经历，不同人的生活。没想到难熬的47小时过得非常快。后来还被独行的大姐安利了一家青旅，3个独行的都来了这家青旅。(大姐+95摄影小哥+我)</p>
-<p>在这家青旅，我大概待了快半个月，遇到的小伙伴基本都是一个人来的，每个人都色彩斑斓。<br>五六十岁在大使馆工作的大姐阿姨，女儿和我一般大。自学的葡萄牙语，凭义工的出色表现在大使馆驻扎了下来，最喜欢一个人国内国外扫荡美景，酷爱各种姿势被拍照，时刻自信洋溢。(真真羡慕大姐心态)</p>
-<p>疫情不能回西伯利亚家的大哥，趁着在国内深度游。大概最让人感触的是他的奶奶吧，时代的受害者，童养媳，爷爷教授先去了台湾。成分关系，一个人极其辛苦抚养大了3个儿子，等了一辈子。等到年老，终于，光鲜的爷爷带着新奶奶从台湾可以回来时，时间也回不去了。每到听到这样的故事，都使人难受，不知道该感叹时代还是人性。但事件重现，大哥的妻子说不管疫情怎样，会一直等他，然后日常用中文微信打字问“活着？”，又忍不住笑出声。</p>
-<a id="more"></a>
-<p>感情受挫又理智的姐姐，来西藏做最后的告别。喜欢的人和别人在一起了，她明年去国外定居后，将和他们在同一个地方工作。她说，这是巨大的挑战，也是重新启程。</p>
-<p>有那些来玩最终在这定居工作的，还有为了信仰留下的…</p>
-<hr>
-<p>圣诞夜，我们围着火炉听歌聊天，连着青旅前台，一共6位。除了一个大哥82年，一半都97/98的…他们听的歌好多我都没听过…</p>
-<p>我还一直觉得自己还很小呢，有的称呼还在小朵拉。这一锤子，让我觉得又伤感又暗喜，一边感叹，如果时间没有沉淀，那过去的这几年算个毛锤子，一边开心的暗戳戳叫别人小朋友</p>
-<hr>
-<p>都说拉萨是一场艳遇之城，虽然我说，日常步行心跳130-140，这看谁都心跳加速，多巴胺错觉，路边溜达的狗狗都眉清目秀。但没想到真有现实版的上演。</p>
-<p>(哈哈哈哈在大昭寺晒太阳驻扎的兵哥哥来加微信，等反应过来已经下意识拒绝了😳，幸好也不帅🤭)</p>
-<p>那天我仨去清吧听民谣(阿拉斯加犬合奏那)，听同行的98年小朋友和我们说逛色拉寺，听辩经还喝了两块钱的甜茶，一笔带过一个广东小姐姐搭讪问路。当时我们调侃他直男自杀式聊天，直接扼杀艳遇于襁褓之中，嘿，没想到。11点驻扎歌手撤场，等我们慢悠悠回到青旅时候，前台小妹妹和我们说有个广东妹子打电话问有没有一个98的新疆小伙(前台小妹妹97，世界是年轻人的了…)，留了手机号码！</p>
-<p>oh youth，真让人羡慕啊。于是我们一众怂恿并侧耳偷听他打电话回去。从“本来想问你要不要一起去喝点酒”到“晚了，要赶明天8点的飞机”，到最后“现在我来找你”。旁观者们贡献了计策艳羡道具(我贡献了两盒酸奶)支持(前台小姐姐表示多晚都帮忙开门)等一众瞎操作后，他顶着沉重的期待责任出门赴约了。</p>
-<p>第二天一起楼顶晒太阳，摄影小哥和我就没忍住第一时间问后续发展。毕竟同屋的摄影小哥为了等后续一直到两点才睡，最后被喝了一杯酒敷衍过去，何其悲痛(哈哈哈哈年轻人的好奇心)。</p>
-<p>然后这位耿直的新疆小伙，一脸委屈</p>
-<ul>
-<li><p>就喝了一杯酒😕，喝到两点，送她回酒店(群众：哈哈哈哈哈哈)</p>
-</li>
-<li><p>临走还没忘了问我拿酸奶 (群众：哈哈哈哈哈哈哈哈哈)</p>
-</li>
-<li><p>这和我想的艳遇完全不一样，果然期待越高，失望越大(群众：人八点飞机，到两点已经给你面了好嘛)</p>
-</li>
-<li><p>心疼酒钱，这四杯鸡尾酒卖的真贵啊(群众：这投资啊哈哈哈哈哈哈)</p>
-</li>
-</ul>
-<p>后来吃饭他俩还说，西藏的爱情，走不出西藏(哈哈哈哈哈哈哈)</p>
-<hr>
-<p>有的小伙伴要去珠峰大本营跨年，不虚此行仪式感；有的准备在西藏玩耍路上跨年，走哪算哪，有的准备回家跨年。</p>
-<p>你问我在哪跨年？</p>
-<p>西安国际机场的女洗手间🚺😟😕🙁☹️😣😖😫</p>
-<p>我个憨憨，买了31的飞机票，西安中转，飞机延误。</p>
-<p>什么珠峰大本营什么故宫长安街，都没有西安机场女洗手间让我印象深深深深刻。</p>
-<p><img src="/img/2020/7.png" alt></p>
-]]></content>
-      <categories>
-        <category>旅行</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>与电瓶车三两事</title>
-    <url>/2019/12/27/2019/191227%E4%B8%8E%E7%94%B5%E7%93%B6%E8%BD%A6%E4%B8%89%E4%B8%A4%E4%BA%8B/</url>
+    <title>风雪竹林屋</title>
+    <url>/2020/03/03/2020/200303%E9%A3%8E%E9%9B%AA%E7%AB%B9%E6%9E%97%E5%B1%8B/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-BazxjyNP" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="28987655" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
-<p></p>
-来上海后的9月，和朋友一起去了扬州，去看音乐节。
+    <div id="aplayer-xVulARpG" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="839925" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
 
-<p>扬州整个城市都挺干净，天空蓝的发亮，草木青翠欲滴，园林精巧美妙，妙趣横生，很有一番意思。</p>
-<p>南方的城市，空气湿润很多，山水似乎都近了很多。</p>
-<p>就是电瓶车有点多，还有点猖狂。</p>
-<p>在路口等红灯，灯还有1-2s变绿。突然感觉眼睛好像睫毛进去了，低头弄了会，腿往前迈了一步，“嘭”电瓶车撞我腿上了，还好不太重，我下意识说了句“不好意思”，骑车男孩好像也下意识回了“没关系”，我还没反应过来，他们继续往前开，听到后座女孩“没长眼睛啊，看也不看路”。</p>
-<p>等过了马路，回过神，真是好生气啊，腿撞红了我还下意识先和车道歉，没几秒绿灯，他们应该从另一边马路开过来了，很大几率是闯红灯过来的，而我下意识的行为竟然是先道歉。在自己没有任何错误的情况下，先说了道歉，好像先把自己置于无理方。</p>
-<p>而对方，在带人上路，可能闯红灯的情况下，还理直气壮的骂人。</p>
+<p>家在南方，可说是，屋前屋后，遍地是竹了。</p>
+<p>屋后是一大片的紫竹林。夏天拿着吊篮在间隔一米的两棵竹子上一捆，便是悬空吊篮了。午睡最是惬意，小鸟在枝头叫着，偶尔成群的勾在电线上，偶尔仰头，偶尔倒吊着，晃晃悠悠的看着这村庄或是天际。仰躺在吊篮上，眯着眼看这些鸟儿们叽叽喳喳，或是安静如鸡，或倒吊着，不知看向哪里。风从很远的地方赶来，到了紫竹林间已是疲倦之身，也荡荡悠悠，随着一梦到西洲了。</p>
 <a id="more"></a>
 
-<p>回想起来，这个事情也似乎有些荒谬。</p>
-<p>有些时候，是不是本来只是一个事实或者非过错方的情况下，自己心虚的态度更容易让人先入为主的认为是错呢。好玩了，若无其事的态度，可能显出这没什么大不了的，郑重其事反而让人正式。</p>
-<p>那下次遇到这样的事情，是不是首先就得先发制人，管他对错，抢占先机呢？<br>时常要为自己的迟钝感觉烦恼。</p>
-<p>前不久又被电瓶车撞了，今年不知怎么的和电瓶车好像杠上了，过去在北京7年没有遇到过一次，来上海，短短两三个月就遇到了两次。</p>
-<p>这次发生在小区里，在过小区过道左右环顾，背后有一辆电瓶车停住了，我就继续往前走了。结果就被撞了，当时疼的捂住小腿半蹲着好一会。那个大爷还碎碎叨叨，还想骂我不看路，看我一言不发一直捂着小腿，才问有没有关系啊什么的。当时我也是，过了一会没那么疼了就走了。到现在，3个多星期了小腿还是有肿块，乌青了大块，脚腕还是不舒服，幸好上周去医院看了没多大事皮肉伤。当时也没想着现场去医院看下，要是骨头撞坏了怎么办。。</p>
-<p>如果一开始就大声呵斥，是不是也代表自己有一些心虚呢，所以就想着先发制人，使自己看起来是有理方的，震慑住像我这样的人？</p>
-<p>那对应的，是不是不该不计较，纵容了这种行为，还让别人觉得这种方式可行？</p>
-<p>拉倒拉倒，希望腿早点好吧。</p>
+<p>如果沿屋向左行个几百米，就到了竹林山上。竹林是极诚实不过的了，谁愿意花时间待它，伺弄它，那片林子就长得茂盛茁壮。物有时候与人也一样，也依靠人气，人在着，这重心似乎就稳，人走了，烟气散了，它看着似乎和以前区别不大，却从里子里开始失望，等你再见着它时，才似乎恍惚间觉得，它似乎不一样了，哪不一样，你说不上来。而有些，像门头那棵枣树，等你见着它不一样时，它已颓颓将死。</p>
+<p>竹林中间有一栋阿爷的小屋子，黄泥糊的墙，稻草堆的顶，半间厨房，半间床。那时候，天还没亮堂，阿爷就拎着锄头，寸寸走竹林。哪儿哪棵竹子粗壮，哪棵竹子老了，哪棵竹子歪了还能扳正，哪已没法子了，都如数家珍。夏天睡在这凉风习习的竹林间，很是惬意，我待在这屋子里，或是在门口等巡山的阿爷归来，和摇着大尾巴的阿黄。</p>
+<p>等冬天，就比较难熬。巡山不能避，等山风起大雪来，我们就躲在这屋子里，火盆里烧起柴火，凑到火盆前。屋外是冰天冻地和着沁骨凉风，竹林间传来呼啸声。屋内是火光亮堂，温暖傍身。柴不用发愁，在遥远的冬天还未到来时，阿爷就会开始准备柴火，码得整整齐齐，屋内屋外都有一堵墙高。竹林总是很沉默，山风过才会偶尔发出声响，而我听不懂它的声音，它大概也从未想过要他人的明白。人与人之间，与物之间，有时候总是会有一些距离，然而互相陪伴着，就是一种温情了。</p>
+<p>落在一个人身上的雪，我们不能完全看见。每个人都在自己的生命中，孤独地过冬。</p>
+<p>我也从没有想过，在多年后，阿爷没有熬到他的春天。占暖还寒的春，我的本命年生日，在阿爷的床前，从清晨到夕阳斜下，看着阳光一寸寸的撤退。他一直在等，等我从雏鸟渴望的远方回家，我没有；在那年离开家的时候，他等我离家前去找他，我没有。</p>
+<p>可是我没有。</p>
 ]]></content>
       <categories>
-        <category>杂思</category>
+        <category>随笔</category>
       </categories>
       <tags>
+        <tag>10Y_Plan</tag>
         <tag>暇思</tag>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
     <title>雪</title>
     <url>/2020/03/06/2020/200306%E9%9B%AA/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-KBTGfGdN" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="839925" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+    <div id="aplayer-NizIKtZP" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="839925" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
 
 <p>仰起头，大片大片的雪花落下来，纷纷扬扬的鹅毛大雪劈头盖脸的倾盖而下，在午夜灯光的照耀下，白光闪耀。很快，屋前临时搭的棚子上就都是厚厚的积雪了。</p>
 <p>有一些落雪穿过棚与屋的缝隙间，飘落在脸上，钻到薄羽绒里，不禁打了个寒战。</p>
@@ -2147,7 +2119,7 @@ Second Day：
     <title>无聊的行尸走肉</title>
     <url>/2020/03/23/2020/200323%E6%97%A0%E8%81%8A%E7%9A%84%E8%A1%8C%E5%B0%B8%E8%B5%B0%E8%82%89/</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-gwImjVXC" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1399889525" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+    <div id="aplayer-kmycvkTh" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="1399889525" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
 
 <p>大概率，呼吸着的时候，是感觉无聊的。</p>
 <p>为什么无聊</p>
@@ -2178,6 +2150,83 @@ Second Day：
         <tag>无聊</tag>
         <tag>暇思</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>什么是PARA及如何运用PARA优化工作流</title>
+    <url>/2020/06/14/2020/200614%E4%BB%80%E4%B9%88%E6%98%AFPARA%E5%8F%8A%E5%A6%82%E4%BD%95%E8%BF%90%E7%94%A8PARA%E4%BC%98%E5%8C%96%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><a href="https://mp.weixin.qq.com/s/0zBF-x-D7tcbmJD_qMNj-A" target="_blank" rel="noopener">ref link</a></p>
+<h1 id="什么是PARA"><a href="#什么是PARA" class="headerlink" title="什么是PARA"></a>什么是PARA</h1><p>PARA：<br><img src="/img/Pasted_image_7.png" alt="Pasted image 7.png"></p>
+<ul>
+<li>项目：具有明确的目标以及时间范围，是最小执行单位</li>
+<li>领域：你日常需要精进的领域（所以你需要为此负责）</li>
+<li>资源：你感兴趣的事情，也是支撑现在 Area 和将来 Area 的外部知识储备</li>
+<li>归档：沉寂的内容，但也许对未来有用</li>
+<li>缓存：快速的收集信息，减少判断的成本 （个人添加）</li>
+</ul>
+<p>其中Goal是贯穿始终的，Area的持续精进是最终目的，Project的选择和执行，是可阶段性量化的指标，Resource是支撑二级的“Area“的资源、资料（外部的）。</p>
+<p>对项目定义不清晰的时候：</p>
+<ol>
+<li><p>你对自己能承诺的边界一无所知</p>
+</li>
+<li><p>目前的努力和长期目标没有关联</p>
+</li>
+<li><p>你不知道你是否在朝着你的目标前进</p>
+</li>
+<li><p>项目和领域需要完全不同的思维方式</p>
+<a id="more"></a> 
+</li>
+</ol>
+<hr>
+<h1 id="如何开始应用，及后期如何维护"><a href="#如何开始应用，及后期如何维护" class="headerlink" title="如何开始应用，及后期如何维护"></a>如何开始应用，及后期如何维护</h1><h2 id="0-理清你的领域"><a href="#0-理清你的领域" class="headerlink" title="0. 理清你的领域"></a>0. 理清你的领域</h2><p>理清领域最难的地方在于，你要坦然面对自己的内心。</p>
+<p>你可以像投资一样来审视你的时间，然后思考你的投资策略。</p>
+<h2 id="1-先定义项目清单"><a href="#1-先定义项目清单" class="headerlink" title="1. 先定义项目清单"></a>1. 先定义项目清单</h2><p>定义你的项目，否则他们会定义你。</p>
+<p>与其寻找【一个万能的通用工具】，不如制定你的项目列表，然后将这个列表复制到你现在和将来使用的每一个工具上，这样就可以在程序之间的过渡尽可能的无缝衔接。</p>
+<p>PARA的特点：集中化的一致性，分散化的适应性</p>
+<h2 id="2-建立项目清单"><a href="#2-建立项目清单" class="headerlink" title="2. 建立项目清单"></a>2. 建立项目清单</h2><p>收集完整的清单是获得控制权的第一步</p>
+<ul>
+<li>导出所有想法</li>
+<li>保存有价值的东西</li>
+<li>整理和完善你的清单</li>
+<li>确定预期成果和时间范围</li>
+<li>进行优先级排序，审视结果</li>
+</ul>
+<h2 id="3-和过去告别"><a href="#3-和过去告别" class="headerlink" title="3. 和过去告别"></a>3. 和过去告别</h2><ol>
+<li>将现有的文件移动到一个新的文件夹里，名为“归档[日期]”的文件夹中（带今天的日期）</li>
+<li>为你当前的每个项目创建文件夹</li>
+<li>将所有的项目文件夹移到一个新的文件夹中，名为“项目”</li>
+<li>创建一个新的“归档”文件夹，并将现有的文件夹移入其中</li>
+<li>仅在需要时才创建新的文件夹</li>
+</ol>
+<h2 id="4-日常维护"><a href="#4-日常维护" class="headerlink" title="4. 日常维护"></a>4. 日常维护</h2><p><img src="/img/Pasted_image_12.png" alt="Pasted image 12.png"></p>
+<h3 id="4-1大胆的让信息在各模块之间的流转"><a href="#4-1大胆的让信息在各模块之间的流转" class="headerlink" title="4.1大胆的让信息在各模块之间的流转"></a>4.1大胆的让信息在各模块之间的流转</h3><p>它是一个动态的系统。它的力量不是来自于深层次的 “知识 “储备，因为这些知识需要遵循严格的规则和惯例，而是来自于四个类别之间不断变化的信息流动。项目的快速更替不是一个需要管理的风险，而是我们维持这个系统的实际机制。</p>
+<p><strong>几点注意事项</strong></p>
+<ul>
+<li>项目和领域之间会经常变化</li>
+<li>领域和资源之间也会变化，比如将某个兴趣爱好升级为副业</li>
+<li>不要吝惜归档，也不要认为归但是垃圾箱。许多是否当前项目的总结，会对未来的内容有用，记得去归档中去寻找过去的只会，不要重新发明轮子</li>
+</ul>
+<h3 id="4-2-用每个当下来维护系统"><a href="#4-2-用每个当下来维护系统" class="headerlink" title="4.2 用每个当下来维护系统"></a>4.2 用每个当下来维护系统</h3><p>管理系统的初衷是希望能间第使用成本，无需额外投入太多的经理设计的。</p>
+<h2 id="X-个人Notion的使用方法"><a href="#X-个人Notion的使用方法" class="headerlink" title="X. 个人Notion的使用方法"></a>X. 个人Notion的使用方法</h2><h3 id="Project设定"><a href="#Project设定" class="headerlink" title="Project设定"></a>Project设定</h3><ul>
+<li>事项</li>
+<li>Area关联</li>
+<li>状态</li>
+<li>优先级</li>
+<li>时间</li>
+<li>分类</li>
+</ul>
+<h3 id="Area分类"><a href="#Area分类" class="headerlink" title="Area分类"></a>Area分类</h3><ul>
+<li>统计项目数量</li>
+<li>一些领域的思考</li>
+</ul>
+<h3 id="Resource"><a href="#Resource" class="headerlink" title="Resource"></a>Resource</h3><ul>
+<li>内容收集</li>
+<li>分类管理</li>
+</ul>
+<h3 id="Index设定"><a href="#Index设定" class="headerlink" title="Index设定"></a>Index设定</h3><p>给自己创建一个工作台<br>建立一个[[0 Inbox]]</p>
+]]></content>
+      <categories>
+        <category>自我成长</category>
+      </categories>
   </entry>
   <entry>
     <title>我又接到了一个诈骗电话...</title>
@@ -2274,81 +2323,32 @@ Second Day：
       </tags>
   </entry>
   <entry>
-    <title>什么是PARA及如何运用PARA优化工作流</title>
-    <url>/2020/06/14/2020/200614%E4%BB%80%E4%B9%88%E6%98%AFPARA%E5%8F%8A%E5%A6%82%E4%BD%95%E8%BF%90%E7%94%A8PARA%E4%BC%98%E5%8C%96%E5%B7%A5%E4%BD%9C%E6%B5%81/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><a href="https://mp.weixin.qq.com/s/0zBF-x-D7tcbmJD_qMNj-A" target="_blank" rel="noopener">ref link</a></p>
-<h1 id="什么是PARA"><a href="#什么是PARA" class="headerlink" title="什么是PARA"></a>什么是PARA</h1><p>PARA：<br><img src="/img/Pasted_image_7.png" alt="Pasted image 7.png"></p>
-<ul>
-<li>项目：具有明确的目标以及时间范围，是最小执行单位</li>
-<li>领域：你日常需要精进的领域（所以你需要为此负责）</li>
-<li>资源：你感兴趣的事情，也是支撑现在 Area 和将来 Area 的外部知识储备</li>
-<li>归档：沉寂的内容，但也许对未来有用</li>
-<li>缓存：快速的收集信息，减少判断的成本 （个人添加）</li>
-</ul>
-<p>其中Goal是贯穿始终的，Area的持续精进是最终目的，Project的选择和执行，是可阶段性量化的指标，Resource是支撑二级的“Area“的资源、资料（外部的）。</p>
-<p>对项目定义不清晰的时候：</p>
-<ol>
-<li><p>你对自己能承诺的边界一无所知</p>
-</li>
-<li><p>目前的努力和长期目标没有关联</p>
-</li>
-<li><p>你不知道你是否在朝着你的目标前进</p>
-</li>
-<li><p>项目和领域需要完全不同的思维方式</p>
-<a id="more"></a> 
-</li>
-</ol>
-<hr>
-<h1 id="如何开始应用，及后期如何维护"><a href="#如何开始应用，及后期如何维护" class="headerlink" title="如何开始应用，及后期如何维护"></a>如何开始应用，及后期如何维护</h1><h2 id="0-理清你的领域"><a href="#0-理清你的领域" class="headerlink" title="0. 理清你的领域"></a>0. 理清你的领域</h2><p>理清领域最难的地方在于，你要坦然面对自己的内心。</p>
-<p>你可以像投资一样来审视你的时间，然后思考你的投资策略。</p>
-<h2 id="1-先定义项目清单"><a href="#1-先定义项目清单" class="headerlink" title="1. 先定义项目清单"></a>1. 先定义项目清单</h2><p>定义你的项目，否则他们会定义你。</p>
-<p>与其寻找【一个万能的通用工具】，不如制定你的项目列表，然后将这个列表复制到你现在和将来使用的每一个工具上，这样就可以在程序之间的过渡尽可能的无缝衔接。</p>
-<p>PARA的特点：集中化的一致性，分散化的适应性</p>
-<h2 id="2-建立项目清单"><a href="#2-建立项目清单" class="headerlink" title="2. 建立项目清单"></a>2. 建立项目清单</h2><p>收集完整的清单是获得控制权的第一步</p>
-<ul>
-<li>导出所有想法</li>
-<li>保存有价值的东西</li>
-<li>整理和完善你的清单</li>
-<li>确定预期成果和时间范围</li>
-<li>进行优先级排序，审视结果</li>
-</ul>
-<h2 id="3-和过去告别"><a href="#3-和过去告别" class="headerlink" title="3. 和过去告别"></a>3. 和过去告别</h2><ol>
-<li>将现有的文件移动到一个新的文件夹里，名为“归档[日期]”的文件夹中（带今天的日期）</li>
-<li>为你当前的每个项目创建文件夹</li>
-<li>将所有的项目文件夹移到一个新的文件夹中，名为“项目”</li>
-<li>创建一个新的“归档”文件夹，并将现有的文件夹移入其中</li>
-<li>仅在需要时才创建新的文件夹</li>
-</ol>
-<h2 id="4-日常维护"><a href="#4-日常维护" class="headerlink" title="4. 日常维护"></a>4. 日常维护</h2><p><img src="/img/Pasted_image_12.png" alt="Pasted image 12.png"></p>
-<h3 id="4-1大胆的让信息在各模块之间的流转"><a href="#4-1大胆的让信息在各模块之间的流转" class="headerlink" title="4.1大胆的让信息在各模块之间的流转"></a>4.1大胆的让信息在各模块之间的流转</h3><p>它是一个动态的系统。它的力量不是来自于深层次的 “知识 “储备，因为这些知识需要遵循严格的规则和惯例，而是来自于四个类别之间不断变化的信息流动。项目的快速更替不是一个需要管理的风险，而是我们维持这个系统的实际机制。</p>
-<p><strong>几点注意事项</strong></p>
-<ul>
-<li>项目和领域之间会经常变化</li>
-<li>领域和资源之间也会变化，比如将某个兴趣爱好升级为副业</li>
-<li>不要吝惜归档，也不要认为归但是垃圾箱。许多是否当前项目的总结，会对未来的内容有用，记得去归档中去寻找过去的只会，不要重新发明轮子</li>
-</ul>
-<h3 id="4-2-用每个当下来维护系统"><a href="#4-2-用每个当下来维护系统" class="headerlink" title="4.2 用每个当下来维护系统"></a>4.2 用每个当下来维护系统</h3><p>管理系统的初衷是希望能间第使用成本，无需额外投入太多的经理设计的。</p>
-<h2 id="X-个人Notion的使用方法"><a href="#X-个人Notion的使用方法" class="headerlink" title="X. 个人Notion的使用方法"></a>X. 个人Notion的使用方法</h2><h3 id="Project设定"><a href="#Project设定" class="headerlink" title="Project设定"></a>Project设定</h3><ul>
-<li>事项</li>
-<li>Area关联</li>
-<li>状态</li>
-<li>优先级</li>
-<li>时间</li>
-<li>分类</li>
-</ul>
-<h3 id="Area分类"><a href="#Area分类" class="headerlink" title="Area分类"></a>Area分类</h3><ul>
-<li>统计项目数量</li>
-<li>一些领域的思考</li>
-</ul>
-<h3 id="Resource"><a href="#Resource" class="headerlink" title="Resource"></a>Resource</h3><ul>
-<li>内容收集</li>
-<li>分类管理</li>
-</ul>
-<h3 id="Index设定"><a href="#Index设定" class="headerlink" title="Index设定"></a>Index设定</h3><p>给自己创建一个工作台<br>建立一个[[0 Inbox]]</p>
+    <title>宇宙深埋的失落</title>
+    <url>/2020/07/23/2020/20200723%E5%AE%87%E5%AE%99%E6%B7%B1%E5%9F%8B%E7%9A%84%E5%A4%B1%E8%90%BD/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
+    <div id="aplayer-rnixGhyJ" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="509512457" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
+
+
+<p>最近有点怠懒，吉他也练得懒懒散散，很多东西都闲搁下来。</p>
+<p>工作的紧绷，让神经和身体都开始渐渐高度紧张，<br>后脑勺像是加了一把火，有一些对于秃然可能会突然出现的担忧，<br>颈椎已经拉响了警报，喑哑的嘶吼自己的悲伤。</p>
+<p>夏天经过漫长的雨季，姗姗而来，急吼吼的让整个世界都热腾腾起来，<br>汗水像是偷藏在发间皮肤表层，在室外随时都准备潜伏而出。<br>而我们却闷头格子间里，跨过它午间最盛大的表演。</p>
+<p>只偶尔清晨晚间，抬头见，晴空万里，人间喧闹。</p>
+<p>而为什么匆匆赶路的人儿啊，面色苍白，行色匆匆，面目呆滞而模糊。</p>
+<p>那些追赶梦想的人儿啊，那些被生活追赶的人儿啊，<br>我们团聚在一处，却各自环抱自我，踽踽独行。</p>
+<a id="more"></a>
+<p>在这个偌大的城市，在那个偌大的城市，<br>看灯红酒绿，看火树银花，看灯火阑珊，<br>看时间像是爬得飞快的蜗牛，这时间就飞逝，<br>睁眼闭眼间，岁月忽已晚，不知老之将至。</p>
+<p>在这那间城市的奔波中，心中感到一阵阵的疲惫。</p>
+<p>人活着，到底是为什么呢</p>
+<p>霍姆斯说，<br>宇宙既不敌视我们，<br>也不友善，<br>它只是漠不关心</p>
+<p>我们从小就以为，人生最重要的是未来<br>如果我们得知未来不会更好的时候，<br>宇宙深埋的失落又渐渐浮现</p>
+<p>人活着，究竟是为什么呢</p>
 ]]></content>
       <categories>
-        <category>自我成长</category>
+        <category>杂思</category>
       </categories>
+      <tags>
+        <tag>暇思</tag>
+      </tags>
   </entry>
   <entry>
     <title>个人工作流梳理，基于PARA + Obsidian + Sycnthing + timetrack + Strides + blog</title>
@@ -2505,157 +2505,157 @@ Second Day：
       </categories>
   </entry>
   <entry>
-    <title>去爱去奔跑，去热烈的拥抱和大笑</title>
-    <url>/2019/12/12/2019/191212%E5%8E%BB%E7%88%B1%E5%8E%BB%E5%A5%94%E8%B7%91%EF%BC%8C%E5%8E%BB%E7%83%AD%E7%83%88%E7%9A%84%E6%8B%A5%E6%8A%B1%E5%92%8C%E5%A4%A7%E7%AC%91/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-qroANHWc" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="001xT6iZ2QW8kG" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
-
-
-
-<p>有人的地方就会有江湖。</p>
-<p>时常被各种复杂的关系所套牢，<br>如果你在乎，你就深陷其中，<br>如果你不在乎，不知道什么时候你就已经被游离。</p>
-<p>说起来矫情，在这个年纪了，还是讨厌这种冗杂的游戏规则。<br>离开家乡的阿姨的嘴，也逃不过身边复杂的牵手。</p>
-<p>终有一天，我一定要有，想离开就离开的勇气和底气。<br>而不是在这种复杂的环境里，战战兢兢，身心俱疲，苍老颓颓。</p>
-<p>蝉蛹里的生活，也许缠绕着死去，也许破茧而出。</p>
+    <title>Obsidian 进阶使用手册</title>
+    <url>/2021/02/22/2021/20210222Obsidian%20%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h3 id="注意Obsidian的图片格式以及链接格式"><a href="#注意Obsidian的图片格式以及链接格式" class="headerlink" title="注意Obsidian的图片格式以及链接格式"></a>注意Obsidian的图片格式以及链接格式</h3><p>保证在Obsidian里保存的链接和图片在其他的markdown软件中也能正常打开</p>
+<p>设置如下：<br><img src="/img/2021/Pastedimage20210220170151.png" alt><br><img src="/img/2021/Pastedimage20210220170224.png" alt><br><img src="/img/2021/Pastedimage20210220170357.png" alt></p>
+<h3 id="第三方插件的使用"><a href="#第三方插件的使用" class="headerlink" title="第三方插件的使用"></a>第三方插件的使用</h3><ol>
+<li>Obsidian Git使用</li>
+</ol>
 <a id="more"></a>
-<p>看不到明天会怎样，不确定世界是不是一定是如此的复杂。</p>
-<p>有没有什么办法，可以使自己能够在复杂的关系里脱身，<br>比如，拥有一个农场吗，哈哈哈哈<br>比如，在工作以外有自己的个人影响力在，如果离开，也不用担心食物来源<br>比如，开始存fuck you money，使自己可以有底气对于不乐意的事情，easy to say no<br>比如，拥有一个第二技能，像某个总统所说，“如果有一天我不能做总统了，还能当个厨子”，哦，虽然当不了总统也最多只能做个吃货，但理想还是要有的</p>
-<p>考拉也许过上了很多人梦想中的生活，饿了有投喂，吃完就长睡。</p>
-<p>在二十多岁的年龄里，对生活充满了焦虑和颓唐，<br>不敢正常下班，不敢迟到，不敢说不，不敢坦率说自己的所思所想所往，<br>担心下个月的房租，担心明天和身体哪个先倒，担心生命苍白无力和自己的无能为力。</p>
-<p>但当在二十多岁的年龄里，还对生活充满了热爱，充满了很多不切实际的幻想，<br>还渴望着去做一个丰富的人，去看很多美丽的风景，去吃很多美味的食物，<br>去感知自然清新的味道，去感受人与人之间的温暖和美好，<br>还想着去爱去奔跑，去热烈的拥抱和大笑。</p>
-<p>为资本主义弯腰，理想主义跌入谷底，我步履蹒跚，踽踽独行。<br>吾谁与归。</p>
-]]></content>
-      <categories>
-        <category>杂思</category>
-      </categories>
-      <tags>
-        <tag>无聊</tag>
-        <tag>暇思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>医疗2B公司digital半年运营的一点想法</title>
-    <url>/2020/01/04/2020/200104%E5%8C%BB%E7%96%972B%E5%85%AC%E5%8F%B8digital%E5%8D%8A%E5%B9%B4%E8%BF%90%E8%90%A5%E7%9A%84%E4%B8%80%E7%82%B9%E6%83%B3%E6%B3%95/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>到新公司半年了，和工业行业不一样，医疗行业在媒体推广方面审核很为严格。</p>
-<p>工作一部分是公众号运营，也算是慢慢的开始熟悉起来。</p>
-<p>在数字营销这块，思考了现状和优化方向，整理如下：</p>
-<h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><ul>
-<li>增粉主要来源于线下会直播：精准用户及潜在用户应采用不同运营方式</li>
-<li>内容推广较为受限，自然增粉的趋势较为平缓：内部推广/员工推广为主/自然增粉</li>
-<li>专业内容粘性较高，品牌/大众内容效果不错（参考mylab+/贫血等）</li>
-<li>Social的内容效果更好，互动较为频繁（参考小高故事和诊断先锋）</li>
-</ul>
-<a id="more"></a>
-<h3 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h3><h4 id="关于微信服务号与小程序定位："><a href="#关于微信服务号与小程序定位：" class="headerlink" title="关于微信服务号与小程序定位："></a>关于微信服务号与小程序定位：</h4><ul>
-<li>微信公众号粉丝群体还较少，增粉与增加用户粘性为目标</li>
-<li>小程序建议以增加精准用户及用户粘性为主</li>
-</ul>
-<h4 id="关于渠道"><a href="#关于渠道" class="headerlink" title="关于渠道"></a>关于渠道</h4><ol>
-<li>可增加Owned media，比如微博（微博近两年的趋势又往上发展，较为活跃；微博定位为开放不熟悉人群，较为容易传播，更接地气）<ul>
-<li>增加品牌曝光</li>
-<li>增加KOL协助推广的渠道（例如@协和检验_李时民粉丝90K+，也会发送自己在本司的直播信息）</li>
-<li>增加产品推广渠道</li>
-<li>增加用户互动和粘性</li>
-<li>增加用户与本司的联系渠道</li>
-</ul>
-</li>
-</ol>
-<ol start="2">
-<li>可增加paid social media及vertical media 推广<ul>
-<li>现状需要突破</li>
-<li>生产线同事有需求</li>
-<li>增加推广和曝光，使用目标用户易触达渠道</li>
-<li>增加品牌曝光</li>
-</ul>
-</li>
-</ol>
-<h4 id="关于内容："><a href="#关于内容：" class="headerlink" title="关于内容："></a>关于内容：</h4><ol>
-<li>增加campaign mini site（内容集成页：包含推广话题的所有相关内容）：建议官网，或者小程序活动页面<ul>
-<li>全面资料的集合</li>
-<li>用户更容易找到想了解的内容</li>
-<li>有更多performance来track推广效果（符合公司2020年想做campaign performance analysis的方向）</li>
-<li>更为有效和精准的传递给用户推广信息</li>
-</ul>
-</li>
-</ol>
-<ol start="2">
-<li><p>游戏汉化：global有一些小游戏，低成本优化推广</p>
-</li>
-<li><p>基层会</p>
-</li>
-</ol>
+
+<p>1.1 插件安装</p>
 <ul>
-<li>根据近几年的增粉趋势，基层会的粉丝增量较为可观（见近几年粉丝增长蓝图），建议可以做一个整体的推广策划（内容+推广），扩大影响力</li>
+<li>在插件库里安装<br><img src="/img/2021/Pastedimage20210220172320.png" alt><br><img src="/img/2021/Pastedimage20210220172331.png" alt></li>
+<li>设置<br><img src="/img/2021/Pastedimage20210220172240.png" alt></li>
 </ul>
-<h4 id="关于形式："><a href="#关于形式：" class="headerlink" title="关于形式："></a>关于形式：</h4><ul>
-<li>Social &amp; Colorful </li>
-<li>Interaction</li>
-<li>Story</li>
+<p>这里表示设置多少时间同步一次<br><img src="/img/2021/Pastedimage20210220172414.png" alt><br><img src="/img/2021/Pastedimage20210220172930.png" alt></p>
+<p><strong><a href="https://effectiveremotework.com/2020/09/obsidian-sync-your-vaults-with-git-github/" target="_blank" rel="noopener">obsidian git的补充视频</a></strong></p>
+<p>1.2 git安装及文件同步到云端</p>
+<ul>
+<li>git安装，到官网安装git 软件 </li>
+<li>配置git及链接到云端GitHub</li>
 </ul>
+<p>客户端配置保存密码，避免每次重新输入<br>1）信息配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;github用户名&quot;</span><br><span class="line">git config --global user.email &quot;github注册邮箱&quot;</span><br></pre></td></tr></table></figure>
+<p>2）设置密码更新时间</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1、设置记住密码（默认15分钟）：</span><br><span class="line">git config --global credential.helper cache</span><br><span class="line"></span><br><span class="line">2、如果想自己设置时间，可以这样做：</span><br><span class="line">git config credential.helper &#39;cache --timeout&#x3D;3600&#39;</span><br><span class="line">这样就设置一个小时之后失效</span><br><span class="line"></span><br><span class="line">3、长期存储密码：</span><br><span class="line">git config --global credential.helper store</span><br><span class="line"></span><br><span class="line">4、增加远程地址的时候带上密码也是可以的。(推荐)</span><br><span class="line">http:&#x2F;&#x2F;yourname:password@git.oschina.net&#x2F;name&#x2F;project.git</span><br></pre></td></tr></table></figure>
+
+
+<ol start="2">
+<li>todo list/checklist<br>目前已有的几个比较，选择了<strong>checklist</strong></li>
+</ol>
+<p><a href="https://github.com/delashum/obsidian-checklist-plugin" target="_blank" rel="noopener">使用说明</a>__</p>
+<p>效果显示<br><img src="/img/2021/Pastedimage20210222172453.png" alt></p>
+]]></content>
+      <categories>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>自我成长</tag>
+        <tag>Obsidian</tag>
+        <tag>双向笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>git清单2</title>
+    <url>/2021/02/25/2021/20210225git%E6%B8%85%E5%8D%952/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><h1 id="在不同的电脑上同步同一个repository"><a href="#在不同的电脑上同步同一个repository" class="headerlink" title="在不同的电脑上同步同一个repository"></a>在不同的电脑上同步同一个repository</h1><ol>
+<li>使用不同的分支<br>多人开发使用<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git branch [name]</span><br><span class="line">git push -g origin [name]</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>先下载远程内容，然后同步<br>先从远程下载，再push</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>强制同步</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git push -u origin master -f</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<a id="more"></a>
+<p> <strong>git pul错误</strong><br> error: Your local changes to the following files would be overwritten by merge</p>
+<p> 解决办法</p>
+<ol>
+<li>stash<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git stash</span><br><span class="line">git commit </span><br><span class="line">git stash pop</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>git stash: 备份当前的工作区的内容，从最近的一次提交中读取相关内容，让工作区保证和上次提交的内容一致。同时，将当前的工作区内容保存到Git栈中。<br>git stash pop: 从Git栈中读取最近一次保存的内容，恢复工作区的相关内容。由于可能存在多个Stash的内容，所以用栈来管理，pop会从最近的一个stash中读取内容并恢复。<br>git stash list: 显示Git栈内的所有备份，可以利用这个列表来决定从那个地方恢复。<br>git stash clear: 清空Git栈。此时使用gitg等图形化工具会发现，原来stash的哪些节点都消失了</p>
+<ol start="2">
+<li>放弃本地修改，直接覆盖<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git reset --hard</span><br><span class="line">git pull</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="关联阅读："><a href="#关联阅读：" class="headerlink" title="关联阅读："></a>关联阅读：</h1><p><a href="https://liheyuting.github.io/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/">git清单</a></p>
+]]></content>
+      <categories>
+        <category>兴趣技能</category>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>Obsidian</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>相遇即缘，无缘散沙，喜欢拉萨日光城</title>
+    <url>/2021/01/01/2021/%E7%9B%B8%E9%81%87%E5%8D%B3%E7%BC%98%EF%BC%8C%E6%97%A0%E7%BC%98%E6%95%A3%E6%B2%99%EF%BC%8C%E5%96%9C%E6%AC%A2%E6%8B%89%E8%90%A8%E6%97%A5%E5%85%89%E5%9F%8E/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>一个人去西藏，朋友有的说冬天不是好季节，有的说一个人危险或者无聊。找不到人，就走了。</p>
+<p>选择了上海-拉萨47小时火车，车厢连我5个全都是全程，如此幸运。一对情侣还是老乡，其他两位也都是一个人来的。聊聊天，听听别人的故事，那些没有体验过的经历，不同人的生活。没想到难熬的47小时过得非常快。后来还被独行的大姐安利了一家青旅，3个独行的都来了这家青旅。(大姐+95摄影小哥+我)</p>
+<p>在这家青旅，我大概待了快半个月，遇到的小伙伴基本都是一个人来的，每个人都色彩斑斓。<br>五六十岁在大使馆工作的大姐阿姨，女儿和我一般大。自学的葡萄牙语，凭义工的出色表现在大使馆驻扎了下来，最喜欢一个人国内国外扫荡美景，酷爱各种姿势被拍照，时刻自信洋溢。(真真羡慕大姐心态)</p>
+<p>疫情不能回西伯利亚家的大哥，趁着在国内深度游。大概最让人感触的是他的奶奶吧，时代的受害者，童养媳，爷爷教授先去了台湾。成分关系，一个人极其辛苦抚养大了3个儿子，等了一辈子。等到年老，终于，光鲜的爷爷带着新奶奶从台湾可以回来时，时间也回不去了。每到听到这样的故事，都使人难受，不知道该感叹时代还是人性。但事件重现，大哥的妻子说不管疫情怎样，会一直等他，然后日常用中文微信打字问“活着？”，又忍不住笑出声。</p>
+<a id="more"></a>
+<p>感情受挫又理智的姐姐，来西藏做最后的告别。喜欢的人和别人在一起了，她明年去国外定居后，将和他们在同一个地方工作。她说，这是巨大的挑战，也是重新启程。</p>
+<p>有那些来玩最终在这定居工作的，还有为了信仰留下的…</p>
 <hr>
-<p>在和朋友沟通中，也谈到了品牌合作协作推广。两个方向，以生产线为坐标，横向品牌合作和纵向品牌合作（这个与战略里的生产线一体化战略有异曲同工之妙啊）。跨界品牌合作也很棒，不管是人还是品牌，跨界容易产生不一样的火花，有时候会很有趣。</p>
-<p>现在想来，将媒体推广和数字运营放到一起真的很有远见。<br>想要把数字营销做起来，除了内容质量，营销形式，将内容做活，渠道的作用绝对不可忽视。</p>
-<p>慢慢来吧。</p>
+<p>圣诞夜，我们围着火炉听歌聊天，连着青旅前台，一共6位。除了一个大哥82年，一半都97/98的…他们听的歌好多我都没听过…</p>
+<p>我还一直觉得自己还很小呢，有的称呼还在小朵拉。这一锤子，让我觉得又伤感又暗喜，一边感叹，如果时间没有沉淀，那过去的这几年算个毛锤子，一边开心的暗戳戳叫别人小朋友</p>
+<hr>
+<p>都说拉萨是一场艳遇之城，虽然我说，日常步行心跳130-140，这看谁都心跳加速，多巴胺错觉，路边溜达的狗狗都眉清目秀。但没想到真有现实版的上演。</p>
+<p>(哈哈哈哈在大昭寺晒太阳驻扎的兵哥哥来加微信，等反应过来已经下意识拒绝了😳，幸好也不帅🤭)</p>
+<p>那天我仨去清吧听民谣(阿拉斯加犬合奏那)，听同行的98年小朋友和我们说逛色拉寺，听辩经还喝了两块钱的甜茶，一笔带过一个广东小姐姐搭讪问路。当时我们调侃他直男自杀式聊天，直接扼杀艳遇于襁褓之中，嘿，没想到。11点驻扎歌手撤场，等我们慢悠悠回到青旅时候，前台小妹妹和我们说有个广东妹子打电话问有没有一个98的新疆小伙(前台小妹妹97，世界是年轻人的了…)，留了手机号码！</p>
+<p>oh youth，真让人羡慕啊。于是我们一众怂恿并侧耳偷听他打电话回去。从“本来想问你要不要一起去喝点酒”到“晚了，要赶明天8点的飞机”，到最后“现在我来找你”。旁观者们贡献了计策艳羡道具(我贡献了两盒酸奶)支持(前台小姐姐表示多晚都帮忙开门)等一众瞎操作后，他顶着沉重的期待责任出门赴约了。</p>
+<p>第二天一起楼顶晒太阳，摄影小哥和我就没忍住第一时间问后续发展。毕竟同屋的摄影小哥为了等后续一直到两点才睡，最后被喝了一杯酒敷衍过去，何其悲痛(哈哈哈哈年轻人的好奇心)。</p>
+<p>然后这位耿直的新疆小伙，一脸委屈</p>
+<ul>
+<li><p>就喝了一杯酒😕，喝到两点，送她回酒店(群众：哈哈哈哈哈哈)</p>
+</li>
+<li><p>临走还没忘了问我拿酸奶 (群众：哈哈哈哈哈哈哈哈哈)</p>
+</li>
+<li><p>这和我想的艳遇完全不一样，果然期待越高，失望越大(群众：人八点飞机，到两点已经给你面了好嘛)</p>
+</li>
+<li><p>心疼酒钱，这四杯鸡尾酒卖的真贵啊(群众：这投资啊哈哈哈哈哈哈)</p>
+</li>
+</ul>
+<p>后来吃饭他俩还说，西藏的爱情，走不出西藏(哈哈哈哈哈哈哈)</p>
+<hr>
+<p>有的小伙伴要去珠峰大本营跨年，不虚此行仪式感；有的准备在西藏玩耍路上跨年，走哪算哪，有的准备回家跨年。</p>
+<p>你问我在哪跨年？</p>
+<p>西安国际机场的女洗手间🚺😟😕🙁☹️😣😖😫</p>
+<p>我个憨憨，买了31的飞机票，西安中转，飞机延误。</p>
+<p>什么珠峰大本营什么故宫长安街，都没有西安机场女洗手间让我印象深深深深刻。</p>
+<p><img src="/img/2020/7.png" alt></p>
 ]]></content>
       <categories>
-        <category>生存技能</category>
+        <category>旅行</category>
       </categories>
-      <tags>
-        <tag>Work</tag>
-        <tag>市场营销</tag>
-        <tag>数字营销</tag>
-      </tags>
   </entry>
   <entry>
-    <title>宇宙深埋的失落</title>
-    <url>/2020/07/23/2020/20200723%E5%AE%87%E5%AE%99%E6%B7%B1%E5%9F%8B%E7%9A%84%E5%A4%B1%E8%90%BD/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-bWjqCjaa" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="509512457" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
-
-
-<p>最近有点怠懒，吉他也练得懒懒散散，很多东西都闲搁下来。</p>
-<p>工作的紧绷，让神经和身体都开始渐渐高度紧张，<br>后脑勺像是加了一把火，有一些对于秃然可能会突然出现的担忧，<br>颈椎已经拉响了警报，喑哑的嘶吼自己的悲伤。</p>
-<p>夏天经过漫长的雨季，姗姗而来，急吼吼的让整个世界都热腾腾起来，<br>汗水像是偷藏在发间皮肤表层，在室外随时都准备潜伏而出。<br>而我们却闷头格子间里，跨过它午间最盛大的表演。</p>
-<p>只偶尔清晨晚间，抬头见，晴空万里，人间喧闹。</p>
-<p>而为什么匆匆赶路的人儿啊，面色苍白，行色匆匆，面目呆滞而模糊。</p>
-<p>那些追赶梦想的人儿啊，那些被生活追赶的人儿啊，<br>我们团聚在一处，却各自环抱自我，踽踽独行。</p>
+    <title>这个世界太严肃，想到这点，我毛骨悚然</title>
+    <url>/2018/11/24/2018/181124%E8%BF%99%E4%B8%AA%E4%B8%96%E7%95%8C%E5%A4%AA%E4%B8%A5%E8%82%83%EF%BC%8C%E6%83%B3%E5%88%B0%E8%BF%99%E7%82%B9%EF%BC%8C%E6%88%91%E6%AF%9B%E9%AA%A8%E6%82%9A%E7%84%B6/</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p>什么时候变得像现在这个样子，每到落笔，似乎灾难性的事情一下子都全部落到了肩上一样，各种幻想自己的悲惨。</p>
+<p>眼睛像是蒙上了一层薄雾，明知自己无限制的玩游戏之后又摸索着用电脑写东西，就好像狗屁不通的胡乱撕咬，也像是自由的在冰面上滑行。</p>
+<p>文字自有其欺骗性的本性以及自由自在的自在。她既是脆弱的不堪一击的比玻璃和爱情还更不靠谱，又像是穿越过无数时光还死乞白赖的活着精彩又长久。让人欲罢不能。</p>
+<p>时常不想动笔，动笔即各种生活的坏处涌上心头，就不知说些什么好，和自己对话，总是乱七八糟的糟心事，当作和别人对话吧，又好像喋喋不休的祥林嫂，让人联想到圆规。索性就还是不写。要真写点正经话吧，又要挠头摆尾，鱼鳞都好像要挠掉一样，半天憋不出一句半句来。说出的话来，像是一个个的泡泡，即怕它落在半空不落地，心就空落落，要是落地了，又是严肃的要命，没意思的紧。</p>
 <a id="more"></a>
-<p>在这个偌大的城市，在那个偌大的城市，<br>看灯红酒绿，看火树银花，看灯火阑珊，<br>看时间像是爬得飞快的蜗牛，这时间就飞逝，<br>睁眼闭眼间，岁月忽已晚，不知老之将至。</p>
-<p>在这那间城市的奔波中，心中感到一阵阵的疲惫。</p>
-<p>人活着，到底是为什么呢</p>
-<p>霍姆斯说，<br>宇宙既不敌视我们，<br>也不友善，<br>它只是漠不关心</p>
-<p>我们从小就以为，人生最重要的是未来<br>如果我们得知未来不会更好的时候，<br>宇宙深埋的失落又渐渐浮现</p>
-<p>人活着，究竟是为什么呢</p>
-]]></content>
-      <categories>
-        <category>杂思</category>
-      </categories>
-      <tags>
-        <tag>暇思</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>风雪竹林屋</title>
-    <url>/2020/03/03/2020/200303%E9%A3%8E%E9%9B%AA%E7%AB%B9%E6%9E%97%E5%B1%8B/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script>
-    <div id="aplayer-ojBsKXtK" class="aplayer aplayer-tag-marker meting-tag-marker" data-id="839925" data-server="tencent" data-type="song" data-mode="circulation" data-autoplay="false" data-mutex="true" data-listmaxheight="340px" data-preload="auto" data-theme="#555"></div>
-
-<p>家在南方，可说是，屋前屋后，遍地是竹了。</p>
-<p>屋后是一大片的紫竹林。夏天拿着吊篮在间隔一米的两棵竹子上一捆，便是悬空吊篮了。午睡最是惬意，小鸟在枝头叫着，偶尔成群的勾在电线上，偶尔仰头，偶尔倒吊着，晃晃悠悠的看着这村庄或是天际。仰躺在吊篮上，眯着眼看这些鸟儿们叽叽喳喳，或是安静如鸡，或倒吊着，不知看向哪里。风从很远的地方赶来，到了紫竹林间已是疲倦之身，也荡荡悠悠，随着一梦到西洲了。</p>
-<a id="more"></a>
-
-<p>如果沿屋向左行个几百米，就到了竹林山上。竹林是极诚实不过的了，谁愿意花时间待它，伺弄它，那片林子就长得茂盛茁壮。物有时候与人也一样，也依靠人气，人在着，这重心似乎就稳，人走了，烟气散了，它看着似乎和以前区别不大，却从里子里开始失望，等你再见着它时，才似乎恍惚间觉得，它似乎不一样了，哪不一样，你说不上来。而有些，像门头那棵枣树，等你见着它不一样时，它已颓颓将死。</p>
-<p>竹林中间有一栋阿爷的小屋子，黄泥糊的墙，稻草堆的顶，半间厨房，半间床。那时候，天还没亮堂，阿爷就拎着锄头，寸寸走竹林。哪儿哪棵竹子粗壮，哪棵竹子老了，哪棵竹子歪了还能扳正，哪已没法子了，都如数家珍。夏天睡在这凉风习习的竹林间，很是惬意，我待在这屋子里，或是在门口等巡山的阿爷归来，和摇着大尾巴的阿黄。</p>
-<p>等冬天，就比较难熬。巡山不能避，等山风起大雪来，我们就躲在这屋子里，火盆里烧起柴火，凑到火盆前。屋外是冰天冻地和着沁骨凉风，竹林间传来呼啸声。屋内是火光亮堂，温暖傍身。柴不用发愁，在遥远的冬天还未到来时，阿爷就会开始准备柴火，码得整整齐齐，屋内屋外都有一堵墙高。竹林总是很沉默，山风过才会偶尔发出声响，而我听不懂它的声音，它大概也从未想过要他人的明白。人与人之间，与物之间，有时候总是会有一些距离，然而互相陪伴着，就是一种温情了。</p>
-<p>落在一个人身上的雪，我们不能完全看见。每个人都在自己的生命中，孤独地过冬。</p>
-<p>我也从没有想过，在多年后，阿爷没有熬到他的春天。占暖还寒的春，我的本命年生日，在阿爷的床前，从清晨到夕阳斜下，看着阳光一寸寸的撤退。他一直在等，等我从雏鸟渴望的远方回家，我没有；在那年离开家的时候，他等我离家前去找他，我没有。</p>
-<p>可是我没有。</p>
+<p>一落笔，你这心里乌黑的墨汁，心里头阴惨惨的角落就好像显露无疑。平时在别人面前，总要保持个沉默靠谱的模样，别人说你文静温柔吧，你这心里头也高兴不起来，无趣的像个木头人，想想就觉得没意思。还真是没啥意思，现在出门遇到人，都不晓得想讲什么话，讲的多是无趣话。不讲话，又是闷的可以。讲的多了，就又想是裹布。</p>
+<p>一开口就得输出价值观，似乎你这观点偏颇有理才是正当，要是你觉得都行，那就可不行了，那就是没性格，没想法。得表态啊，花好不好看，好看或是不好看，看花是花，看鸟是鸟那可不行，得有点实在的看法啊，对着个花，你还不能说点“花开花飞飞满天“的伤感话，或者花的香味若隐若现似柔似媚的赞美话？花怎能是个单纯的花呢，你还是年轻啊。</p>
+<p>肩膀疼，脖子也不太舒服，我时常惶恐的紧，生个急性病还好说，来吧来吧，一锤子伤害，落在身上也就那样，这慢刀子可不成啊，钝的你心都要颤着疼。后来发现，你没个职业病，还敢说敬业？</p>
+<p>有些黑色墨汁啊，传染性最强，你不知不觉，感觉自己手臂已经慢慢的浸染了，还不知晓，路边小树碰你下，你心中一阵恼怒，想要踹它，抬脚时发现自己的脚已经灰突突的让人厌恶。</p>
+<p>又是一堆垃圾话，有时候想着来这人间这一趟，到底是为了什么。</p>
+<p>有时候想着以前曾对人说过伤害的话，心里有些难受。年少不懂事那才是借口，为了显示自己比较酷比较特别，就说出一些伤人的话，有时候想起来很想对人道个歉。道歉了又怎样呢，你对他人的伤害已经造成了，你现在再重提，不谈提醒对方的二次伤害，即使接受了又怎样，你难道不是为了求得自己的心里好受吗，为了自己解脱，再去提醒对方已发生的伤害。</p>
+<p>什么乱七八糟的。</p>
+<p>想起读书时学到的伍尔夫的《墙上的斑点》，当时真觉得这个作者好无聊，一个黑点就能联想大这么多，这得有多无聊啊。想完了还得写下来，写下来还让我们学，学什么？学看一个斑点？现在长大了，写的什么我已经记不得了，奇迹般的，这篇东西的感觉我还记得很清楚。无聊无趣百无聊赖，不正是现在我的状态吗？这难道就是长大之后会生的一个无聊病？小时候能吃到薯片就好像天塌下来也不害怕的欢喜事，现在吃个美味，整个人都还是焦虑，这个蠢笨的人啊，又在浪费粮食了。诶？不对不对，换个思路岂不是”蠢笨如我，竟有幸可品尝此等美味，岂不幸哉游哉？“</p>
+<p>这个世界太严肃，想到这点，我毛骨悚然。</p>
 ]]></content>
       <categories>
         <category>随笔</category>
       </categories>
       <tags>
-        <tag>10Y_Plan</tag>
+        <tag>无聊</tag>
         <tag>暇思</tag>
       </tags>
   </entry>
