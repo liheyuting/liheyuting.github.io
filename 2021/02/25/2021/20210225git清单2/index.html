@@ -87,7 +87,7 @@
 <meta property="og:description" content="在不同的电脑上同步同一个repository 使用不同的分支多人开发使用12git branch [name]git push -g origin [name]      先下载远程内容，然后同步先从远程下载，再push 12git pull origin mastergit push -u origin master  强制同步 1git push -u origin master -f">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-02-24T21:16:00.000Z">
-<meta property="article:modified_time" content="2021-02-24T21:36:37.625Z">
+<meta property="article:modified_time" content="2021-03-21T07:59:24.093Z">
 <meta property="article:author" content="Dora Li">
 <meta property="article:tag" content="Obsidian">
 <meta property="article:tag" content="Git">
@@ -503,6 +503,13 @@ daovoice('update');
 
 </li>
 </ol>
+<p>**git push 错误“</p>
+<p>问题：SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443解决办法</p>
+<p>解决方式1：<br>命令行输入：<code>networksetup -setv6off Wi-Fi</code></p>
+<p>方式2: 重新输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m &quot;111&quot;</span><br><span class="line">git pull origin master</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+
+<p>方式3. 命令行重新输入<br><code>git config --global http.sslBackend &quot;openssl&quot;</code></p>
 <h1 id="关联阅读："><a href="#关联阅读：" class="headerlink" title="关联阅读："></a>关联阅读：</h1><p><a href="https://liheyuting.github.io/2018/09/28/2018/180928git%E6%B8%85%E5%8D%95/">git清单</a></p>
 
       
