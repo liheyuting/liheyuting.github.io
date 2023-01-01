@@ -131,6 +131,6 @@ aplayer:
 backup:
   type: git
   repository:
-    github: git@github.com:liheyuting/liheyuting.github.io.git,Hexo
+    github: https://github.com/liheyuting/liheyuting.github.io.git,Hexo
 
 
