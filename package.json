@@ -6,7 +6,7 @@
     "version": "4.2.1"
   },
   "dependencies": {
-    "hexo": "^4.2.1",
+    "hexo": "^5.4.1",
     "hexo-asset-image": "git+https://github.com/JackCh3n/hexo-asset-image.git",
     "hexo-deployer-git": "^2.1.0",
     "hexo-filter-image": "^1.2.3",
