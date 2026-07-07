@@ -426,6 +426,18 @@ daovoice('update');
 
           
           
+             <span id="/2018/05/12/2018/180512Markdown%E8%AF%AD%E6%B3%95%E6%96%87%E6%A1%A3/" class="leancloud_visitors" data-flag-title="Markdown语法文档">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
 
           
             <span class="post-meta-divider">|</span>
@@ -560,8 +572,8 @@ daovoice('update');
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/12/2018/180512%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" rel="next" title="建立第一篇博客">
-                <i class="fa fa-chevron-left"></i> 建立第一篇博客
+              <a href="/2018/03/16/2018/180316%E9%82%A3%E4%B8%AA%E6%B2%89%E9%BB%98%E7%9D%80%E9%80%81%E4%BD%A0%E5%9B%9E%E5%AE%B6%E5%8D%B4%E4%B8%8D%E5%91%8A%E8%AF%89%E4%BD%A0%E7%9A%84%E7%94%B7%E7%94%9F/" rel="next" title="那个沉默着送你回家却不告诉你的男生">
+                <i class="fa fa-chevron-left"></i> 那个沉默着送你回家却不告诉你的男生
               </a>
             
           </div>
@@ -570,8 +582,8 @@ daovoice('update');
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/05/16/2018/180516%E2%80%9C%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E2%80%9D%E6%94%BB%E7%95%A5/" rel="prev" title="“科学上网”攻略">
-                “科学上网”攻略 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/05/12/2018/180512%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" rel="prev" title="建立第一篇博客">
+                建立第一篇博客 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -1325,6 +1337,113 @@ daovoice('update');
 
 
   
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("0PY1HzVz9JYtsOCqiPoAF0CE-gzGzoHsz", "EhMC1X4UxpCLdFSiEXFvUbJX");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
