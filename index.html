@@ -344,6 +344,567 @@ daovoice('update');
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2026/01/04/2026/2026-01-04Obsidian+PicGo%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dora Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="虚妄之城">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2026/01/04/2026/2026-01-04Obsidian+PicGo%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/" itemprop="url">2026/2026-01-04Obsidian+PicGo自动备份上传图片</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2026-01-04T18:30:00+08:00">
+                2026-01-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2026/01/04/2026/2026-01-04Obsidian+PicGo%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2026/01/04/2026/2026-01-04Obsidian+PicGo%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2026/01/04/2026/2026-01-04Obsidian+PicGo%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/" class="leancloud_visitors" data-flag-title="2026/2026-01-04Obsidian+PicGo自动备份上传图片">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>几年前设置过自动备份，后来发现mdnice排版时候直接生成图片链接，并且公司电脑防火墙缘故，就没有使用了，但是今天用mdnice排版的时候，告诉我已经没有免费额度了，所以重新配置obsidian自动同步上传图片到图床。</p>
+<p>使用的三方插件【Image auto upload】+ GitHub进行配置<br>插件地址：obsidian://show-plugin?id=obsidian-image-auto-upload-plugin<br>PicGo: <a href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener">https://github.com/Molunerfinn/PicGo</a></p>
+<h2 id="插件安装"><a href="#插件安装" class="headerlink" title="插件安装"></a>插件安装</h2><p>我没有调整，默认的就够用了<br><img src="https://raw.githubusercontent.com/liheyuting/PicGo_Open/main/20260104193707943.png" alt></p>
+<h2 id="Github-设置"><a href="#Github-设置" class="headerlink" title="Github 设置"></a>Github 设置</h2><ol>
+<li>建立一个repo : <strong>千万注意要设置为公开repo，否则图片链接很容易失效</strong></li>
+<li>建立一个tokes<ul>
+<li>个人头像- setting</li>
+<li>选择左下角的personal access tokens</li>
+<li>选择Tokens（classic）</li>
+<li>建立Generate new token（classic）</li>
+<li>设置【Note/Expiration】，勾选repo</li>
+</ul>
+</li>
+</ol>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2026/01/04/2026/2026-01-04Obsidian+PicGo%E8%87%AA%E5%8A%A8%E5%A4%87%E4%BB%BD%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87/#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2025/08/08/2025/2025-08-08%E9%9D%9E%E5%8C%BB%E5%AD%A6%E8%83%8C%E6%99%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E9%9D%A0AI%E5%86%99%E5%87%BA%E4%B8%93%E4%B8%9A%E7%BA%A7%E5%8C%BB%E7%96%97%E6%96%87%E6%A1%88%EF%BC%9F%E9%99%84%E9%AB%98%E6%95%88%E6%8E%92%E7%89%88%E4%B8%80%E6%9D%A1%E9%BE%99%E6%94%BB%E7%95%A5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dora Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="虚妄之城">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2025/08/08/2025/2025-08-08%E9%9D%9E%E5%8C%BB%E5%AD%A6%E8%83%8C%E6%99%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E9%9D%A0AI%E5%86%99%E5%87%BA%E4%B8%93%E4%B8%9A%E7%BA%A7%E5%8C%BB%E7%96%97%E6%96%87%E6%A1%88%EF%BC%9F%E9%99%84%E9%AB%98%E6%95%88%E6%8E%92%E7%89%88%E4%B8%80%E6%9D%A1%E9%BE%99%E6%94%BB%E7%95%A5/" itemprop="url">2025/2025-08-08非医学背景，如何靠AI写出专业级医疗文案？附高效排版一条龙攻略</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2025-08-08T11:09:00+08:00">
+                2025-08-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index">
+                    <span itemprop="name">工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2025/08/08/2025/2025-08-08%E9%9D%9E%E5%8C%BB%E5%AD%A6%E8%83%8C%E6%99%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E9%9D%A0AI%E5%86%99%E5%87%BA%E4%B8%93%E4%B8%9A%E7%BA%A7%E5%8C%BB%E7%96%97%E6%96%87%E6%A1%88%EF%BC%9F%E9%99%84%E9%AB%98%E6%95%88%E6%8E%92%E7%89%88%E4%B8%80%E6%9D%A1%E9%BE%99%E6%94%BB%E7%95%A5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2025/08/08/2025/2025-08-08%E9%9D%9E%E5%8C%BB%E5%AD%A6%E8%83%8C%E6%99%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E9%9D%A0AI%E5%86%99%E5%87%BA%E4%B8%93%E4%B8%9A%E7%BA%A7%E5%8C%BB%E7%96%97%E6%96%87%E6%A1%88%EF%BC%9F%E9%99%84%E9%AB%98%E6%95%88%E6%8E%92%E7%89%88%E4%B8%80%E6%9D%A1%E9%BE%99%E6%94%BB%E7%95%A5/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2025/08/08/2025/2025-08-08%E9%9D%9E%E5%8C%BB%E5%AD%A6%E8%83%8C%E6%99%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E9%9D%A0AI%E5%86%99%E5%87%BA%E4%B8%93%E4%B8%9A%E7%BA%A7%E5%8C%BB%E7%96%97%E6%96%87%E6%A1%88%EF%BC%9F%E9%99%84%E9%AB%98%E6%95%88%E6%8E%92%E7%89%88%E4%B8%80%E6%9D%A1%E9%BE%99%E6%94%BB%E7%95%A5/" class="leancloud_visitors" data-flag-title="2025/2025-08-08非医学背景，如何靠AI写出专业级医疗文案？附高效排版一条龙攻略">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>我在医疗行业做数字营销，专业是市场营销。由于公司遭遇了巨大变化，我的工作scope中就增加了医学类的文章撰写内容。坦白说，这个对我来说是巨大的挑战，一个非医学专业的人，要写出让至少四年专业学习以及几年甚至几十年的专业医师都认可的文章，不知道是我疯了还是世界疯了，当时就想到一个词，<strong>倒反天罡</strong>。</p>
+<p>但是，不管我怎么蹦跶，上下求索，仍然被要求必须去做这个事情。牛马之道，一入其门深似海，使用月薪-世界上第三邪恶的东西，拴住我的脖颈，我也不得不俯首。</p>
+<p>在努力降低了老板对我医学文章产出效果的预期之后，无奈一头扎进了AI的怀抱。但幸运的是，那句话怎么说，遇到她，世界都变得不一样了起来，AI亦是如此。</p>
+<p>之前也写过1篇[[2022-11-17Markdown软件等快速排版公众号文章]]，基于此，本文将分享我如何利用AI，<strong>从0开始撰写专业医疗文案</strong>，并实现<strong>一键高效美观排版</strong>的完整工作流。</p>
+<h1 id="1-制作Markdown语法内容"><a href="#1-制作Markdown语法内容" class="headerlink" title="1. 制作Markdown语法内容"></a>1. 制作Markdown语法内容</h1><p>这部分分两种类型</p>
+<ol>
+<li>材料已经整理完成的成品</li>
+<li>从0开始，通过AI撰写专业性文章</li>
+</ol>
+<h2 id="场景一：优化现有内容"><a href="#场景一：优化现有内容" class="headerlink" title="场景一：优化现有内容"></a>场景一：优化现有内容</h2><p>如果你已经有一份完整的内容，只需要简单优化和排版。</p>
+<p>首先可以在deepseek中建立一个对话命名排版，然后上传内容+指令，我一般使用以下指令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. markdown语法排版 </span><br><span class="line">2. 不要修改原文，但告诉我哪里有问题 </span><br><span class="line">3. 参考文献不要斜体；文章中角标使用 &lt;sup&gt;</span><br><span class="line">4. 标题使用一级标题符号，加粗重要内容，标题之间不要分隔符 </span><br><span class="line">5. 末尾增加“本文仅供xx人士阅读”； </span><br><span class="line">6. 涉及表格中的换行符使用&lt;br&#x2F;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>为什么这样设计？</strong></p>
+<ul>
+<li><strong><code>&lt;sup&gt;</code>标签</strong>：确保角标在不同平台和渲染器下都能完美显示</li>
+<li><strong><code>&lt;br/&gt;</code>标签</strong>：解决表格换行的兼容性问题，避免格式错乱</li>
+<li><strong>固定结尾</strong>：批量处理时保持品牌信息的一致性</li>
+</ul>
+<p><strong>进阶玩法</strong>：你还可以让AI根据内容提炼小标题，或针对不同推广平台生成适配的标题建议。</p>
+<hr>
+<h2 id="场景二：-从0到1创作专业文章"><a href="#场景二：-从0到1创作专业文章" class="headerlink" title="场景二： 从0到1创作专业文章"></a>场景二： 从0到1创作专业文章</h2><p>这里就涉及了我真正遇到的问题，如何产出专业医学类型的文章，当然这个专业是有限的专业，并非是真正研究型的，主要是为了推广产品服务的，也适合于发布在公众号里，沉淀垂直领域用户的。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2025/08/08/2025/2025-08-08%E9%9D%9E%E5%8C%BB%E5%AD%A6%E8%83%8C%E6%99%AF%EF%BC%8C%E5%A6%82%E4%BD%95%E9%9D%A0AI%E5%86%99%E5%87%BA%E4%B8%93%E4%B8%9A%E7%BA%A7%E5%8C%BB%E7%96%97%E6%96%87%E6%A1%88%EF%BC%9F%E9%99%84%E9%AB%98%E6%95%88%E6%8E%92%E7%89%88%E4%B8%80%E6%9D%A1%E9%BE%99%E6%94%BB%E7%95%A5/#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2024/11/27/2024/%E5%A6%82%E4%BD%95%E5%81%9A%E6%97%A5%E8%AE%A1%E5%88%92%EF%BC%9AObsidian%E4%B8%ADCalendar%20DayPlanner%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dora Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="虚妄之城">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2024/11/27/2024/%E5%A6%82%E4%BD%95%E5%81%9A%E6%97%A5%E8%AE%A1%E5%88%92%EF%BC%9AObsidian%E4%B8%ADCalendar%20DayPlanner%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/" itemprop="url">如何做日计划：Obsidian中Calendar+DayPlanner计划执行</a></h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2024-11-27T16:41:00+08:00">
+                2024-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" itemprop="url" rel="index">
+                    <span itemprop="name">自我成长</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2024/11/27/2024/%E5%A6%82%E4%BD%95%E5%81%9A%E6%97%A5%E8%AE%A1%E5%88%92%EF%BC%9AObsidian%E4%B8%ADCalendar%20DayPlanner%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2024/11/27/2024/%E5%A6%82%E4%BD%95%E5%81%9A%E6%97%A5%E8%AE%A1%E5%88%92%EF%BC%9AObsidian%E4%B8%ADCalendar%20DayPlanner%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2024/11/27/2024/%E5%A6%82%E4%BD%95%E5%81%9A%E6%97%A5%E8%AE%A1%E5%88%92%EF%BC%9AObsidian%E4%B8%ADCalendar%20DayPlanner%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/" class="leancloud_visitors" data-flag-title="如何做日计划：Obsidian中Calendar+DayPlanner计划执行">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">热度&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+                 <span>℃</span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="日计划的设定目标"><a href="#日计划的设定目标" class="headerlink" title="日计划的设定目标"></a>日计划的设定目标</h1><ol>
+<li><p>时间设定区块为30mins，可根据自身需求选择15mins或者1h<br>每个人的专注程度不一样，不必强求自己必须长时间进行同一件事</p>
+</li>
+<li><p>设定计划，同时希望反馈实际的完成情况。但不强求完全按照计划执行。<br>忘记在哪本书上看到的，书里面提到的是做周计划，每周最重要的三件事，每天每时的计划事项，计划后还有一列，作为计划的实际执行情况，每周进行总结分析。感觉这个想法不错，所以我希望我的计划表中也要体现，实际执行和操作的情况</p>
+</li>
+<li><p>操作简单，计划和执行需要一目了然。</p>
+</li>
+</ol>
+<h1 id="使用到的工具"><a href="#使用到的工具" class="headerlink" title="使用到的工具"></a>使用到的工具</h1><ol>
+<li>Obsidian自带的Calendar功能</li>
+<li>Day Planner插件：obsidian://show-plugin?id=obsidian-day-planner</li>
+<li>Dataview安装：obsidian://show-plugin?id=dataview</li>
+<li>流水账中涉及到的Cmenu + QuickAdd，具体可见文章</li>
+<li>苹果日历链接及timetrack（自由选择）：因为我同时会使用timetrack软件记录时间使用情况，所以也结合了这部分</li>
+</ol>
+<h1 id="页面展示"><a href="#页面展示" class="headerlink" title="页面展示"></a>页面展示</h1><ol>
+<li>工作时的页面：</li>
+</ol>
+<ul>
+<li>底部有正在进行的事项以及即将到来的事项</li>
+<li>右侧左边可打钩的事项即为计划事项，右侧带有绿底时间的即为实际完成情况</li>
+<li>一条绿线为目前的时间线</li>
+</ul>
+<p>![[Pasted image 20260707161713.png]]</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2024/11/27/2024/%E5%A6%82%E4%BD%95%E5%81%9A%E6%97%A5%E8%AE%A1%E5%88%92%EF%BC%9AObsidian%E4%B8%ADCalendar%20DayPlanner%E8%AE%A1%E5%88%92%E6%89%A7%E8%A1%8C/#更多" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2023/05/31/2023/2023-05-31%E5%96%9D%E5%A5%B6%E8%8C%B6%E5%90%83%E9%9B%B6%E9%A3%9F%E4%B8%8D%E5%90%83%E5%87%8F%E8%82%A5%E9%A4%90%EF%BC%8C%E5%A6%82%E4%BD%95%E7%98%A615%E6%96%A4%EF%BC%8C%E5%85%A8%E6%98%AF%E5%B9%B2%E8%B4%A7%EF%BC%8C%E5%8F%AF%E5%A4%8D%E7%94%A8%E4%BB%BB%E4%BD%95%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1623,534 +2184,6 @@ daovoice('update');
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2022/09/29/2022/2022-09-29%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A826%E5%B2%81/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dora Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="虚妄之城">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/09/29/2022/2022-09-29%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A826%E5%B2%81/" itemprop="url">如果你现在26岁，你有什么愿望？</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2022-09-29T10:24:00+08:00">
-                2022-09-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" itemprop="url" rel="index">
-                    <span itemprop="name">自我成长</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/09/29/2022/2022-09-29%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A826%E5%B2%81/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/09/29/2022/2022-09-29%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A826%E5%B2%81/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2022/09/29/2022/2022-09-29%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A826%E5%B2%81/" class="leancloud_visitors" data-flag-title="如果你现在26岁，你有什么愿望？">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>看到一个话题，如果你现在26岁，你有什么愿望？</p>
-<p>想了想，好像我没有什么愿望；如果说回到26岁，那还是现在吧，挺好的；</p>
-<p>相比于二十四五岁加班后，在寒风凛冽的地铁口吃烤冷面，26岁时换了另外一个城市，从北回南。</p>
-<p>在初中时，很想去北京，啊那时候觉得清华不错（哈哈哈哈哈），还列下阶段性小目标，然中道崩殂。后来发现能去北京读个大学就可以，一心想要离开“穷乡僻岭”（当时读书的地方叫二百岭），去外面的世界看一看。现在的QQ名还叫知北游，知吗，也许知也许不知。但想看京城，想看北方的辽阔，想看其他的风景，看其他的人和事，看参差不齐的世界，看矛盾和和谐的碰撞。</p>
-<p>记得几年前去拉萨，当时坐了很久很久的车去看圣湖，问旁边的小姐姐，她辞职从尼泊尔一路玩过来，</p>
-<ul>
-<li>“我们来到这里，坐了很久的车，血管突突的，看到这样的风景，获得开心和快乐，如果我们没有来，在原来的生活里也能看到生活的美好，也能享受到精神的喜悦，也不知道有不一样的风景。同样都能获得平和和快乐，那为什么要来呢”</li>
-<li>“但是我们选择来了啊”</li>
-</ul>
-<p>是的啊，但是我们选择来了啊。</p>
-<p>那，后来为什么离开北京呢？</p>
-<ul>
-<li>北方的地方玩得差不多了</li>
-<li>北京更多的风景不是我再待个五年十年就能看到的了</li>
-<li>缺水让枯萎的小草失去思想</li>
-</ul>
-<p>尽量不要回头看那些过去的时光；<br>如果回头，只是遥看，诉说，尽量不评价不批判不添油加醋</p>
-<p>脑壳后的回忆，穿越过时间漫长的回廊，总会像是起了细密毛球的毛衣，泛着时光晕开的旧和温暖；<br>如果现世安稳，则不由自主补上一些自我的得意；<br>如果偶遇厄运，则不得不来点英雄叹暮，遥想公瑾当年或是悔不该当初了</p>
-<p>然而，即使时光倒流，那时候懵懂的我们，仍会以同样的运动轨迹，滑向我们原历经的命运。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/09/29/2022/2022-09-29%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A826%E5%B2%81/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2022/07/18/2022/2022-07-18%E4%BA%BA%E7%94%9F%E8%B7%8C%E8%B7%8C%E6%92%9E%E6%92%9E/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dora Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="虚妄之城">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/07/18/2022/2022-07-18%E4%BA%BA%E7%94%9F%E8%B7%8C%E8%B7%8C%E6%92%9E%E6%92%9E/" itemprop="url">人生，就是这样跌跌撞撞撞撞撞撞</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2022-07-18T10:56:00+08:00">
-                2022-07-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/07/18/2022/2022-07-18%E4%BA%BA%E7%94%9F%E8%B7%8C%E8%B7%8C%E6%92%9E%E6%92%9E/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/07/18/2022/2022-07-18%E4%BA%BA%E7%94%9F%E8%B7%8C%E8%B7%8C%E6%92%9E%E6%92%9E/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2022/07/18/2022/2022-07-18%E4%BA%BA%E7%94%9F%E8%B7%8C%E8%B7%8C%E6%92%9E%E6%92%9E/" class="leancloud_visitors" data-flag-title="人生，就是这样跌跌撞撞撞撞撞撞">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>人生，就是这样跌跌撞撞撞撞撞撞</p>
-<p>早上骑车，出门没多久脚轻微扭了下，<br>为了避免撞到行人，自己摔倒了，连带着撞倒了路旁的两个停着的车（后来才想到，后来忘了把车扶起来）。<br>后来十字路口右转，刚好对面的人行道转绿灯，行人往前走，但我刹车来不及了，惯性在往前了几米，避开了一个行人，然而撞到了另一个大哥，大哥怒目相视，他的伙伴拍了拍他的后背，安抚了下，两人赶绿灯走了。<br>原本早上准备去做血液检查，没吃早饭，找了一个离公司很近的社区医院。事先在公众号上看到六月推送的信息说就诊正常，周一周三周五8-9点可以抽血，结果到了那里一打听，只有周五开门。<br>立即打车去另一个医院，到了和我说，只有周三下午的内科开单才能抽血做。<br>我怏怏的打车回公司上班。<br>饥肠辘辘，却没有想吃东西的欲望。</p>
-<p>这个夏天，我的腿上，大腿小腿脚包括膝盖和脚腕，真的无处没有伤，还一层叠一层，青里泛着紫，紫里透着黑，黑旁还有红，仔细看了下还有暗灰深红浅红，形状不一，状态多样。</p>
-<p>撞过人，撞过树，撞过马路牙子，撞过围栏栏杆，撞过路边花草等。。。不敢想象，骑车才一个多月，城市能撞的东西已经不多了，从此所撞之物，皆是重逢。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/07/18/2022/2022-07-18%E4%BA%BA%E7%94%9F%E8%B7%8C%E8%B7%8C%E6%92%9E%E6%92%9E/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://liheyuting.github.io/2022/06/13/2022/2022-06-13%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Dora Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="虚妄之城">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h2 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2022/06/13/2022/2022-06-13%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA/" itemprop="url">唐山打人，女性为什么这么愤怒</a></h2>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建时间" itemprop="dateCreated datePublished" datetime="2022-06-13T10:56:00+08:00">
-                2022-06-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%9D%82%E6%80%9D/" itemprop="url" rel="index">
-                    <span itemprop="name">杂思</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2022/06/13/2022/2022-06-13%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2022/06/13/2022/2022-06-13%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-             <span id="/2022/06/13/2022/2022-06-13%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA/" class="leancloud_visitors" data-flag-title="唐山打人，女性为什么这么愤怒">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">热度&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-                 <span>℃</span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>这两天唐山打人事件不停的发酵，和广大女同胞一样，我也夜不能寐，看到有一些视频，也忍不住眼眶留下眼泪来。</p>
-<p>为什么这次好像所有上网的女性都在关注这件事情，就像是铁链女的事件一样，有很多人不停的想要在微博争取话语权，一方面是的确，女权在我们现代社会仍然是一个任重而道远的事情，第二个，这次的事情的严肃性在之前类似的女性同胞无故被伤害的基础上，一下子爆发了，这次的事件让很多的女同胞发现，即使自己老老实实的穿衣服老老实实的生活单纯的聚餐吃东西在灯光下在众多目光下单纯的拒绝性骚扰，仍然会被群殴，在互帮互助的情况下仍然会被打到医院里去，心理防线一下子被击破。</p>
-<p>很多男性朋友，多年的教育和熏陶之下，我相信，他们也是很努力想要理解女性朋友的立场，去理解女性朋友的想法。但是，如果只是假想自己是一个女性，即使在空杯大脑的思考下，也很难想象出女性朋友为什么会这么害怕为什么好像这么脆弱为什么好像这么敏感，好像轻轻几句话就能让他们暴跳如雷，怒容相对。</p>
-<p>假如你只是以性别代入去想象，好像看到的一切都很正常，好像那些担心是草木皆兵。那是因为，你从来没有经历过女孩经历过的，你不会在大街上被性骚扰，在地铁被摸，你不会遇到始终在鼓励你你堕落的人，不会遇到那些恶意来自于异性与被同化的同性。有人问，那如果别人说你怎样怎样，你就要怎样怎样吗，那一刻我真的哭笑不得，还有点不知道怎么回。人是社会人，受到环境的影响，在你还没有判别能力的时候，就告诉你，你的价值是结婚是生孩子你读书没用你理科不行，你能分辨出什么是真实什么是幻觉吗，你是在要求每一个女孩都是一个天才，出生就拥有了辨别的智慧吗？可是，也没有人和我们说，当我们开始了思考，当我们读书，当我们看到世界，看到人与人，看到社会，看到公平和公正，正直与诚信，懦弱与暴力，我们怎么会想到，真相会更加让人分裂和伤心。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2022/06/13/2022/2022-06-13%E5%94%90%E5%B1%B1%E6%89%93%E4%BA%BA/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2205,7 +2238,7 @@ daovoice('update');
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">72</span>
+                  <span class="site-state-item-count">75</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -2227,7 +2260,7 @@ daovoice('update');
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">53</span>
+                  <span class="site-state-item-count">57</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -2303,7 +2336,7 @@ daovoice('update');
           # <h3 class="widget-title"></h3>
           <div id="myCanvasContainer" class="widget tagcloud">
               <canvas width="250" height="250" id="resCanvas" style="width=100%">
-                  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/10Y-Plan/" rel="tag">10Y_Plan</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/" rel="tag">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Obsidian/" rel="tag">Obsidian</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/" rel="tag">Work</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Year-Plan/" rel="tag">Year_Plan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yilia/" rel="tag">Yilia</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/earn/" rel="tag">earn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/" rel="tag">learn</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/marketo/" rel="tag">marketo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/" rel="tag">next</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/" rel="tag">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/" rel="tag">习惯养成</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%B7%E5%80%BC%E8%A7%82/" rel="tag">价值观</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%8E%92%E7%89%88/" rel="tag">公众号排版</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%8F%E8%82%A5/" rel="tag">减肥</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%8C%E5%90%91%E7%AC%94%E8%AE%B0/" rel="tag">双向笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86/" rel="tag">回忆</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%B0%E6%83%91/" rel="tag">困惑</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E9%87%91/" rel="tag">基金</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%8D%E7%9B%98/" rel="tag">复盘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%B3%E6%80%A7/" rel="tag">女性</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89/" rel="tag">女权主义</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80/" rel="tag">市场营销</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E5%BF%B5/" rel="tag">思念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80/" rel="tag">数字营销</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B4%E7%90%86/" rel="tag">整理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/" rel="tag">断舍离</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A0%E8%81%8A/" rel="tag">无聊</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9A%87%E6%80%9D/" rel="tag">暇思</a><span class="tag-list-count">25</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E6%80%9D/" rel="tag">杂思</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB/" rel="tag">极简生活</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B4%BB%E5%9C%A8%E5%BD%93%E4%B8%8B/" rel="tag">活在当下</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E7%97%85/" rel="tag">生病</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BF%BB%E5%A2%99/" rel="tag">翻墙</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" rel="tag">自我成长</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%90%A5%E9%94%80/" rel="tag">营销</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%90%A5%E9%94%80%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="tag">营销自动化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E8%B5%B0/" rel="tag">行走</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag">认知</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B4%A2%E5%8A%A1/" rel="tag">财务</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E5%8A%A8/" rel="tag">运动</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a><span class="tag-list-count">1</span></li></ul>
+                  <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/10Y-Plan/" rel="tag">10Y_Plan</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Day-Planner/" rel="tag">Day Planner</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Excel/" rel="tag">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Obsidian/" rel="tag">Obsidian</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Work/" rel="tag">Work</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Year-Plan/" rel="tag">Year_Plan</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Yilia/" rel="tag">Yilia</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/" rel="tag">blog</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/earn/" rel="tag">earn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/learn/" rel="tag">learn</a><span class="tag-list-count">17</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/marketo/" rel="tag">marketo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next/" rel="tag">next</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/soft/" rel="tag">soft</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sql/" rel="tag">sql</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B9%A0%E6%83%AF%E5%85%BB%E6%88%90/" rel="tag">习惯养成</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BB%B7%E5%80%BC%E8%A7%82/" rel="tag">价值观</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7%E6%8E%92%E7%89%88/" rel="tag">公众号排版</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%87%8F%E8%82%A5/" rel="tag">减肥</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%8C%E5%90%91%E7%AC%94%E8%AE%B0/" rel="tag">双向笔记</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%96%B5%E6%98%9F%E4%BA%BA/" rel="tag">喵星人</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%9E%E5%BF%86/" rel="tag">回忆</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%B0%E6%83%91/" rel="tag">困惑</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9B%BE%E7%89%87%E5%A4%87%E4%BB%BD/" rel="tag">图片备份</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9F%BA%E9%87%91/" rel="tag">基金</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%8D%E7%9B%98/" rel="tag">复盘</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%B3%E6%80%A7/" rel="tag">女性</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A5%B3%E6%9D%83%E4%B8%BB%E4%B9%89/" rel="tag">女权主义</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B8%82%E5%9C%BA%E8%90%A5%E9%94%80/" rel="tag">市场营销</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%BE%AE%E4%BF%A1%E8%BF%90%E8%90%A5/" rel="tag">微信运营</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%80%9D%E5%BF%B5/" rel="tag">思念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E5%AD%97%E8%90%A5%E9%94%80/" rel="tag">数字营销</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%B4%E7%90%86/" rel="tag">整理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%AD%E8%88%8D%E7%A6%BB/" rel="tag">断舍离</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%97%A0%E8%81%8A/" rel="tag">无聊</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9A%87%E6%80%9D/" rel="tag">暇思</a><span class="tag-list-count">25</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9D%82%E6%80%9D/" rel="tag">杂思</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E7%AE%80%E7%94%9F%E6%B4%BB/" rel="tag">极简生活</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B4%BB%E5%9C%A8%E5%BD%93%E4%B8%8B/" rel="tag">活在当下</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%94%9F%E7%97%85/" rel="tag">生病</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BF%BB%E5%A2%99/" rel="tag">翻墙</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%87%AA%E6%88%91%E6%88%90%E9%95%BF/" rel="tag">自我成长</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%90%A5%E9%94%80/" rel="tag">营销</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%90%A5%E9%94%80%E8%87%AA%E5%8A%A8%E5%8C%96/" rel="tag">营销自动化</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A1%8C%E8%B5%B0/" rel="tag">行走</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A4%E7%9F%A5/" rel="tag">认知</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%B4%A2%E5%8A%A1/" rel="tag">财务</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BF%90%E5%8A%A8/" rel="tag">运动</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a><span class="tag-list-count">1</span></li></ul>
               </canvas>
           </div>
         </div>
@@ -2320,7 +2353,7 @@ daovoice('update');
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2023</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
