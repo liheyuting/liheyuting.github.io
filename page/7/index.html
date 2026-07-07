@@ -611,18 +611,28 @@ daovoice('update');
 
       
         
-          <h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p>
+          
+            <h3 id="gitalk评论部署"><a href="#gitalk评论部署" class="headerlink" title="gitalk评论部署"></a>gitalk评论部署</h3><p>我用的是gitalk评论</p>
 <p>这里花费的时间最久，在issues里找了很久，终于在<a href="https://ziven.cc/2018/07/03/Hexo%E4%B8%BB%E9%A2%98yilia%E5%A2%9E%E5%8A%A0gitalk%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6/?nsukey=%2BijgAVH%2B4eCTudP96Bul1%2FQsAa44sS5wREOMSjzWZhpp5HNtgQ5lYQXXWgsrEjpRXfaVUvIfj1pVXj%2FYnFSdjAf0TR900HBBZYQThmSrRTtVwFlzfcGL9KfVT67ohG1XyYvT35Te2BXTqDo5Vh8nrUA6pr55q0Xs2nagi4yyiQFrPsRNMcql82iJ5ltbcivhdE%2Fe3i3m8aBleHrwZkGOWA%3D%3D" target="_blank" rel="noopener">Ziven</a>找到对应的</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">#6、gitalk评论</span><br><span class="line">gitalk:</span><br><span class="line">  enable:  true</span><br><span class="line">  githubID:  liheyuting  </span><br><span class="line">  repo: liheyuting.github.io （填写repo的名字）</span><br><span class="line">  ClientID: &#39;&#39;</span><br><span class="line">  ClientSecret: &#39;&#39;</span><br><span class="line">  adminUser: &#39;&#39;</span><br><span class="line">  distractionFreeMode: true</span><br></pre></td></tr></table></figure>
 
 <p>这里涉及到一个很重要的疑惑点是“ClientID”和“ClientSecret”，这个也许对于有开发经验的童鞋来说很基础，所以很多博文中自动默认大家都知道了。而对于小白，这个还是一头雾水。其实这个是GitHub的授权，解决方法很简单。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/26/2019/180826Hexo+Yilia%20%E6%89%80%E9%81%87%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E6%B1%87%E6%80%BB/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>** GitHub授权ClientID和ClientSecret **<br>进入setting-developer settings - OAuth Apps<br><a href="https://github.com/settings/applications/861324" target="_blank" rel="noopener">点击直接进入</a></p>
+<p><img src="/img/client.png" alt></p>
+<p>homepage url 只需要填写blog首页链接即可<br>Authorization callback URL 填写的是授权返回的页面，这样也只需要填写blog地址即可</p>
+<p>提交之后会生成“ClientID”和“ClientSecret”放到主题配置文件中就可以了。</p>
+<p>按上面提交之后，怎么页面还是提示“未找到对应issue，需要联系管理员”呢？</p>
+<p>** 评论初始化 **</p>
+<p>首先，先注意下地址是不是本地化地址，评论需要在正式环境中初始化有效。</p>
+<p>第二步：只需要简单的点击issue，授权adminUser的GitHub权限。</p>
+<p>再试试，是不是页面评论就可以了？</p>
+<h3 id="多标签"><a href="#多标签" class="headerlink" title="多标签"></a>多标签</h3><p>这个比较简单，如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: Markdown语法文档</span><br><span class="line">date: 2018-05-12</span><br><span class="line">tags: </span><br><span class="line">- blog </span><br><span class="line">- markdown</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="页面浏览统计"><a href="#页面浏览统计" class="headerlink" title="页面浏览统计"></a>页面浏览统计</h3><p>这个实现比较快，<a href="https://ziven.cc/2018/06/25/Hexo%E4%B8%BB%E9%A2%98Yilia%E6%B7%BB%E5%8A%A0%E7%BD%91%E7%AB%99%E6%B5%8F%E8%A7%88%E9%87%8F%E7%BB%9F%E8%AE%A1/" target="_blank" rel="noopener">Hexo主题Yilia添加网站浏览量统计</a></p>
+<h3 id="分页显示"><a href="#分页显示" class="headerlink" title="分页显示"></a>分页显示</h3><p>在文中中想要分页的地方加上</p>
+
+          
         
       
     </div>
@@ -776,7 +786,8 @@ daovoice('update');
 
       
         
-          <p>假设</p>
+          
+            <p>假设</p>
 <ul>
 <li>表1：Persons</li>
 <li>表2：Behaviors</li>
@@ -785,13 +796,55 @@ daovoice('update');
 <p>-** 从Persons表里查询姓名和电话 **<br>SELECT name,phone<br>FROM Persons </p>
 <p>-** DISTINCT 返回唯一不同的值 **<br>SELECT DISTINCT name,phone<br>FROM Persons </p>
 <p>-** WHERE 找出地域为北京的用户姓名和电话 **<br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/22/2018/180822SQL%E5%B8%B8%E7%94%A8%E8%AF%AD%E5%8F%A5/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>-** AND/OR 找出来源是微信且（或）地域是北京的用户姓名和电话 **<br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’ and（/or） source = ‘wechat’</p>
+<p>-** ORDER BY 找出北京地区用户，按公司字母(和名字)排序 **<br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company (,name) </p>
+<p>-** DESC/ASC 找出北京地区用户，按公司字母顺序和名字逆序排序 **<br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company ASC (,name DESC)</p>
+<p>-** 找出前n名 **<br>SELECT city(列名)<br>FROM Persons<br>LIMIT number</p>
+<p>-** 找出名字带有‘二’的人 **<br>SELECT * FROM Persons<br>WHERE city = ‘%二%’</p>
+<p>-** 找出在上海和北京的人，用in **<br>SELECT * FROM Persons<br>WHERE city in (‘beijing’,’shanghai’)</p>
+<p>-** 值在什么之间 **<br>SELECT * FROM Persons<br>WHERE birth<br>BETWEEN ‘2017/02/03’ AND ‘2018/04/03’</p>
+<p>-<strong>两表间查询</strong></p>
+<p>** 对应相同的名字 **</p>
+<ul>
+<li><p>方式1<br>SELECT * FROM Persons, Behaviors<br>WHERE Persons.name = Behaviors.name</p>
+</li>
+<li><p>方式2</p>
+</li>
+</ul>
+<p>** JOIN  **<br>SELECT * FROM Persons<br>INNER JOIN Behaviors<br>ON Persons.name = Behaviors.name</p>
+<p>-** Left Join 想象左对齐，心里只有左表，不管它怎样，都保留它 **<br>SELECT * FROM Persons<br>LEFT JOIN Behaviors<br>ON Persons.name = Behaviors.name</p>
+<p>-** RIGHT JOIN 全为右右右 **</p>
+<p>-** FULL JOIN 全部都要，左表右表全在一块儿 **</p>
+<p>-** UNION 汇总：两个表表头一样，合并在一起,只取唯一值 **<br>SELECT name FROM Persons1<br>UNION<br>SELECT name FROM Persons2</p>
+<p>-** UNION ALL 汇总所有值（用法如上） **</p>
+<p>-** SELECT INTO 从前表选取数据插入后表中 **<br>SELECT */name(列名)<br>INTO new_Persons (IN Externaldb.mdb)<br>FROM old_Persons</p>
+<p>-** GROUP BY 感觉某字段，分类统计 **</p>
+<hr>
+<p>-** INSERT 插入新的行 **<br>INSERT INTO table_name(列1， 列2)<br>VALUES (VALUE 1, VALUE 2, VALUE 3)</p>
+<p>-** 插入指定行的值，在value里加入限定的值 **</p>
+<p>-** UPDATE 更新值 **<br>UPDATE Persons<br>SET city（列值）= ‘beijing’<br>WHERE phone=’12122222222’</p>
+<p>-** 删除表(表的行） **<br>DELETE FROM Persons<br>(WEHRE city=’beijing’)</p>
+<p>-** AS 指定命名 **</p>
+<hr>
+<p>-** CREATE DATABASE 创建数据库 **<br>CREATE DATABASE new_db</p>
+<p>-** CREATE TABLE **<br>CREATE TABLE new_Persons{<br>name varchar,<br>city varchar,<br>…<br>}</p>
+<p>-** 字段约束 **</p>
+<ul>
+<li><p>NOT NULL 不为空<br>ALERT TABLE Persons<br>DROP INDEX PersonID</p>
+</li>
+<li><p>UNIQUE 唯一标识</p>
+</li>
+<li><p>PRIMARY KEY 主键</p>
+</li>
+<li><p>FOREIGN KEY</p>
+</li>
+<li><p>CHECK</p>
+</li>
+<li><p>DEFAULT</p>
+</li>
+</ul>
+
+          
         
       
     </div>
@@ -945,18 +998,26 @@ daovoice('update');
 
       
         
-          <blockquote>
+          
+            <blockquote>
 </blockquote>
 <p>我认识你，永远记得你。那时候，你还很年轻，人人都说你美，现在，我是特为来告诉你，对我来说，我觉得现在你比年轻的时候更美，那时你是年轻女人，与你那时的面貌相比，我更爱你现在备受摧残的面容。<br>– 杜拉斯《情人》</p>
 <p>原本今天想推林清玄的散文集《在云上》，今天遇到的一个女人改变了我的想法。她就像一场清风，让我感觉，美就像是穿越过时光的星空，依旧灼灼其华熠熠生辉，酝酿的美酒，清香内敛而值得细细回味。</p>
 <p>你可能会遇到这样一个女人，头发还是黝黑，细致的卷起，刘海细碎而妥帖。时间的针脚已经爬上了她的眉眼面庞，有时会遗留下点点斑纹，皮肤还是比较紧致，法令纹也是细细的，难受时，眉头细细颦起。最让人注意的是她的眼睛，深邃的眼睛看着你时，似乎所有的光都聚在了她的黑色瞳孔里，像是一闪一闪亮晶晶的小星星，对世界充满了好奇和热忱，跳跃着跳跃着要跳出时间的枷锁，拥抱这个痛苦而温暖的现实。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/08/19/2018/180819%E5%B2%81%E6%9C%88%E8%B5%B0%E5%9C%A8%E7%BE%8E%E7%9A%84%E5%85%89%E5%BD%B1%E9%87%8C/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>她身着一身舒适修身的黑长裙，深色小皮鞋，身修长纤瘦，身体放松而克制的站在一副画前。</p>
+<p>《斗霸》，整幅画满满占了一堵墙，中间的那人发量很少，手被铐在身后，头颅深深深的低垂着，他面前的妇女身着白衣，双眼微闭，向后倾倒，有人掺扶着。那人身后还有个老人和一对母子，老人紧紧捂着自己的脸，似乎痛苦到无法克制，母子神情麻木，呆滞的看着捂脸老人，周边全是围观的群众，里三层外三层，高高的台阶上，身着制服的大义凌然，貌似在说着正义之理，其他人大多数神情麻木。</p>
+<p>交谈时，你才惊讶她竟然已经退休了，也曾经历了许许多多的春秋。说起那个年代，说起不平之事，说起人生惨剧，感同身受般，眼神和神情都痛苦起来。说着说着，愈加激动，声音也颤抖起来，手持胸前。她的眼里细细密密的涌现出泪，积聚积聚着也把你带入黑暗的往事之中，心情随之起伏，淹没在她诉说的黑暗中，一波一波痛苦的浪潮席卷而来，浇灌着已被平淡或名利或焦虑划割过坑坑洼洼的心。酸胀疼痛，心也在不觉中泪下。</p>
+<p>情绪缓和下来，我们在美术馆里闲逛。她的眼神率真，讲起自己的年龄毫不避讳，说到美时，她声音轻快起来，<br>“有同学老了觉得要穿着艳丽，我不认为，我喜欢黑色的。衣服带来的年轻感只是一时的，老了只是身体，心态还可以一直年轻”，<br>“我现在不害怕老了，它会沉淀下很多东西，只要你心态年轻，很多东西依然是美的”，<br>“我喜欢一切美的东西，喜欢和美一起相处，他们让我感觉美好，非常享受，让我感觉自己一直年轻”，<br>…</p>
+<p>我细细的看着她的眉眼，眼神清澈，好奇而天真。开心时眼睛都要发光，让你忍不住想把一切美的东西放到她的面前；痛苦时潸然泪下，又恨不得以身相替。</p>
+<p>我看着她，也如同看着美一样，像是享受一副自然而慢品的画，抿下一口微苦而甘甜的茶，想要细细眯起眼来，敞开来任其细细密密的阳光倾泻。</p>
+<p>世事如水，偶尔漫过脚背，偶尔奔涌而来，率真不世故，坦诚不自拗，自然而欣然。</p>
+<p>那么时间你来吧，就如同微风吹拂旷野杂草，苍穹洒落星辰大海。</p>
+<p>** 当你老了 **<br>–叶芝 袁可嘉译</p>
+<blockquote>
+<p>　<br>　　当你老了，头白了，睡意昏沉，<br>　　炉火旁打盹，请取下这部诗歌，<br>　　慢慢读，回想你过去眼神的柔和，<br>　　回想它们昔日浓重的阴影；<br>　　<br>　　多少人爱你青春欢畅的时辰，<br>　　爱慕你的美丽，假意或真心，<br>　　只有一个人爱你那朝圣者的灵魂，<br>　　爱你衰老了的脸上痛苦的皱纹；<br>　　<br>　　垂下头来，在红光闪耀的炉子旁，<br>　　凄然地轻轻诉说那爱情的消逝，<br>　　在头顶的山上它缓缓踱着步子，<br>　　在一群星星中间隐藏着脸庞。 </p>
+</blockquote>
+
+          
         
       
     </div>
@@ -1110,17 +1171,30 @@ daovoice('update');
 
       
         
-          <h3 id="Windows-Mac-安卓"><a href="#Windows-Mac-安卓" class="headerlink" title="Windows/Mac/安卓"></a>Windows/Mac/安卓</h3><p>蓝灯即可，蓝灯即可，蓝灯即可，直接<a href="http://www.landengpro.org/index.php#download" target="_blank" rel="noopener">官网</a></p>
+          
+            <h3 id="Windows-Mac-安卓"><a href="#Windows-Mac-安卓" class="headerlink" title="Windows/Mac/安卓"></a>Windows/Mac/安卓</h3><p>蓝灯即可，蓝灯即可，蓝灯即可，直接<a href="http://www.landengpro.org/index.php#download" target="_blank" rel="noopener">官网</a></p>
 <h3 id="iOS"><a href="#iOS" class="headerlink" title="iOS"></a>iOS</h3><p>之前记得pad下过一个蓝灯，手机怎么搜也搜不到，蓝灯官网说iOS版正在开发中。</p>
 <p>最初只是想要下载一个 Google keep，只能在非大陆的app store里下载，神烦。</p>
 <p><strong>* 注册一个非大陆的apple id *</strong><br>目前store里几乎只有那些试用一次收费的软件，其他的VPN几乎全被下架。免费的VPN一般都需要在非大陆的store里下载，所以申请一个非大陆的账号还是有点用的。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/16/2018/180516%E2%80%9C%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91%E2%80%9D%E6%94%BB%E7%95%A5/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>1.下载一个一次性免费VPN<br>只要可以免费连接一次即可，比如熊猫VPN，windly VPN，seed，wingy等等</p>
+<p>2.申请非大陆账号<br>登陆之后迅速在设置中，重新创建一个app id，设置双重验证（据说有必要），以及在付款里选择“无”（只有非大陆的网络下才可以选择无，这个很有必要，要不然无法购买app），这样就可以在app store里下载免费的VPN了。</p>
+<p>以下的可以试试，试了几个，总的来说，都没有蓝灯页面简洁少广告，还是期待今年的蓝灯iOS可以上架吧。</p>
+<ul>
+<li>赛风</li>
+<li>vypr VPN：付费</li>
+<li>Yurbo</li>
+<li>Bestline</li>
+<li>SSR</li>
+<li>Yoga VPN</li>
+<li>网易UU</li>
+<li>蜗牛加速器</li>
+</ul>
+<p>（以上来源于xxx公众号，为避免说广告，就无耻的盗用且隐藏了公众号名字）</p>
+<p>以上大致可满足普通民众如我对科学上网不太强烈的需求，需求大些也可以购买付费类的。</p>
+<p>之前有听过小伙伴说好像也可以自己搭建，可能是搬瓦工？记不清了，也需要先VPN跨越山川大海进官网。</p>
+<p>完。</p>
+
+          
         
       
     </div>
@@ -1274,18 +1348,47 @@ daovoice('update');
 
       
         
-          <h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
+          
+            <h6 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题</span><br><span class="line">##### 这是五级标题</span><br><span class="line">###### 这是六级标题</span><br></pre></td></tr></table></figure>
 
 <p>** 加粗 **<br><code>** 加粗 **</code></p>
 <p><em>斜体</em></p>
 <p><code>*斜体*</code></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/12/2018/180512Markdown%E8%AF%AD%E6%B3%95%E6%96%87%E6%A1%A3/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p><strong>* 斜体加粗 *</strong><br><code>*** 斜体加粗 ***</code></p>
+<p><del>删除线</del><br><code>~~删除线~~</code></p>
+<blockquote>
+<p>引用<br><code>&gt; 引用</code></p>
+</blockquote>
+<hr>
+<p>分割线</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">***</span><br></pre></td></tr></table></figure>
+<p>图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br><span class="line"></span><br><span class="line">&lt;img src&#x3D;&#39;&#x2F;img&#x2F;0-5.jpg&#39;, height&#x3D; &#39;37%&#39;, width &#x3D; &#39;37%&#39;&gt; &lt;img src&#x3D;&#39;&#x2F;img&#x2F;0-8.jpg&#39;, height&#x3D; &#39;37%&#39;, width &#x3D; &#39;37%&#39;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>超链接</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[超链接名]（超链接地址&quot;超链接title&quot;）</span><br><span class="line">title可加可不加</span><br></pre></td></tr></table></figure>
+
+<p>无序列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 列表</span><br><span class="line">+ 列表</span><br><span class="line">* 列表</span><br></pre></td></tr></table></figure>
+
+
+<p>有序列表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 内容</span><br><span class="line">2. 内容</span><br><span class="line">3. 内容</span><br></pre></td></tr></table></figure>
+
+
+<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
+<p>表格</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|表头|表头</span><br><span class="line">---|：--：|---：</span><br><span class="line">内容|内容|内容</span><br><span class="line"></span><br><span class="line">第二行分割表头和内容</span><br><span class="line">- 有一个就行</span><br><span class="line">文字默认居左</span><br><span class="line">-两边加：表示文字居中</span><br><span class="line">-右边加：表示文字居右</span><br><span class="line"></span><br><span class="line">注：原生的语法两边都要用|包起来。此处省略</span><br></pre></td></tr></table></figure>
+
+<p>代码<br>单行代码  “<code>单行代码</code>“<br>多行代码  两对3个上角标</p>
+<p>插入视频</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe width&#x3D;&quot;560&quot; height&#x3D;&quot;315&quot; src&#x3D;&quot;&quot; frameborder&#x3D;&quot;0&quot; allowfullscreen&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+
+<p>插入音乐</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;iframe frameborder&#x3D;&quot;no&quot; border&#x3D;&quot;0&quot; marginwidth&#x3D;&quot;0&quot; marginheight&#x3D;&quot;0&quot; src&#x3D;&quot;&#x2F;&#x2F;music.163.com&#x2F;outchain&#x2F;player?type&#x3D;2&amp;id&#x3D;28381611&amp;auto&#x3D;1&amp;height&#x3D;66&quot; width&#x3D;330 height&#x3D;86&gt;&lt;&#x2F;iframe&gt;</span><br></pre></td></tr></table></figure>
+
+
+          
         
       
     </div>
@@ -1439,20 +1542,43 @@ daovoice('update');
 
       
         
-          <p><strong>* 发布文章 *</strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
+          
+            <p><strong>* 发布文章 *</strong><br>过程：<br>先进入blog所在的文件夹，在终端输入<br>进入blog所在文件夹</p>
 <p>每次部署的步骤，三步</p>
 <ul>
 <li>hexo clean</li>
 <li>hexo generate</li>
 <li>hexo deploy</li>
 </ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/05/12/2018/180512%E5%BB%BA%E7%AB%8B%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p><strong>* 增加tag *</strong><br><code>hexo new page ‘blog&#39;</code><br>在source里面多了个目录life，里面有个index.md，也可以手动建立。页面格式和文章一样</p>
+<p>接着把链接加上<code>themes/&lt;theme_name&gt;/_config.yml</code>里面的menu一项，添加一行blog: /tags/blog</p>
+<p><strong>* 主题 *</strong><br>主题可选择: <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank" rel="noopener">点击此处</a></p>
+<p>个人觉得好看的主题：</p>
+<ul>
+<li>Yilia - Responsive and simple style 优雅简洁响应式主题</li>
+<li>Winterland - A minimalistic theme based on Light with living background</li>
+<li>Iceman - A simple theme with some built-in China mainland service, based on Pacman</li>
+</ul>
+<p>YAHT - Yet Another Hexo Theme based on Pacman</p>
+<p><strong>* 多端同步管理 *</strong><br>​用coding.net来备份博客并同步博客</p>
+<p>1.新建一个博客备份的私有仓库，配置SSH，不过不需要pages服务。</p>
+<p>2.配置 .gitignore 如下： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;.deploy_git</span><br><span class="line">&#x2F;public</span><br></pre></td></tr></table></figure>
+<p>3.如果主题是git clone 下来的，记得删除主题下的.git文件(rm -rf .git)</p>
+<p>4.初始化仓库,git init 和 git remote add origin</p>
+<p>5.git add. #添加目录下所有文件 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git commit -m “更新说明” #提交并添加更新说明 </span><br><span class="line">git push origin master #推送更新到远程仓库</span><br></pre></td></tr></table></figure>
+<p>6.查看仓库有没有提交成功</p>
+<p><strong>* 另一台电脑的更新远程仓库 *</strong><br>​ 在B电脑安装必须要的环境后，新建文件执行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">​ git init</span><br><span class="line">​ git remote add origin</span><br><span class="line">​ git fetch –all</span><br><span class="line">​ git pull origin master</span><br></pre></td></tr></table></figure>
+
+<p><strong>* 发布客户端同步 *</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m “更新说明”</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>每次写博客之前记得先 git pull 进行同步更新</p>
+<p><strong>* 常用同步操作 *</strong><br>​```<br>git pull #同步更新<br>hexo new test “新建文章” （hexo n xxx）<br>hexo clean 清除旧的public文件夹<br>hexo d -g<br>git add .<br>git commit - m “更新说明”<br>git push origin master</p>
+<pre><code>
+</code></pre>
+          
         
       
     </div>
@@ -1606,7 +1732,8 @@ daovoice('update');
 
       
         
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=28381611&auto=1&height=66" width="330" height="86"></iframe>
+          
+            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" src="//music.163.com/outchain/player?type=2&id=28381611&auto=1&height=66" width="330" height="86"></iframe>
 
 <p>（<em>旧文</em>）<br>Z小姐个子很高，一米七，走起路来大开大合，很是潇洒，她的笑声也是。</p>
 <p>在我说了”不过单身二十三年而已”，上铺的她接到”我也不过二十四年而已”，然后两人相视大笑。谈到单身这个问题，她忽然说起了一个几乎伴随着她整个学生生涯的男孩。</p>
@@ -1614,13 +1741,52 @@ daovoice('update');
 <p>J是个很沉默的人，坐在最后一排的窗户旁边，守护着窗外的风景，聪明却不努力。</p>
 <p>爱情最初是什么的模样，谁也不知道。就好像，众人起哄，”你这么重，只有J带的动你”，自行车后座上飞扬起来的头发。田埂上，拾棉花，男孩沉默跑过来背起沉沉的蛇皮袋。</p>
 <p>或者是，我沉默的注视着你，即使也许你永远不知道。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/16/2018/180316%E9%82%A3%E4%B8%AA%E6%B2%89%E9%BB%98%E7%9D%80%E9%80%81%E4%BD%A0%E5%9B%9E%E5%AE%B6%E5%8D%B4%E4%B8%8D%E5%91%8A%E8%AF%89%E4%BD%A0%E7%9A%84%E7%94%B7%E7%94%9F/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>“Z，偷偷和你说哦，那个不是xxx帮你洗的桌布，是J帮你洗的哦”仿似女孩间的絮絮秘密，散落空气里。</p>
+<p>Z小姐轻轻的笑了笑，装做满不在意，空气中传来洗得干干净净的桌布传来的淡淡香味，嗯，香味。</p>
+<p>真是个可爱的家伙。</p>
+<p>“Z,你快回头看，他又在窗户那看着你了”</p>
+<p>“哈哈，他又在偷看你哦”</p>
+<p>…</p>
+<p>圣诞节，</p>
+<p>“嗯，给你”</p>
+<p>“什么”</p>
+<p>卡片上：你站在桥上看风景 看风景的人在楼上看你 明月装饰了你的窗子 你装饰了别人的梦</p>
+<p>“写得真好，谁写得呀”Z小姐故作不知，俏皮问到。</p>
+<p>“嗯…嗯…不是…是卞之琳”J挠挠头。</p>
+<p>快乐的时光，像涮毛的刷子，飞逝的猝不及防。</p>
+<p>中考三个月，男孩翻墙摔断右臂，班主任恨铁不成钢，狠狠的骂了那个聪慧却不上进的男孩。</p>
+<p>只有三个月，摔断右臂。</p>
+<p>女孩走到男孩桌前，一脸认真的说”我已经保送到十二中，你必须考上十二中或者xxx中，必须去市里”</p>
+<p>“只能用左手写字，会很慢诶”</p>
+<p>“他晚上写作业都写到很晚的，从来不这么拼的”</p>
+<p>“后来呢”</p>
+<p>“后来…”Z小姐微微侧了侧头，似乎陷在了回忆里，无法自拔。</p>
+<p>“后来，我在十二中的重点班，他在平行班。就像以前和你说的，班里的同学是滚动着的，如果成绩太差，就会被踢出去。</p>
+<p>那时候家里出了很大的变动，家人也都搬去了兰州。我每天每天睡不好觉，不想和任何人说话，活在了自己的世界里，也不是那个原来的我了”</p>
+<p>再不是那个笑得肆意飞扬的女孩，再不是那个成绩很不错，自带光芒的女孩了，只剩下灰暗灰暗的背影，在街灯下拉长推短。</p>
+<p>每天晚自习结束，J离女孩很远，默默的送女孩到宿舍楼下，然后回去。</p>
+<p>Z明白身后沉默的陪伴，却一次也没有回过头。电话，关机；短信，不回，求约，拒绝。</p>
+<p>“其实每天睡觉前，打开手机，看到他的搞笑留言，心里有一丝丝暖”</p>
+<p>感谢有这样一个人，默默的陪伴着渺小的自己，说得再多让他难堪的话，也不会讨厌自己，好像冬日的暖流缓缓流淌过干涸的河床。</p>
+<p>“他的消息断断续续传来，高二的时候他和一个女孩在一起了”</p>
+<p>据说有次晚自习，女孩在画漫画，老师过来，男孩主动承认是自己的。</p>
+<p>闻者不禁唏嘘，那又是另一段”我心目中的他会踏着七彩祥云来找我”的英雄故事了。</p>
+<p>只是，片尾曲起，终究有人要离场，终究有人会失望。也许无关情爱，也许，是触手可及的陪伴。</p>
+<p>那个沉默的男孩终于渐行渐远，在暗黑色的背景里渐渐隐去，在记忆的后视镜里蝴蝶飘远。</p>
+<p>爱情，最初的时候，是怎样的模样。是不是有笑靥如花的脸庞，是不是有窗后静静凝视的目光，是不是，只是等待和陪伴。</p>
+<p>徐志摩曾说，<br>“年少时，我们因谁因爱或是只因寂寞而同场起舞；<br>沧桑后，我们何因何故寂寞如初却宁愿形同陌路。”<br>“联系？很少了。”停顿片刻，Z略遗憾的语气像是穿越过十年的长廊，”我多想再回到那时候”</p>
+<p>我多想再回到那时候。</p>
+<p>也许我会回头看看窗后默默的凝视眼睛，</p>
+<p>也许我会回头看看身后跟随的细长身影</p>
+<p>也许我会在午夜辗转难眠时回你的信息，</p>
+<p>也许…</p>
+<p>也许我什么都不会做，只是想对那时候的你真诚说一句”谢谢你，谢谢你陪伴我这么久，谢谢你曾给我那种珍视的感觉”</p>
+<p>其实我都知道，原谅我没有对你说。</p>
+<hr>
+<p>去年的时候Z小姐结婚了，婚纱照看起来很漂亮，笑容灿烂。犹记得当时把文字拿给她看时，她有些怔怔的摸样。</p>
+<p>回忆最美好的地方，大概就是被时间氤氲开，像是久穿的毛衣，起了一粒粒的毛球，那些快乐飞驰的难受郁郁的都夹杂融合在了一起，反倒是熨帖而微暖。</p>
+
+          
         
       
     </div>
@@ -1774,18 +1940,27 @@ daovoice('update');
 
       
         
-          <p>小时候总喜欢仰头看着家门口大枣树最低的树桠，似乎盼着盼着，枣儿就落满枝头，自己不用力的蹦也能够到枣儿。</p>
+          
+            <p>小时候总喜欢仰头看着家门口大枣树最低的树桠，似乎盼着盼着，枣儿就落满枝头，自己不用力的蹦也能够到枣儿。</p>
 <p>春天似乎一个晚上就席卷了来，裸奔了个满冬的树干枝头终于开始冒出绿芽。</p>
 <p>没几日，嫩叶就爬满了枝头，一颗一颗米粒大的花点儿就隐隐在叶子间探出头来，熙熙攘攘的簇拥了每个枝头。</p>
 <p>花点是嫩黄嫩黄的，簇在一起，也是大朵大朵的，风吹来，一颤一颤的，有些点点的就吹落了。满地点点嫩蕊叶叶新绿。</p>
 <p>若风再大些，树下就洋洋洒洒了，树下经过时，总得时不时踮着脚迅速跳过，害怕稀稀落落飘落的蕊黄叶绿里会夹带着毛毛虫落到身上，又担心踩到地上的虫儿尸体。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/12/09/2018/171209%E9%82%A3%E9%87%8C%E6%9C%89%E4%B8%80%E6%A3%B5%E6%9E%A3%E6%A0%91/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+<p>风吹过初夏的枝头，叶子更繁盛了，青涩的小枣儿仰躺着偶尔露出肚皮徜徉在温暖的阳光里。在门口坐在椅子看书最是舒服不过，太阳初露时，阳光暖暖的铺洒开来，整个身体沐浴在细细暖阳中惬意极了。</p>
+<p>午时左右，枣树如同撑开的巨伞，场地荫凉，偶尔有风吹过，整个人暖洋洋的，如同饮多佳酿，醺醺的，飘飘的，困意袭来。</p>
+<p>盛夏夜凉如水，蝉声蛙声此起彼伏，蒲扇慢慢摇着，仰躺在摇椅上，抬头就是满天星空，错落闪耀，大珠小珠落墨盘，偶尔月明星稀，云色淡淡。</p>
+<p>风里吹来枣叶竹叶的清香，那时枣儿已经大致成熟了，偶尔会爬上树，摘着个把，用手擦擦，轻轻一咬，枣儿清脆的一声，就裂开了，清甜清甜的。枣儿胖鼓鼓的，那些大大的，肚儿颜色越泛白的，最是清脆香甜。</p>
+<p>后来在隆冬时，去过漠河。冬夜泠冽时，也曾出门去寻静默的星空。万籁俱寂，村落里传来的声音如同在另一个空间盒子里，只有鞋子和雪上擦啦的声音和着头顶的星光相伴而走。</p>
+<p>仰头望去，深邃的夜空像是破布袋漏了星点，散散落落的，呼吸的气息绕成团团的白气，散开来，我们久久不愿离去。然而却也比不上漏在枣叶间的星星闪亮。</p>
+<p>枣树活的年岁很久了，在小时的记忆里已是枝繁叶茂的模样。</p>
+<p>爷爷说，家里种各种的果树，你去哪都想回来吃啊。</p>
+<p>后来，枣树只剩下一个光秃秃的大树墩，偶尔会坐在上面歇息。</p>
+<p>后来树根也没了。<br>…</p>
+<p>有时，站在城市天桥上，周边是亮得刺眼的霓虹阑珊，恍惚间，看着桥下的车辆像是被追赶的饿狼，从桥后驰骋而来，又往桥前飞驰而去。</p>
+<p>恰如时光，身后是裹卷而来铺天盖地的过去，面前是汹涌而去微昭迢迢的远方。</p>
+<p><img src="/img/0-2.jpg" alt></p>
+
+          
         
       
     </div>
@@ -1939,7 +2114,8 @@ daovoice('update');
 
       
         
-          <p><strong>1-2Day：搭建Blog到GitHub</strong></p>
+          
+            <p><strong>1-2Day：搭建Blog到GitHub</strong></p>
 <h3 id="安装过程："><a href="#安装过程：" class="headerlink" title="安装过程："></a>安装过程：</h3><p>详情可以借鉴<a href="https://hexo.io/docs/index.html" target="_blank" rel="noopener">官方网站</a>,</p>
 <p>安装homebrew</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby -e &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;Homebrew&#x2F;install&#x2F;master&#x2F;install)&quot;</span><br></pre></td></tr></table></figure>
@@ -1947,13 +2123,53 @@ daovoice('update');
 <p>安装nodejs<br>    <code>brew install node</code></p>
 <p>安装hexo</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/23/2018/171123%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/#更多" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+
+<p>安装git<br><code>- sudo brew install git</code><br><br></p>
+<h3 id="建立博客"><a href="#建立博客" class="headerlink" title="建立博客"></a>建立博客</h3><p>创建文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br><span class="line">cd blog</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<p>生成静态页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate &#x2F;** 生成一套静态网页 **&#x2F;</span><br><span class="line">hexo server &#x2F;** 在服务器上运行 **&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>建立第一篇博客</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(cd 进入blog文件夹)</span><br><span class="line">hexo new post &quot;博客名&quot;</span><br><span class="line">info created：～／blog&#x2F;souce&#x2F;_posts&#x2F;博客名.md</span><br></pre></td></tr></table></figure>
+
+<p>连接GitHub</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">liheyuting.github.io</span><br><span class="line">（一定要和账户名一致）</span><br></pre></td></tr></table></figure>
+
+<p>修改文件夹中yml文件，如下：（注意空格）<br>    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;liheyuting&#x2F;Dora.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></p>
+<p>发布博客到服务器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save   (第一次安装所需)</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<br>
+### 回顾 ###
+总耗时：3h（一心二用，聆听朋友倾诉）+ 0.5h (整理)
+First Day（1.5h）：跟着浚宇的博客进入官方网站搭建，在hexo环境配置中断
+Second Day：
+
+<h3 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h3><ul>
+<li><a href="http://blog.csdn.net/jasonjwl/article/details/52887575" target="_blank" rel="noopener">http://blog.csdn.net/jasonjwl/article/details/52887575</a></li>
+<li><a href="http://blog.csdn.net/qq_30379689/article/details/52854003" target="_blank" rel="noopener">http://blog.csdn.net/qq_30379689/article/details/52854003</a></li>
+</ul>
+<h3 id="坑点"><a href="#坑点" class="headerlink" title="坑点"></a>坑点</h3><ul>
+<li>对于英文文件的不习惯阅读</li>
+<li>对于命令行的不熟悉</li>
+<li>耗时于git 账户和hexo关联</li>
+<li>安装说明的关键点不清晰，未抓住说明的关键点</li>
+</ul>
+<p><em>待继续处理</em></p>
+<ul>
+<li>命令行安装软件原理</li>
+<li>用命令行来建设blog</li>
+<li>掌握 git 命令</li>
+<li>blog 页面建设内容建设等</li>
+</ul>
+<p>blog的下一步建设：主页面</p>
+<ul>
+<li>主题</li>
+<li>内容</li>
+</ul>
+
+          
         
       
     </div>

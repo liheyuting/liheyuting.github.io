@@ -87,7 +87,7 @@
 <meta property="og:description" content="假设  表1：Persons 表2：Behaviors  SELECT-** SELECT 查询 **SELECT * FROM Persons -** 从Persons表里查询姓名和电话 **SELECT name,phoneFROM Persons  -** DISTINCT 返回唯一不同的值 **SELECT DISTINCT name,phoneFROM Persons  -** WHER">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-08-21T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-06-06T15:34:45.418Z">
+<meta property="article:modified_time" content="2026-07-07T09:28:41.331Z">
 <meta property="article:author" content="Dora Li">
 <meta property="article:tag" content="learn">
 <meta property="article:tag" content="sql">
@@ -460,8 +460,6 @@ daovoice('update');
 <p>-** 从Persons表里查询姓名和电话 **<br>SELECT name,phone<br>FROM Persons </p>
 <p>-** DISTINCT 返回唯一不同的值 **<br>SELECT DISTINCT name,phone<br>FROM Persons </p>
 <p>-** WHERE 找出地域为北京的用户姓名和电话 **<br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’</p>
-<a id="more"></a>
-
 <p>-** AND/OR 找出来源是微信且（或）地域是北京的用户姓名和电话 **<br>SELECT name,phone FROM Persons<br>WHERE city =’beijing’ and（/or） source = ‘wechat’</p>
 <p>-** ORDER BY 找出北京地区用户，按公司字母(和名字)排序 **<br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company (,name) </p>
 <p>-** DESC/ASC 找出北京地区用户，按公司字母顺序和名字逆序排序 **<br>SELECT * FROM Persons<br>WHERE city =’beijing’<br>ORDER BY company ASC (,name DESC)</p>

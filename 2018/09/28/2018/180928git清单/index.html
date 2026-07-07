@@ -87,7 +87,7 @@
 <meta property="og:description" content="Git 配置git config工具专门用来配置或读取相应的工作环境变量 git config –global user.name “dora”git config –global user.email xxx@163.com –global所有项目会默认使用这个配置信息 在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git&#x2F;config 文件里 文本编辑">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-09-28T05:02:31.000Z">
-<meta property="article:modified_time" content="2023-06-06T15:34:45.419Z">
+<meta property="article:modified_time" content="2026-07-07T09:28:41.328Z">
 <meta property="article:author" content="Dora Li">
 <meta property="article:tag" content="learn">
 <meta property="article:tag" content="git">
@@ -457,8 +457,6 @@ daovoice('update');
 <p>在某个特定文件中使用其他的账户，去掉–global重新配置，新的设定保存在当前项目的 .git/config 文件里</p>
 <p><strong>文本编辑器</strong><br>默认的是Vi或者Vim，重新设置：<br>git config –global core.editor sublime</p>
 <p><strong>差异分析工具</strong></p>
-<a id="more"></a>
-
 <h4 id="Git创建仓库"><a href="#Git创建仓库" class="headerlink" title="Git创建仓库"></a>Git创建仓库</h4><p><strong>git 创建仓库</strong><br>#使用当前目录作为Git仓库，使它初始化<br>git init</p>
 <p>#使用指定目录作为仓库<br>git init newrepo</p>
 <p>当前目录会出现一个名叫.git的目录。<br>如果当前目录下有几个文件需要纳入版本控制，需要先用git add命令告诉git开始对这些文件进行跟踪，然后提交。<br>#Q 需要后期往前再看一下<br>git add *.c<br>git add README #类似增加一个说明文档<br>git commit -m ‘initial project version’</p>
